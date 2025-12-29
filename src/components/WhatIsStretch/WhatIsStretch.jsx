@@ -13,7 +13,7 @@ const WhatIsStretch = ({ className, id }) => {
     <Section id={id} container={true} padding="none" className={cn("relative", className)}>
       <SectionTitle data={sectionLabels} />
       <InteractiveImage data={sectionLabels} />
-      <List className="3xl:text-[24px] absolute right-2.5 bottom-0 text-right text-[14px] font-bold [direction:rtl] lg:text-[20px] xl:bottom-6 xl:text-right">
+      <List className="3xl:text-[24px] 3xl:right-[156px] absolute right-[26px] bottom-0 text-right text-[14px] font-bold [direction:rtl] lg:text-[20px] xl:right-[5px] xl:bottom-6 xl:text-right 2xl:right-[111px]">
         {sectionLabels.tagline.map((line) => (
           <List.Item className="font-poppins" key={line}>
             {line}

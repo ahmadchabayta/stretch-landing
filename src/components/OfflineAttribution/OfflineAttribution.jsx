@@ -1,81 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import data from "./offline_attribution.data.json";
-import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
-import { Section, Typography } from "../../components";
+import SectionData from "./SectionData";
+import SectionTitle from "./SectionTitle";
+import { Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
-import cn from "../../utils/cn";
-
-const SectionTitle = ({ labels, dir }) => (
-  <div className="section_head_container app_container">
-    <Typography as="h2" variant="section-title" dir={dir}>
-      {labels.title}
-    </Typography>
-    <Typography as="h3" variant="section-subtitle" className="xl:[direction:rtl]" dir={dir}>
-      {labels.subtitles.subtitle}{" "}
-      <Typography.Text accent>{labels.subtitles.subtitle_highlight}</Typography.Text>
-    </Typography>
-  </div>
-);
-
-SectionTitle.propTypes = {
-  labels: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    subtitles: PropTypes.shape({
-      subtitle: PropTypes.string.isRequired,
-      subtitle_highlight: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  dir: PropTypes.string.isRequired,
-};
-
-// 2. Your Main Component
-const SectionData = ({ labels, dir, language }) => {
-  // Remove commas and parse as number for animation
-  const parsedNumber = Number(String(labels.number).replace(/,/g, ""));
-  const counterRef = useAnimatedCounter(parsedNumber, {
-    duration: 2,
-    dependencies: [parsedNumber],
-  });
-  return (
-    <div
-      className={cn(
-        "flex items-center justify-between",
-        "app_container z-50",
-        "2xl:absolute 2xl:top-[151px]",
-        language === "en" ? "2xl:right-[111px]" : "2xl:left-[111px]",
-        "3xl:w-[920px]! 2xl:w-[620px]!",
-      )}
-      style={{
-        flexDirection: language === "en" ? "row" : "row-reverse",
-      }}
-    >
-      <Typography
-        as="h3"
-        ref={counterRef}
-        className="text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
-        dir={dir}
-      />
-      <Typography as="p" className="text-black [direction:ltr] xl:[direction:rtl]" dir={dir}>
-        {labels.description.desc}
-        <br />
-        <Typography.Text className="font-bold">{labels.description.highlight}</Typography.Text>
-      </Typography>
-    </div>
-  );
-};
-
-SectionData.propTypes = {
-  labels: PropTypes.shape({
-    number: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    description: PropTypes.shape({
-      desc: PropTypes.string.isRequired,
-      highlight: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  dir: PropTypes.string.isRequired,
-  language: PropTypes.string.isRequired,
-};
 
 const OfflineAttribution = ({ id }) => {
   const { language, currentLanguage } = useLanguage();
@@ -83,6 +12,16 @@ const OfflineAttribution = ({ id }) => {
 
   const dir = currentLanguage?.dir || "rtl";
   const [isRevealed, setIsRevealed] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const checkTouchDevice = () => {
+      setIsTouchDevice(
+        "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0,
+      );
+    };
+    checkTouchDevice();
+  }, []);
 
   const hidden_on_small_styles = `
     hidden
@@ -91,6 +30,7 @@ const OfflineAttribution = ({ id }) => {
     w-full
     min-w-[738px]
     lg:min-w-[1583px]
+    pointer-events-none
     ${
       language === "en"
         ? `left-[-38%]
@@ -116,6 +56,7 @@ const OfflineAttribution = ({ id }) => {
     w-full
     min-w-[738px]
     md:w-[1582px]
+    pointer-events-none
     ${
       language === "en"
         ? `left-[-150px]
@@ -135,6 +76,15 @@ const OfflineAttribution = ({ id }) => {
     }
   `;
 
+  const containerHandlers = isTouchDevice
+    ? {
+        onClick: () => setIsRevealed((prev) => !prev),
+      }
+    : {
+        onMouseEnter: () => setIsRevealed(true),
+        onMouseLeave: () => setIsRevealed(false),
+      };
+
   return (
     <Section id={id} container={false} padding="none" className="relative overflow-hidden">
       <SectionTitle labels={labels} dir={dir} />
@@ -142,14 +92,14 @@ const OfflineAttribution = ({ id }) => {
       <div
         role="button"
         tabIndex={0}
-        onClick={() => setIsRevealed((prev) => !prev)}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             setIsRevealed((prev) => !prev);
           }
         }}
-        className="relative min-h-[515px] w-[738px] cursor-pointer lg:h-[815px]"
+        className="relative min-h-[515px] w-[738px] cursor-pointer touch-none lg:h-[815px]"
+        {...containerHandlers}
       >
         {isRevealed ? (
           <>

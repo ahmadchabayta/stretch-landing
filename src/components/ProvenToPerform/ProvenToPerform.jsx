@@ -19,6 +19,7 @@ const ProvenToPerform = () => {
       }}
       container={true}
       padding="none"
+      className="min-h-[50vh]!"
     >
       <SectionTitle labels={labels} />
 
@@ -27,7 +28,7 @@ const ProvenToPerform = () => {
         direction="flex-col xl:flex-row"
         align="items-center xl:items-center"
         justify="justify-center"
-        className="mx-auto min-h-screen w-full flex-1 gap-24 lg:max-w-[1745px] xl:gap-0"
+        className="mx-auto w-full flex-1 gap-24 lg:max-w-[1745px] xl:gap-0"
       >
         <ImageCard image={labels.images.img_1} isArabic={isArabic} />
 

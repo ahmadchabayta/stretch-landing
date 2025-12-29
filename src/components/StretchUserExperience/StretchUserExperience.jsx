@@ -71,6 +71,13 @@ const StretchUserExperience = () => {
               language={language}
             />
           ))}
+
+          <button
+            type="button"
+            aria-label="Next experience image"
+            onClick={handleItemClick}
+            className="3xl:right-[147px] absolute top-1/2 right-[-147px] z-[9999] hidden h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-[#FF4200] shadow-lg transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2 focus:outline-none lg:hidden xl:right-[1.9px] xl:flex 2xl:right-[62px]"
+          />
         </div>
       </Flex>
     </Section>
