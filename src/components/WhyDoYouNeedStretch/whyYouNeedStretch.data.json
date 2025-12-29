@@ -1,0 +1,83 @@
+{
+  "languages": {
+    "en": {
+      "title": "WHY DO YOU NEED STRETCH?",
+      "subtitle": {
+        "description": "Marketing campaigns are",
+        "highlighted_desc_1": "everywhere.",
+        "bold_desc_1": "But clarity?",
+        "highlighted_desc_2": "Nowhere."
+      },
+      "funnel": {
+        "issue": "Funnel Fragmentation",
+        "icon": "/assets/why_do_you_need_stretch/funnel.webp",
+        "details": {
+          "part1": "Your audience lives across META, TikTok, DV360, Snapchat, but these platforms",
+          "bold_part": "don’t talk to each other."
+        }
+      },
+      "duplicated": {
+        "issue": "Duplicated Audiences & Wasted Budgets",
+        "icon": "/assets/why_do_you_need_stretch/duplicated.webp",
+        "details": "Platforms report reach separately. Marketers unknowingly pay to hit the same user multiple times resulting in budget overspend."
+      },
+      "guessed": {
+        "issue": "Audience Opacity",
+        "icon": "/assets/why_do_you_need_stretch/guessed.webp",
+        "details": {
+          "part1": "Platforms report performance metrics like clicks and impressions but",
+          "bold_part": "lack enriched audience insights, leaving marketers blind to who actually engages."
+        }
+      },
+      "audience": {
+        "issue": "Guessed Outcomes",
+        "icon": "/assets/why_do_you_need_stretch/audience.webp",
+        "details": {
+          "part1": "Most platforms stop tracking at the click. Store visits?",
+          "bold_part": "They’re invisible."
+        }
+      }
+    },
+    "ar": {
+      "title": "لماذا تحتاج إلى ستريتش؟",
+      "subtitle": {
+        "description": "حملات التسويق موجودة",
+        "highlighted_desc_1": "في كل مكان",
+        "bold_desc_1": "أما الوضوح؟",
+        "highlighted_desc_2": "لا مكان له."
+      },
+      "funnel": {
+        "issue": "تجزئة مسار التحويل",
+        "icon": "/assets/why_do_you_need_stretch/funnel.webp",
+        "details": {
+          "part1": "جمهورك موزع بين ميتا و تيك توك و دي في 360  و سناب شات وغيرها، لكن هذه المنصات ",
+          "bold_part": "لا تتواصل مع بعضها."
+        }
+      },
+      "duplicated": {
+        "issue": "تكرار الجمهور وإهدار الميزانيات",
+        "icon": "/assets/why_do_you_need_stretch/duplicated.webp",
+        "details": {
+          "part1": "كل منصة تبلغ عن الوصول بشكل منفصل. دون أن يدرك المسوقون، يتم استهداف ",
+          "bold_part": "المستخدم نفسه عدة مرات، مما يؤدي إلى تضخيم الإنفاق."
+        }
+      },
+      "guessed": {
+        "issue": "غياب وضوح الجمهور",
+        "icon": "/assets/why_do_you_need_stretch/guessed.webp",
+        "details": {
+          "part1": "المنصات تبلغ عن مقاييس سطحية مثل النقرات والانطباعات، لكنها ",
+          "bold_part": "تفتقر إلى رؤى معمقة عن الجمهور، ما يجعل المسوقين غير قادرين على معرفة من يتفاعل فعلاً."
+        }
+      },
+      "audience": {
+        "issue": "نتائج مبنية على التخمين",
+        "icon": "/assets/why_do_you_need_stretch/audience.webp",
+        "details": {
+          "part1": "معظم المنصات تتوقف عند النقر فقط. زيارات المتاجر الفعلية؟ ",
+          "bold_part": "غير مرئية."
+        }
+      }
+    }
+  }
+}

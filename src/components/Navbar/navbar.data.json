@@ -1,0 +1,25 @@
+{
+  "languages": {
+    "en": {
+      "menu_items": ["Product", "Use Cases", "About Us", "Contact"],
+
+      "button_label": "Login",
+      "hero_features": [
+        "Trusted by leading marketers and agencies",
+        "No SDK required",
+        "Trusted by leading marketers and agencies"
+      ]
+    },
+    "ar": {
+      "menu_items": ["المنتج", "حالات الاستخدام", "من نحن", "تواصل معنا"],
+
+      "button_label": "تسجيل الدخول",
+      "hero_features": [
+        "موثوق به من قبل كبار المسوقين والوكالات",
+        "لا يتطلب SDK",
+        "موثوق به من قبل كبار المسوقين والوكالات"
+      ]
+    }
+  },
+  "link_urls": ["product", "use-cases", "about-us", "contact"]
+}

@@ -1,0 +1,33 @@
+{
+  "languages": {
+    "en": {
+      "title": "PROVEN TO PERFORM",
+      "subtitle": "-Testimonials",
+      "images": {
+        "img_1": {
+          "img": "./assets/proven_to_perform/left_profile.webp",
+          "by": "-Performance Director, Global Fashion Retailer"
+        },
+        "img_2": {
+          "img": "./assets/proven_to_perform/right_profile.webp",
+          "by": "-Regional QSR Director of Marketing"
+        }
+      }
+    },
+    "ar": {
+      "title": "أثبت فعاليته",
+      "subtitle": "آراء العملاء-",
+      "images": {
+        "img_1": {
+          "img": "./assets/proven_to_perform/right_ar_profile.webp",
+          "by": "-مدير الأداء، شركة أزياء عالمية"
+        },
+        "img_2": {
+          "img": "./assets/proven_to_perform/left_ar_profile.webp",
+          "by": "-مدير التسويق الإقليمي لسلسلة مطاعم سريعة الخدمة"
+        }
+      }
+    }
+  },
+  "grid": "./assets/proven_to_perform/grid.webp"
+}

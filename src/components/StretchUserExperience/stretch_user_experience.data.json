@@ -1,0 +1,46 @@
+{
+  "languages": {
+    "en": {
+      "title": {
+        "title": "THE STRETCH",
+        "title_2": "USER EXPERIENCE"
+      },
+      "steps": [
+        {
+          "subtitle_bold": "Generate Stretch Tag",
+          "subtitle": "for all Campaign Channels"
+        },
+        {
+          "subtitle_bold": "Download and add Tag",
+          "subtitle": "to all creatives"
+        },
+        {
+          "subtitle_bold": "Receive",
+          "subtitle": "report"
+        }
+      ],
+      "button_label": "Book a Demo"
+    },
+    "ar": {
+      "title": {
+        "title": "تجربة ستريتش",
+        "title_2": "للمستخدم"
+      },
+      "steps": [
+        {
+          "subtitle_bold": "إنشاء وسم ستريتش",
+          "subtitle": "لجميع قنوات الحملات"
+        },
+        {
+          "subtitle_bold": "نزّل وأضف الوسم",
+          "subtitle": "إلى جميع المواد الإبداعية"
+        },
+        {
+          "subtitle_bold": "استلم",
+          "subtitle": "التقرير"
+        }
+      ],
+      "button_label": "احجز عرضاً توضيحياً"
+    }
+  }
+}

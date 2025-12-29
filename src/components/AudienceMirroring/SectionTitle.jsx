@@ -1,0 +1,23 @@
+import PropTypes from "prop-types";
+import { Typography, SectionHeadContainer } from "../../components";
+
+const SectionTitle = ({ labels, dir }) => (
+  <SectionHeadContainer>
+    <Typography as="h2" variant="section-title" dir={dir}>
+      {labels.title}
+    </Typography>
+    <Typography as="h3" variant="section-subtitle" dir={dir}>
+      {labels.subtitle}
+    </Typography>
+  </SectionHeadContainer>
+);
+
+SectionTitle.propTypes = {
+  labels: PropTypes.shape({
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+  }).isRequired,
+  dir: PropTypes.string,
+};
+
+export default SectionTitle;

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Breakpoints */
+  --breakpoint-xs: 402px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1920px;
+
+  /* Fonts */
+  --font-manrope: "Manrope", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-tajawal: "Tajawal", sans-serif;
+
+  --color-primary: #1849eb;
+  --color-secondary: #ff4200;
+  --color-accent: #ff4200;
+  --color-text-muted: rgba(0, 0, 0, 0.9);
+
+  /* Border Radius */
+  --radius-pill: 276px;
+  --radius-pill-small: 230.45px;
+}
+
+/* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
+
+.section_head_container {
+  @apply flex w-full flex-col items-start lg:mb-12 xl:flex-row xl:items-end xl:justify-between xl:gap-x-16;
+}
+
+.section_title {
+  @apply font-poppins 3xl:text-[72px] max-w-[95%] text-[40px] leading-[108.457%] font-extrabold xl:text-[64px] 2xl:text-[64px];
+}
+
+.section_subtitle {
+  @apply font-poppins 3xl:text-[24px] 3xl:max-w-[852px] 3xl:text-right max-w-[400px] text-[14px] leading-normal font-normal xl:text-[64px] xl:leading-[108.457%] xl:font-extrabold 2xl:text-right 2xl:text-[20px] 2xl:leading-normal 2xl:font-normal;
+}
+
+.app_container {
+  width: 100%;
+  max-width: 95%;
+  margin-inline: auto;
+}
+@media (min-width: var(--breakpoint-sm)) {
+  .app_container {
+    max-width: 580px;
+  }
+}
+@media (min-width: var(--breakpoint-md)) {
+  .app_container {
+    max-width: 700px;
+  }
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .app_container {
+    max-width: 980px;
+  }
+}
+@media (min-width: var(--breakpoint-xl)) {
+  .app_container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: var(--breakpoint-2xl)) {
+  .app_container {
+    max-width: 1300px;
+  }
+}
+@media (min-width: var(--breakpoint-3xl)) {
+  .app_container {
+    max-width: 1552px;
+  }
+}
+
+@layer components {
+  .table-header-colored {
+    @apply -mr-px -ml-px rounded-tl-md rounded-tr-md border-[1.5px] border-b-black px-2 py-3 text-center font-bold text-white;
+  }
+  .primary-btn {
+    @apply rounded-pill-small bg-primary flex items-center justify-center gap-[22.544px] leading-normal font-bold text-white;
+    @apply h-[33px] w-full max-w-[172px] text-[18px]; /* Default mobile styles */
+
+    /* Small (sm) */
+    @apply sm:h-[38px] sm:max-w-[190px];
+
+    /* Medium (md) */
+    @apply md:h-[42px] md:max-w-[210px];
+
+    /* Large (lg) */
+    @apply lg:h-[50px] lg:max-w-[266px] lg:text-[28px];
+
+    /* Extra Large (xl) */
+    @apply xl:h-[52px] xl:max-w-[270px];
+
+    /* 3XL - Desktop */
+    @apply 3xl:text-[28px] 3xl:w-[320px] 3xl:h-[72px] 3xl:inline-flex 3xl:px-11 3xl:gap-2.5 3xl:rounded-pill;
+  }
+}
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  p {
+    /* Font Size Progression: 14 -> 15 -> 16 -> 18 -> 20 -> 21.175 -> 24 */
+    @apply 3xl:text-[24px] text-sm sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21.175px];
+  }
+}
+
+.stretch_user_experience {
+  position: relative;
+}
+
+.stretch_user_experience::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/stretch_user_experience/stretch_user_experience_background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  transform: rotate(90deg);
+  transform-origin: center;
+  pointer-events: none !important;
+  transition: transform 600ms linear;
+}
+
+@media (min-width: 1024px) {
+  .stretch_user_experience::before {
+    transform: rotate(0deg);
+    background-position: top left;
+  }
+}
+.menu_links_typography {
+  @apply font-manrope 3xl:text-[23px] lg:font-poppins 3xl:font-semibold 3xl:leading-[34px] text-left text-[16px] leading-[22px] font-normal lg:text-center;
+}
+/* .menu_links_typography {
+  font-family: var(--font-manrope);
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 22px;
+  font-weight: 500;
+}
+@media (min-width: var(--breakpoint-lg)) {
+  .menu_links_typography {
+    text-align: center;
+    font-family: var(--font-poppins);
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+} */

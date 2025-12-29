@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": {
+      "title": "STRETCH",
+      "subtitle": "Marketing made accountable.",
+      "subtitle_2": "Audiences made visible.",
+      "highlighted_subtitle": "Results made real.",
+      "description": "Your only SaaSS solution for Cross-Channel Audience Matching Audience Retargeting, Audience Enrichment, and Offline Attribution",
+      "button_label": "Book a Demo",
+      "hero_features": [
+        "Trusted by leading marketers and agencies",
+        "No SDK required",
+        "Trusted by leading marketers and agencies"
+      ]
+    },
+    "ar": {
+      "title": "ستريتش",
+      "subtitle": "التسويق أصبح قابلاً للقياس",
+      "subtitle_2": "الجمهور أصبح مرئياً",
+      "highlighted_subtitle": "والنتائج أصبحت حقيقة",
+      "description": "منصتك الوحيدة كخدمة لربط الجمهور عبر القنوات، وإعادة استهدافه، وإثراء البيانات، وقياس الأداء في القنوات غير المتصلة.",
+      "button_label": "احجز عرضاً توضيحياً",
+      "hero_features": [
+        "أكثر من 3 مليارات نقطة بيانات لدعم قياس أداء أكثر ذكاءً",
+        "لا يتطلب SDK",
+        "موثوق به من أبرز المسوقين والوكالات"
+      ]
+    }
+  },
+  "images": {
+    "hero_img": "/assets/hero/hero_img.webp",
+    "stretch_s": "/assets/hero/stretch_s.webp",
+    "dot": "/assets/hero/dot.webp"
+  }
+}
