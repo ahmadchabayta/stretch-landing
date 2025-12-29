@@ -5,6 +5,7 @@ import data from "./stretch_user_experience.data.json";
 import { Flex, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
+import { withBase } from "../../utils/withBase";
 
 const StretchUserExperience = () => {
   const { language } = useLanguage();
@@ -13,17 +14,17 @@ const StretchUserExperience = () => {
   const initialItems = [
     {
       id: "tags",
-      src: "/assets/stretch_user_experience/tags.webp",
+      src: withBase("assets/stretch_user_experience/tags.webp"),
       alt: "Dashboard campaigns view with Tags",
     },
     {
       id: "reports",
-      src: "/assets/stretch_user_experience/graphs.webp",
+      src: withBase("assets/stretch_user_experience/graphs.webp"),
       alt: "Dashboard reports stack",
     },
     {
       id: "platforms",
-      src: "/assets/stretch_user_experience/nav.webp",
+      src: withBase("assets/stretch_user_experience/nav.webp"),
       alt: "Platform list",
     },
   ];

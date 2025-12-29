@@ -7,6 +7,7 @@ import NavbarControl from "./NavbarControl/NavbarControl";
 import Menu from "./Menu/Menu";
 import { useLanguage } from "../../context/LanguageContext";
 import rawData from "./navbar.data.json";
+import { withBase } from "../../utils/withBase";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
     <nav className="app_container">
       <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
         <img
-          src="/assets/navbar/stretch_logo.webp"
+          src={withBase("assets/navbar/stretch_logo.webp")}
           alt="Stretch Logo"
           className="w-[171px] lg:w-[293px]"
           loading="eager"
