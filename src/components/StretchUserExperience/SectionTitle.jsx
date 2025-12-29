@@ -6,7 +6,7 @@ const SectionTitle = ({ currentStep, data }) => {
   const stepData = data.steps[currentStep - 1] || data.steps[0];
 
   return (
-    <SectionHeadContainer className="section_head_container">
+    <SectionHeadContainer className="section_head_container w-full">
       <Typography as="h2" variant="section-title">
         {data.title.title}
         <br />

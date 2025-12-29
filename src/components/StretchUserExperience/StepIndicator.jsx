@@ -7,7 +7,7 @@ const StepIndicator = ({ currentStep, subtitle, subtitleBold }) => (
     align="items-center"
     spaceX="lg:space-x-4"
     spaceY="space-y-3 lg:space-y-0"
-    className="stretch_step_indicator mx-0! mb-4"
+    className="stretch_step_indicator mx-0! mb-4 w-full xl:ml-auto xl:w-auto"
   >
     <div className="stretch_step_circle 3xl:w-[61.291px] 3xl:h-[61.291px] shrink-0">
       <Typography
