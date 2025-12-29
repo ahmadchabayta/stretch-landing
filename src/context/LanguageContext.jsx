@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { withBase } from "../utils/withBase";
 
 const LanguageContext = createContext(undefined);
 
 const LANGUAGES = {
-  en: { code: "en", label: "English", flag: "/gb.webp", dir: "ltr" },
-  ar: { code: "ar", label: "العربية", flag: "/sa.webp", dir: "rtl" },
+  en: { code: "en", label: "English", flag: withBase("gb.webp"), dir: "ltr" },
+  ar: { code: "ar", label: "العربية", flag: withBase("sa.webp"), dir: "rtl" },
 };
 
 const STORAGE_KEY = "stretch_language";

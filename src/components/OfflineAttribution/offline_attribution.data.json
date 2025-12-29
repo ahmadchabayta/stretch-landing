@@ -33,8 +33,8 @@
   },
   "images": {
     "large": {
-        "purple": "./assets/offline_attribution/purple.webp",
-        "orange": "./assets/offline_attribution/orange.webp"
+      "purple": "./assets/offline_attribution/purple.webp",
+      "orange": "./assets/offline_attribution/orange.webp"
     },
     "small": {
       "purple": "/assets/offline_attribution/mobile_purple.webp",
