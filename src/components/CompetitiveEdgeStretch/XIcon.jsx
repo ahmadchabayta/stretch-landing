@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const XIcon = (props) => {
-  const { size = 24, color = "#000", style = {} } = props;
+  const { size = 24, color = "#000", style = {}, className = "" } = props;
   return (
     <svg
       width={size}
@@ -10,6 +10,7 @@ const XIcon = (props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={style}
+      className={className}
       {...props}
     >
       <path
@@ -27,6 +28,7 @@ XIcon.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   style: PropTypes.object,
+  className: PropTypes.string,
 };
 
 export default XIcon;

@@ -4,13 +4,19 @@ import GridEventHeaders from "./Grid/GridEventHeaders";
 import GridHead from "./Grid/GridHead";
 import GridBody from "./Grid/GridBody";
 
-const Grid = ({ labels, activeTab, language }) => {
+const Grid = ({ labels, activeTab, language, setActiveTab }) => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const isArabic = language === "ar";
 
   return (
     <>
-      <GridEventHeaders labels={labels} isArabic={isArabic} />
+      <GridEventHeaders
+        labels={labels}
+        isArabic={isArabic}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        language={language}
+      />
       <GridHead labels={labels} isArabic={isArabic} />
       <GridBody
         channels={labels.channels}
@@ -36,6 +42,7 @@ Grid.propTypes = {
   }).isRequired,
   activeTab: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
+  setActiveTab: PropTypes.func.isRequired,
 };
 
 export default Grid;

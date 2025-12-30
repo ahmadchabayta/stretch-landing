@@ -25,7 +25,7 @@ const DesktopGrid = ({
           <div
             key={feature}
             className={cn(
-              "grid items-center gap-2 px-3 py-4 transition-colors duration-200 hover:bg-gray-50/50 sm:gap-3 sm:px-4 sm:py-5 lg:gap-4 lg:px-6 lg:py-6 xl:py-7",
+              "grid items-center gap-2 px-3 py-4 transition-colors duration-200 sm:gap-3 sm:px-4 sm:py-5 lg:gap-4 lg:px-6 lg:py-6 xl:py-7",
               "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6",
               rowIdx !== features.length - 1 && "border-b border-gray-100",
               isArabic ? "direction-rtl" : "",
@@ -38,8 +38,12 @@ const DesktopGrid = ({
             <div className={cn("flex items-center", isArabic ? "justify-end" : "justify-start")}>
               <Typography.Text
                 className={cn(
-                  "text-xs font-semibold text-gray-900 sm:text-sm xl:text-base",
-                  isArabic && "font-[Tajawal,sans-serif]",
+                  "text-[12.021px] font-bold text-black leading-normal text-justify",
+                  "lg:text-[20px]",
+                  "xl:text-[20px]",
+                  "2xl:text-[20px]",
+                  "3xl:text-[24px]",
+                  isArabic ? "font-[Tajawal,sans-serif]" : "font-poppins",
                 )}
               >
                 {feature}

@@ -4,7 +4,6 @@ import data from "./implementation_options.data.json";
 import Section from "../Section/Section";
 import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
-import ButtonGroup from "./ButtonGroup";
 import Grid from "./Grid";
 
 const ImplementationOptions = ({ id }) => {
@@ -21,15 +20,12 @@ const ImplementationOptions = ({ id }) => {
     >
       <SectionTitle labels={labels} language={language} />
       <div className="w-full overflow-x-auto text-sm">
-        {/* Tab Switcher for mobile */}
-        <ButtonGroup
+        <Grid
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
           labels={labels}
           language={language}
+          setActiveTab={setActiveTab}
         />
-
-        <Grid activeTab={activeTab} labels={labels} language={language} />
       </div>
     </Section>
   );

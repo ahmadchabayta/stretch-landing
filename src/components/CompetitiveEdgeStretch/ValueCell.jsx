@@ -16,21 +16,35 @@ export const getValueStyles = (value, isStretch, idx, small) => {
 };
 
 const ValueCell = ({ value, small, partialLabel }) => {
-  const iconSize = small ? 27 : 32;
-
-  if (value === "Partial") return partialLabel;
-  if (value === "✓") {
+  if (value === "Partial") {
     return (
       <span
-        className={`flex items-center justify-center ${
-          small ? "h-[22px] w-[27px]" : "h-[26px] w-8"
-        } rounded-md bg-transparent`}
+        className={`
+          text-white text-justify font-poppins font-bold leading-normal
+          text-[12.021px]
+          lg:text-[19.934px]
+          xl:text-[19.934px]
+          2xl:text-[19.934px]
+          3xl:text-[24px]
+        `}
       >
-        <CheckIcon size={iconSize} />
+        {partialLabel}
       </span>
     );
   }
-  return <XIcon size={small ? 20 : iconSize} color="#ff4200" />;
+  if (value === "✓") {
+    return (
+      <span className="flex items-center justify-center">
+        <CheckIcon className="w-[21.84px] h-[17.94px] lg:w-[43.87px] lg:h-[36.033px] xl:w-[55.65px] xl:h-[55.65px] 2xl:w-[43.87px] 2xl:h-[36.033px] 3xl:w-[52.818px] 3xl:h-[43.382px]" />
+      </span>
+    );
+  }
+  return (
+    <XIcon
+      className="w-[28.34px] h-[28.34px] rotate-45 lg:w-[46.995px] lg:h-[46.995px] lg:rotate-45 xl:w-[46.995px] xl:h-[46.995px] xl:rotate-45 2xl:w-[46.995px] 2xl:h-[46.995px] 2xl:rotate-45 3xl:w-[47.15px] 3xl:h-[47.15px]"
+      color="#ff4200"
+    />
+  );
 };
 
 ValueCell.propTypes = {

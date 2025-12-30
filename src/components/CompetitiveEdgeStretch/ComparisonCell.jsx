@@ -14,11 +14,13 @@ const ComparisonCell = ({
   <div className={cn("flex items-center justify-center", className)}>
     <div
       className={cn(
-        "flex w-full items-center justify-center rounded-xl font-bold transition-transform duration-200",
+        "flex items-center justify-center rounded-xl font-bold transition-all duration-200",
+        "w-[190px] h-[72px] px-[16.607px] py-[24.156px]",
+        "[&:hover]:!bg-black [&:hover]:scale-105",
         isArabic && "font-[Tajawal,sans-serif]",
         isSmall
-          ? "h-14 rounded-lg text-sm shadow-sm transition-all sm:h-16 sm:text-base"
-          : "h-12 max-w-[100px] text-sm hover:scale-105 xl:h-14 xl:text-base",
+          ? "rounded-lg text-sm shadow-sm transition-all sm:text-base"
+          : "text-sm xl:text-base",
         isStretch && isSmall && "scale-105 shadow-md",
       )}
       style={getValueStyles(value, isStretch, rowIdx, isSmall)}

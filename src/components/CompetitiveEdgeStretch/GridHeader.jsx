@@ -14,7 +14,7 @@ const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
   return (
     <div
       className={cn(
-        "grid gap-2 border-b border-gray-200 bg-linear-to-br from-gray-50 to-white px-3 py-4 sm:gap-3 sm:px-4 lg:gap-4 lg:px-6",
+        "grid gap-2  px-3 py-4 sm:gap-3 sm:px-4 lg:gap-4 lg:px-6",
         "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6",
         isArabic ? "direction-rtl" : "",
       )}
@@ -38,8 +38,12 @@ const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
         >
           <Typography.Text
             className={cn(
-              "text-[11px] leading-tight font-bold text-gray-800 sm:text-xs lg:text-sm xl:text-base",
-              isArabic && "font-[Tajawal,sans-serif]",
+              "text-[12.021px] font-bold text-black leading-normal text-justify",
+              "lg:text-[20px]",
+              "xl:text-[20px]",
+              "2xl:text-[20px]",
+              "3xl:text-[24px]",
+              isArabic ? "font-[Tajawal,sans-serif]" : "font-poppins",
             )}
           >
             {col}

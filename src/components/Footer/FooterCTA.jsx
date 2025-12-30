@@ -27,7 +27,7 @@ const FooterCTA = ({ labels, language }) => {
         <Button variant="demo" className={_language}>
           {labels.button_label.demo_button_label}
         </Button>
-        <Button variant="footer_contact" className={`px-12 ${_language}`}>
+        <Button variant="footer_contact" className={`${_language}`}>
           {labels.button_label.contact_button_label}
         </Button>
       </Flex>
