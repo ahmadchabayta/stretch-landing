@@ -21,8 +21,8 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
   };
 
   const variants = useMemo(() => {
-    const tilt = isLg ? -10 : -6;
-    const yaw = isLg ? -18 : -10;
+    const tilt = isLg ? -15 : -8;
+    const yaw = isLg ? -12 : -8;
     const depth = isXl ? 90 : isLg ? 70 : 30;
     const sideOffset = isLg ? 10 : 4;
     const verticalOffset = isLg ? 42 : 32;
@@ -39,7 +39,7 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
         filter: "blur(0px)",
         rotateX: tilt,
         rotateY: yaw,
-        rotateZ: isLg ? -2 : -1,
+        rotateZ: isLg ? -1 : -0.5,
       },
       next: {
         x: `${sideOffset}%`,
@@ -49,9 +49,9 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
         zIndex: 6,
         opacity: 0.45,
         filter: "blur(2px)",
-        rotateX: Math.abs(tilt) / 1.2,
+        rotateX: tilt / 1.2,
         rotateY: yaw,
-        rotateZ: isLg ? -1 : 0,
+        rotateZ: isLg ? -0.5 : 0,
       },
       prev: {
         x: `-${sideOffset}%`,
@@ -61,9 +61,9 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
         zIndex: 6,
         opacity: 0.45,
         filter: "blur(2px)",
-        rotateX: tilt * 1.8,
+        rotateX: tilt * 1.5,
         rotateY: yaw,
-        rotateZ: isLg ? -3 : -1,
+        rotateZ: isLg ? -2 : -1,
       },
     };
   }, [isLg, isXl]);

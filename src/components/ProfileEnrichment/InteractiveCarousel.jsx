@@ -20,7 +20,7 @@ const InteractiveCarousel = ({ images }) => {
       direction="flex-col"
       align="items-center"
       justify="justify-center"
-      className="relative mx-auto -mt-6 w-full md:-mt-10 lg:-mt-14"
+      className="relative mx-auto w-full"
     >
       <Flex
         align="items-center"
