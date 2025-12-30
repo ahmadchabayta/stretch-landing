@@ -32,7 +32,7 @@ const Footer = ({ id }) => {
         direction="flex-col"
         align="items-center!"
         justify="justify-between"
-        className="w-full flex-1 bg-black py-16! min-h-[548px]"
+        className="w-full flex-1 bg-black pt-16! min-h-[548px] pb-24"
       >
         <img
           className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px]"
