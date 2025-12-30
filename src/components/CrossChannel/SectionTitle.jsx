@@ -10,7 +10,7 @@ const SectionTitle = ({ labels }) => (
     <Typography
       as="h3"
       variant="section-subtitle"
-      className="text-secondary hidden font-bold [direction:rtl] xl:block"
+      className="text-secondary font-bold hidden [direction:rtl] xl:block"
     >
       {labels.subtitle}
     </Typography>

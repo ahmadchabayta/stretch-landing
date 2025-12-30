@@ -1,43 +1,39 @@
 import PropTypes from "prop-types";
 
-import { Flex, Typography, Button } from "..";
+import { Button, Flex, Typography } from "..";
 
-const FooterCTA = ({ labels, language }) => (
-  <Flex
-    direction="flex-col"
-    align="items-center"
-    justify="justify-center"
-    spaceY="space-y-8"
-    className="mx-auto mt-8 max-w-3xl flex-1 text-center"
-  >
-    <Typography
-      as="p"
-      variant="footer-desc"
-      className={language === "ar" ? "font-[Tajawal,sans-serif]" : ""}
-    >
-      {labels.description}
-    </Typography>
-
+const FooterCTA = ({ labels, language }) => {
+  const _language = language === "ar" ? "font-[Tajawal,sans-serif]" : "font-poppins";
+  return (
     <Flex
-      direction="flex-col xl:flex-row"
+      direction="flex-col"
       align="items-center"
       justify="justify-center"
-      spaceY="space-y-[29px] xl:space-y-0"
-      spaceX="xl:space-x-4 3xl:space-x-[60px]!"
-      className="mt-10!"
+      spaceY="space-y-8"
+      className="mx-auto mt-8 max-w-3xl flex-1 text-center"
     >
-      <Button variant="demo" className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}>
-        {labels.button_label.demo_button_label}
-      </Button>
-      <Button
-        variant="footer_contact"
-        className={`px-12 ${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
+      <Typography as="p" variant="footer-desc" className={_language}>
+        {labels.description}
+      </Typography>
+
+      <Flex
+        direction="flex-col xl:flex-row"
+        align="items-center"
+        justify="justify-center"
+        spaceY="space-y-[29px] xl:space-y-0"
+        spaceX="xl:space-x-4 3xl:space-x-[60px]!"
+        className="mt-10!"
       >
-        {labels.button_label.contact_button_label}
-      </Button>
+        <Button variant="demo" className={_language}>
+          {labels.button_label.demo_button_label}
+        </Button>
+        <Button variant="footer_contact" className={`px-12 ${_language}`}>
+          {labels.button_label.contact_button_label}
+        </Button>
+      </Flex>
     </Flex>
-  </Flex>
-);
+  );
+};
 
 FooterCTA.propTypes = {
   labels: PropTypes.shape({

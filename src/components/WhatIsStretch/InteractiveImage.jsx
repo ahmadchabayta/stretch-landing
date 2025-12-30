@@ -78,10 +78,10 @@ const InteractiveImage = () => {
         lg:top-[3%]
         xl:top-[5%]
         xl:left-auto
-        xl:right-[6%]
+        xl:right-[12%]
         xl:translate-x-0
         2xl:top-[5%]
-        2xl:right-[8%]
+        2xl:right-[14%]
         3xl:top-[5%]
         3xl:right-[10%]
       `;
@@ -92,7 +92,7 @@ const InteractiveImage = () => {
     md:h-[220px]
     lg:h-[280px]
     xl:h-[340px]
-    2xl:h-[420px]
+    2xl:h-[360px]
     3xl:h-[500px]
   `;
 
@@ -119,10 +119,10 @@ const InteractiveImage = () => {
         md:top-[22%]
         lg:top-[23%]
         xl:top-[25%]
-        xl:left-[5%]
+        xl:left-[2%]
         xl:translate-x-0
         2xl:top-[25%]
-        2xl:left-[6%]
+        2xl:left-[3%]
         3xl:top-[25%]
         3xl:left-[7%]
       `;
@@ -133,7 +133,7 @@ const InteractiveImage = () => {
     md:h-[200px]
     lg:h-[250px]
     xl:h-[300px]
-    2xl:h-[360px]
+    2xl:h-[320px]
     3xl:h-[440px]
   `;
 
@@ -160,10 +160,10 @@ const InteractiveImage = () => {
         lg:top-[43%]
         xl:top-[45%]
         xl:left-auto
-        xl:right-[4%]
+        xl:right-[8%]
         xl:translate-x-0
         2xl:top-[45%]
-        2xl:right-[5%]
+        2xl:right-[10%]
         3xl:top-[45%]
         3xl:right-[7%]
       `;
@@ -174,7 +174,7 @@ const InteractiveImage = () => {
     md:h-[210px]
     lg:h-[270px]
     xl:h-[320px]
-    2xl:h-[400px]
+    2xl:h-[350px]
     3xl:h-[480px]
   `;
 
@@ -188,8 +188,8 @@ const InteractiveImage = () => {
         className="absolute top-[65%] left-1/2 w-full -translate-x-1/2 
         md:top-[67%] 
         lg:top-[68%] 
-        xl:top-[70%] xl:left-[7%] xl:translate-x-0 
-        2xl:top-[70%] 
+        xl:top-[70%] xl:left-[3%] xl:translate-x-0 
+        2xl:top-[70%] 2xl:left-[3%] 
         3xl:top-[70%]"
       >
         <img src={iphoneSrc} alt="iPhone" className={iphoneClass} />

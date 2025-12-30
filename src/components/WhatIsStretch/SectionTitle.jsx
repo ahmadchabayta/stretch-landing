@@ -12,11 +12,13 @@ const SectionTitle = ({ data }) => (
       className="3xl:[direction:rtl] w-full max-w-[343px] [direction:ltr] md:max-w-[500px] lg:w-auto lg:max-w-[650px] 2xl:max-w-[852px]"
     >
       <Typography.Text>{data.description.part1}</Typography.Text>
-      <Typography.Text accent className="3xl:whitespace-pre-line">
+      <Typography.Text accent bold className="3xl:whitespace-pre-line">
         {data.description.highlighted1}
       </Typography.Text>
       <Typography.Text>{data.description.part2}</Typography.Text>
-      <Typography.Text accent>{data.description.highlighted2}</Typography.Text>
+      <Typography.Text accent bold>
+        {data.description.highlighted2}
+      </Typography.Text>
     </Typography>
   </SectionHeadContainer>
 );

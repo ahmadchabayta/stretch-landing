@@ -70,9 +70,9 @@ const typographyVariants = {
     3xl:text-[72px]
   `,
   "section-subtitle": `
-    font-poppins font-normal
+    font-poppins
     text-[14px] leading-normal
-    xl:text-[20px] xl:font-normal xl:leading-[108.457%]
+    xl:text-[20px] xl:leading-[108.457%]
     2xl:text-[20px] 2xl:leading-normal 2xl:text-right
     3xl:text-[24px] 3xl:text-right
   `,

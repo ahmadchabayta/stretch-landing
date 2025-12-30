@@ -8,7 +8,9 @@ const SectionTitle = ({ labels }) => (
     </Typography>
     <Typography as="h3" variant="section-subtitle">
       {labels.subtitle.subtitle}{" "}
-      <Typography.Text secondary>{labels.subtitle.highlighted}</Typography.Text>{" "}
+      <Typography.Text bold accent>
+        {labels.subtitle.highlighted}
+      </Typography.Text>{" "}
       {labels.subtitle.subtitle_2}{" "}
     </Typography>
   </SectionHeadContainer>

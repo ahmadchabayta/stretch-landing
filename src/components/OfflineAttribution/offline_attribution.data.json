@@ -4,7 +4,8 @@
       "title": "OFFLINE ATTRIBUTION",
       "subtitles": {
         "subtitle": "Stretch tracks who saw or clicked your ads across channels, and matches that exposure to real-world location visits.",
-        "subtitle_highlight": "matches that exposure to real-world location"
+        "subtitle_highlight": "matches that exposure to real-world location",
+        "visits": "visits"
       },
       "number": "1,300",
       "description": {

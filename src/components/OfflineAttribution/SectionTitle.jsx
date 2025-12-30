@@ -8,7 +8,12 @@ const SectionTitle = ({ labels, dir }) => (
     </Typography>
     <Typography as="h3" variant="section-subtitle" className="xl:[direction:rtl]" dir={dir}>
       {labels.subtitles.subtitle}{" "}
-      <Typography.Text accent>{labels.subtitles.subtitle_highlight}</Typography.Text>
+      <Typography.Text accent bold>
+        {labels.subtitles.subtitle_highlight}
+      </Typography.Text>
+      <Typography.Text>
+        {labels.subtitles.visits ? ` ${labels.subtitles.visits}` : ""}
+      </Typography.Text>
     </Typography>
   </SectionHeadContainer>
 );
@@ -19,6 +24,7 @@ SectionTitle.propTypes = {
     subtitles: PropTypes.shape({
       subtitle: PropTypes.string.isRequired,
       subtitle_highlight: PropTypes.string.isRequired,
+      visits: PropTypes.string,
     }).isRequired,
   }).isRequired,
   dir: PropTypes.string.isRequired,

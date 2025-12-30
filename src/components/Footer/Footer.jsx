@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import data from "./footer.data.json";
 import { useLanguage } from "../../context/LanguageContext";
+import { Container, Flex } from "../UI";
+import data from "./footer.data.json";
 import FooterCTA from "./FooterCTA";
 import FooterLinksColumns from "./FooterLinksColumns";
 import SectionTitle from "./SectionTitle";
-import { Container, Flex } from "../UI";
 
 const Footer = ({ id }) => {
   const { language } = useLanguage();
