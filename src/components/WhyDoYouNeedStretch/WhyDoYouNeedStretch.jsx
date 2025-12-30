@@ -14,7 +14,7 @@ const WhyDoYouNeedStretch = ({ id }) => {
         id={id}
         padding="none"
         container={true}
-        className="flex flex-col items-center justify-center"
+        className="flex flex-col items-center justify-center min-h-0!"
       >
         <SectionTitle data={sectionLabels} />
 

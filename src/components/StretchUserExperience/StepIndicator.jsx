@@ -5,7 +5,7 @@ const StepIndicator = ({ currentStep, subtitle, subtitleBold }) => (
   <Flex
     direction="flex-row"
     align="items-center"
-    spaceX="space-x-4"
+    gap="gap-4"
     spaceY="space-y-3 lg:space-y-0"
     className="stretch_step_indicator mx-0! mb-4 w-full xl:ml-auto xl:w-auto"
   >

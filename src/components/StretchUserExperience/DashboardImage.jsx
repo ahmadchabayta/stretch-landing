@@ -14,7 +14,7 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
       opacity: 1,
       scale: 1,
       z: 0,
-      x: "0px",
+      x: isLargeScreen ? "clamp(-150px, -15vw, -250px)" : "0px",
       y: isLargeScreen ? "0px" : "-220px",
       width: "clamp(400px, 70vw, 1100px)",
       zIndex: 30,
@@ -25,8 +25,8 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
       z: -50,
       x: isLargeScreen
         ? isRTL
-          ? "clamp(-250px, -35vw, -700px)"
-          : "clamp(250px, 35vw, 700px)"
+          ? "clamp(-250px, -30vw, -650px)"
+          : "clamp(250px, 30vw, 650px)"
         : "0px",
       y: isLargeScreen ? "0px" : "80px",
       width: "clamp(260px, 45vw, 700px)",
@@ -38,10 +38,10 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
       z: -100,
       x: isLargeScreen
         ? isRTL
-          ? "clamp(250px, 35vw, 700px)"
-          : "clamp(-250px, -35vw, -700px)"
+          ? "clamp(250px, 30vw, 650px)"
+          : "clamp(-250px, -30vw, -650px)"
         : "0px",
-      y: isLargeScreen ? "0px" : "380px",
+      y: isLargeScreen ? "0px" : "180px",
       width: "clamp(260px, 45vw, 700px)",
       zIndex: 10,
     },
