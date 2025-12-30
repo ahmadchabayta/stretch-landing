@@ -23,8 +23,8 @@ const FooterCTA = ({ labels, language }) => (
       align="items-center"
       justify="justify-center"
       spaceY="space-y-[29px] xl:space-y-0"
-      spaceX="xl:space-x-4 3xl:space-x-8"
-      className="mb-[97px] h-[57px]! py-0!"
+      spaceX="xl:space-x-4 3xl:space-x-[60px]!"
+      className="h-[57px]! mt-10!"
     >
       <Button
         variant="demo"

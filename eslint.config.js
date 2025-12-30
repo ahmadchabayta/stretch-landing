@@ -38,9 +38,15 @@ export default defineConfig([
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
       ...importPlugin.configs.recommended.rules,
+      ...prettier.rules,
 
       // Prettier
-      "prettier/prettier": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto",
+        },
+      ],
 
       // Airbnb-style strict rules
       "no-console": ["warn", { allow: ["warn", "error"] }],
@@ -50,17 +56,6 @@ export default defineConfig([
       "prefer-const": "error",
       "no-var": "error",
       "object-shorthand": ["error", "always"],
-      "quote-props": "off",
-      quotes: "off",
-      semi: "off",
-      "comma-dangle": "off",
-      "no-trailing-spaces": "off",
-      "eol-last": "off",
-      indent: "off",
-      "max-len": "off",
-      "arrow-body-style": "off",
-      "prefer-arrow-callback": "off",
-      "prefer-template": "off",
 
       // React-specific strict rules
       "react/prop-types": 2, // Using TypeScript instead
@@ -117,5 +112,4 @@ export default defineConfig([
       },
     },
   },
-  prettier,
 ]);

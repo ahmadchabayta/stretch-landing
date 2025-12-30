@@ -6,8 +6,6 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
   const transitionMs = 600;
   const transitionSec = transitionMs / 1000;
   const isLargeScreen = useMediaQuery("(min-width: 1024px)");
-  const isXLScreen = useMediaQuery("(min-width: 1440px)");
-  const isMidScreen = useMediaQuery("(min-width: 1024px) and (max-width: 1280px)");
 
   // 1. Define prominence styles based on position
   const isRTL = language === "ar";
@@ -16,51 +14,35 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
       opacity: 1,
       scale: 1,
       z: 0,
-      x: isLargeScreen
-        ? isRTL
-          ? isMidScreen
-            ? "clamp(150px, 30vw, 280px)"
-            : isXLScreen
-              ? "clamp(200px, 45vw, 320px)"
-              : "clamp(150px, 38vw, 380px)"
-          : isMidScreen
-            ? "clamp(-150px, -30vw, -280px)"
-            : isXLScreen
-              ? "clamp(-320px, -45vw, -550px)"
-              : "clamp(-150px, -38vw, -380px)"
-        : "0px",
-      y: isLargeScreen ? "0px" : "-220px", // Top on small screens
-      width: "clamp(260px, 55vw, 830px)",
+      x: "0px",
+      y: isLargeScreen ? "0px" : "-220px",
+      width: "clamp(400px, 70vw, 1100px)",
       zIndex: 30,
     },
     second: {
-      opacity: 0.7,
-      scale: 0.88,
-      z: -100,
-      x: "0px", // Center position
-      y: "0px", // Center on all screens
-      width: "clamp(220px, 48vw, 760px)",
+      opacity: 0.95,
+      scale: 0.65,
+      z: -50,
+      x: isLargeScreen
+        ? isRTL
+          ? "clamp(-250px, -35vw, -700px)"
+          : "clamp(250px, 35vw, 700px)"
+        : "0px",
+      y: isLargeScreen ? "0px" : "80px",
+      width: "clamp(260px, 45vw, 700px)",
       zIndex: 20,
     },
     third: {
-      opacity: 0.45,
-      scale: 0.72,
-      z: -200,
+      opacity: 0.9,
+      scale: 0.65,
+      z: -100,
       x: isLargeScreen
         ? isRTL
-          ? isMidScreen
-            ? "clamp(-150px, -30vw, -280px)"
-            : isXLScreen
-              ? "clamp(-500px, -45vw, -550px)"
-              : "clamp(-150px, -38vw, -380px)"
-          : isMidScreen
-            ? "clamp(150px, 30vw, 280px)"
-            : isXLScreen
-              ? "clamp(200px, 45vw, 550px)"
-              : "clamp(150px, 38vw, 380px)"
+          ? "clamp(250px, 35vw, 700px)"
+          : "clamp(-250px, -35vw, -700px)"
         : "0px",
-      y: isLargeScreen ? "0px" : "180px", // Bottom on small screens
-      width: "clamp(180px, 40vw, 560px)",
+      y: isLargeScreen ? "0px" : "380px",
+      width: "clamp(260px, 45vw, 700px)",
       zIndex: 10,
     },
   };

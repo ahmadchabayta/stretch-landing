@@ -6,9 +6,11 @@ const HeroFeatures = ({ data }) => (
     {data.map((el, i) => (
       <List.Item
         key={`${el}_${i}`}
-        className="3xl:h-[30px] 3xl:gap-[13px] flex items-center justify-center gap-3"
+        className="3xl:h-[30px] flex items-center justify-center space-x-4"
       >
-        <span className="3xl:w-6 3xl:h-6">●</span>
+        <Typography as="p" className="3xl:w-6 3xl:h-6">
+          ●
+        </Typography>
         <Typography as="p" variant="hero-feature" className="max-w-[471px]">
           {el}
         </Typography>

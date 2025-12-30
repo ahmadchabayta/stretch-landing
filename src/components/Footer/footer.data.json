@@ -11,13 +11,7 @@
         "demo_button_label": "Book a Demo",
         "contact_button_label": "Contact Us Now"
       },
-      "footer_links": [
-        "Company Info",
-        "Privacy & Terms",
-        "Support",
-        "Contact",
-        "Powered by Memob+"
-      ]
+      "footer_links": ["Company Info", "Privacy & Terms", "Support", "Contact", "Powered by Memob+"]
     },
     "ar": {
       "title": "حلقتك المفقودة",
@@ -30,13 +24,7 @@
         "demo_button_label": "احجز عرضاً توضيحياً",
         "contact_button_label": "تواصل معنا الآن"
       },
-      "footer_links": [
-        "معلومات الشركة",
-        "الخصوصية والشروط",
-        "الدعم",
-        "اتصل بنا",
-        "مدعوم من Memob+"
-      ]
+      "footer_links": ["معلومات الشركة", "الخصوصية والشروط", "الدعم", "اتصل بنا", "مدعوم من Memob+"]
     }
   },
   "footer_logo": "./assets/footer/footer_logo.webp",

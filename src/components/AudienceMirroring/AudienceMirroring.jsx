@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Flex, Section, Wrapper } from "../../components";
+import { Container, Flex, Section, Wrapper } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import rawData from "./audience_mirroring.data.json";
 import InteractiveImage from "./InteractiveImage";
@@ -12,15 +12,17 @@ const AudienceMirroring = ({ id }) => {
   const dir = currentLanguage?.dir || "ltr";
 
   return (
-    <Section id={id} container padding="none" className="relative flex flex-col">
-      <SectionTitle labels={labels} dir={dir} />
-      <Flex flex="true" direction="flex-col">
-        <Wrapper className="my-6">
-          <InteractiveImage data={labels} />
-        </Wrapper>
-        <MappedDescription labels={labels} dir={dir} />
-      </Flex>
-    </Section>
+    <Container>
+      <Section id={id} padding="none" className="relative flex flex-col">
+        <SectionTitle labels={labels} dir={dir} />
+        <Flex flex="true" direction="flex-col">
+          <Wrapper className="my-6">
+            <InteractiveImage data={labels} />
+          </Wrapper>
+          <MappedDescription labels={labels} dir={dir} />
+        </Flex>
+      </Section>
+    </Container>
   );
 };
 

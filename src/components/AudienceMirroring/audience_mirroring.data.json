@@ -28,7 +28,7 @@
       "id": "match-rate",
       "src": "./assets/audience_mirroring/match_rate.webp",
       "alt": "Match Rate",
-      "className": "absolute right-0 top-[210px] w-[113px] md:right-[27%] lg:right-[32%]"
+      "className": "absolute right-0 top-[-35px] w-[113px] md:right-[27%] lg:right-[32%] xl:right-[16%] xl:top-[7%] 2xl:top-[5%] 2xl:right-[16%] 3xl:right-[29%] 3xl:top-[-10%]"
     },
     {
       "id": "orange-avatars",

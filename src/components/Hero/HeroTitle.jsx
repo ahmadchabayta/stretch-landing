@@ -3,7 +3,7 @@ import { Typography } from "..";
 
 const HeroTitle = ({ sectionLabels }) => (
   <>
-    <Typography as="h1" variant="hero-title" className="mb-6 lg:mb-7">
+    <Typography as="h1" variant="hero-title" className="mb-[12.37px] lg:mb-6 3xl:mb-7">
       {sectionLabels.title}
     </Typography>
 
@@ -11,7 +11,7 @@ const HeroTitle = ({ sectionLabels }) => (
     <Typography
       as="h2"
       variant="hero-subtitle"
-      className="mb-6 max-w-[370px] space-y-1 lg:mb-8 lg:max-w-[761px] 2xl:max-w-none"
+      className="mb-[11.71px] max-w-[370px] space-y-1 lg:mb-[21.2px] xl:mb-[68.2px] 2xl:mb-[24.7px] 3xl:mb-7 lg:max-w-[761px] 2xl:max-w-none"
     >
       <Typography.Text br>{sectionLabels.subtitle}</Typography.Text>
       <Typography.Text br>{sectionLabels.subtitle_2}</Typography.Text>

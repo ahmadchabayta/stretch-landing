@@ -4,7 +4,7 @@ import Description from "./Description";
 import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
 import { useLanguage } from "../../context/LanguageContext";
-import { Flex, Section } from "../../components";
+import { Flex, Section, Container } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
 
 const CrossChannel = ({ id }) => {
@@ -14,10 +14,12 @@ const CrossChannel = ({ id }) => {
 
   return (
     <Section id={id} container={false} padding="none" className="relative min-h-0! overflow-hidden">
-      <Flex direction="flex-col" className="app_container relative">
-        <SectionTitle labels={labels} language={language} />
-        <SectionData labels={labels} language={language} percentageRef={percentageRef} />
-      </Flex>
+      <Container>
+        <Flex direction="flex-col" className="relative">
+          <SectionTitle labels={labels} language={language} />
+          <SectionData labels={labels} language={language} percentageRef={percentageRef} />
+        </Flex>
+      </Container>
 
       {/* Image and Description Container */}
       <Flex

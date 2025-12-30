@@ -21,3 +21,4 @@ export { default as Wrapper } from "./UI/Wrapper/Wrapper";
 export { default as Flex } from "./UI/Flex/Flex";
 export { default as SectionHeadContainer } from "./UI/SectionHeadContainer/SectionHeadContainer";
 export { default as Image } from "./UI/Image/Image";
+export { default as Container } from "./UI/Container/Container";

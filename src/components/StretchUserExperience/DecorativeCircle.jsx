@@ -14,8 +14,7 @@ const DecorativeCircle = ({ type, onClick }) => {
       },
     },
     blueGradient: {
-      className:
-        "pointer-events-none hidden 3xl:block absolute left-[41px] top-[364px] w-[554px] h-[554px]",
+      className: "pointer-events-none  absolute left-[41px] top-[364px] w-[554px] h-[554px]",
       children: (
         <div
           className="absolute inset-0 rounded-full bg-linear-to-br from-[#1849EB] to-[#0F2A9A] blur-2xl"

@@ -8,6 +8,7 @@ import Menu from "./Menu/Menu";
 import { useLanguage } from "../../context/LanguageContext";
 import rawData from "./navbar.data.json";
 import { withBase } from "../../utils/withBase";
+import { Container } from "../UI";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   const menuRef = useRef(null);
 
-  const isDesktopOrUp = useMediaQuery("lg");
+  const isDesktopOrUp = useMediaQuery("xl");
 
   useEffect(() => {
     if (isDesktopOrUp && isMenuOpen) {
@@ -37,29 +38,31 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="app_container">
-      <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
-        <img
-          src={withBase("assets/navbar/stretch_logo.webp")}
-          alt="Stretch Logo"
-          className="w-[171px] lg:w-[293px]"
-          loading="eager"
-        />
+    <Container>
+      <nav>
+        <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
+          <img
+            src={withBase("assets/navbar/stretch_logo.webp")}
+            alt="Stretch Logo"
+            className="w-[171px] lg:w-[293px]"
+            loading="eager"
+          />
 
-        <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
+          <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
 
-        <MobileMenu ref={menuRef} isOpen={isMenuOpen} data={data} linkUrls={rawData.link_urls} />
+          <MobileMenu ref={menuRef} isOpen={isMenuOpen} data={data} linkUrls={rawData.link_urls} />
 
-        <Menu
-          className="hidden min-w-[50%] justify-center xl:flex"
-          isOpen={true}
-          data={data}
-          linkUrls={rawData.link_urls}
-        />
+          <Menu
+            className="hidden min-w-[50%] justify-center xl:flex"
+            isOpen={true}
+            data={data}
+            linkUrls={rawData.link_urls}
+          />
 
-        <NavbarControl className="hidden xl:flex" data={data} />
-      </div>
-    </nav>
+          <NavbarControl className="hidden xl:flex" data={data} />
+        </div>
+      </nav>
+    </Container>
   );
 };
 

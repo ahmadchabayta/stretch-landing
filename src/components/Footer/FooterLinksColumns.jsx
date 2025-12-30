@@ -53,8 +53,8 @@ const FooterLinksColumns = ({ labels, language }) => {
       <Flex
         className="hidden w-full items-center md:flex md:items-start xl:hidden"
         direction="flex-col md:flex-row"
-        justify="md:justify-center"
-        gap="md:gap-[48px] lg:gap-[64px]"
+        justify="md:justify-between"
+        gap="md:gap-12"
       >
         {twoColumnSplit.map((column, columnIndex) =>
           renderColumn(
@@ -70,8 +70,8 @@ const FooterLinksColumns = ({ labels, language }) => {
       <Flex
         className="hidden w-full items-center xl:flex xl:items-start"
         direction="flex-col xl:flex-row"
-        justify="xl:justify-center"
-        gap="xl:gap-[48px] 3xl:gap-[64px]"
+        justify="xl:justify-between"
+        gap="xl:gap-16"
       >
         {threeColumnSplit.map((column, columnIndex) =>
           renderColumn(

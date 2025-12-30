@@ -26,7 +26,7 @@ const baseButtonStyles = `
   sm:w-[172px] sm:h-[33.4px] sm:text-[18px]
   md:text-[20px]
   lg:text-[24px]
-  xl:text-[28px]
+  xl:text-[24px]
   2xl:text-[30px]
   3xl:text-[32px] 3xl:rounded-pill
 `;

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Typography } from "../../components";
+import { Container, Typography } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
 import cn from "../../utils/cn";
 
@@ -11,11 +11,11 @@ const SectionData = ({ labels, dir, language }) => {
   });
 
   return (
-    <div
+    <Container
       className={cn(
         "flex items-center justify-between",
-        "app_container z-50",
-        "2xl:absolute 2xl:top-[151px]",
+        "z-50",
+        "2xl:absolute 2xl:top-80",
         language === "en" ? "2xl:right-[111px]" : "2xl:left-[111px]",
         "3xl:w-[920px]! 2xl:w-[620px]!",
       )}
@@ -34,7 +34,7 @@ const SectionData = ({ labels, dir, language }) => {
         <br />
         <Typography.Text className="font-bold">{labels.description.highlight}</Typography.Text>
       </Typography>
-    </div>
+    </Container>
   );
 };
 

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { Typography } from "../../components";
+import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels }) => (
-  <div className="section_head_container mb-0!">
+  <SectionHeadContainer className="mb-0!">
     <Typography as="h2" variant="section-title" className="max-w-[808px]!">
       {labels.title}
     </Typography>
@@ -10,11 +10,11 @@ const SectionTitle = ({ labels }) => (
     <Typography
       as="h3"
       variant="section-subtitle"
-      className="text-secondary hidden font-bold [direction:rtl] 2xl:block"
+      className="text-secondary hidden font-bold [direction:rtl] xl:block"
     >
       {labels.subtitle}
     </Typography>
-  </div>
+  </SectionHeadContainer>
 );
 
 SectionTitle.propTypes = {

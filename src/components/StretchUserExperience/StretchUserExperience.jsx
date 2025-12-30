@@ -2,7 +2,7 @@ import { useState } from "react";
 import DashboardImage from "./DashboardImage";
 import DecorativeCircle from "./DecorativeCircle";
 import data from "./stretch_user_experience.data.json";
-import { Flex, Section } from "../../components";
+import { Container, Flex, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
 import { withBase } from "../../utils/withBase";
@@ -47,39 +47,40 @@ const StretchUserExperience = () => {
       <DecorativeCircle type="background" />
       <DecorativeCircle type="blueGradient" />
       <DecorativeCircle type="shadow" />
-      <DecorativeCircle type="orange" onClick={handleItemClick} />
 
-      <Flex
-        className="app_container relative mx-auto overflow-visible py-10 lg:py-14"
-        direction="flex-col"
-        align="items-center"
-        justify="justify-center"
-        gap="gap-10 lg:gap-10"
-      >
-        <SectionTitle currentStep={currentStep} data={sectionLabels} />
-
-        <div
-          className="relative mt-[200px] flex w-full items-center justify-center lg:mt-0"
-          style={{ height: "clamp(350px, 65vw, 950px)" }}
+      <Container>
+        <Flex
+          className="relative mx-auto overflow-visible py-10 lg:py-14"
+          direction="flex-col"
+          align="items-center"
+          justify="justify-center"
+          gap="gap-10 lg:gap-10"
         >
-          {initialItems.map((item, index) => (
-            <DashboardImage
-              key={item.id}
-              item={item}
-              position={getPosition(index)}
-              onClick={handleItemClick}
-              language={language}
-            />
-          ))}
+          <SectionTitle currentStep={currentStep} data={sectionLabels} />
 
-          <button
-            type="button"
-            aria-label="Next experience image"
-            onClick={handleItemClick}
-            className="3xl:right-[147px] absolute top-1/2 right-[-147px] z-[9999] hidden h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-[#FF4200] shadow-lg transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2 focus:outline-none lg:hidden xl:right-[1.9px] xl:flex 2xl:right-[62px]"
-          />
-        </div>
-      </Flex>
+          <div
+            className="relative mt-[200px] lg:mt-0 flex w-full items-start justify-center"
+            style={{ height: "clamp(350px, 65vw, 950px)" }}
+          >
+            {initialItems.map((item, index) => (
+              <DashboardImage
+                key={item.id}
+                item={item}
+                position={getPosition(index)}
+                onClick={handleItemClick}
+                language={language}
+              />
+            ))}
+
+            <button
+              type="button"
+              aria-label="Next experience image"
+              onClick={handleItemClick}
+              className="3xl:right-[147px] absolute top-1/2 right-[-147px] z-[9999] hidden h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-[#FF4200] shadow-lg transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2 focus:outline-none lg:hidden xl:right-[1.9px] xl:flex 2xl:right-[62px]"
+            />
+          </div>
+        </Flex>
+      </Container>
     </Section>
   );
 };

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./competitive_edge_stretch.data.json";
-import { Section, Wrapper } from "../../components";
+import { Container, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
 import GridHeader from "./GridHeader";
@@ -30,9 +30,9 @@ const CompetitiveEdgeStretch = () => {
         alt=""
       />
 
-      <Wrapper className="app_container relative z-10 pt-8 pb-8 lg:pt-16 lg:pb-12">
+      <Container className="relative z-10 pt-8 pb-8 lg:pt-16 lg:pb-12">
         <SectionTitle title={labels.title} language={language} />
-      </Wrapper>
+      </Container>
 
       {/* Premium Comparison Grid */}
       <div className="relative z-10 w-full px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">

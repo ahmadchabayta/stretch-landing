@@ -25,20 +25,22 @@ const OfflineAttribution = ({ id }) => {
 
   const hidden_on_small_styles = `
     hidden
-    lg:flex
+    xl:flex
     absolute
     w-full
     min-w-[738px]
-    lg:min-w-[1583px]
+    xl:min-w-[1583px]
     pointer-events-none
+    shrink-0
+    bottom-[-10%]
     ${
       language === "en"
         ? `left-[-38%]
            md:left-0
-           lg:left-[-49%]
-           xl:left-[-50%]
+           lg:left-[-50%]
+           xl:left-[-40%]
            2xl:left-[-40%]
-           3xl:left-[-45%]`
+           3xl:left-[-30%]`
         : `right-[-38%]
            md:right-0
            lg:right-[-92%]
@@ -51,18 +53,19 @@ const OfflineAttribution = ({ id }) => {
   `;
   const hidden_on_large_styles = `
     flex
-    lg:hidden
+    xl:hidden
     absolute
     w-full
-    min-w-[738px]
-    md:w-[1582px]
+    min-w-[1038px]
+    lg:min-w-[1582px]
     pointer-events-none
+    bottom-[-10%]
     ${
       language === "en"
         ? `left-[-150px]
            md:translate-x-[-50%]
            md:left-[50%]
-           lg:left-[-42%]
+           lg:left-[50%]
            xl:left-[-70%]
            2xl:left-[-80%]
            3xl:left-[-50%]`
@@ -86,7 +89,7 @@ const OfflineAttribution = ({ id }) => {
       };
 
   return (
-    <Section id={id} container={false} padding="none" className="relative overflow-hidden">
+    <Section id={id} container={false} padding="none" className="relative overflow-hidden min-h-0!">
       <SectionTitle labels={labels} dir={dir} />
       <SectionData labels={labels} dir={dir} language={language} />
       <div

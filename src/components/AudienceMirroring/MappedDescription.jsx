@@ -1,22 +1,24 @@
 import PropTypes from "prop-types";
-import { Typography } from "../../components";
+import { List, Typography } from "../../components";
 
 const MappedDescription = ({ labels, dir }) => (
-  <ul className="mt-8">
+  <List className="mt-[-10%] 2xl:mt-[-5%] 3xl:mt-[5%]">
     {labels.description.map((item, index) => (
-      <Typography
-        as="li"
-        key={`description-${index}`}
-        className="mb-2 text-right font-[Tajawal] text-[26px] leading-[normal] text-black"
-        dir={dir}
-      >
-        <Typography.Text accent className="font-bold">
-          {item.highlighted}
-        </Typography.Text>{" "}
-        <span className="ml-2">{item.description}</span>
-      </Typography>
+      <List.Item key={`description-${index}`}>
+        <Typography
+          as="li"
+          variant="audience-mirroring-list"
+          className={`text-black ${dir === "rtl" ? "font-[Tajawal]" : "font-poppins"}`}
+          dir={dir}
+        >
+          <Typography.Text accent className="font-bold">
+            {item.highlighted}
+          </Typography.Text>{" "}
+          <Typography.Text className="ml-2">{item.description}</Typography.Text>
+        </Typography>
+      </List.Item>
     ))}
-  </ul>
+  </List>
 );
 
 MappedDescription.propTypes = {

@@ -47,9 +47,9 @@ const typographyVariants = {
     font-poppins font-extrabold
     text-[18px] leading-[27px]
     md:text-[24px] md:leading-[36px]
-    lg:text-[35.2917px] lg:leading-[53px]
-    xl:text-[37px] xl:leading-[56px]
-    2xl:text-[38px] 2xl:leading-[57px]
+    lg:text-[35px] lg:leading-[53px]
+    xl:text-[35px] xl:leading-[56px]
+    2xl:text-[35px] 2xl:leading-[57px]
     3xl:text-[40px] 3xl:leading-[60px]
   `,
   "hero-description": `
@@ -109,13 +109,21 @@ const typographyVariants = {
     3xl:text-[20px] 3xl:leading-[30px]
   `,
   "button-text": `
-    font-poppins font-bold text-center text-white
-    text-[18px] leading-[27px]
-    md:text-[20px] md:leading-[30px]
-    lg:text-[24px] lg:leading-[36px]
-    xl:text-[28px] xl:leading-[42px]
-    2xl:text-[30px] 2xl:leading-[45px]
-    3xl:text-[32px] 3xl:leading-[48px]
+    font-poppins font-bold text-white
+    text-[18px] leading-normal text-justify
+    md:text-[18px] md:leading-normal md:text-justify
+    lg:text-[18px] lg:leading-normal lg:text-justify
+    xl:text-[32px] xl:leading-normal xl:text-center
+    2xl:text-[32px] 2xl:leading-normal 2xl:text-center
+    3xl:text-[32px] 3xl:leading-normal 3xl:text-center
+  `,
+  "audience-mirroring-list": `
+    font-poppins font-normal text-justify text-accent
+    text-[14px] leading-normal
+    lg:text-[20px]
+    xl:text-[20px]
+    2xl:text-[20px]
+    3xl:text-[24px]
   `,
 };
 

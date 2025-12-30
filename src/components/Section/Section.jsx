@@ -32,7 +32,7 @@ const Section = ({
   id,
   padding = "xl",
   background = "default",
-  container = true,
+  container = false,
   className,
   containerClassName,
   children,

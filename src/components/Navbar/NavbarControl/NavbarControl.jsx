@@ -41,7 +41,7 @@ const NavbarControl = ({ data, className }) => {
           <span className="text-sm font-medium">{otherLanguage.label}</span>
         </button>
       </Wrapper>
-      <Button variant="login" className="mx-auto w-full xl:w-auto">
+      <Button variant="login" className="mx-auto w-full xl:w-auto min-w-[204px]">
         {data.button_label}
       </Button>
     </Flex>

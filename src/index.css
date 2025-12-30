@@ -4,6 +4,12 @@
 
 @import "tailwindcss";
 
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
 @theme {
   /* Breakpoints */
   --breakpoint-xs: 402px;
@@ -48,34 +54,34 @@
   max-width: 95%;
   margin-inline: auto;
 }
-@media (min-width: var(--breakpoint-sm)) {
+@media (min-width: 640px) {
   .app_container {
-    max-width: 580px;
+    max-width: 350px;
   }
 }
-@media (min-width: var(--breakpoint-md)) {
+@media (min-width: 768px) {
   .app_container {
     max-width: 700px;
   }
 }
-@media (min-width: var(--breakpoint-lg)) {
+@media (min-width: 1024px) {
   .app_container {
-    max-width: 980px;
+    max-width: 903px;
   }
 }
-@media (min-width: var(--breakpoint-xl)) {
+@media (min-width: 1280px) {
   .app_container {
-    max-width: 1140px;
+    max-width: 1245px;
   }
 }
-@media (min-width: var(--breakpoint-2xl)) {
+@media (min-width: 1440px) {
   .app_container {
-    max-width: 1300px;
+    max-width: 1326px;
   }
 }
-@media (min-width: var(--breakpoint-3xl)) {
+@media (min-width: 1920px) {
   .app_container {
-    max-width: 1552px;
+    max-width: 1623px;
   }
 }
 
@@ -104,17 +110,8 @@
   }
 }
 
-@layer base {
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  p {
-    /* Font Size Progression: 14 -> 15 -> 16 -> 18 -> 20 -> 21.175 -> 24 */
-    @apply 3xl:text-[24px] text-sm sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[21.175px];
-  }
+section {
+  margin-block: 120px;
 }
 
 .stretch_user_experience {

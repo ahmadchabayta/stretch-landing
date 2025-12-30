@@ -28,7 +28,6 @@ const Flex = ({
     container && "app_container",
     className,
   );
-
   return (
     <Component className={flexClasses} {...props}>
       {children}

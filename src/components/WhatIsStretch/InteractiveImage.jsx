@@ -57,122 +57,125 @@ const InteractiveImage = () => {
 
   const graphPosition = isRTL
     ? `
-        top-[12%]
-        left-[8%]
-        md:top-[12%]
-        md:left-[8%]
-        lg:top-[10%]
-        lg:left-[10%]
-        xl:top-[8%]
-        xl:left-[12%]
+        top-[0%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[2%]
+        lg:top-[3%]
+        xl:top-[5%]
+        xl:left-[6%]
+        xl:translate-x-0
         2xl:top-[5%]
-        2xl:left-[14%]
-        3xl:top-[4%]
-        3xl:left-[16%]
+        2xl:left-[8%]
+        3xl:top-[5%]
+        3xl:left-[10%]
       `
     : `
-        top-[12%]
-        right-[8%]
-        md:top-[12%]
-        md:right-[8%]
-        lg:top-[10%]
-        lg:right-[10%]
-        xl:top-[8%]
-        xl:right-[12%]
+        top-[0%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[2%]
+        lg:top-[3%]
+        xl:top-[5%]
+        xl:left-auto
+        xl:right-[6%]
+        xl:translate-x-0
         2xl:top-[5%]
-        2xl:right-[14%]
-        3xl:top-[4%]
-        3xl:right-[16%]
+        2xl:right-[8%]
+        3xl:top-[5%]
+        3xl:right-[10%]
       `;
 
   const graphSize = `
-    h-[130px]
+    h-[180px]
     w-auto
-    3xl:h-[340px]
-    md:h-[140px]
-    lg:h-[170px]
-    xl:h-[210px]
-    2xl:h-[280px]
+    md:h-[220px]
+    lg:h-[280px]
+    xl:h-[340px]
+    2xl:h-[420px]
+    3xl:h-[500px]
   `;
 
   const duplicationPosition = isRTL
     ? `
-        top-[28%]
-        right-[3%]
-        md:top-[26%]
-        md:right-[5%]
-        lg:top-[24%]
-        lg:right-[8%]
-        xl:top-[22%]
-        xl:right-[10%]
-        2xl:top-[20%]
-        2xl:right-[11%]
-        3xl:top-[18%]
-        3xl:right-[12%]
+        top-[20%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[22%]
+        lg:top-[23%]
+        xl:top-[25%]
+        xl:left-auto
+        xl:right-[5%]
+        xl:translate-x-0
+        2xl:top-[25%]
+        2xl:right-[6%]
+        3xl:top-[25%]
+        3xl:right-[7%]
       `
     : `
-        top-[28%]
-        left-[3%]
-        md:top-[26%]
-        md:left-[5%]
-        lg:top-[24%]
-        lg:left-[8%]
-        xl:top-[22%]
-        xl:left-[10%]
-        2xl:top-[20%]
-        2xl:left-[11%]
-        3xl:top-[18%]
-        3xl:left-[12%]
+        top-[20%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[22%]
+        lg:top-[23%]
+        xl:top-[25%]
+        xl:left-[5%]
+        xl:translate-x-0
+        2xl:top-[25%]
+        2xl:left-[6%]
+        3xl:top-[25%]
+        3xl:left-[7%]
       `;
 
   const duplicationSize = `
-    h-[115px]
+    h-[160px]
     w-auto
-    3xl:h-[300px]
-    md:h-[125px]
-    lg:h-[155px]
-    xl:h-[185px]
-    2xl:h-[240px]
+    md:h-[200px]
+    lg:h-[250px]
+    xl:h-[300px]
+    2xl:h-[360px]
+    3xl:h-[440px]
   `;
 
   const mapPosition = isRTL
     ? `
-        top-[48%]
-        left-[4%]
-        md:top-[46%]
-        md:left-[6%]
-        lg:top-[44%]
-        lg:left-[8%]
-        xl:top-[42%]
-        xl:left-[10%]
-        2xl:top-[40%]
-        2xl:left-[11%]
-        3xl:top-[38%]
-        3xl:left-[13%]
+        top-[40%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[42%]
+        lg:top-[43%]
+        xl:top-[45%]
+        xl:left-[4%]
+        xl:translate-x-0
+        2xl:top-[45%]
+        2xl:left-[5%]
+        3xl:top-[45%]
+        3xl:left-[7%]
       `
     : `
-        top-[48%]
-        right-[4%]
-        md:top-[46%]
-        md:right-[6%]
-        lg:top-[44%]
-        lg:right-[8%]
-        xl:top-[42%]
-        xl:right-[10%]
-        2xl:top-[40%]
-        2xl:right-[11%]
-        3xl:top-[38%]
-        3xl:right-[13%]
+        top-[40%]
+        left-1/2
+        -translate-x-1/2
+        md:top-[42%]
+        lg:top-[43%]
+        xl:top-[45%]
+        xl:left-auto
+        xl:right-[4%]
+        xl:translate-x-0
+        2xl:top-[45%]
+        2xl:right-[5%]
+        3xl:top-[45%]
+        3xl:right-[7%]
       `;
 
   const mapSize = `
-    h-[120px]
+    h-[170px]
     w-auto
-    3xl:h-80
-    md:h-[130px]
-    lg:h-[165px]
-    xl:h-[200px]
-    2xl:h-[260px]
+    md:h-[210px]
+    lg:h-[270px]
+    xl:h-[320px]
+    2xl:h-[400px]
+    3xl:h-[480px]
   `;
 
   return (
@@ -180,9 +183,15 @@ const InteractiveImage = () => {
       ref={sectionRef}
       className="relative mt-8 min-h-[600px] md:mt-12 md:min-h-[700px] lg:min-h-[800px]"
     >
-      {/* iPhone as the main central anchor, always lower */}
-      {/* Only render one iPhone image depending on screen size */}
-      <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 md:bottom-[10%] md:left-[7%] md:translate-x-0 lg:bottom-0 lg:left-[8%]">
+      {/* iPhone positioned below the other images on y-axis */}
+      <div
+        className="absolute top-[65%] left-1/2 w-full -translate-x-1/2 
+        md:top-[67%] 
+        lg:top-[68%] 
+        xl:top-[70%] xl:left-[7%] xl:translate-x-0 
+        2xl:top-[70%] 
+        3xl:top-[70%]"
+      >
         <img src={iphoneSrc} alt="iPhone" className={iphoneClass} />
       </div>
 
