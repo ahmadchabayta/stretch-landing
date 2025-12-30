@@ -18,7 +18,7 @@ const GridEventHeaders = ({ labels, isArabic }) => (
     <Typography
       as="div"
       className={cn(
-        "col-span-3 text-center text-base font-bold lg:col-span-2 lg:text-lg",
+        "col-span-3 text-center text-base font-bold lg:col-span-2 lg:text-lg hidden lg:block",
         isArabic && ARABIC_FONT,
       )}
     >
