@@ -24,11 +24,11 @@ const FooterCTA = ({ labels, language }) => (
       justify="justify-center"
       spaceY="space-y-[29px] xl:space-y-0"
       spaceX="xl:space-x-4 3xl:space-x-[60px]!"
-      className="h-[57px]! mt-10!"
+      className="mt-10!"
     >
       <Button
         variant="demo"
-        className={`w-full ${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
+        className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
       >
         {labels.button_label.demo_button_label}
       </Button>

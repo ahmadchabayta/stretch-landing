@@ -56,8 +56,9 @@ const OfflineAttribution = ({ id }) => {
     xl:hidden
     absolute
     w-full
-    min-w-[1038px]
-    lg:min-w-[1582px]
+    min-w-[738px]
+    md:min-w-[900px]
+    lg:min-w-[1400px]
     pointer-events-none
     bottom-[-10%]
     ${

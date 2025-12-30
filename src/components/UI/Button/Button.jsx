@@ -22,8 +22,8 @@ import { useLanguage } from "../../../context/LanguageContext";
 const baseButtonStyles = `
   !cursor-pointer z-[9999] text-white text-center font-bold
   rounded-pill-small transition-all hover:brightness-90 active:scale-95
-  w-[172px] h-[33.4px] text-[18px]
-  sm:w-[172px] sm:h-[33.4px] sm:text-[18px]
+  w-[172px] h-[45px] text-[18px]
+  sm:w-[172px] sm:h-[45px] sm:text-[18px]
   md:text-[20px]
   lg:text-[24px]
   xl:text-[24px]

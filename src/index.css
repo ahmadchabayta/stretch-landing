@@ -56,12 +56,12 @@
 }
 @media (min-width: 640px) {
   .app_container {
-    max-width: 350px;
+    max-width: 580px;
   }
 }
 @media (min-width: 768px) {
   .app_container {
-    max-width: 600px;
+    max-width: 750px;
   }
 }
 @media (min-width: 1024px) {

@@ -20,7 +20,7 @@ const StepIndicator = ({ currentStep, subtitle, subtitleBold }) => (
     <Flex
       align="items-center"
       justify="justify-center"
-      className="3xl:w-[340.617px] 3xl:h-[88.42px] text-center lg:text-left"
+      className="3xl:w-[340.617px] 3xl:h-[88.42px] text-left"
     >
       <Typography className="font-poppins" as="p">
         <Typography.Text bold>{subtitleBold}</Typography.Text> {subtitle}
