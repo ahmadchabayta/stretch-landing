@@ -18,7 +18,7 @@ const FooterLinksColumns = ({ labels, language }) => {
     "list-none text-white text-center space-y-[7px] mb-6 md:mb-0 md:text-left md:space-y-[18px]";
   const listClassXL =
     "list-none text-white text-center space-y-[7px] mb-6 xl:mb-0 xl:text-left xl:space-y-[18px]";
-  const linkClass = `cursor-pointer text-[18px] md:text-[22px] lg:text-[28px] font-bold md:text-left ${
+  const linkClass = `cursor-pointer text-white text-center font-[Poppins] text-[14px] font-bold leading-normal lg:text-right lg:text-[22px] xl:text-right xl:text-[22px] 3xl:text-center 3xl:text-[28px] ${
     language === "ar" ? "font-[Tajawal,sans-serif]" : ""
   }`;
 
