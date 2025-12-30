@@ -66,7 +66,8 @@ const OfflineAttribution = ({ id }) => {
         ? `left-[-150px]
            md:translate-x-[-50%]
            md:left-[50%]
-           lg:left-[50%]
+           lg:left-[-40%]
+           lg:translate-x-0
            xl:left-[-70%]
            2xl:left-[-80%]
            3xl:left-[-50%]`

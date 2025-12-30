@@ -26,10 +26,7 @@ const FooterCTA = ({ labels, language }) => (
       spaceX="xl:space-x-4 3xl:space-x-[60px]!"
       className="mt-10!"
     >
-      <Button
-        variant="demo"
-        className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
-      >
+      <Button variant="demo" className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}>
         {labels.button_label.demo_button_label}
       </Button>
       <Button
