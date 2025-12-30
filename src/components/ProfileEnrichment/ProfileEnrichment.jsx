@@ -18,6 +18,7 @@ const ProfileEnrichment = ({ id }) => {
       }}
       container={true}
       padding="none"
+      className="relative overflow-hidden"
     >
       <SectionTitle labels={labels} />
       <InteractiveCarousel images={data.images} />

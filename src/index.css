@@ -61,7 +61,7 @@
 }
 @media (min-width: 768px) {
   .app_container {
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 @media (min-width: 1024px) {
