@@ -24,11 +24,7 @@ const SectionData = ({ labels, language, percentageRef }) => (
           >
             {labels.subtitle}
           </Typography>
-          <Typography
-            as="h3"
-            variant="section-subtitle"
-            className="max-w-[265px] font-normal! 2xl:[direction:rtl]"
-          >
+          <Typography as="h3" variant="section-subtitle" className="max-w-[265px] font-normal!">
             {labels.other_subtitle}
           </Typography>
         </Flex>

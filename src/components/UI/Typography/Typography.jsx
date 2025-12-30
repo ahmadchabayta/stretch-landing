@@ -71,10 +71,11 @@ const typographyVariants = {
   `,
   "section-subtitle": `
     font-poppins
-    text-[14px] leading-normal
-    xl:text-[20px] xl:leading-[108.457%]
-    2xl:text-[20px] 2xl:leading-normal 2xl:text-right
-    3xl:text-[24px] 3xl:text-right
+    text-[14px] leading-auto
+    xl:text-[20px]
+    xl:text-right
+    2xl:text-[20px]
+    3xl:text-[24px] 
   `,
   "section-desc": `
     font-poppins font-normal text-justify

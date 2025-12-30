@@ -9,7 +9,7 @@ const SectionTitle = ({ data }) => (
     <Typography
       as="h3"
       variant="section-subtitle"
-      className="3xl:max-w-[852px] 3xl:text-right max-w-[343px] lg:max-w-[500px]"
+      className="3xl:max-w-[462px] 3xl:text-right max-w-[343px] lg:max-w-[500px]"
     >
       {data.subtitle.description}{" "}
       <Typography.Text accent>{data.subtitle.highlighted_desc_1}</Typography.Text>{" "}
