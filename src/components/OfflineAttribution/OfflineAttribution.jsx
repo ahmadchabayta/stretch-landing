@@ -30,9 +30,6 @@ const OfflineAttribution = ({ id }) => {
     w-full
     min-w-[738px]
     xl:min-w-[1583px]
-    pointer-events-none
-    touch-none
-    select-none
     shrink-0
     bottom-[-10%]
     ${
@@ -54,6 +51,7 @@ const OfflineAttribution = ({ id }) => {
     }
   `;
   const hidden_on_large_styles = `
+
     flex
     xl:hidden
     absolute
@@ -61,9 +59,6 @@ const OfflineAttribution = ({ id }) => {
     min-w-[738px]
     md:min-w-[900px]
     lg:min-w-[1400px]
-    pointer-events-none
-    touch-none
-    select-none
     bottom-[-10%]
     ${
       language === "en"
@@ -89,30 +84,21 @@ const OfflineAttribution = ({ id }) => {
     }
   `;
 
-  const containerHandlers = isTouchDevice
-    ? {
-        onClick: () => setIsRevealed((prev) => !prev),
-      }
-    : {
-        onMouseEnter: () => setIsRevealed(true),
-        onMouseLeave: () => setIsRevealed(false),
-      };
-
   return (
-    <Section id={id} container={false} padding="none" className="relative overflow-hidden min-h-0!">
+    <Section
+      id={id}
+      container={false}
+      padding="none"
+      className="relative overflow-hidden min-h-0! "
+    >
       <SectionTitle labels={labels} dir={dir} />
       <SectionData labels={labels} dir={dir} language={language} />
       <div
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            setIsRevealed((prev) => !prev);
-          }
-        }}
-        className="relative min-h-[515px] w-[738px] cursor-pointer touch-none lg:h-[815px]"
-        {...containerHandlers}
+        className="relative min-h-[515px] w-[738px] cursor-pointer lg:h-[815px]"
+        {...(!isTouchDevice && {
+          onMouseEnter: () => setIsRevealed((prev) => !prev),
+          onMouseLeave: () => setIsRevealed((prev) => !prev),
+        })}
       >
         {isRevealed ? (
           <>
@@ -141,6 +127,18 @@ const OfflineAttribution = ({ id }) => {
             />
           </>
         )}
+        <button
+          className="absolute inset-0 cursor-pointer bg-transparent"
+          aria-label={isRevealed ? "Hide attribution map" : "Show attribution map"}
+          tabIndex={0}
+          onClick={isTouchDevice ? () => setIsRevealed((prev) => !prev) : undefined}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setIsRevealed((prev) => !prev);
+            }
+          }}
+        />
       </div>
     </Section>
   );

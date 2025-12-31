@@ -11,7 +11,7 @@ const SectionHeadContainer = ({ children, className, ...props }) => (
     justify="xl:justify-between"
     gap="xl:gap-x-16"
     spaceY="space-y-[15px] xl:space-y-0"
-    className={cn("w-full", "lg:pr-[30px]! 3xl:pr-[63px]!", className)}
+    className={cn("w-full", "lg:pr-[30px]! 3xl:pr-[63px]! my-10", className)}
     {...props}
   >
     {children}
