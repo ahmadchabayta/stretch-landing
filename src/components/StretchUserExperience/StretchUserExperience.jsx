@@ -49,7 +49,18 @@ const StretchUserExperience = () => {
     <Section container={false} padding="none" className="stretch_user_experience relative">
       <DecorativeCircle type="background" />
       <img
-        className={`absolute object-contain w-[104px] md:w-[204px] lg:w-[373px] xl:top-[366px] xl:left-[41px] md:right-[0.5%] right-[-0.5%] top-0`}
+        className={`
+          absolute
+          object-contain
+          top-[307px]
+          right-[-0.5%]
+          w-[clamp(96px,20vw,140px)]
+          md:right-[0.5%]
+          md:w-[clamp(180px,32vw,240px)]
+          lg:w-[clamp(340px,32vw,420px)]
+          xl:top-[366px]
+          xl:left-[41px]
+        `}
         src={circleSrc}
         alt="Blue Circle"
       />

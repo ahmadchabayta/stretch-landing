@@ -31,6 +31,8 @@ const OfflineAttribution = ({ id }) => {
     min-w-[738px]
     xl:min-w-[1583px]
     pointer-events-none
+    touch-none
+    select-none
     shrink-0
     bottom-[-10%]
     ${
@@ -60,6 +62,8 @@ const OfflineAttribution = ({ id }) => {
     md:min-w-[900px]
     lg:min-w-[1400px]
     pointer-events-none
+    touch-none
+    select-none
     bottom-[-10%]
     ${
       language === "en"

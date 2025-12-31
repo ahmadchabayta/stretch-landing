@@ -15,7 +15,7 @@ export const getValueStyles = (value, isStretch, idx, small) => {
   };
 };
 
-const ValueCell = ({ value, small, partialLabel }) => {
+const ValueCell = ({ value, partialLabel }) => {
   if (value === "Partial") {
     return (
       <span

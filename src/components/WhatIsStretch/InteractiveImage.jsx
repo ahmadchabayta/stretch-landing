@@ -46,31 +46,21 @@ const InteractiveImage = () => {
     ? "translate-y-0 xl:translate-x-0 opacity-100"
     : "translate-y-8 xl:translate-y-0 xl:-translate-x-8 opacity-0";
 
-  const iphonePosition = `
-  ${
-    isRTL
-      ? ` 
+  const iphoneTop = `
     absolute
-    top-[640px] right-0
-    md:top-[640px] md:right-0
+    top-[590px]
+    md:top-[640px]
     lg:top-[727px]
-    lg:right-[-6%]
-    xl:top-[302px] xl:right-[-6%]
-    2xl:top-[385px] 2xl:right-[-3%]
-    3xl:top-[385px] 3xl:right-[-3%]
-    `
-      : ` 
-    absolute
-    top-[640px] left-0
-    md:top-[640px] md:left-0
-    lg:top-[727px]
-    lg:left-[-6%]
-    xl:top-[302px] xl:left-[-6%]
-    2xl:top-[385px] 2xl:left-[-3%]
-    3xl:top-[385px] 3xl:left-[-3%]
-    `
-  }
+    xl:top-[302px]
+    2xl:top-[385px]
+    3xl:top-[385px]
   `;
+
+  const iphoneSide = isRTL
+    ? `right-[-25px] md:right-0 lg:right-[-6%] xl:right-[-6%] 2xl:right-[-3%] 3xl:right-[-3%]`
+    : `left-[-25px] md:left-0 lg:left-[-6%] xl:left-[-6%] 2xl:left-[-3%] 3xl:left-[-3%]`;
+
+  const iphonePosition = `${iphoneTop} ${iphoneSide}`;
 
   const iphoneSize = `
   object-contain
@@ -88,38 +78,21 @@ const InteractiveImage = () => {
     ${isRTL ? "scale-x-[-1]" : ""}
   `;
 
-  const graphPosition = isRTL
-    ? `
-          top-[216px]
-        right-[35px]
-        md:top-[216px] md:right-1/2 md:-translate-x-1/2
+  const graphTop = `
+        top-[296px]
+        md:top-[216px] md:-translate-x-1/2
         lg:translate-x-0
         lg:top-[306.38px]
-        lg:right-[127.11px]
         xl:top-[225.74px]
-        xl:right-[568.47px]
-
         2xl:top-[314.55px]
-        2xl:right-[591.21px]
         3xl:top-[324.55px]
-        3xl:right-[729px]
-      `
-    : `
-        top-[216px]
-        left-[35px]
-        md:top-[216px] md:left-1/2 md:-translate-x-1/2
-        lg:translate-x-0
-        lg:top-[306.38px]
-        lg:left-[127.11px]
-
-        xl:top-[225.74px]
-        xl:left-[568.47px]
-
-        2xl:top-[314.55px]
-        2xl:left-[591.21px]
-        3xl:top-[324.55px]
-        3xl:left-[729px]
       `;
+
+  const graphSide = isRTL
+    ? `right-[35px] md:right-1/2 lg:right-[127.11px] xl:right-[568.47px] 2xl:right-[591.21px] 3xl:right-[729px]`
+    : `left-[35px] md:left-1/2 lg:left-[127.11px] xl:left-[568.47px] 2xl:left-[591.21px] 3xl:left-[729px]`;
+
+  const graphPosition = `${graphTop} ${graphSide}`;
 
   const graphSize = `
   object-contain
@@ -138,37 +111,20 @@ const InteractiveImage = () => {
     3xl:w-[447px]
   `;
 
-  const duplicationPosition = isRTL
-    ? `
-         top-[327px]
-        right-[60px]
-        md:top-[327px] md:right-[120px]
+  const duplicationTop = `
+        top-[367px]
+        md:top-[327px]
         lg:top-[465.13px]
-        lg:right-[180.44px]
-
         xl:top-[352.91px]
-        xl:right-[710px]
-
         2xl:top-[474px]
-        2xl:right-[830.19px]
         3xl:top-[474px]
-        3xl:right-[1020px]
-      `
-    : `
-        top-[327px]
-        left-[60px]
-        md:top-[327px] md:left-[120px]
-        lg:top-[465.13px]
-        lg:left-[180.44px]
-
-        xl:top-[352.91px]
-        xl:left-[710px]
-
-        2xl:top-[474px]
-        2xl:left-[830.19px]
-        3xl:top-[474px]
-        3xl:left-[1020px]
       `;
+
+  const duplicationSide = isRTL
+    ? `right-[60px] md:right-[120px] lg:right-[180.44px] xl:right-[710px] 2xl:right-[830.19px] 3xl:right-[1020px]`
+    : `left-[60px] md:left-[120px] lg:left-[180.44px] xl:left-[710px] 2xl:left-[830.19px] 3xl:left-[1020px]`;
+
+  const duplicationPosition = `${duplicationTop} ${duplicationSide}`;
 
   const duplicationSize = `
   object-contain
@@ -187,35 +143,20 @@ const InteractiveImage = () => {
     3xl:w-[549px]
   `;
 
-  const mapPosition = isRTL
-    ? `
+  const mapTop = `
         top-[505px]
-        right-[100px]
-        md:top-[505px] md:right-[300px]
+        md:top-[505px]
         lg:top-[721px]
-        lg:right-[226px]
-
         xl:top-[522.47px]
-        xl:right-[600px]
         2xl:top-[623.36px]
-        2xl:right-[676.47px]
         3xl:top-[653px]
-        3xl:right-[815px]
-      `
-    : `
-        top-[505px]
-        left-[100px]
-        md:top-[505px] md:left-[300px]
-        lg:top-[721px]
-        lg:left-[226px]
-
-        xl:top-[522.47px]
-        xl:left-[600px]
-        2xl:top-[623.36px]
-        2xl:left-[676.47px]
-        3xl:top-[653px]
-        3xl:left-[815px]
       `;
+
+  const mapSide = isRTL
+    ? `right-[150px] md:right-[300px] lg:right-[226px] xl:right-[600px] 2xl:right-[676.47px] 3xl:right-[815px]`
+    : `left-[150px] md:left-[300px] lg:left-[226px] xl:left-[600px] 2xl:left-[676.47px] 3xl:left-[815px]`;
+
+  const mapPosition = `${mapTop} ${mapSide}`;
 
   const mapSize = `
     object-contain

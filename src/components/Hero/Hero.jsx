@@ -18,7 +18,7 @@ const Hero = ({ id }) => {
         backgroundImage: `url(${data.images.hero_img})`,
         backgroundRepeat: "no-repeat",
       }}
-      className="md:bg-md:bg-position-[center_top_50px] bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-100px] 3xl:bg-contain 3xl:bg-positiion-[right_top_0px] flex flex-col justify-center"
+      className="md:bg-md:bg-position-[center_top_50px] bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-0px] 3xl:bg-contain 3xl:bg-positiion-[right_top_0px] flex flex-col justify-center"
     >
       <Container>
         <Flex
@@ -70,7 +70,7 @@ const Hero = ({ id }) => {
             style={{ objectFit: "contain" }}
           />
         </Flex>
-        <Container className="3xl:bottom-0 absolute bottom-0 left-[50%] w-full translate-x-[-50%] 2xl:bottom-[100px]">
+        <Container className="3xl:bottom-0 absolute bottom-[-50px] left-[50%] w-full translate-x-[-50%] xl:-bottom-2.5 2xl:bottom-2.5">
           <HeroFeatures data={sectionLabels.hero_features} />
         </Container>
       </Container>

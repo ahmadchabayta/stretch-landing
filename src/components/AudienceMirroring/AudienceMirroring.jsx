@@ -12,8 +12,8 @@ const AudienceMirroring = ({ id }) => {
   const dir = currentLanguage?.dir || "ltr";
 
   return (
-    <Container>
-      <Section id={id} padding="none" className="relative flex flex-col">
+    <Section id={id} padding="none" className="relative flex flex-col">
+      <Container>
         <SectionTitle labels={labels} dir={dir} />
         <Flex flex="true" direction="flex-col">
           <Wrapper className="my-6">
@@ -21,8 +21,8 @@ const AudienceMirroring = ({ id }) => {
           </Wrapper>
           <MappedDescription labels={labels} dir={dir} />
         </Flex>
-      </Section>
-    </Container>
+      </Container>
+    </Section>
   );
 };
 
