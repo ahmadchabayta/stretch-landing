@@ -6,11 +6,7 @@ const SectionTitle = ({ data }) => (
     <Typography as="h2" variant="section-title">
       {data.title}
     </Typography>
-    <Typography
-      as="h3"
-      variant="section-subtitle"
-      className="3xl:[direction:rtl] 3xl:max-w-[852px] w-full max-w-[287px] [direction:ltr] md:max-w-[500px] lg:w-auto lg:max-w-[650px] xl:max-w-[683px]"
-    >
+    <Typography as="h3" variant="section-subtitle" className="3xl:[direction:rtl] [direction:ltr] ">
       <Typography.Text>{data.description.part1}</Typography.Text>
       <Typography.Text accent bold className="3xl:whitespace-pre-line">
         {data.description.highlighted1}

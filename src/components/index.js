@@ -5,7 +5,7 @@ export { default as Capabilities } from "./Capabilities/Capabilities";
 export { default as CrossChannel } from "./CrossChannel/CrossChannel";
 export { default as Hero } from "./Hero/Hero";
 export { default as Navbar } from "./Navbar/Navbar";
-export { default as Section } from "./Section/Section";
+export { default as Section } from "./UI/Section/Section";
 export { default as OfflineAttribution } from "./OfflineAttribution/OfflineAttribution";
 export { default as StretchUserExperience } from "./StretchUserExperience/StretchUserExperience";
 export { default as WhatIsStretch } from "./WhatIsStretch/WhatIsStretch";

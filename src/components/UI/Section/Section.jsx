@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import cn from "../../utils/cn";
+import cn from "../../../utils/cn";
 
 const PADDING_STYLES = {
   none: "",
@@ -10,7 +10,7 @@ const PADDING_STYLES = {
 };
 
 const BACKGROUND_STYLES = {
-  default: "",
+  default: "bg-[#FAFBFC]",
   muted: "bg-slate-50",
   dark: "bg-black text-white",
   primary: "bg-primary text-white",
@@ -43,7 +43,7 @@ const Section = ({
     id={id}
     className={cn(
       // Base section styles previously defined in global CSS
-      "relative mx-auto my-10 min-h-screen w-full",
+      "relative mx-auto min-h-screen w-full py-12 ",
       PADDING_STYLES[padding],
       BACKGROUND_STYLES[background],
       className,

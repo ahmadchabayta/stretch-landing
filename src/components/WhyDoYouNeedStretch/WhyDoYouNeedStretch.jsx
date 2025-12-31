@@ -9,12 +9,12 @@ const WhyDoYouNeedStretch = ({ id }) => {
   const { language } = useLanguage();
   const sectionLabels = _data.languages[language] || _data.languages.en;
   return (
-    <div className="bg-[#FAFAFB]">
+    <div className=" ">
       <Section
         id={id}
         padding="none"
         container={true}
-        className="flex flex-col items-center justify-center min-h-0!"
+        className="why-do-you-need-stretch-background overflow-hidden flex flex-col items-center justify-center"
       >
         <SectionTitle data={sectionLabels} />
 

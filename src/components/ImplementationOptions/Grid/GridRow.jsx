@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import cn from "../../../utils/cn";
 import { Typography } from "../../../components";
 import CheckCell from "./CheckCell";
-import { CELL_BASE_CLASSES, ARABIC_FONT } from "./constants";
 import { getCellCheckedState } from "./utils";
 
 const GridRow = ({ channel, index, isDesktop, activeTab, isArabic }) => {
@@ -12,20 +11,21 @@ const GridRow = ({ channel, index, isDesktop, activeTab, isArabic }) => {
   return (
     <div
       className={cn(
-        "grid w-full grid-cols-3 items-center text-center lg:grid-cols-5",
-        index > 0 && "border-t border-black",
+        "grid w-full grid-cols-3 items-center justify-start text-left md:grid-cols-5 py-2",
+        index > 0 && "border-t-2 border-black",
       )}
     >
       {/* Channel Name */}
       <Typography
         as="div"
         className={cn(
-          CELL_BASE_CLASSES,
-          "text-sm font-medium lg:text-base",
-          isArabic && ARABIC_FONT,
+          "px-2 lg:px-3 py-4 lg:py-5 flex items-center justify-start",
+          "text-sm md:text-[18px] lg:text-[20px] 3xl:text-[24px] font-medium",
+
+          isArabic && "font-[Tajawal,sans-serif]",
         )}
       >
-        <Typography.Text>{channel.name}</Typography.Text>
+        {channel.name}
       </Typography>
 
       {/* Mobile: Shows impressions or clicks based on tab */}
@@ -33,8 +33,8 @@ const GridRow = ({ channel, index, isDesktop, activeTab, isArabic }) => {
       <CheckCell isChecked={videoChecked} />
 
       {/* Desktop: Shows clicks columns */}
-      <CheckCell isChecked={channel.clicks_banner_checked} className="hidden lg:flex" />
-      <CheckCell isChecked={channel.clicks_video_checked} className="hidden lg:flex" />
+      <CheckCell isChecked={channel.clicks_banner_checked} className="hidden md:flex" />
+      <CheckCell isChecked={channel.clicks_video_checked} className="hidden md:flex" />
     </div>
   );
 };

@@ -22,71 +22,25 @@ import { useLanguage } from "../../../context/LanguageContext";
 const baseButtonStyles = `
   !cursor-pointer z-[9999] text-white text-center font-bold
   rounded-pill-small transition-all hover:brightness-90 active:scale-95
-  w-[172px] h-[45px] text-[18px]
-  sm:w-[172px] sm:h-[45px] sm:text-[18px]
-  md:text-[20px]
-  lg:text-[24px]
-  xl:text-[24px]
-  2xl:text-[30px]
-  3xl:text-[32px] 3xl:rounded-pill
+  min-w-[172px] max-w-fit px-8
+  h-[45px] text-[18px]
+  md:h-[38px] md:text-[20px]
+  lg:h-[42px] lg:text-[24px]
+  xl:h-[50px] xl:text-[24px] xl:rounded-pill
+  2xl:h-[52px] 2xl:text-[30px]
+  3xl:h-[57px] 3xl:text-[32px] 3xl:rounded-pill
 `;
 
 const buttonVariants = {
   ltr: {
-    demo: `
-      bg-primary font-poppins
-      w-[172px]
-      md:w-[190px] md:h-[38px]
-      lg:w-[210px] lg:h-[42px]
-      xl:w-[266px] xl:h-[50px]
-      2xl:w-[270px] 2xl:h-[52px]
-      3xl:w-[303px] 3xl:h-[57px]
-    `,
-    login: `
-      bg-accent font-poppins
-      md:w-[190px] md:h-[38px]
-      lg:w-[210px] lg:h-[42px]
-      xl:w-[234px] xl:h-[57px] xl:rounded-pill
-      2xl:w-[234px] 2xl:h-[57px] 2xl:rounded-pill
-      3xl:w-[234px] 3xl:h-[57px] 3xl:rounded-pill
-    `,
-    footer_contact: `
-      bg-black font-poppins
-      w-[247px] h-[40px]
-      md:w-[247px] md:h-[40px]
-      lg:w-[247px] lg:h-[40px]
-      xl:h-[57px] xl:w-auto xl:rounded-pill
-      2xl:h-[57px] 2xl:w-auto 2xl:rounded-pill
-      3xl:h-[57px] 3xl:w-auto 3xl:rounded-pill
-    `,
+    demo: `bg-primary font-poppins`,
+    login: `bg-accent font-poppins`,
+    footer_contact: `bg-black font-poppins`,
   },
   rtl: {
-    demo: `
-      bg-primary font-poppins
-      md:w-[190px] md:h-[38px]
-      lg:w-[210px] lg:h-[42px]
-      xl:w-[266px] xl:h-[50px]
-      2xl:w-[270px] 2xl:h-[52px]
-      3xl:w-[432px] 3xl:h-[72px] 3xl:p-[0_74px]
-      3xl:font-[Tajawal] 3xl:font-black 3xl:leading-[38px] 3xl:text-justify
-    `,
-    login: `
-      bg-accent font-poppins
-      md:w-[190px] md:h-[38px]
-      lg:w-[210px] lg:h-[42px]
-      xl:w-[220px] xl:h-[48px]
-      2xl:w-[227px] 2xl:h-[52px]
-      3xl:w-[392px] 3xl:h-[72px] 3xl:px-[74px] 3xl:gap-[10px]
-    `,
-    footer_contact: `
-      bg-black font-poppins
-      w-[247px] h-[40px]
-      md:w-[247px] md:h-[40px]
-      lg:w-[247px] lg:h-[40px]
-      xl:h-[57px] xl:w-auto xl:rotate-[-90deg] xl:rounded-pill
-      2xl:h-[57px] 2xl:w-auto 2xl:rounded-pill
-      3xl:h-[57px] 3xl:w-auto 3xl:rounded-pill
-    `,
+    demo: `bg-primary font-poppins`,
+    login: `bg-accent font-poppins`,
+    footer_contact: `bg-black font-poppins`,
   },
 };
 

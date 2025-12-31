@@ -42,162 +42,205 @@ const InteractiveImage = () => {
     return () => mq.removeEventListener("change", updateSrc);
   }, []);
 
-  const visibilityClass = isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0";
+  const visibilityClass = isVisible
+    ? "translate-y-0 xl:translate-x-0 opacity-100"
+    : "translate-y-8 xl:translate-y-0 xl:-translate-x-8 opacity-0";
 
-  const iphoneClass = `
-    h-[229px]
-    w-auto
-    md:h-[333px]
-    lg:h-[450px]
-    xl:h-[480px]
-    2xl:h-[540px]
-    3xl:h-[600px]
+  const iphonePosition = `
+  ${
+    isRTL
+      ? ` 
+    absolute
+    top-[640px] right-0
+    md:top-[640px] md:right-0
+    lg:top-[727px]
+    lg:right-[-6%]
+    xl:top-[302px] xl:right-[-6%]
+    2xl:top-[385px] 2xl:right-[-3%]
+    3xl:top-[385px] 3xl:right-[-3%]
+    `
+      : ` 
+    absolute
+    top-[640px] left-0
+    md:top-[640px] md:left-0
+    lg:top-[727px]
+    lg:left-[-6%]
+    xl:top-[302px] xl:left-[-6%]
+    2xl:top-[385px] 2xl:left-[-3%]
+    3xl:top-[385px] 3xl:left-[-3%]
+    `
+  }
+  `;
+
+  const iphoneSize = `
+  object-contain
+    w-[300px]
+    xs:w-[360px]
+    md:w-[550px]
+    lg:w-[936px]
+    lg:h-[457px]
+    xl:w-[800px]
+    xl:h-[419px]
+    2xl:h-[435.165px]
+    2xl:w-[832px]
+    3xl:h-[519px]
+    3xl:w-[1014px]
     ${isRTL ? "scale-x-[-1]" : ""}
   `;
 
   const graphPosition = isRTL
     ? `
-        top-[0%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[2%]
-        lg:top-[3%]
-        xl:top-[5%]
-        xl:left-[6%]
-        xl:translate-x-0
-        2xl:top-[5%]
-        2xl:left-[8%]
-        3xl:top-[5%]
-        3xl:left-[10%]
+          top-[216px]
+        right-[35px]
+        md:top-[216px] md:right-1/2 md:-translate-x-1/2
+        lg:translate-x-0
+        lg:top-[306.38px]
+        lg:right-[127.11px]
+        xl:top-[225.74px]
+        xl:right-[568.47px]
+
+        2xl:top-[314.55px]
+        2xl:right-[591.21px]
+        3xl:top-[324.55px]
+        3xl:right-[729px]
       `
     : `
-        top-[0%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[2%]
-        lg:top-[3%]
-        xl:top-[5%]
-        xl:left-auto
-        xl:right-[12%]
-        xl:translate-x-0
-        2xl:top-[5%]
-        2xl:right-[14%]
-        3xl:top-[5%]
-        3xl:right-[10%]
+        top-[216px]
+        left-[35px]
+        md:top-[216px] md:left-1/2 md:-translate-x-1/2
+        lg:translate-x-0
+        lg:top-[306.38px]
+        lg:left-[127.11px]
+
+        xl:top-[225.74px]
+        xl:left-[568.47px]
+
+        2xl:top-[314.55px]
+        2xl:left-[591.21px]
+        3xl:top-[324.55px]
+        3xl:left-[729px]
       `;
 
   const graphSize = `
-    h-[180px]
-    w-auto
+  object-contain
+    h-[140px]
+    w-[235px]
+    xs:h-[169.132px]
+    xs:w-[283.783px]
     md:h-[220px]
-    lg:h-[280px]
-    xl:h-[340px]
-    2xl:h-[360px]
-    3xl:h-[500px]
+    lg:w-[409.048px]
+    lg:h-[243.788px]
+    xl:w-[402px]
+    xl:h-[240px]
+    2xl:h-[249.607px]
+    2xl:w-[418.811px]
+    3xl:h-[266px]
+    3xl:w-[447px]
   `;
 
   const duplicationPosition = isRTL
     ? `
-        top-[20%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[22%]
-        lg:top-[23%]
-        xl:top-[25%]
-        xl:left-auto
-        xl:right-[5%]
-        xl:translate-x-0
-        2xl:top-[25%]
-        2xl:right-[6%]
-        3xl:top-[25%]
-        3xl:right-[7%]
+         top-[327px]
+        right-[60px]
+        md:top-[327px] md:right-[120px]
+        lg:top-[465.13px]
+        lg:right-[180.44px]
+
+        xl:top-[352.91px]
+        xl:right-[710px]
+
+        2xl:top-[474px]
+        2xl:right-[830.19px]
+        3xl:top-[474px]
+        3xl:right-[1020px]
       `
     : `
-        top-[20%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[22%]
-        lg:top-[23%]
-        xl:top-[25%]
-        xl:left-[2%]
-        xl:translate-x-0
-        2xl:top-[25%]
-        2xl:left-[3%]
-        3xl:top-[25%]
-        3xl:left-[7%]
+        top-[327px]
+        left-[60px]
+        md:top-[327px] md:left-[120px]
+        lg:top-[465.13px]
+        lg:left-[180.44px]
+
+        xl:top-[352.91px]
+        xl:left-[710px]
+
+        2xl:top-[474px]
+        2xl:left-[830.19px]
+        3xl:top-[474px]
+        3xl:left-[1020px]
       `;
 
   const duplicationSize = `
-    h-[160px]
-    w-auto
+  object-contain
+    h-[155px]
+    w-[390px]
+    xs:h-[188px]
+    xs:w-[474.642px]
     md:h-[200px]
-    lg:h-[250px]
-    xl:h-[300px]
-    2xl:h-[320px]
-    3xl:h-[440px]
+    lg:w-[684.154px]
+    lg:h-[270.985px]
+    xl:h-[195px]
+    xl:w-[494px]
+    2xl:h-[203.739px]
+    2xl:w-[514px]
+    3xl:h-[217.625px]
+    3xl:w-[549px]
   `;
 
   const mapPosition = isRTL
     ? `
-        top-[40%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[42%]
-        lg:top-[43%]
-        xl:top-[45%]
-        xl:left-[4%]
-        xl:translate-x-0
-        2xl:top-[45%]
-        2xl:left-[5%]
-        3xl:top-[45%]
-        3xl:left-[7%]
+        top-[505px]
+        right-[100px]
+        md:top-[505px] md:right-[300px]
+        lg:top-[721px]
+        lg:right-[226px]
+
+        xl:top-[522.47px]
+        xl:right-[600px]
+        2xl:top-[623.36px]
+        2xl:right-[676.47px]
+        3xl:top-[653px]
+        3xl:right-[815px]
       `
     : `
-        top-[40%]
-        left-1/2
-        -translate-x-1/2
-        md:top-[42%]
-        lg:top-[43%]
-        xl:top-[45%]
-        xl:left-auto
-        xl:right-[8%]
-        xl:translate-x-0
-        2xl:top-[45%]
-        2xl:right-[10%]
-        3xl:top-[45%]
-        3xl:right-[7%]
+        top-[505px]
+        left-[100px]
+        md:top-[505px] md:left-[300px]
+        lg:top-[721px]
+        lg:left-[226px]
+
+        xl:top-[522.47px]
+        xl:left-[600px]
+        2xl:top-[623.36px]
+        2xl:left-[676.47px]
+        3xl:top-[653px]
+        3xl:left-[815px]
       `;
 
   const mapSize = `
-    h-[170px]
+    object-contain
+    w-[230px]
+    h-[126px]
+    xs:w-[276px]
+    xs:h-[152px]
     w-auto
     md:h-[210px]
-    lg:h-[270px]
-    xl:h-[320px]
-    2xl:h-[350px]
-    3xl:h-[480px]
+    lg:w-[398px]
+    lg:h-[219px]
+    xl:h-[232px]
+    2xl:h-[218px]
+    2xl:w-[396.362px]
+    3xl:h-[233px]
   `;
 
   return (
-    <div
-      ref={sectionRef}
-      className="relative mt-8 min-h-[600px] md:mt-12 md:min-h-[700px] lg:min-h-[800px]"
-    >
-      {/* iPhone positioned below the other images on y-axis */}
-      <div
-        className="absolute top-[65%] left-1/2 w-full -translate-x-1/2 
-        md:top-[67%] 
-        lg:top-[68%] 
-        xl:top-[70%] xl:left-[3%] xl:translate-x-0 
-        2xl:top-[70%] 2xl:left-[3%] 
-        3xl:top-[70%]"
-      >
-        <img src={iphoneSrc} alt="iPhone" className={iphoneClass} />
-      </div>
+    <div ref={sectionRef}>
+      {/* iPhone - centered vertically on left, slightly protruding */}
+      <img src={iphoneSrc} alt="iPhone" className={`${iphonePosition} ${iphoneSize}`} />
 
       {/* Scatter: Graph - top right (LTR) / top left (RTL) */}
       <img
-        className={`absolute z-40 transition-all duration-1000 ${graphPosition} ${graphSize} ${visibilityClass} `}
+        className={`absolute z-30 transition-all duration-1000 ${graphPosition} ${graphSize} ${visibilityClass} `}
         style={{ transitionDelay: "600ms" }}
         src={data.images.graph}
         alt="Graph"
@@ -211,7 +254,7 @@ const InteractiveImage = () => {
         src={data.images.duplication}
         alt="Duplication"
         style={{ transitionDelay: "700ms" }}
-        className={`absolute z-30 transition-all duration-1000 ${duplicationPosition} ${duplicationSize} ${visibilityClass} `}
+        className={`absolute z-40 transition-all duration-1000 ${duplicationPosition} ${duplicationSize} ${visibilityClass} `}
       />
 
       {/* Scatter: Map - right side (LTR) / left side (RTL) */}
@@ -219,7 +262,7 @@ const InteractiveImage = () => {
         src={data.images.map}
         alt="Map"
         style={{ transitionDelay: "800ms" }}
-        className={`absolute z-20 transition-all duration-1000 ${mapPosition} ${mapSize} ${visibilityClass} `}
+        className={`absolute z-50 transition-all duration-1000 ${mapPosition} ${mapSize} ${visibilityClass} `}
       />
     </div>
   );

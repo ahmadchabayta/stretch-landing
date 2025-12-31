@@ -43,10 +43,10 @@ const OfflineAttribution = ({ id }) => {
            3xl:left-[-30%]`
         : `right-[-38%]
            md:right-0
-           lg:right-[-92%]
-           xl:right-[-50%]
+           lg:right-[-50%]
+           xl:right-[-40%]
            2xl:right-[-40%]
-           3xl:right-[-45%]
+           3xl:right-[-30%]
            scale-x-[-1]
            `
     }
@@ -71,13 +71,17 @@ const OfflineAttribution = ({ id }) => {
            xl:left-[-70%]
            2xl:left-[-80%]
            3xl:left-[-50%]`
-        : `left-[0]
-           md:translate-x-[-50%]
-           md:right-[50%]
-           lg:right-[-92%]
-           xl:right-[-70%]
-           2xl:right-[-80%]
-           3xl:right-[-50%]`
+        : `right-[-150px]
+            md:translate-x-[50%]
+            md:right-[50%]
+            lg:right-[-40%]
+            lg:translate-x-0
+            xl:right-[-70%]
+            2xl:right-[-80%]
+            3xl:right-[-50%]
+            scale-x-[-1]
+        
+        `
     }
   `;
 

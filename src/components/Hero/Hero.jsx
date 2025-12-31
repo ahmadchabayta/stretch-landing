@@ -18,15 +18,15 @@ const Hero = ({ id }) => {
         backgroundImage: `url(${data.images.hero_img})`,
         backgroundRepeat: "no-repeat",
       }}
-      className="md:bg-md:bg-position-[center_top_50px] bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-100px]"
+      className="md:bg-md:bg-position-[center_top_50px] bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-100px] 3xl:bg-contain 3xl:bg-positiion-[right_top_0px] flex flex-col justify-center"
     >
-      <Container className="h-full">
+      <Container>
         <Flex
           flex="flex"
           direction="flex-col"
-          align="items-center xl:items-start text-center"
-          justify="justify-between"
-          className={`${language === "ar" ? "xl:items-end xl:text-right" : "xl:text-left"}`}
+          align="items-center text-center"
+          justify="justify-center"
+          className={`h-full  ${language === "ar" ? "xl:items-start xl:text-right" : "xl:items-start xl:text-left"}`}
         >
           <HeroTitle sectionLabels={sectionLabels} />
           <Button
@@ -44,12 +44,12 @@ const Hero = ({ id }) => {
           direction="flex-col"
           align="items-center"
           justify="justify-between!"
-          spaceY="space-y-[100%] md:space-y-[50%]"
+          spaceY="space-y-[60px] md:space-y-[80px] lg:space-y-0"
           className={`mx-auto w-fit lg:mt-[-45px] xl:absolute xl:mx-0 xl:my-0  ${
             language === "en"
-              ? "3xl:right-[405px] 3xl:top-[424px] xl:right-[15%] xl:top-[200px] 2xl:top-[306px]"
-              : "lg:left-[15%]"
-          } xl:top-[230px]`}
+              ? "3xl:right-[405px] 3xl:top-[310px] xl:right-[15%] xl:top-[200px] 2xl:top-[306px]"
+              : "xl:left-[15%] xl:top-[230px] 2xl:top-[306px] 3xl:left-[405px] 3xl:top-[310px]"
+          }`}
         >
           <Button
             as="button"
@@ -61,7 +61,7 @@ const Hero = ({ id }) => {
             </Typography>
           </Button>
           <img
-            className="3xl:w-[278px] w-[135px] md:w-[304px] 2xl:w-[245px]"
+            className="w-[135px] md:w-[180px] lg:w-[220px] xl:w-[245px] 2xl:w-[245px] 3xl:w-[278px]"
             src={data.images.stretch_s}
             alt="Stretch S"
             width={384}

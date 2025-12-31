@@ -4,12 +4,15 @@ import DecorativeCircle from "./DecorativeCircle";
 import data from "./stretch_user_experience.data.json";
 import { Container, Flex, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import SectionTitle from "./SectionTitle";
 import { withBase } from "../../utils/withBase";
 
 const StretchUserExperience = () => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
+  const isLargeCircle = useMediaQuery("(min-width: 1024px)");
+  const circleSrc = withBase(isLargeCircle ? data.images.large : data.images.small);
 
   const initialItems = [
     {
@@ -45,12 +48,14 @@ const StretchUserExperience = () => {
   return (
     <Section container={false} padding="none" className="stretch_user_experience relative">
       <DecorativeCircle type="background" />
-      <DecorativeCircle type="blueGradient" />
-      <DecorativeCircle type="shadow" />
-
+      <img
+        className={`absolute object-contain w-[104px] md:w-[204px] lg:w-[373px] xl:top-[366px] xl:left-[41px] md:right-[0.5%] right-[-0.5%] top-0`}
+        src={circleSrc}
+        alt="Blue Circle"
+      />
       <Container>
         <Flex
-          className="relative mx-auto overflow-visible py-10 lg:py-14"
+          className="relative mx-auto overflow-visible"
           direction="flex-col"
           align="items-center"
           justify="justify-center"

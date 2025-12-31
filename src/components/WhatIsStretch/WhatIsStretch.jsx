@@ -14,11 +14,16 @@ const WhatIsStretch = ({ className, id }) => {
       <SectionTitle data={sectionLabels} />
       <InteractiveImage data={sectionLabels} />
       <List
-        className="absolute right-[26px] bottom-0 text-right text-[14px] font-bold [direction:rtl] 
+        className={`absolute 
+        bottom-0
+        text-[14px] font-bold [direction:rtl] 
         lg:text-[20px] 
         xl:right-[115px] xl:bottom-6 xl:text-right 
         2xl:right-[111px] 
-        3xl:text-[24px] 3xl:right-[156px]"
+        3xl:text-[24px] 3xl:right-[156px]
+        ${language === "ar" ? "left-[26px] text-left" : "right-[26px] text-right"}
+
+        `}
       >
         {sectionLabels.tagline.map((line) => (
           <List.Item className="font-poppins" key={line}>

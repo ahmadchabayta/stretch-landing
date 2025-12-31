@@ -6,7 +6,7 @@ const SectionHeader = ({ title, subtitle, subtitleHighlighted }) => (
     <Typography as="h2" variant="section-title" className="max-w-sm md:max-w-xl lg:max-w-4xl">
       {title}
     </Typography>
-    <Typography as="h2" variant="section-subtitle">
+    <Typography as="h2" variant="section-subtitle" className="">
       {subtitle}{" "}
       <Typography.Text accent bold>
         {subtitleHighlighted}

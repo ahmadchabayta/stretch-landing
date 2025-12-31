@@ -6,7 +6,7 @@ const SectionTitle = ({ labels, dir }) => (
     <Typography as="h2" variant="section-title" dir={dir}>
       {labels.title}
     </Typography>
-    <Typography as="h3" variant="section-subtitle" dir={dir}>
+    <Typography as="h3" variant="section-subtitle" dir={dir} className="">
       {labels.subtitle}
     </Typography>
   </SectionHeadContainer>

@@ -38,7 +38,7 @@ const DesktopGrid = ({
             <div className={cn("flex items-center", isArabic ? "justify-end" : "justify-start")}>
               <Typography.Text
                 className={cn(
-                  "text-[12.021px] font-bold text-black leading-normal text-justify",
+                  "text-[12.021px] font-bold text-black leading-normal text-pretty",
                   "lg:text-[20px]",
                   "xl:text-[20px]",
                   "2xl:text-[20px]",

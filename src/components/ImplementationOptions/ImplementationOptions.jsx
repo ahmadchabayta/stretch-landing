@@ -1,10 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import data from "./implementation_options.data.json";
-import Section from "../Section/Section";
+import Section from "../UI/Section/Section";
 import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "./SectionTitle";
 import Grid from "./Grid";
+import { Container } from "../UI";
 
 const ImplementationOptions = ({ id }) => {
   const { language } = useLanguage();
@@ -14,19 +15,18 @@ const ImplementationOptions = ({ id }) => {
   return (
     <Section
       id={id}
-      container={true}
       padding="none"
-      className="relative mb-20 min-h-0! overflow-x-hidden"
+      className="relative overflow-x-hidden flex flex-col justify-center "
     >
       <SectionTitle labels={labels} language={language} />
-      <div className="w-full overflow-x-auto text-sm">
+      <Container className="w-full overflow-x-auto 6 pt-12">
         <Grid
           activeTab={activeTab}
           labels={labels}
           language={language}
           setActiveTab={setActiveTab}
         />
-      </div>
+      </Container>
     </Section>
   );
 };

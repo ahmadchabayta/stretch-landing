@@ -9,7 +9,7 @@ const SectionTitle = ({ labels, language }) => (
     <Typography
       as="h3"
       variant="section-subtitle"
-      className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
+      className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""} `}
     >
       <Typography.Text>{`${labels.subtitle.line1} `}</Typography.Text>
       <Typography.Text accent bold>

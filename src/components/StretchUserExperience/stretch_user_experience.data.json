@@ -1,4 +1,8 @@
 {
+  "images": {
+    "large": "./assets/stretch_user_experience/blue_circle.webp",
+    "small": "./assets/stretch_user_experience/blue_circle_sm.webp"
+  },
   "languages": {
     "en": {
       "title": {

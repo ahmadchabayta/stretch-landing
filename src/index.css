@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* * {
   padding: 0;
@@ -37,21 +38,9 @@
 
 /* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
 
-.section_head_container {
-  @apply flex w-full flex-col items-start lg:mb-12 xl:flex-row xl:items-end xl:justify-between xl:gap-x-16;
-}
-
-.section_title {
-  @apply font-poppins 3xl:text-[72px] max-w-[95%] text-[40px] leading-[108.457%] font-extrabold xl:text-[64px] 2xl:text-[64px];
-}
-
-.section_subtitle {
-  @apply font-poppins 3xl:text-[24px] 3xl:max-w-[852px] 3xl:text-right max-w-[400px] text-[14px] leading-normal font-normal xl:text-[64px] xl:leading-[108.457%] xl:font-extrabold 2xl:text-right 2xl:text-[20px] 2xl:leading-normal 2xl:font-normal;
-}
-
 .app_container {
   width: 100%;
-  max-width: 95%;
+  max-width: 82.14%;
   margin-inline: auto;
 }
 @media (min-width: 640px) {
@@ -61,7 +50,7 @@
 }
 @media (min-width: 768px) {
   .app_container {
-    max-width: 750px;
+    max-width: 650px;
   }
 }
 @media (min-width: 1024px) {
@@ -86,9 +75,6 @@
 }
 
 @layer components {
-  .table-header-colored {
-    @apply -mr-px -ml-px rounded-tl-md rounded-tr-md border-[1.5px] border-b-black px-2 py-3 text-center font-bold text-white;
-  }
   .primary-btn {
     @apply rounded-pill-small bg-primary flex items-center justify-center gap-[22.544px] leading-normal font-bold text-white;
     @apply h-[33px] w-full max-w-[172px] text-[18px]; /* Default mobile styles */
@@ -110,10 +96,6 @@
   }
 }
 
-section {
-  margin-block: 120px;
-}
-
 .stretch_user_experience {
   position: relative;
 }
@@ -130,6 +112,30 @@ section {
   transform-origin: center;
   pointer-events: none !important;
   transition: transform 600ms linear;
+}
+.why-do-you-need-stretch-background {
+  position: relative;
+}
+.why-do-you-need-stretch-background > * {
+  z-index: 2;
+}
+
+.why-do-you-need-stretch-background::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: -81px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-image: url("./assets/why_do_you_need_stretch/background.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  transform-origin: center;
+  pointer-events: none !important;
+  transition: transform 600ms linear;
+  z-index: 1;
 }
 
 @media (min-width: 1024px) {

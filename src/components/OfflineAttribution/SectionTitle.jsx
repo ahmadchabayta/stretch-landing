@@ -6,7 +6,7 @@ const SectionTitle = ({ labels, dir }) => (
     <Typography as="h2" variant="section-title" dir={dir}>
       {labels.title}
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="xl:[direction:rtl]" dir={dir}>
+    <Typography as="h3" variant="section-subtitle" className="xl:[direction:rtl] " dir={dir}>
       {labels.subtitles.subtitle}{" "}
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}

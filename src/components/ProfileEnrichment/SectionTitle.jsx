@@ -6,7 +6,7 @@ const SectionTitle = ({ labels }) => (
     <Typography as="h2" variant="section-title">
       {labels.title}
     </Typography>
-    <Typography as="h3" variant="section-subtitle">
+    <Typography as="h3" variant="section-subtitle" className="">
       {labels.subtitle.subtitle}{" "}
       <Typography.Text bold accent>
         {labels.subtitle.highlighted}

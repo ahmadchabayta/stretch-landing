@@ -4,11 +4,11 @@ import { Typography } from "../../../components";
 import { ARABIC_FONT } from "./constants";
 
 const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language }) => (
-  <div className="mb-6 flex w-full items-center justify-between lg:grid lg:grid-cols-5">
+  <div className="mb-6 flex w-full items-center gap-2 md:grid md:grid-cols-5">
     <Typography
       as="div"
       className={cn(
-        "text-secondary text-base font-bold lg:text-lg",
+        "text-secondary text-base font-bold lg:text-lg shrink-0 mx-2",
         isArabic ? `text-right ${ARABIC_FONT}` : "text-left",
       )}
     >
@@ -16,19 +16,27 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
     </Typography>
 
     {/* Mobile buttons */}
-    <div className="flex gap-2 lg:hidden">
+    <div className="flex gap-0 md:hidden -ml-2">
       <button
-        className={`rounded-full px-4 py-2 text-xs font-bold transition-all duration-200 ${
+        className={`relative rounded-full px-3 py-1.5 text-[11px] font-bold transition-all duration-200 -mr-3 ${
           language === "ar" ? "font-[Tajawal,sans-serif]" : ""
-        } ${activeTab === "impressions" ? "bg-primary text-white shadow" : "bg-gray-100 text-black"}`}
+        } ${
+          activeTab === "impressions"
+            ? "bg-primary text-white shadow z-20"
+            : "bg-gray-100 text-black z-10"
+        }`}
         onClick={() => setActiveTab("impressions")}
       >
         {labels.headers.tracking_impressions}
       </button>
       <button
-        className={`rounded-full px-4 py-2 text-xs font-bold transition-all duration-200 ${
+        className={`relative rounded-full px-3 py-1.5 text-[11px] font-bold transition-all duration-200 -ml-3 ${
           language === "ar" ? "font-[Tajawal,sans-serif]" : ""
-        } ${activeTab === "clicks" ? "bg-secondary text-white shadow" : "bg-gray-100 text-black"}`}
+        } ${
+          activeTab === "clicks"
+            ? "bg-secondary text-white shadow z-20"
+            : "bg-gray-100 text-black z-10"
+        }`}
         onClick={() => setActiveTab("clicks")}
       >
         {labels.headers.tracking_clicks}
@@ -39,7 +47,7 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
     <Typography
       as="div"
       className={cn(
-        "col-span-3 text-center text-base font-bold lg:col-span-2 lg:text-lg hidden lg:block",
+        "hidden md:block text-center text-base font-bold md:text-lg md:col-span-2 md:col-start-2",
         isArabic && ARABIC_FONT,
       )}
     >
@@ -49,7 +57,7 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
     <Typography
       as="div"
       className={cn(
-        "hidden text-center text-base font-bold lg:block lg:text-lg",
+        "hidden md:block text-center text-base font-bold md:text-lg md:col-span-2 md:col-start-4",
         isArabic && ARABIC_FONT,
       )}
     >
