@@ -15,6 +15,7 @@ const ProfileEnrichment = ({ id }) => {
         backgroundImage: `url(${data.images.background})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
+        backgroundSize: "contain",
       }}
       container={true}
       padding="none"

@@ -34,6 +34,10 @@
   /* Border Radius */
   --radius-pill: 276px;
   --radius-pill-small: 230.45px;
+
+  /* Spacing */
+  --spacing-30px: 30px;
+  --spacing-63px: 63px;
 }
 
 /* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
@@ -104,14 +108,16 @@
   content: "";
   position: absolute;
   inset: 0;
+  height: 100vh;
   background-image: url("./assets/stretch_user_experience/stretch_user_experience_background.webp");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-size: 100% 100%;
+  background-position: center;
   transform: rotate(90deg);
   transform-origin: center;
   pointer-events: none !important;
   transition: transform 600ms linear;
+  z-index: 0;
 }
 .why-do-you-need-stretch-background {
   position: relative;
@@ -130,7 +136,7 @@
   object-fit: contain;
   background-image: url("./assets/why_do_you_need_stretch/background.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: top right;
   transform-origin: center;
   pointer-events: none !important;
@@ -141,7 +147,8 @@
 @media (min-width: 1024px) {
   .stretch_user_experience::before {
     transform: rotate(0deg);
-    background-position: top left;
+    background-position: top center;
+    background-size: cover;
   }
 }
 .menu_links_typography {

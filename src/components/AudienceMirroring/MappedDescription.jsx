@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { List, Typography } from "../../components";
 
 const MappedDescription = ({ labels, dir }) => (
-  <List className="mt-[10%] md:mt-[-20%] lg:mt-[-10%] xl:mt-[-10%] 2xl:mt-[-5%] 3xl:mt-[5%]">
+  <List>
     {labels.description.map((item, index) => (
       <List.Item key={`description-${index}`}>
         <Typography

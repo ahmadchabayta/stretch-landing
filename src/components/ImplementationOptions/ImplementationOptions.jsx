@@ -18,7 +18,9 @@ const ImplementationOptions = ({ id }) => {
       padding="none"
       className="relative overflow-x-hidden flex flex-col justify-center "
     >
-      <SectionTitle labels={labels} language={language} />
+      <Container>
+        <SectionTitle labels={labels} language={language} />
+      </Container>
       <Container className="w-full overflow-x-auto 6 pt-12">
         <Grid
           activeTab={activeTab}

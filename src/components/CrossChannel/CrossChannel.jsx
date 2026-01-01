@@ -34,11 +34,13 @@ const CrossChannel = ({ id }) => {
           className={`h-[395px] w-[592px] object-contain md:h-[666px] md:w-[900px] lg:h-[866px] lg:w-[1299px]`}
         />
 
-        <Description
-          className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[140px]"
-          labels={labels}
-          language={language}
-        />
+        <Container>
+          <Description
+            className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[140px]"
+            labels={labels}
+            language={language}
+          />
+        </Container>
       </Flex>
     </Section>
   );

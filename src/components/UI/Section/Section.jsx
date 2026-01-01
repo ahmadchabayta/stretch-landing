@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import cn from "../../../utils/cn";
 
 const PADDING_STYLES = {
-  none: "",
+  default: "pb-24",
   sm: "py-6",
   md: "py-10",
   lg: "py-16",
@@ -30,7 +30,7 @@ const BACKGROUND_STYLES = {
 const Section = ({
   as: Component = "section",
   id,
-  padding = "xl",
+  padding = "default",
   background = "default",
   container = false,
   className,
@@ -43,7 +43,7 @@ const Section = ({
     id={id}
     className={cn(
       // Base section styles previously defined in global CSS
-      "relative mx-auto min-h-screen w-full py-12",
+      "relative mx-auto min-h-screen w-full py-[90px] my-6!",
       PADDING_STYLES[padding],
       BACKGROUND_STYLES[background],
       className,
@@ -58,7 +58,7 @@ const Section = ({
 Section.propTypes = {
   as: PropTypes.elementType,
   id: PropTypes.string,
-  padding: PropTypes.oneOf(["none", "sm", "md", "lg", "xl"]),
+  padding: PropTypes.oneOf(["default", "sm", "md", "lg", "xl"]),
   background: PropTypes.oneOf(["default", "muted", "dark", "primary"]),
   container: PropTypes.bool,
   className: PropTypes.string,

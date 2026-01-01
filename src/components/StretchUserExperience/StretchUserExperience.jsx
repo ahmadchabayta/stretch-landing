@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DashboardImage from "./DashboardImage";
-import DecorativeCircle from "./DecorativeCircle";
 import data from "./stretch_user_experience.data.json";
 import { Container, Flex, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
@@ -47,10 +46,30 @@ const StretchUserExperience = () => {
 
   return (
     <Section container={false} padding="none" className="stretch_user_experience relative">
-      <DecorativeCircle type="background" />
+      <>
+        <div className="absolute z-10 left-1/2 top-[64%] md:top-[62%] lg:top-1/2 xl:top-[52%] flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
+          {initialItems.map((item, index) => (
+            <DashboardImage
+              key={item.id}
+              item={item}
+              position={getPosition(index)}
+              onClick={handleItemClick}
+              language={language}
+            />
+          ))}
+
+          <button
+            type="button"
+            aria-label="Next experience image"
+            onClick={handleItemClick}
+            className="3xl:right-[147px] absolute top-1/2 right-[-147px] z-[9999] hidden h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-[#FF4200] shadow-lg transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2 focus:outline-none lg:hidden xl:right-[1.9px] xl:flex 2xl:right-[62px]"
+          />
+        </div>
+      </>
       <img
         className={`
           absolute
+          z-0
           object-contain
           top-[307px]
           right-[-0.5%]
@@ -64,37 +83,15 @@ const StretchUserExperience = () => {
         src={circleSrc}
         alt="Blue Circle"
       />
-      <Container>
+      <Container className="z-50 relative">
         <Flex
-          className="relative mx-auto overflow-visible"
+          className="mx-auto overflow-visible"
           direction="flex-col"
           align="items-center"
           justify="justify-center"
           gap="gap-10 lg:gap-10"
         >
           <SectionTitle currentStep={currentStep} data={sectionLabels} />
-
-          <div
-            className="relative mt-[200px] lg:mt-0 flex w-full items-start justify-center"
-            style={{ height: "clamp(350px, 65vw, 950px)" }}
-          >
-            {initialItems.map((item, index) => (
-              <DashboardImage
-                key={item.id}
-                item={item}
-                position={getPosition(index)}
-                onClick={handleItemClick}
-                language={language}
-              />
-            ))}
-
-            <button
-              type="button"
-              aria-label="Next experience image"
-              onClick={handleItemClick}
-              className="3xl:right-[147px] absolute top-1/2 right-[-147px] z-[9999] hidden h-[50px] w-[50px] -translate-y-1/2 items-center justify-center rounded-full bg-[#FF4200] shadow-lg transition-transform hover:scale-105 focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2 focus:outline-none lg:hidden xl:right-[1.9px] xl:flex 2xl:right-[62px]"
-            />
-          </div>
         </Flex>
       </Container>
     </Section>

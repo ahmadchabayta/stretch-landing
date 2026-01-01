@@ -70,7 +70,7 @@ const Hero = ({ id }) => {
             style={{ objectFit: "contain" }}
           />
         </Flex>
-        <Container className="3xl:bottom-0 absolute bottom-[-50px] left-[50%] w-full translate-x-[-50%] xl:-bottom-2.5 2xl:bottom-2.5">
+        <Container className="3xl:bottom-0 absolute bottom-0 left-[50%] w-full translate-x-[-50%] xl:-bottom-2.5 2xl:bottom-2.5">
           <HeroFeatures data={sectionLabels.hero_features} />
         </Container>
       </Container>

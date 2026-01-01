@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Typography, Flex } from "../../components";
 
 const Description = ({ labels, className, language }) => (
-  <Flex container={true} align="items-end" justify="justify-end" className={`${className}`}>
+  <Flex align="items-end" justify="justify-end" className={`${className}`}>
     <Typography
       as="p"
       variant="section-desc"
