@@ -41,7 +41,7 @@ const ValueCell = ({ value, partialLabel }) => {
   }
   return (
     <XIcon
-      className="w-[28.34px] h-[28.34px] rotate-45 lg:w-[46.995px] lg:h-[46.995px] lg:rotate-45 xl:w-[46.995px] xl:h-[46.995px] xl:rotate-45 2xl:w-[46.995px] 2xl:h-[46.995px] 2xl:rotate-45 3xl:w-[47.15px] 3xl:h-[47.15px]"
+      className="w-[28.34px] h-[28.34px] lg:w-[46.995px] lg:h-[46.995px] xl:w-[46.995px] xl:h-[46.995px 2xl:w-[46.995px] 2xl:h-[46.995px]  3xl:w-[47.15px] 3xl:h-[47.15px]"
       color="#ff4200"
     />
   );

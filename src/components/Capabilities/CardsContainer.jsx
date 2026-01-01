@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import CapabilityCard from "./CapabilityCard";
 
 const CardsContainer = ({ cards, activeCard, onCardClick }) => (
-  <div className="relative flex w-full flex-1 items-center justify-center overflow-visible p-0 lg:h-[450px]">
-    <div className="relative z-50 flex h-auto w-full cursor-grab snap-x snap-mandatory items-center gap-5 overflow-x-auto overflow-y-hidden p-5 pb-20 lg:mx-auto lg:grid lg:w-full lg:grid-cols-2 lg:place-content-center lg:place-items-center lg:justify-center lg:gap-8 lg:overflow-visible">
+  <div className="relative flex w-full flex-1 items-center justify-center overflow-visible p-0 lg:h-[450px] ">
+    <div className="relative z-50 flex h-auto w-full cursor-grab snap-x snap-mandatory items-center gap-5 overflow-x-auto overflow-y-hidden p-5 pb-20 lg:mx-auto lg:grid lg:w-full lg:grid-cols-2 md:place-content-center md:place-items-center md:justify-center lg:gap-8 md:overflow-visible lg:space-y-12">
       {cards.map((card, index) => (
         <CapabilityCard
           key={card.id}

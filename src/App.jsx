@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import {
   AudienceMirroring,
   Capabilities,
@@ -27,10 +29,15 @@ const buttonLabels = {
 
 const App = () => {
   const { language } = useLanguage();
+  const heroRef = useRef(null);
+  const footerRef = useRef(null);
+  const heroInView = useInView(heroRef, { amount: 0.1 });
+  const footerInView = useInView(footerRef, { amount: 0.1 });
+  const hideButton = heroInView || footerInView;
 
-  const floatingButtonClass = `primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-75 linear bottom-10 z-10000 ${
+  const floatingButtonClass = `primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 ${
     language === "ar" ? "font-tajawal left-5" : "right-5 font-poppins"
-  }`;
+  } ${hideButton ? "translate-x-[150%] pointer-events-none opacity-0!" : ""}`;
 
   return (
     <div className="overflow-x-hidden">
@@ -41,7 +48,9 @@ const App = () => {
       </Button>
       <>
         <Navbar />
-        <Hero id={url_links_data.link_urls[0]} />
+        <div ref={heroRef}>
+          <Hero id={url_links_data.link_urls[0]} />
+        </div>
         <WhatIsStretch id={url_links_data.link_urls[1]} />
         <WhyDoYouNeedStretch id={url_links_data.link_urls[2]} />
         <StretchUserExperience />
@@ -53,7 +62,9 @@ const App = () => {
         <ProvenToPerform />
         <CompetitiveEdgeStretch />
         <ImplementationOptions />
-        <Footer id={url_links_data.link_urls[3]} />
+        <div ref={footerRef}>
+          <Footer id={url_links_data.link_urls[3]} />
+        </div>
       </>
     </div>
   );

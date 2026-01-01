@@ -9,19 +9,68 @@ import SectionTitle from "./SectionTitle";
 const Footer = ({ id }) => {
   const { language } = useLanguage();
   const labels = data.languages?.[language] || data.languages.en;
+  const meshImage = "http://localhost:3845/assets/d3b589195df88937ca145ea8aa8700843d0d613b.svg";
 
   return (
     <footer id={id} className="w-full overflow-x-hidden">
       {/* Top section with CTA and net background with built-in side gradients */}
-      <Container
-        style={{
-          backgroundImage: `linear-gradient(to right, white 0%, transparent 20%, transparent 80%, white 100%), url(${data.background_net})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "50% 60%",
-          backgroundSize: "cover",
-        }}
-        className="mx-auto flex min-h-screen flex-col justify-between items-center"
-      >
+      <Container className="relative mx-auto flex min-h-screen flex-col items-center justify-between overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, white 0%, transparent 20%, transparent 80%, white 100%)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "50% 60%",
+            backgroundSize: "cover",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 -z-8"
+          style={{
+            backgroundImage:
+              "linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 22%)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "top",
+            backgroundSize: "cover",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 -z-7"
+          style={{
+            backgroundImage:
+              "linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 35%)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "bottom",
+            backgroundSize: "cover",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 -z-5"
+          style={{
+            backgroundImage:
+              "linear-gradient(180deg, rgba(217, 217, 217, 0.08) 0%, rgba(255, 255, 255, 0) 55%)",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 -z-20"
+          style={{
+            backgroundImage: `url(${meshImage || data.background_net})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            filter: "invert(1)",
+            opacity: 1,
+          }}
+          aria-hidden="true"
+        />
         <SectionTitle labels={labels} language={language} />
         <FooterCTA labels={labels} language={language} />
       </Container>

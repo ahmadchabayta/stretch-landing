@@ -15,9 +15,9 @@ const SectionData = ({ labels, dir, language }) => {
       className={cn(
         "flex items-center justify-between",
         "z-50",
-        "2xl:absolute 2xl:top-80",
-        language === "en" ? "2xl:right-[111px]" : "2xl:left-[111px]",
-        "3xl:w-[920px]! 2xl:w-[620px]!",
+        "2xl:absolute 2xl:top-[300px]",
+        "2xl:max-w-[clamp(620px,46.35vw,890px)]!",
+        language === "en" ? "2xl:right-[90px] 3xl:right-[211px]" : "3xl:left-[221px]",
       )}
       style={{
         flexDirection: language === "en" ? "row" : "row-reverse",
@@ -26,10 +26,14 @@ const SectionData = ({ labels, dir, language }) => {
       <Typography
         as="h3"
         ref={counterRef}
-        className="text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
+        className="font-poppins text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
         dir={dir}
       />
-      <Typography as="p" className="text-black [direction:ltr] xl:[direction:rtl]" dir={dir}>
+      <Typography
+        as="p"
+        className="text-black [direction:ltr] xl:[direction:rtl] text-sm lg:text-[20px] 3xl:text-[24px]"
+        dir={dir}
+      >
         {labels.description.desc}
         <br />
         <Typography.Text className="font-bold">{labels.description.highlight}</Typography.Text>

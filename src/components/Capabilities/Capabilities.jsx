@@ -27,6 +27,12 @@ const Capabilities = ({ id }) => {
 
   return (
     <Section
+      style={{
+        backgroundImage: "url(./assets/capabilities/grid.webp)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "bottom",
+        backgroundSize: "100% 399px",
+      }}
       id={id}
       container={true}
       padding="none"

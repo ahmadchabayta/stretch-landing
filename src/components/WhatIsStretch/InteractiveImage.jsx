@@ -48,136 +48,92 @@ const InteractiveImage = () => {
 
   const iphoneTop = `
     absolute
-    top-[590px]
-    md:top-[640px]
-    lg:top-[727px]
-    xl:top-[302px]
-    2xl:top-[385px]
-    3xl:top-[385px]
+    top-[clamp(590px,88vh,727px)]
+    xl:top-[40vh]
+    2xl:top-[42vh]
+    3xl:top-[40vh]
   `;
 
   const iphoneSide = isRTL
-    ? `right-[-25px] md:right-0 lg:right-[-6%] xl:right-[-6%] 2xl:right-[-3%] 3xl:right-[-3%]`
-    : `left-[-25px] md:left-0 lg:left-[-6%] xl:left-[-6%] 2xl:left-[-3%] 3xl:left-[-3%]`;
+    ? `right-[clamp(-25px,-3vw,0px)] lg:right-[-6%] xl:right-[clamp(-6%,-5vw,-3%)]`
+    : `left-[clamp(-25px,-3vw,0px)] lg:left-[-6%] xl:left-[clamp(-6%,-5vw,-3%)]`;
 
   const iphonePosition = `${iphoneTop} ${iphoneSide}`;
 
   const iphoneSize = `
   object-contain
-    w-[300px]
-    xs:w-[360px]
-    md:w-[550px]
-    lg:w-[936px]
-    lg:h-[457px]
-    xl:w-[800px]
-    xl:h-[419px]
-    2xl:h-[435.165px]
-    2xl:w-[832px]
-    3xl:h-[519px]
-    3xl:w-[1014px]
-    ${isRTL ? "scale-x-[-1]" : ""}
+    w-[clamp(300px,90vw,936px)]
+    xl:w-[clamp(800px,62.5vw,1014px)]
+    h-auto
+    ${isRTL ? "scale-x-[-1]" : "scale-x-[1]"}
   `;
 
   const graphTop = `
-        top-[296px]
-        md:top-[216px] md:-translate-x-1/2
+        top-[clamp(216px,44vh,306px)]
+        md:-translate-x-1/2
         lg:translate-x-0
-        lg:top-[306.38px]
-        xl:top-[225.74px]
-        2xl:top-[314.55px]
-        3xl:top-[324.55px]
+        xl:top-[35vh]
+        2xl:top-[34vh]
+        3xl:top-[34vh]
       `;
 
   const graphSide = isRTL
-    ? `right-[35px] md:right-1/2 lg:right-[127.11px] xl:right-[568.47px] 2xl:right-[591.21px] 3xl:right-[729px]`
-    : `left-[35px] md:left-1/2 lg:left-[127.11px] xl:left-[568.47px] 2xl:left-[591.21px] 3xl:left-[729px]`;
+    ? `right-[clamp(35px,10vw,127px)] md:right-1/2 lg:translate-x-0 xl:right-[clamp(568px,44vw,729px)]`
+    : `left-[clamp(35px,10vw,127px)] md:left-1/2 lg:translate-x-0 xl:left-[clamp(568px,44vw,729px)]`;
 
   const graphPosition = `${graphTop} ${graphSide}`;
 
   const graphSize = `
   object-contain
-    h-[140px]
-    w-[235px]
-    xs:h-[169.132px]
-    xs:w-[283.783px]
-    md:h-[220px]
-    lg:w-[409.048px]
-    lg:h-[243.788px]
-    xl:w-[402px]
-    xl:h-[240px]
-    2xl:h-[249.607px]
-    2xl:w-[418.811px]
-    3xl:h-[266px]
-    3xl:w-[447px]
+    w-[clamp(235px,70vw,409px)]
+    xl:w-[clamp(402px,31vw,447px)]
+    h-auto
   `;
 
   const duplicationTop = `
-        top-[367px]
-        md:top-[327px]
-        lg:top-[465.13px]
-        xl:top-[352.91px]
-        2xl:top-[474px]
-        3xl:top-[474px]
+        top-[clamp(327px,54vh,465px)]
+        xl:top-[47vh]
+        2xl:top-[52vh]
+        3xl:top-[49vh]
       `;
 
   const duplicationSide = isRTL
-    ? `right-[60px] md:right-[120px] lg:right-[180.44px] xl:right-[710px] 2xl:right-[830.19px] 3xl:right-[1020px]`
-    : `left-[60px] md:left-[120px] lg:left-[180.44px] xl:left-[710px] 2xl:left-[830.19px] 3xl:left-[1020px]`;
+    ? `right-[clamp(60px,16vw,180px)] xl:right-[clamp(710px,55vw,1020px)]`
+    : `left-[clamp(60px,16vw,180px)] xl:left-[clamp(710px,55vw,1020px)]`;
 
   const duplicationPosition = `${duplicationTop} ${duplicationSide}`;
 
   const duplicationSize = `
   object-contain
-    h-[155px]
-    w-[390px]
-    xs:h-[188px]
-    xs:w-[474.642px]
-    md:h-[200px]
-    lg:w-[684.154px]
-    lg:h-[270.985px]
-    xl:h-[195px]
-    xl:w-[494px]
-    2xl:h-[203.739px]
-    2xl:w-[514px]
-    3xl:h-[217.625px]
-    3xl:w-[549px]
+    w-[clamp(390px,115vw,684px)]
+    xl:w-[clamp(494px,38.5vw,549px)]
+    h-auto
   `;
 
   const mapTop = `
-        top-[505px]
-        md:top-[505px]
-        lg:top-[721px]
-        xl:top-[522.47px]
-        2xl:top-[623.36px]
-        3xl:top-[653px]
+        top-[clamp(505px,75vh,721px)]
+        xl:top-[69vh]
+        2xl:top-[68vh]
+        3xl:top-[68vh]
       `;
 
   const mapSide = isRTL
-    ? `right-[150px] md:right-[300px] lg:right-[226px] xl:right-[600px] 2xl:right-[676.47px] 3xl:right-[815px]`
-    : `left-[150px] md:left-[300px] lg:left-[226px] xl:left-[600px] 2xl:left-[676.47px] 3xl:left-[815px]`;
+    ? `right-[clamp(150px,40vw,300px)] lg:right-[226px] xl:right-[clamp(600px,46vw,815px)]`
+    : `left-[clamp(150px,40vw,300px)] lg:left-[226px] xl:left-[clamp(600px,46vw,815px)]`;
 
   const mapPosition = `${mapTop} ${mapSide}`;
 
   const mapSize = `
     object-contain
-    w-[230px]
-    h-[126px]
-    xs:w-[276px]
-    xs:h-[152px]
-    w-auto
-    md:h-[210px]
-    lg:w-[398px]
-    lg:h-[219px]
-    xl:h-[232px]
-    2xl:h-[218px]
-    2xl:w-[396.362px]
-    3xl:h-[233px]
+    w-[clamp(230px,70vw,398px)]
+    xl:w-[clamp(396px,31vw,396px)]
+    h-auto
   `;
 
   return (
     <div ref={sectionRef}>
       {/* iPhone - centered vertically on left, slightly protruding */}
-      <img src={iphoneSrc} alt="iPhone" className={`${iphonePosition} ${iphoneSize}`} />
+      <img src={iphoneSrc} alt="iPhone" className={`z-28 ${iphonePosition} ${iphoneSize}`} />
 
       {/* Scatter: Graph - top right (LTR) / top left (RTL) */}
       <img

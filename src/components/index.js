@@ -1,5 +1,4 @@
 export { default as Button } from "./UI/Button/Button";
-export { default as SectionButton } from "./UI/Button/SectionButton";
 export { default as AudienceMirroring } from "./AudienceMirroring/AudienceMirroring";
 export { default as Capabilities } from "./Capabilities/Capabilities";
 export { default as CrossChannel } from "./CrossChannel/CrossChannel";

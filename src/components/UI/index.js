@@ -1,5 +1,4 @@
 export { default as Button } from "./Button/Button";
-export { default as SectionButton } from "./Button/SectionButton";
 export { default as Flex } from "./Flex/Flex";
 export { default as Typography } from "./Typography/Typography";
 export { default as Wrapper } from "./Wrapper/Wrapper";

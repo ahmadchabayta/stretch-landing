@@ -14,12 +14,12 @@ const ProvenToPerform = () => {
       style={{
         backgroundImage: `url(${data.grid})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "fill",
+        backgroundSize: "cover",
         backgroundPosition: "center",
       }}
       container={true}
       padding="none"
-      className="min-h-[50vh]!"
+      className="flex flex-col items-start"
     >
       <SectionTitle labels={labels} />
 
@@ -28,7 +28,9 @@ const ProvenToPerform = () => {
         direction="flex-col xl:flex-row"
         align="items-center xl:items-center"
         justify="justify-center"
-        className="mx-auto w-full flex-1 gap-24 lg:max-w-[1745px] xl:gap-0"
+        spaceX="xl:space-x-24"
+        spaceY="md:space-y-10 xl:space-y-0"
+        className="mx-auto w-full lg:max-w-[1745px] xl:gap-0 h-full absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] "
       >
         <ImageCard image={labels.images.img_1} isArabic={isArabic} />
 
@@ -36,7 +38,7 @@ const ProvenToPerform = () => {
           image={labels.images.img_2}
           isArabic={isArabic}
           isSecondCard
-          className="xl:translate-y-[20%]"
+          className="translate-y-[20%]"
         />
       </Flex>
     </Section>

@@ -6,7 +6,6 @@ import SectionTitle from "./SectionTitle";
 import GridHeader from "./GridHeader";
 import DesktopGrid from "./DesktopGrid";
 import cn from "../../utils/cn";
-import { withBase } from "../../utils/withBase";
 
 const CompetitiveEdgeStretch = () => {
   const { language } = useLanguage();
@@ -19,22 +18,18 @@ const CompetitiveEdgeStretch = () => {
   };
 
   return (
-    <div
-      style={{
-        backgroundImage: `url('${withBase("assets/competitive_edge_stretch/grid.webp")}')`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center bottom",
-      }}
-    >
+    <div className="relative">
       <Section
+        style={{
+          backgroundImage: "url('./assets/capabilities/grid.webp')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom center",
+          backgroundSize: "contain",
+        }}
         padding="none"
         container={false}
-        className="relative flex min-h-0! flex-col overflow-hidden"
+        className="relative flex min-h-screen flex-col overflow-hidden"
       >
-        {/* Background Grid Pattern */}
-        <div className="pointer-events-none absolute inset-0 z-0 opacity-30" />
-
         <Container className="relative z-10 pt-8 pb-8 lg:pt-16 lg:pb-12">
           <SectionTitle title={labels.title} language={language} />
         </Container>
