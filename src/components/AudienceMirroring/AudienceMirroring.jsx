@@ -15,12 +15,7 @@ const AudienceMirroring = ({ id }) => {
     <Section id={id}>
       <Container>
         <SectionTitle labels={labels} dir={dir} />
-        <Flex
-          className="translate-y-12 md:translate-y-16 lg:translate-y-[72px]"
-          flex="true"
-          direction="flex-col"
-          spaceY="space-y-[150px]"
-        >
+        <Flex className="" flex="true" direction="flex-col" spaceY="space-y-12">
           <InteractiveImage data={labels} />
           <MappedDescription labels={labels} dir={dir} />
         </Flex>

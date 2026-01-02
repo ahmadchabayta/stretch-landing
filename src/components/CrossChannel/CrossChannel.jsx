@@ -13,7 +13,7 @@ const CrossChannel = ({ id }) => {
   const percentageRef = useAnimatedCounter(labels.percentage, { duration: 2 });
 
   return (
-    <Section id={id} container={false} padding="none" className="relative min-h-0! overflow-hidden">
+    <Section id={id} container={false} className="relative overflow-hidden">
       <Container>
         <Flex direction="flex-col" className="relative">
           <SectionTitle labels={labels} language={language} />
@@ -36,7 +36,7 @@ const CrossChannel = ({ id }) => {
 
         <Container>
           <Description
-            className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[140px]"
+            className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[120px]"
             labels={labels}
             language={language}
           />

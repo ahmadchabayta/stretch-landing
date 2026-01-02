@@ -82,6 +82,8 @@ const typographyVariants = {
     xl:text-right
     2xl:text-[20px]
     3xl:text-[24px] 
+    [direction:rtl]:text-left
+    [direction:ltr]:text-right
   `,
   "section-desc": `
     font-poppins font-normal text-justify
@@ -131,6 +133,14 @@ const typographyVariants = {
     xl:text-[20px]
     2xl:text-[20px]
     3xl:text-[24px]
+  `,
+  "testimonial-quote": `
+    font-poppins font-normal italic text-black text-justify
+    text-[14px] leading-normal w-[299px] h-[63px]
+    lg:text-[20px] lg:w-[627px] lg:h-[78px]
+    xl:text-[20px] xl:w-[457px] xl:h-[78px]
+    2xl:text-[20px] 2xl:w-[473px] 2xl:h-[78px]
+    3xl:text-[24px] 3xl:w-[668px] 3xl:h-[83px]
   `,
 };
 

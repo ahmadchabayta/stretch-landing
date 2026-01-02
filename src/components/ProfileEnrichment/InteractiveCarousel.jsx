@@ -25,13 +25,15 @@ const InteractiveCarousel = ({ images }) => {
       <Flex
         align="items-center"
         justify="justify-center"
-        className={`relative h-[450px] w-full overflow-visible md:h-[650px] lg:h-[800px] xl:h-[950px] ${
-          isXl ? "perspective-[2200px]" : isLg ? "perspective-[1800px]" : "perspective-distant"
-        }`}
+        className={`relative h-[450px] w-full overflow-visible md:h-[650px] lg:h-[800px] xl:h-[950px]`}
+        style={{
+          perspective: isXl ? "2500px" : isLg ? "2000px" : "1500px",
+          perspectiveOrigin: "center center",
+        }}
       >
         <img
           src={images.macbook}
-          className="pointer-events-none absolute bottom-[-2%] left-1/2 z-10 w-full max-w-[1200px] -translate-x-1/2 object-contain"
+          className="pointer-events-none relative z-10 w-full max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px]"
           alt="Macbook Base"
         />
 
@@ -49,7 +51,7 @@ const InteractiveCarousel = ({ images }) => {
               damping: 20,
               mass: 1,
             }}
-            className="absolute max-h-[75%] max-w-[85%] origin-center rounded-lg border-none object-contain shadow-none lg:max-w-[75%]"
+            className="absolute max-h-[50%] max-w-[55%] origin-center rounded-lg border-none object-contain shadow-2xl lg:max-h-[45%] lg:max-w-[50%] xl:max-h-[40%] xl:max-w-[45%]"
             draggable={false}
           />
         ))}

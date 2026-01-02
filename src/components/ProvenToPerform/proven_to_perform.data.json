@@ -5,11 +5,13 @@
       "subtitle": "-Testimonials",
       "images": {
         "img_1": {
-          "img": "./assets/proven_to_perform/left_profile.webp",
+          "img": "./assets/proven_to_perform/left_profile_large.webp",
+          "text": "“Stretch uncovered duplication we didn’t know existed; saving us 30% in media costs.”",
           "by": "-Performance Director, Global Fashion Retailer"
         },
         "img_2": {
-          "img": "./assets/proven_to_perform/right_profile.webp",
+          "img": "./assets/proven_to_perform/right_profile_large.webp",
+          "text": "“With the help of Stretch offline attribution insights we finally were able to calculate a cost per footfall for our campaign”",
           "by": "-Regional QSR Director of Marketing"
         }
       }
@@ -19,15 +21,16 @@
       "subtitle": "آراء العملاء-",
       "images": {
         "img_1": {
-          "img": "./assets/proven_to_perform/right_ar_profile.webp",
+          "img": "./assets/proven_to_perform/left_glass.webp",
+          "text": "“With the help of Stretch offline attribution insights we finally were able to calculate a cost per footfall for our campaign”",
           "by": "-مدير الأداء، شركة أزياء عالمية"
         },
         "img_2": {
-          "img": "./assets/proven_to_perform/left_ar_profile.webp",
+          "img": "./assets/proven_to_perform/right_glass.webp",
           "by": "-مدير التسويق الإقليمي لسلسلة مطاعم سريعة الخدمة"
         }
       }
     }
   },
-  "grid": "./assets/proven_to_perform/grid.webp"
+  "grid": "./assets/proven_to_perform/proven_to_perform_large.jpg"
 }

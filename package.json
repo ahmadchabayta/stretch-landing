@@ -23,10 +23,12 @@
     "@unpic/react": "^1.0.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
+    "liquid-glass-react": "^1.1.1",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-intersection-observer": "^10.0.0",
+    "react-responsive-3d-carousel": "^2.1.5",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17"
   },

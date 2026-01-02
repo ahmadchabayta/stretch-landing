@@ -14,12 +14,12 @@ const ProfileEnrichment = ({ id }) => {
       style={{
         backgroundImage: `url(${data.images.background})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
       }}
       container={true}
       padding="none"
-      className="relative overflow-hidden"
+      className="relative overflow-hidden bg-red-500"
     >
       <SectionTitle labels={labels} />
       <InteractiveCarousel images={data.images} />

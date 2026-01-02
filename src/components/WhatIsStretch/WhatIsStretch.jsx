@@ -10,7 +10,7 @@ const WhatIsStretch = ({ className, id }) => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
   return (
-    <Section id={id} container={true} padding="none" className={cn("relative", className)}>
+    <Section id={id} container={true} className={cn("relative", className)}>
       <SectionTitle data={sectionLabels} />
       <InteractiveImage data={sectionLabels} />
       <List

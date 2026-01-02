@@ -31,7 +31,7 @@ const Capabilities = ({ id }) => {
         backgroundImage: "url(./assets/capabilities/grid.webp)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
-        backgroundSize: "contain",
+        backgroundSize: "100% 399px",
       }}
       id={id}
       container={true}

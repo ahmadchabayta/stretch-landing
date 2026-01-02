@@ -1,69 +1,25 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import useMediaQuery from "../../hooks/useMediaQuery";
 
-const DashboardImage = ({ item, position, onClick, language = "en" }) => {
-  const transitionMs = 600;
-  const transitionSec = transitionMs / 1000;
-  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
+const DashboardImage = ({ item, angle, radius, onClick, isActive, isVertical }) => {
+  // Convert angle to radians for positioning
+  const rad = (angle * Math.PI) / 180;
 
-  // 1. Define prominence styles based on position
-  const isRTL = language === "ar";
-  const prominenceMap = {
-    first: {
-      opacity: 1,
-      scale: 1,
-      z: 0,
-      x: isLargeScreen ? "clamp(-220px, -18vw, -120px)" : "0px",
-      y: isLargeScreen ? "clamp(40px, 15vh, 120px)" : "0px",
-      width: isLargeScreen ? "clamp(400px, 70vw, 800px)" : "clamp(320px, 90vw, 700px)",
-      zIndex: 30,
-    },
-    second: {
-      opacity: 0.95,
-      scale: 0.65,
-      z: -50,
-      x: isLargeScreen
-        ? isRTL
-          ? "clamp(-250px, -35vw, -700px)"
-          : "clamp(250px, 35vw, 700px)"
-        : "0px",
-      y: isLargeScreen ? "clamp(40px, 15vh, 120px)" : "200px",
-      width: isLargeScreen ? "clamp(260px, 45vw, 700px)" : "clamp(260px, 80vw, 640px)",
-      zIndex: 20,
-    },
-    third: {
-      opacity: 0.9,
-      scale: 0.65,
-      z: -100,
-      x: isLargeScreen
-        ? isRTL
-          ? "clamp(250px, 35vw, 700px)"
-          : "clamp(-250px, -35vw, -700px)"
-        : "0px",
-      y: isLargeScreen ? "clamp(40px, 15vh, 120px)" : "300px",
-      width: isLargeScreen ? "clamp(260px, 45vw, 700px)" : "clamp(260px, 80vw, 640px)",
-      zIndex: 10,
-    },
-  };
+  // Calculate position on the elliptical path
+  const offset = Math.sin(rad) * radius;
+  const z = Math.cos(rad) * radius - radius;
 
-  const prominence = prominenceMap[position] || prominenceMap.first;
+  // Vertical: use Y axis, Horizontal: use X axis
+  const x = isVertical ? 0 : offset;
+  const y = isVertical ? offset : 0;
 
-  // Build transform for smooth 3D movement
-  const buildTransform = (x, y, z, rotX, rotY, scale) =>
-    `translate(-50%, ${isLargeScreen ? "-60%" : "-50%"}) perspective(1400px) translateX(${x}) translateY(${y}) translateZ(${z}px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(${scale}, ${scale}, ${scale})`;
-
-  const currentTransform = buildTransform(
-    prominence.x,
-    prominence.y,
-    prominence.z,
-    0,
-    0,
-    prominence.scale,
-  );
+  // Scale and opacity based on whether this is the active/front item
+  const scale = isActive ? 1.15 : 0.6;
+  const opacity = isActive ? 1 : 0.35;
+  const zIndex = isActive ? 100 : Math.round(50 + z / 10);
 
   return (
-    <div
+    <motion.div
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -74,37 +30,30 @@ const DashboardImage = ({ item, position, onClick, language = "en" }) => {
         }
       }}
       aria-label={`Show next dashboard image, current: ${item.alt}`}
-      style={{
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        width: prominence.width,
-        transformStyle: "preserve-3d",
-        zIndex: prominence.zIndex,
-        cursor: "pointer",
+      className="absolute cursor-pointer"
+      animate={{
+        x,
+        y,
+        z,
+        scale,
+        opacity,
+        zIndex,
       }}
-      className="flex items-center justify-center"
+      transition={{
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1],
+      }}
+      style={{
+        transformStyle: "preserve-3d",
+      }}
     >
-      <motion.img
+      <img
         src={item.src}
         alt={item.alt}
-        animate={{
-          opacity: prominence.opacity,
-          transform: currentTransform,
-        }}
-        transition={{
-          duration: transitionSec,
-          ease: [0.25, 0.1, 0.25, 1],
-        }}
-        style={{
-          width: prominence.width,
-          height: "auto",
-          objectFit: "contain",
-          transformStyle: "preserve-3d",
-          backfaceVisibility: "hidden",
-        }}
+        className="w-[370px] md:w-[550px] lg:w-[903px] xl:w-[860px] 2xl:w-[908px] 3xl:w-[919.36px] h-auto object-contain pointer-events-none"
+        draggable={false}
       />
-    </div>
+    </motion.div>
   );
 };
 
@@ -114,9 +63,11 @@ DashboardImage.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }).isRequired,
-  position: PropTypes.oneOf(["first", "second", "third"]).isRequired,
+  angle: PropTypes.number.isRequired,
+  radius: PropTypes.number.isRequired,
   onClick: PropTypes.func,
-  language: PropTypes.string,
+  isActive: PropTypes.bool,
+  isVertical: PropTypes.bool,
 };
 
 export default DashboardImage;

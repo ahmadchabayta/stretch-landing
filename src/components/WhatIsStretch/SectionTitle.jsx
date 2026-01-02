@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { Typography, SectionHeadContainer } from "../../components";
 
 const SectionTitle = ({ data }) => (
-  <SectionHeadContainer>
-    <Typography as="h2" variant="section-title">
+  <SectionHeadContainer className="min-w-full">
+    <Typography as="h2" variant="section-title" className="w-full">
       {data.title}
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="3xl:[direction:rtl] [direction:ltr] ">
+    <Typography as="h3" variant="section-subtitle" className="w-full">
       <Typography.Text>{data.description.part1}</Typography.Text>
       <Typography.Text accent bold className="3xl:whitespace-pre-line">
         {data.description.highlighted1}

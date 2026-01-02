@@ -37,7 +37,7 @@ const App = () => {
 
   const floatingButtonClass = `primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 ${
     language === "ar" ? "font-tajawal left-5" : "right-5 font-poppins"
-  } ${hideButton ? "translate-x-[150%] pointer-events-none opacity-0!" : ""}`;
+  } ${hideButton ? `${language === "ar" ? "translate-x-[-150%]" : "translate-x-[150%]"} pointer-events-none opacity-0!` : ""}`;
 
   return (
     <div className="overflow-x-hidden">

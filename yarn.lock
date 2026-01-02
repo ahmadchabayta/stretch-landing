@@ -2263,6 +2263,11 @@ lightningcss@1.30.2:
     lightningcss-win32-arm64-msvc "1.30.2"
     lightningcss-win32-x64-msvc "1.30.2"
 
+liquid-glass-react@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/liquid-glass-react/-/liquid-glass-react-1.1.1.tgz#d510517b5fda7785890e28a7885881abff887421"
+  integrity sha512-pKzaktaMAEztd93wpWcz2Z5Z9qdLJUNJdMX+n00Ca4XsnrLTQ5xJzm/+GQXZUeuFXe/PQ8ziVMZO6531PyaFJw==
+
 local-pkg@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-1.1.2.tgz#c03d208787126445303f8161619dc701afa4abb5"
@@ -2627,6 +2632,11 @@ react-refresh@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.18.0.tgz#2dce97f4fe932a4d8142fa1630e475c1729c8062"
   integrity sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==
+
+react-responsive-3d-carousel@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-responsive-3d-carousel/-/react-responsive-3d-carousel-2.1.5.tgz#48f4ca41380177cd9398e082cb9d42536db54762"
+  integrity sha512-bdXVVdDiYupIIRk9EPxaa2gM0TsD6N++qYdO14YRO3+IWNX88MC3mJSsTAALT7p1GY9Y5mFW9LUJ+shVooKx3w==
 
 react@^19.2.0:
   version "19.2.1"
