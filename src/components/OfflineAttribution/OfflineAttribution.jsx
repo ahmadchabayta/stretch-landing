@@ -5,6 +5,7 @@ import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
 import { Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
+import { languages } from "eslint-plugin-prettier";
 
 const OfflineAttribution = ({ id }) => {
   const { language, currentLanguage } = useLanguage();
@@ -32,26 +33,14 @@ const OfflineAttribution = ({ id }) => {
     xl:min-w-[1583px]
     shrink-0
     bottom-[-10%]
-    ${
-      language === "en"
-        ? `left-[-38%]
-           md:left-0
-           lg:left-[-50%]
-           xl:left-[-40%]
-           2xl:left-[-40%]
-           3xl:left-[-30%]`
-        : `right-[-38%]
-           md:right-0
-           lg:right-[-50%]
-           xl:right-[-40%]
-           2xl:right-[-40%]
-           3xl:right-[-30%]
-           scale-x-[-1]
-           `
-    }
+    left-[-38%]
+    md:left-0
+    lg:left-[-50%]
+    xl:left-[-40%]
+    2xl:left-[-40%]
+    3xl:left-[-30%]
   `;
   const hidden_on_large_styles = `
-
     flex
     xl:hidden
     absolute
@@ -60,28 +49,14 @@ const OfflineAttribution = ({ id }) => {
     md:min-w-[900px]
     lg:min-w-[1400px]
     bottom-[-10%]
-    ${
-      language === "en"
-        ? `left-[-150px]
-           md:translate-x-[-50%]
-           md:left-[50%]
-           lg:left-[-40%]
-           lg:translate-x-0
-           xl:left-[-70%]
-           2xl:left-[-80%]
-           3xl:left-[-50%]`
-        : `right-[-150px]
-            md:translate-x-[50%]
-            md:right-[50%]
-            lg:right-[-40%]
-            lg:translate-x-0
-            xl:right-[-70%]
-            2xl:right-[-80%]
-            3xl:right-[-50%]
-            scale-x-[-1]
-        
-        `
-    }
+    left-[-150px]
+    md:translate-x-[-50%]
+    md:left-[50%]
+    lg:left-[-40%]
+    lg:translate-x-0
+    xl:left-[-70%]
+    2xl:left-[-80%]
+    3xl:left-[-50%]
   `;
 
   return (
@@ -89,12 +64,16 @@ const OfflineAttribution = ({ id }) => {
       id={id}
       container={false}
       padding="none"
-      className="relative overflow-hidden min-h-0! "
+      className="relative overflow-hidden min-h-0!"
+      style={{ direction: "ltr" }}
     >
-      <SectionTitle labels={labels} dir={dir} />
-      <SectionData labels={labels} dir={dir} language={language} />
+      <div style={{ direction: dir }}>
+        <SectionTitle labels={labels} dir={dir} />
+        <SectionData labels={labels} dir={dir} language={language} />
+      </div>
       <div
         className="relative min-h-[515px] w-[738px] cursor-pointer lg:h-[815px]"
+        dir="ltr"
         {...(!isTouchDevice && {
           onMouseEnter: () => setIsRevealed((prev) => !prev),
           onMouseLeave: () => setIsRevealed((prev) => !prev),
@@ -104,12 +83,12 @@ const OfflineAttribution = ({ id }) => {
           <>
             <img
               className={hidden_on_small_styles}
-              src={data.images.large.orange}
+              src={labels.images.large.orange}
               alt="orange map"
             />
             <img
               className={hidden_on_large_styles}
-              src={data.images.small.orange}
+              src={labels.images.small.orange}
               alt="orange map mobile"
             />
           </>
@@ -117,12 +96,12 @@ const OfflineAttribution = ({ id }) => {
           <>
             <img
               className={hidden_on_small_styles}
-              src={data.images.large.purple}
+              src={labels.images.large.purple}
               alt="purple map"
             />
             <img
               className={hidden_on_large_styles}
-              src={data.images.small.purple}
+              src={labels.images.small.purple}
               alt="purple map mobile"
             />
           </>

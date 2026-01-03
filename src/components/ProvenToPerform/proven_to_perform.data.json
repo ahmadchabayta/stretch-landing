@@ -21,12 +21,12 @@
       "subtitle": "آراء العملاء-",
       "images": {
         "img_1": {
-          "img": "./assets/proven_to_perform/left_glass.webp",
+          "img": "./assets/proven_to_perform/right_profile_large_ar.webp",
           "text": "“With the help of Stretch offline attribution insights we finally were able to calculate a cost per footfall for our campaign”",
           "by": "-مدير الأداء، شركة أزياء عالمية"
         },
         "img_2": {
-          "img": "./assets/proven_to_perform/right_glass.webp",
+          "img": "./assets/proven_to_perform/left_profile_large_ar.webp",
           "by": "-مدير التسويق الإقليمي لسلسلة مطاعم سريعة الخدمة"
         }
       }

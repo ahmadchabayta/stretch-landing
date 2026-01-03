@@ -14,7 +14,17 @@
       },
       "competitor_visitors": "COMPETITOR VISITORS",
       "store_visitors": "STORE VISITORS",
-      "button_label": "Book a Demo"
+      "button_label": "Book a Demo",
+      "images": {
+        "large": {
+          "purple": "./assets/offline_attribution/purple.webp",
+          "orange": "./assets/offline_attribution/orange.webp"
+        },
+        "small": {
+          "purple": "./assets/offline_attribution/mobile_purple.webp",
+          "orange": "./assets/offline_attribution/mobile_orange.webp"
+        }
+      }
     },
     "ar": {
       "title": "الإحالة التسويقية غير المتصلة بالإنترنت",
@@ -29,17 +39,17 @@
       },
       "competitor_visitors": "زوار المنافس",
       "store_visitors": "زوار المتجر",
-      "button_label": "احجز عرضاً توضيحياً"
-    }
-  },
-  "images": {
-    "large": {
-      "purple": "./assets/offline_attribution/purple.webp",
-      "orange": "./assets/offline_attribution/orange.webp"
-    },
-    "small": {
-      "purple": "./assets/offline_attribution/mobile_purple.webp",
-      "orange": "./assets/offline_attribution/mobile_orange.webp"
+      "button_label": "احجز عرضاً توضيحياً",
+      "images": {
+        "large": {
+          "purple": "./assets/offline_attribution/purple_ar.webp",
+          "orange": "./assets/offline_attribution/orange_ar.webp"
+        },
+        "small": {
+          "purple": "./assets/offline_attribution/mobile_purple_ar.webp",
+          "orange": "./assets/offline_attribution/mobile_orange_ar.webp"
+        }
+      }
     }
   }
 }
