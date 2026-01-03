@@ -26,11 +26,10 @@ const CompetitiveEdgeStretch = () => {
           backgroundPosition: "bottom center",
           backgroundSize: "contain",
         }}
-        padding="none"
         container={false}
         className="relative flex min-h-screen flex-col overflow-hidden"
       >
-        <Container className="relative z-10 pt-8 pb-8 lg:pt-16 lg:pb-12">
+        <Container>
           <SectionTitle title={labels.title} language={language} />
         </Container>
 

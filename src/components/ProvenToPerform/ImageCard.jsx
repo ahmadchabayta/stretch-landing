@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import cn from "../../utils/cn";
 
-const ImageCard = ({ className, image, isArabic, isSecondCard = false }) => {
+const ImageCard = ({ className, image, isSecondCard = false }) => {
   return (
     <img
       className={cn(

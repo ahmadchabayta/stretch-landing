@@ -15,7 +15,7 @@ const SectionHeadContainer = ({ children, className, ...props }) => {
       align="items-start xl:items-end"
       justify="xl:justify-between"
       gap="xl:gap-x-16"
-      spaceY="space-y-[15px] xl:space-y-0"
+      spaceY="space-y-[15px] xl:space-y-0 bg-red-500"
       className={cn("w-full my-10", paddingClass, className)}
       {...props}
     >

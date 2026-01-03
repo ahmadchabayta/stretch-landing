@@ -73,13 +73,13 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
       return {
         x: `${x}px`,
         y: `${y}px`,
-        z: z,
-        scale: scale,
-        zIndex: zIndex,
-        opacity: opacity,
+        z,
+        scale,
+        zIndex,
+        opacity,
         filter: `blur(${blur}px)`,
-        rotateX: rotateX,
-        rotateY: rotateY,
+        rotateX,
+        rotateY,
         rotateZ: 0,
       };
     };

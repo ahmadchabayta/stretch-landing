@@ -41,6 +41,8 @@ const App = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <div className="fixed app_container border-x-2 h-screen inset-0 z-50 border-red-500" />
+      <div className="fixed app_container border-x-2 top-[50%] left-1/2 translate-x-[-50%] translate-y-[-50%] h-10 z-50 bg-green-500" />
       <Button variant="demo" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}

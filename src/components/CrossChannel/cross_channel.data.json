@@ -3,8 +3,11 @@
     "en": {
       "title": "Cross-Channel Audience Match",
       "subtitle": " TikTok & META",
-      "other_subtitle": "Cross-Channel Audience Duplication",
-      "percentage": "28",
+      "other_subtitle": "Cross-Channel\n Audience Duplication",
+      "percentage": {
+        "number": 28,
+        "suffix": "%"
+      },
       "meta_audience": "META AUDIENCE",
       "tiktok_audience": "TIKTOK AUDIENCE",
       "description": "Platforms report reach in silos. Stretch identifies",
@@ -15,10 +18,13 @@
       "button_label": "Book a Demo"
     },
     "ar": {
-      "title": "مطابقة الجمهور عبر القنوات",
+      "title": "مطابقة الجمهور \nعبر القنوات",
       "subtitle": "تيك توك وميتا",
-      "other_subtitle": "نسبة تكرار الجمهور عبر القنوات",
-      "percentage": "28",
+      "other_subtitle": "نسبة تكرار\nالجمهور عبر القنوات",
+      "percentage": {
+        "number": "٢٨",
+        "suffix": "٪"
+      },
       "meta_audience": "جمهور ميتا",
       "tiktok_audience": "جمهور تيك توك",
       "description": "تقوم المنصات بالإبلاغ عن الوصول بشكل منفصل. Stretch تحدد",

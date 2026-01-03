@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels }) => (
-  <SectionHeadContainer className="mb-0!">
-    <Typography as="h2" variant="section-title" className="max-w-[808px]!">
+  <SectionHeadContainer>
+    <Typography as="h2" variant="section-title">
       {labels.title}
     </Typography>
 
