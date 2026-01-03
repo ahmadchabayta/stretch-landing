@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { withBase } from "../../utils/withBase";
 
 const DashboardImage = ({
   item,
@@ -57,7 +56,7 @@ const DashboardImage = ({
       }}
     >
       <img
-        src={withBase(item.src)}
+        src={item.src}
         alt={item.alt}
         className="w-[420px] md:w-[650px] lg:w-[903px] xl:w-[860px] 2xl:w-[908px] 3xl:w-[919.36px] h-auto object-contain pointer-events-none max-w-[85vw] md:max-w-none"
         draggable={false}
