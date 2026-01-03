@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import data from "./whatIsStretch.data.json";
+import { withBase } from "../../utils/withBase";
 
 const InteractiveImage = () => {
   const sectionRef = useRef(null);
@@ -177,13 +178,13 @@ const InteractiveImage = () => {
   return (
     <div ref={sectionRef}>
       {/* iPhone - centered vertically on left, slightly protruding */}
-      <img src={iphoneSrc} alt="iPhone" className={` ${iphonePosition} ${iphoneSize}`} />
+      <img src={withBase(iphoneSrc)} alt="iPhone" className={` ${iphonePosition} ${iphoneSize}`} />
 
       {/* Scatter: Graph - top right (LTR) / top left (RTL) */}
       <img
         className={`absolute z-30 transition-all duration-1000 ${graphPosition} ${graphSize} ${visibilityClass} `}
         style={{ transitionDelay: "600ms" }}
-        src={data.images.graph}
+        src={withBase(data.images.graph)}
         alt="Graph"
         loading="eager"
         decoding="async"
@@ -192,7 +193,7 @@ const InteractiveImage = () => {
 
       {/* Scatter: Duplication - center-left (LTR) / center-right (RTL) */}
       <img
-        src={data.images.duplication}
+        src={withBase(data.images.duplication)}
         alt="Duplication"
         style={{ transitionDelay: "700ms" }}
         className={`absolute z-40 transition-all duration-1000 ${duplicationPosition} ${duplicationSize} ${visibilityClass} `}
@@ -200,7 +201,7 @@ const InteractiveImage = () => {
 
       {/* Scatter: Map - right side (LTR) / left side (RTL) */}
       <img
-        src={data.images.map}
+        src={withBase(data.images.map)}
         alt="Map"
         style={{ transitionDelay: "800ms" }}
         className={`absolute z-50 transition-all duration-1000 ${mapPosition} ${mapSize} ${visibilityClass} `}

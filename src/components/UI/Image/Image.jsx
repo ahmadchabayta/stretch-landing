@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import cn from "../../../utils/cn";
+import { withBase } from "../../../utils/withBase";
 
 const Image = ({
   src,
@@ -13,7 +14,7 @@ const Image = ({
   ...props
 }) => (
   <img
-    src={src}
+    src={withBase(src)}
     alt={alt}
     width={width}
     height={height}

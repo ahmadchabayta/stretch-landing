@@ -6,7 +6,7 @@ const SectionData = ({ labels, language, percentageRef }) => (
     justify="justify-between"
     align="items-bottom xl:items-end"
     className={`xl:flex-col 2xl:absolute ${
-      language === "en" ? "2xl:right-[17px] 3xl:right-[45px]" : "2xl:left-0"
+      language === "en" ? "2xl:right-[17px] 3xl:right-4" : "2xl:left-0"
     } 2xl:top-[250px]`}
   >
     <Flex direction="flex-col" align="items-start" className="w-full">

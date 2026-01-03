@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { List, Flex, Typography } from "../../../components";
+import { withBase } from "../../../utils/withBase";
 
 const NavbarControlItems = ({ languages, open, changeLanguage, setOpen }) => (
   <>
@@ -24,7 +25,11 @@ const NavbarControlItems = ({ languages, open, changeLanguage, setOpen }) => (
                 justify="justify-center"
                 className="h-8 w-8 shrink-0 overflow-hidden rounded-full"
               >
-                <img src={lang.flag} alt={lang.label} className="h-full w-full object-cover" />
+                <img
+                  src={withBase(lang.flag)}
+                  alt={lang.label}
+                  className="h-full w-full object-cover"
+                />
               </Flex>
               <Typography as="span" className="flex-1">
                 {lang.label}

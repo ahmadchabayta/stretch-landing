@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import cn from "../../utils/cn";
+import { withBase } from "../../utils/withBase";
 
-const ImageCard = ({ className, image, isArabic, isSecondCard = false }) => {
+const ImageCard = ({ className, image, isSecondCard = false }) => {
   return (
     <img
       className={cn(
@@ -11,7 +12,7 @@ const ImageCard = ({ className, image, isArabic, isSecondCard = false }) => {
           ? "w-[370px] lg:w-[850px] 2xl:w-[650px] 3xl:w-[850px]"
           : "w-[370px] lg:w-[850px] 2xl:w-[650px] 3xl:w-[850px]",
       )}
-      src={image.img}
+      src={withBase(image.img)}
       alt={image.by}
     />
   );

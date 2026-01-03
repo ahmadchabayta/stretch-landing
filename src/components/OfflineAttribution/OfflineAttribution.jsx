@@ -5,7 +5,7 @@ import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
 import { Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
-import { languages } from "eslint-plugin-prettier";
+import { withBase } from "../../utils/withBase";
 
 const OfflineAttribution = ({ id }) => {
   const { language, currentLanguage } = useLanguage();
@@ -83,12 +83,12 @@ const OfflineAttribution = ({ id }) => {
           <>
             <img
               className={hidden_on_small_styles}
-              src={labels.images.large.orange}
+              src={withBase(labels.images.large.orange)}
               alt="orange map"
             />
             <img
               className={hidden_on_large_styles}
-              src={labels.images.small.orange}
+              src={withBase(labels.images.small.orange)}
               alt="orange map mobile"
             />
           </>
@@ -96,12 +96,12 @@ const OfflineAttribution = ({ id }) => {
           <>
             <img
               className={hidden_on_small_styles}
-              src={labels.images.large.purple}
+              src={withBase(labels.images.large.purple)}
               alt="purple map"
             />
             <img
               className={hidden_on_large_styles}
-              src={labels.images.small.purple}
+              src={withBase(labels.images.small.purple)}
               alt="purple map mobile"
             />
           </>

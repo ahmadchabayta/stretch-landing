@@ -48,7 +48,7 @@ const App = () => {
       </Button>
       <>
         <Navbar />
-        <div ref={heroRef}>
+        <div className="mb-12" ref={heroRef}>
           <Hero id={url_links_data.link_urls[0]} />
         </div>
         <WhatIsStretch id={url_links_data.link_urls[1]} />

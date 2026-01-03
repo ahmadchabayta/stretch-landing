@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useLanguage } from "../../../context/LanguageContext";
 import cn from "../../../utils/cn";
 import { Button, Flex, Wrapper } from "../..";
+import { withBase } from "../../../utils/withBase";
 
 const NavbarControl = ({ data, className }) => {
   const rootRef = useRef(null);
@@ -33,7 +34,7 @@ const NavbarControl = ({ data, className }) => {
         >
           <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full">
             <img
-              src={otherLanguage.flag}
+              src={withBase(otherLanguage.flag)}
               alt={otherLanguage.label}
               className="h-full w-full object-cover"
             />

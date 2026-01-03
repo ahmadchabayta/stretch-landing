@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { Flex } from "../../components";
 import useCarousel3D from "../../hooks/useCarousel3D";
+import { withBase } from "../../utils/withBase";
 
 const InteractiveCarousel = ({ images }) => {
   const slides = [
@@ -32,29 +33,35 @@ const InteractiveCarousel = ({ images }) => {
         }}
       >
         <img
-          src={images.macbook}
-          className="pointer-events-none relative z-10 w-full max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px]"
+          src={withBase(images.macbook)}
+          className="pointer-events-none relative z-20 w-full max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px]"
           alt="Macbook Base"
         />
 
-        {slides.map((slide, index) => (
-          <motion.img
-            key={slide.id}
-            src={slide.src}
-            alt={slide.alt}
-            variants={variants}
-            initial={false}
-            animate={getPosition(index)}
-            transition={{
-              type: "spring",
-              stiffness: 70,
-              damping: 20,
-              mass: 1,
-            }}
-            className="absolute max-h-[50%] max-w-[55%] origin-center rounded-lg border-none object-contain shadow-2xl lg:max-h-[45%] lg:max-w-[50%] xl:max-h-[40%] xl:max-w-[45%]"
-            draggable={false}
-          />
-        ))}
+        {slides.map((slide, index) => {
+          const position = getPosition(index);
+          const isRightPosition = position === "next";
+
+          return (
+            <motion.img
+              key={slide.id}
+              src={withBase(slide.src)}
+              alt={slide.alt}
+              variants={variants}
+              initial={false}
+              animate={position}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+                damping: 25,
+                mass: 0.8,
+                velocity: 0,
+              }}
+              className={`absolute max-h-[50%] max-w-[55%] origin-center rounded-lg border-none object-contain lg:max-h-[45%] lg:max-w-[50%] xl:max-h-[40%] xl:max-w-[45%] ${isRightPosition ? "-z-1 " : "z-20"}`}
+              draggable={false}
+            />
+          );
+        })}
       </Flex>
 
       <Flex

@@ -4,6 +4,7 @@ import HeroFeatures from "./HeroFeatures";
 import { Button, Container, Flex, Section, Typography } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import HeroTitle from "./HeroTitle";
+import { withBase } from "../../utils/withBase";
 
 const Hero = ({ id }) => {
   const { language } = useLanguage();
@@ -18,7 +19,7 @@ const Hero = ({ id }) => {
         backgroundImage: `url(${data.images.hero_img})`,
         backgroundRepeat: "no-repeat",
       }}
-      className="md:bg-md:bg-position-[center_top_50px] bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-0px] 3xl:bg-contain 3xl:bg-positiion-[right_top_0px] flex flex-col justify-center"
+      className="md:bg-md:bg-position-[center_top_50px] bg-white bg-cover bg-center lg:bg-position-[right_top_43px] xl:bg-position-[right_top_-75px] 2xl:bg-position-[right_top_-0px] 3xl:bg-contain 3xl:bg-positiion-[right_top_0px] flex flex-col justify-center"
     >
       <Container>
         <Flex
@@ -62,7 +63,7 @@ const Hero = ({ id }) => {
           </Button>
           <img
             className="w-[135px] md:w-[180px] lg:w-[220px] xl:w-[245px] 2xl:w-[245px] 3xl:w-[278px]"
-            src={data.images.stretch_s}
+            src={withBase(data.images.stretch_s)}
             alt="Stretch S"
             width={384}
             height={384}

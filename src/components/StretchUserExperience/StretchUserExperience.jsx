@@ -1,149 +1,87 @@
-import { useState, useEffect } from "react";
-import DashboardImage from "./DashboardImage";
 import data from "./stretch_user_experience.data.json";
-import { Container, Flex, Section } from "../../components";
+import { Container, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import SectionTitle from "./SectionTitle";
 import { withBase } from "../../utils/withBase";
+import RippleButton from "../UI/RippleButton";
+import { useCarouselTimer } from "./useCarouselTimer";
+import { getCarouselSpread, getCarouselPositions, getPositionIndex } from "./carouselConfig";
+import CarouselItem from "./CarouselItem";
 
 const StretchUserExperience = () => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
-  const isLargeScreen = useMediaQuery("(min-width: 1024px)");
-  const circleSrc = withBase(isLargeScreen ? data.images.large : data.images.small);
 
-  const items = [
-    {
-      id: "tags",
-      src: withBase("assets/stretch_user_experience/tags.webp"),
-      alt: "Dashboard campaigns view with Tags",
-    },
-    {
-      id: "reports",
-      src: withBase("assets/stretch_user_experience/graphs.webp"),
-      alt: "Dashboard reports stack",
-    },
-    {
-      id: "platforms",
-      src: withBase("assets/stretch_user_experience/nav.webp"),
-      alt: "Platform list",
-    },
-  ];
+  // Media queries
+  const isMdScreen = useMediaQuery("(min-width: 740px)");
+  const isLgScreen = useMediaQuery("(min-width: 1024px)");
+  const isLargeScreen = useMediaQuery("(min-width: 1280px)");
+  const isXLScreen = useMediaQuery("(min-width: 1280px)");
+  const is2XLScreen = useMediaQuery("(min-width: 1440px)");
+  const is3XLScreen = useMediaQuery("(min-width: 1920px)");
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Get carousel items from JSON and add withBase to src
+  const items = data.carouselItems.map((item) => ({
+    ...item,
+    src: withBase(item.src),
+  }));
 
-  // Auto-rotate every 4 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % items.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [items.length]);
+  const { currentIndex, handleNext } = useCarouselTimer(items.length);
 
-  const handleItemClick = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
-  };
-
-  // Calculate angle for each item based on its position relative to current
-  const getAngle = (index) => {
-    const anglePerItem = 360 / items.length; // 120° apart for 3 items
-    const relativeIndex = (index - currentIndex + items.length) % items.length;
-    // Map: 0 = left (-90°), 1 = right-back, 2 = far-back
-    // Start at -90° so front item is on the left
-    return -90 + relativeIndex * anglePerItem;
-  };
-
-  // Responsive radius - controls how spread out items are
-  const radius = isLargeScreen ? 550 : 250;
-
-  const currentStep = currentIndex + 1;
+  // Calculate spread and positions based on screen size
+  const spread = getCarouselSpread({
+    is3XLScreen,
+    is2XLScreen,
+    isXLScreen,
+    isLgScreen,
+    isMdScreen,
+  });
+  const isMobile = !isMdScreen && !isLgScreen && !isLargeScreen;
+  const positions = getCarouselPositions(spread, isLargeScreen, isMobile);
 
   return (
     <Section container={false} className="stretch_user_experience relative w-full">
       <img
-        className={`
-                      absolute
-                      z-0
-                      object-contain
-                      top-[307px]
-                      right-[-0.5%]
-                      w-[clamp(96px,20vw,140px)]
-                      md:right-[0.5%]
-                      md:w-[clamp(180px,32vw,240px)]
-                      lg:w-[clamp(340px,32vw,420px)]
-                      xl:top-[366px]
-                      xl:left-[41px]
-                    `}
-        src={circleSrc}
+        className="absolute -z-0 object-contain top-[307px] right-[-0.5%] w-[clamp(96px,20vw,140px)] md:right-[0.5%] md:w-[clamp(180px,32vw,240px)] lg:w-[clamp(340px,32vw,420px)] xl:top-[366px] xl:left-[41px]"
+        src={withBase(isLargeScreen ? data.images.large : data.images.small)}
         alt="Blue Circle"
       />
 
-      <Container className="z-50 relative">
-        <Flex
-          className="mx-auto overflow-visible"
-          direction="flex-col"
-          align="items-center"
-          justify="justify-center"
-          gap="gap-10 lg:gap-10"
+      <Container>
+        <SectionTitle currentStep={currentIndex + 1} data={sectionLabels} />
+      </Container>
+
+      {/* Carousel Section - Centered in Container */}
+      <Container className="flex flex-col xl:flex-row items-center justify-center gap-6 lg:gap-10">
+        {/* 3D Carousel */}
+        <div
+          className="relative w-full h-[70vh] max-h-[600px] xl:h-[500px] flex items-center justify-center origin-center"
+          style={{ perspective: "1000px" }}
         >
-          <Container>
-            <SectionTitle currentStep={currentStep} data={sectionLabels} />
-          </Container>
+          {items.map((item, index) => {
+            const posIndex = getPositionIndex(index, currentIndex, items.length);
+            return (
+              <CarouselItem
+                key={item.id}
+                item={item}
+                position={positions[posIndex]}
+                onClick={handleNext}
+              />
+            );
+          })}
+        </div>
 
-          {/* Carousel container with perspective */}
-          <div
-            className="relative w-[95%] max-w-[1623px] flex items-center justify-center"
-            style={{
-              perspective: "1200px",
-              perspectiveOrigin: "center center",
-              height: isLargeScreen ? "500px" : "700px",
-            }}
-          >
-            {/* 3D scene container */}
-            <div
-              className="relative flex items-center justify-center"
-              style={{
-                transformStyle: "preserve-3d",
-                width: "100%",
-                height: "100%",
-              }}
-            >
-              {items.map((item, index) => (
-                <DashboardImage
-                  key={item.id}
-                  item={item}
-                  angle={getAngle(index)}
-                  radius={radius}
-                  onClick={handleItemClick}
-                  isActive={index === currentIndex}
-                  isVertical={!isLargeScreen}
-                />
-              ))}
-            </div>
-
-            {/* Navigation button */}
-            <button
-              type="button"
-              aria-label="Next slide"
-              onClick={handleItemClick}
-              className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-50 w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#FF4200] flex items-center justify-center shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 lg:w-8 lg:h-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2.5}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </Flex>
+        {/* Navigation Button */}
+        <RippleButton
+          type="button"
+          aria-label="Next slide"
+          onClick={handleNext}
+          className="hidden xl:flex shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#FF4200]  items-center justify-center shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2"
+        />
       </Container>
     </Section>
   );
 };
+
 export default StretchUserExperience;

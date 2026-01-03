@@ -1,6 +1,24 @@
 {
   "images": [
     {
+      "id": "gradient-bg",
+      "src": "assets/audience_mirroring/gradient_bg.webp",
+      "alt": "Gradient Background",
+      "className": ""
+    },
+    {
+      "id": "gray-avatars-left",
+      "src": "assets/audience_mirroring/gray_avatars_left.webp",
+      "alt": "Gray Avatars Left",
+      "className": ""
+    },
+    {
+      "id": "orange-vertical-avatar",
+      "src": "assets/audience_mirroring/orange_vertical_avatar.webp",
+      "alt": "Orange Vertical Avatar",
+      "className": "w-[190px] md:w-[200px] lg:w-[391px]"
+    },
+    {
       "id": "grid-background",
       "src": "./assets/audience_mirroring/grid_background.webp",
       "alt": "Grid Background",

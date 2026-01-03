@@ -42,7 +42,7 @@ const Navbar = () => {
       <nav>
         <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
           <img
-            src={withBase("assets/navbar/stretch_logo.webp")}
+            src={withBase(rawData.images.logo)}
             alt="Stretch Logo"
             className="w-[171px] lg:w-[293px]"
             loading="eager"

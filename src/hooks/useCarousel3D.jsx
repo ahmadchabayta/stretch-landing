@@ -13,6 +13,10 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
     return () => clearInterval(timer);
   }, [intervalMs, slidesLength]);
 
+  const handleSetSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
   const getPosition = (index) => {
     const diff = (index - currentSlide + slidesLength) % slidesLength;
     if (diff === 0) return "active";
@@ -73,13 +77,13 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
       return {
         x: `${x}px`,
         y: `${y}px`,
-        z: z,
-        scale: scale,
-        zIndex: zIndex,
-        opacity: opacity,
+        z,
+        scale,
+        zIndex,
+        opacity,
         filter: `blur(${blur}px)`,
-        rotateX: rotateX,
-        rotateY: rotateY,
+        rotateX,
+        rotateY,
         rotateZ: 0,
       };
     };
@@ -91,7 +95,7 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
     };
   }, [isLg, isXl]);
 
-  return { currentSlide, setCurrentSlide, getPosition, variants, isLg, isXl };
+  return { currentSlide, setCurrentSlide: handleSetSlide, getPosition, variants, isLg, isXl };
 };
 
 export default useCarousel3D;

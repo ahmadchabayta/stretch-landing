@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
-
 import { withBase } from "../../utils/withBase";
 
-const DecorativeCircle = ({ type, onClick }) => {
+const DecorativeCircle = ({ type, onClick, backgroundImage }) => {
   const circles = {
     background: {
       className:
         "pointer-events-none absolute left-[-63px] top-0 w-[539.399px] h-[809px] rotate-90 3xl:left-0 3xl:top-0 3xl:w-[1896px] 3xl:h-[1080px] 3xl:rotate-0 z-[500]",
       style: {
-        backgroundImage: `url(${withBase("assets/stretch_user_experience/background_blur.webp")})`,
+        backgroundImage: `url(${withBase(backgroundImage)})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       },
@@ -64,6 +63,7 @@ const DecorativeCircle = ({ type, onClick }) => {
 DecorativeCircle.propTypes = {
   type: PropTypes.oneOf(["background", "blueGradient", "shadow", "orange"]).isRequired,
   onClick: PropTypes.func,
+  backgroundImage: PropTypes.string,
 };
 
 export default DecorativeCircle;

@@ -1,8 +1,26 @@
 {
   "images": {
     "large": "./assets/stretch_user_experience/blue_circle.webp",
-    "small": "./assets/stretch_user_experience/blue_circle_sm.webp"
+    "small": "./assets/stretch_user_experience/blue_circle_sm.webp",
+    "backgroundBlur": "assets/stretch_user_experience/background_blur.webp"
   },
+  "carouselItems": [
+    {
+      "id": "tags",
+      "src": "assets/stretch_user_experience/tags.webp",
+      "alt": "Dashboard campaigns view with Tags"
+    },
+    {
+      "id": "reports",
+      "src": "assets/stretch_user_experience/graphs.webp",
+      "alt": "Dashboard reports stack"
+    },
+    {
+      "id": "platforms",
+      "src": "assets/stretch_user_experience/nav.webp",
+      "alt": "Platform list"
+    }
+  ],
   "languages": {
     "en": {
       "title": {

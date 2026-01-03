@@ -6,6 +6,7 @@ import SectionTitle from "./SectionTitle";
 import { useLanguage } from "../../context/LanguageContext";
 import { Flex, Section, Container } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
+import { withBase } from "../../utils/withBase";
 
 const CrossChannel = ({ id }) => {
   const { language } = useLanguage();
@@ -29,14 +30,14 @@ const CrossChannel = ({ id }) => {
         className="3xl:pr-0 2xl:pr-[117px]"
       >
         <img
-          src={labels.img}
+          src={withBase(labels.img)}
           alt="Cross Channel Background"
           className={`h-[395px] w-[592px] object-contain md:h-[666px] md:w-[900px] lg:h-[866px] lg:w-[1299px]`}
         />
 
         <Container>
           <Description
-            className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[120px]"
+            className="3xl:max-w-[587px]! lg:max-w-[762px]! 2xl:mb-[120px] mx-auto mt-6 lg:mt-0"
             labels={labels}
             language={language}
           />

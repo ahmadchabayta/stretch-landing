@@ -1,4 +1,7 @@
 {
+  "images": {
+    "logo": "assets/navbar/stretch_logo.webp"
+  },
   "languages": {
     "en": {
       "menu_items": ["Product", "Use Cases", "About Us", "Contact"],

@@ -1,13 +1,17 @@
 import PropTypes from "prop-types";
 import rawData from "./audience_mirroring.data.json";
+import { withBase } from "../../utils/withBase";
 
 const InteractiveImage = () => {
   const absoluteImages = ["grid-background", "background", "match-rate"];
+  const gradientBg = rawData.images.find((img) => img.id === "gradient-bg");
+  const grayAvatarsLeft = rawData.images.find((img) => img.id === "gray-avatars-left");
+  const orangeVerticalAvatar = rawData.images.find((img) => img.id === "orange-vertical-avatar");
 
   return (
     <div
       style={{
-        backgroundImage: "url('assets/audience_mirroring/gradient_bg.webp')",
+        backgroundImage: `url('${withBase(gradientBg?.src || "")}')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "center",
@@ -17,7 +21,7 @@ const InteractiveImage = () => {
       {rawData.images.map(({ id, src, alt, className }) => {
         const shouldBeAbsolute = absoluteImages.includes(id);
         if (shouldBeAbsolute) {
-          return <img key={id} src={src} alt={alt} className={className} />;
+          return <img key={id} src={withBase(src)} alt={alt} className={className} />;
         }
         return null;
       })}
@@ -35,7 +39,7 @@ const InteractiveImage = () => {
             return (
               <img
                 key={id}
-                src="./assets/audience_mirroring/gray_avatars_left.webp"
+                src={withBase(grayAvatarsLeft?.src || "")}
                 alt={alt}
                 className={cleanClassName}
               />
@@ -46,8 +50,8 @@ const InteractiveImage = () => {
 
         <div className="relative ">
           <img
-            src="./assets/audience_mirroring/orange_vertical_avatar.webp"
-            alt="Orange Vertical Avatar"
+            src={withBase(orangeVerticalAvatar?.src || "")}
+            alt={orangeVerticalAvatar?.alt || "Orange Vertical Avatar"}
             className="w-[190px] md:w-[200px] lg:w-[391px] cursor-pointer hover:opacity-0 transition-opacity"
           />
           {rawData.images.map(({ id, src, alt, className }) => {
@@ -61,7 +65,7 @@ const InteractiveImage = () => {
               return (
                 <img
                   key={id}
-                  src={src}
+                  src={withBase(src)}
                   alt={alt}
                   className={`${cleanClassName} absolute top-0 left-0`}
                 />
@@ -80,7 +84,7 @@ const InteractiveImage = () => {
               )
               .replace(/md:w-\[286px\]/, "md:w-[180px] lg:w-[286px]")
               .trim();
-            return <img key={id} src={src} alt={alt} className={cleanClassName} />;
+            return <img key={id} src={withBase(src)} alt={alt} className={cleanClassName} />;
           }
           return null;
         })}

@@ -42,6 +42,20 @@
 
 /* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
 
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
 .app_container {
   width: 100%;
   max-width: 95%;
@@ -102,22 +116,36 @@
 
 .stretch_user_experience {
   position: relative;
+  overflow: hidden;
 }
 
 .stretch_user_experience::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  /* Make it tall enough to cover after rotation */
   height: 100vh;
-  background-image: url("./assets/stretch_user_experience/stretch_user_experience_background.webp");
+  width: 100vw;
+  background-image: url("./assets/stretch_user_experience/stretch_user_experience_background_vertical.webp");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center;
-  transform: rotate(90deg);
-  transform-origin: center;
+  background-size: cover;
+  background-position: top center;
+  transform-origin: top center;
   pointer-events: none !important;
   transition: transform 600ms linear;
   z-index: 0;
+}
+@media (min-width: 1280px) {
+  .stretch_user_experience::before {
+    background-image: url("./assets/stretch_user_experience/stretch_user_experience_background.webp");
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: top center;
+    background-size: cover;
+  }
 }
 .why-do-you-need-stretch-background {
   position: relative;
@@ -144,13 +172,6 @@
   z-index: 1;
 }
 
-@media (min-width: 1024px) {
-  .stretch_user_experience::before {
-    transform: rotate(0deg);
-    background-position: top center;
-    background-size: cover;
-  }
-}
 .menu_links_typography {
   @apply font-manrope 3xl:text-[23px] lg:font-poppins 3xl:font-semibold 3xl:leading-[34px] text-left text-[16px] leading-[22px] font-normal lg:text-center;
 }
