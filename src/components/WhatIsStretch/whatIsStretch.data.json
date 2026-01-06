@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": {
+      "title": "WHAT IS STRETCH?",
+      "description": {
+        "part1": "Stretch is a seamless SaaS platform that sheds light on ",
+        "highlighted1": "duplication,cross-platform",
+        "part2": " performance, and ",
+        "highlighted2": "real-world impact"
+      },
+      "button_label": "Book a Demo",
+      "tagline": ["No SDKs", "No integrations", "Just clarity"]
+    },
+    "ar": {
+      "title": "ما هو ستريتش؟",
+      "description": {
+        "part1": "ستريتش هو منصة SaaS متكاملة توفر رؤية واضحة حول ",
+        "highlighted1": "تكرار الجمهور، وأداء الحملات عبر المنصات",
+        "part2": "، ",
+        "highlighted2": "والتأثير الحقيقي في السوق"
+      },
+      "button_label": "احجز عرضاً توضيحياً",
+      "tagline": ["لا حاجة لـ SDK ", "لا حاجة لعمليات دمج", "فقط وضوح تام"]
+    }
+  },
+  "images": {
+    "graph": "./assets/what_is_stretch/graph.webp",
+    "iphone": {
+      "small": "./assets/what_is_stretch/iphone.webp",
+      "large": "./assets/what_is_stretch/iphone_large.webp"
+    },
+    "duplication": "./assets/what_is_stretch/duplication.webp",
+    "map": "./assets/what_is_stretch/map.webp"
+  }
+}

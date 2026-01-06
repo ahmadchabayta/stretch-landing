@@ -1,0 +1,37 @@
+{
+  "languages": {
+    "en": {
+      "title": "PROVEN TO PERFORM",
+      "subtitle": "-Testimonials",
+      "images": {
+        "img_1": {
+          "img": "./assets/proven_to_perform/left_profile_large.webp",
+          "text": "“Stretch uncovered duplication we didn’t know existed; saving us 30% in media costs.”",
+          "by": "-Performance Director, Global Fashion Retailer"
+        },
+        "img_2": {
+          "img": "./assets/proven_to_perform/right_profile_large.webp",
+          "text": "“With the help of Stretch offline attribution insights we finally were able to calculate a cost per footfall for our campaign”",
+          "by": "-Regional QSR Director of Marketing"
+        }
+      }
+    },
+    "ar": {
+      "title": "أثبت فعاليته",
+      "subtitle": "آراء العملاء-",
+      "images": {
+        "img_1": {
+          "img": "./assets/proven_to_perform/right_profile_large_ar.webp",
+          "text": "“كشف ستريتش عن تكرار في الجمهور لم نكن نعلم بوجوده، مما وفر لنا 30% من تكاليف الإعلانات”",
+          "by": "-مدير الأداء، شركة أزياء عالمية"
+        },
+        "img_2": {
+          "img": "./assets/proven_to_perform/left_profile_large_ar.webp",
+          "text": "“بفضل تحليلات الإحالة التسويقية غير المتصلة بالإنترنت من ستريتش، تمكّنا أخيراً من احتساب تكلفة الزيارات الفعلية لحملتنا”",
+          "by": "-مدير التسويق الإقليمي لسلسلة مطاعم سريعة الخدمة"
+        }
+      }
+    }
+  },
+  "grid": "./assets/proven_to_perform/proven_to_perform_large.jpg"
+}

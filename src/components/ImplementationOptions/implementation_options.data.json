@@ -1,0 +1,156 @@
+{
+  "languages": {
+    "en": {
+      "title": "IMPLEMENTATION OPTIONS FOR STRETCH",
+      "subtitle": {
+        "line1": "Where can",
+        "line_highlight": "Stretch Track",
+        "line2": "and based on",
+        "line_bold": "which event"
+      },
+      "button_label": "Book a Demo",
+      "headers": {
+        "event": "Event",
+        "channels": "Channels",
+        "tracking_impressions": "Tracking Based on Impressions",
+        "tracking_clicks": "Tracking Based on Clicks",
+        "banner": "Banner",
+        "video": "Video"
+      },
+      "channels": [
+        {
+          "name": "DSPs",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "Facebook",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "Instagram",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "Snap",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "TikTok",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "X",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "Mobile networks",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "Direct Publishers",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        }
+      ]
+    },
+    "ar": {
+      "title": "خيارات التطبيق لـ ستريتش",
+      "subtitle": {
+        "line1": "أين يمكن لـ",
+        "line_highlight": "ستريتش التتبع",
+        "line2": "وبناءً على",
+        "line_bold": "أي حدث"
+      },
+      "button_label": "احجز عرضاً توضيحياً",
+      "headers": {
+        "event": "الحدث",
+        "channels": "القنوات",
+        "tracking_impressions": "التتبع بناءً على مرات الظهور",
+        "tracking_clicks": "التتبع بناءً على النقرات",
+        "banner": "إعلانات البانر",
+        "video": "الفيديو"
+      },
+      "channels": [
+        {
+          "name": "منصات DSP",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "فيسبوك",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "إنستغرام",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "سناب",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "تيك توك",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "X",
+          "impressions_banner_checked": false,
+          "impressions_video_checked": false,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "شبكات الموبايل",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        },
+        {
+          "name": "الناشرون المباشرون",
+          "impressions_banner_checked": true,
+          "impressions_video_checked": true,
+          "clicks_banner_checked": true,
+          "clicks_video_checked": true
+        }
+      ]
+    }
+  }
+}

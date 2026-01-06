@@ -1,0 +1,32 @@
+{
+  "languages": {
+    "en": {
+      "title": "YOUR MISSING LINK",
+      "subtitle": {
+        "subtitle": "Between Ad Spend and ",
+        "highlight": "Real Results"
+      },
+      "description": "Let us show you how Stretch unifies fragmented media reporting and improves your performance.",
+      "button_label": {
+        "demo_button_label": "Book a Demo",
+        "contact_button_label": "Contact Us Now"
+      },
+      "footer_links": ["Company Info", "Privacy & Terms", "Support", "Contact", "Powered by Memob+"]
+    },
+    "ar": {
+      "title": "حلقتك المفقودة",
+      "subtitle": {
+        "subtitle": "بين إنفاق الإعلانات و",
+        "highlight": "النتائج الحقيقية"
+      },
+      "description": "دعنا نُظهر لك كيف يقوم ستريتش بتوحيد تقارير الإعلانات المتجزئة وتحسين أداء حملاتك.",
+      "button_label": {
+        "demo_button_label": "احجز عرضاً توضيحياً",
+        "contact_button_label": "تواصل معنا الآن"
+      },
+      "footer_links": ["معلومات الشركة", "الخصوصية والشروط", "الدعم", "اتصل بنا", "مدعوم من Memob+"]
+    }
+  },
+  "footer_logo": "./assets/footer/footer_logo.webp",
+  "background_img": "./assets/footer/net.webp"
+}

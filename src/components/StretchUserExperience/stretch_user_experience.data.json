@@ -1,0 +1,76 @@
+{
+  "images": {
+    "large": "./assets/stretch_user_experience/blue_circle.webp",
+    "small": "./assets/stretch_user_experience/blue_circle_sm.webp",
+    "backgroundBlur": "assets/stretch_user_experience/background_blur.webp",
+    "backgroundVertical": "assets/stretch_user_experience/stretch_user_experience_background_vertical.webp",
+    "backgroundHorizontal": "assets/stretch_user_experience/stretch_user_experience_background.webp"
+  },
+  "carouselItems": [
+    {
+      "id": "platforms",
+      "src": "assets/stretch_user_experience/nav.webp",
+      "alt": "Platform list"
+    },
+    {
+      "id": "tags",
+      "src": "assets/stretch_user_experience/tags.webp",
+      "alt": "Dashboard campaigns view with Tags"
+    },
+    {
+      "id": "reports",
+      "src": "assets/stretch_user_experience/graphs.webp",
+      "alt": "Dashboard reports stack"
+    }
+  ],
+  "languages": {
+    "en": {
+      "title": {
+        "title": "THE STRETCH",
+        "title_2": "USER EXPERIENCE"
+      },
+      "steps": [
+        {
+          "subtitle_bold": "Generate Stretch Tag",
+          "subtitle": "for all Campaign Channels",
+          "relation": "assets/stretch_user_experience/nav.webp"
+        },
+        {
+          "subtitle_bold": "Download and add Tag",
+          "subtitle": "to all creatives",
+          "relation": "assets/stretch_user_experience/tags.webp"
+        },
+        {
+          "subtitle_bold": "Receive",
+          "subtitle": "report",
+          "relation": "assets/stretch_user_experience/graphs.webp"
+        }
+      ],
+      "button_label": "Book a Demo"
+    },
+    "ar": {
+      "title": {
+        "title": "تجربة ستريتش",
+        "title_2": "للمستخدم"
+      },
+      "steps": [
+        {
+          "subtitle_bold": "توليد وسم ستريتش",
+          "subtitle": "لجميع قنوات الحملات",
+          "relation": "assets/stretch_user_experience/nav.webp"
+        },
+        {
+          "subtitle_bold": "تنزيل إضافة الوسم ",
+          "subtitle": "إلى جميع المواد الإبداعية",
+          "relation": "assets/stretch_user_experience/tags.webp"
+        },
+        {
+          "subtitle_bold": "استلم",
+          "subtitle": "التقرير",
+          "relation": "assets/stretch_user_experience/graphs.webp"
+        }
+      ],
+      "button_label": "احجز عرضاً توضيحياً"
+    }
+  }
+}

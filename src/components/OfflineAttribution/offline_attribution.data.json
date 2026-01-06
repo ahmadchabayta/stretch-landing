@@ -1,0 +1,55 @@
+{
+  "languages": {
+    "en": {
+      "title": "OFFLINE ATTRIBUTION",
+      "subtitles": {
+        "subtitle": "Stretch tracks who saw or clicked your ads across channels, and matches that exposure to real-world location visits.",
+        "subtitle_highlight": "matches that exposure to real-world location",
+        "visits": "visits"
+      },
+      "number": "1,300",
+      "description": {
+        "desc": "visited the store",
+        "highlight": "post-ad exposure"
+      },
+      "competitor_visitors": "COMPETITOR VISITORS",
+      "store_visitors": "STORE VISITORS",
+      "button_label": "Book a Demo",
+      "images": {
+        "large": {
+          "purple": "./assets/offline_attribution/purple.webp",
+          "orange": "./assets/offline_attribution/orange.webp"
+        },
+        "small": {
+          "purple": "./assets/offline_attribution/mobile_purple.webp",
+          "orange": "./assets/offline_attribution/mobile_orange.webp"
+        }
+      }
+    },
+    "ar": {
+      "title": "الإحالة التسويقية غير المتصلة بالإنترنت",
+      "subtitles": {
+        "subtitle": "يتتبع ستريتش الأشخاص الذين شاهدوا إعلاناتك أو نقروا عليها عبر مختلف القنوات، ",
+        "subtitle_highlight": "ويربط هذا التعرض بزيارات فعلية لمواقع المتاجر على أرض الواقع."
+      },
+      "number": "1,300",
+      "description": {
+        "desc": "زار المتجر",
+        "highlight": "بعد التعرّض للإعلان"
+      },
+      "competitor_visitors": "زوار المنافس",
+      "store_visitors": "زوار المتجر",
+      "button_label": "احجز عرضاً توضيحياً",
+      "images": {
+        "large": {
+          "purple": "./assets/offline_attribution/purple_ar.webp",
+          "orange": "./assets/offline_attribution/orange_ar.webp"
+        },
+        "small": {
+          "purple": "./assets/offline_attribution/mobile_purple_ar.webp",
+          "orange": "./assets/offline_attribution/mobile_orange_ar.webp"
+        }
+      }
+    }
+  }
+}

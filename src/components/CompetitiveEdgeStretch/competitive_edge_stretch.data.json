@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": {
+      "title": "THE COMPETITIVE EDGE STRETCH VS SOCIAL & DSPs",
+      "button_label": "Book a demo",
+      "features": [
+        "Cross-platform matching",
+        "Offline attribution",
+        "Audience retargeting",
+        "Profile enrichment"
+      ],
+      "columns": ["Snapchat", "Meta", "Tiktok", "DV360", "Stretch"],
+      "partial": "Partial"
+    },
+    "ar": {
+      "title": "الميزة التنافسية: ستريتش مقابل وسائل التواصل الاجتماعي ومنصّات الـ DSP",
+      "button_label": "احجز عرضاً توضيحياً",
+      "features": [
+        "مطابقة عبر المنصات",
+        "الإحالة التسويقية غير المتصلة بالإنترنت",
+        "إعادة استهداف الجمهور",
+        "إثراء الملفات التعريفية"
+      ],
+      "columns": ["سناب شات", "ميتا", "تيك توك", "دي في 360", "ستريتش"],
+      "partial": "جزئي"
+    }
+  },
+  "img": "./assets/competitive_edge_stretch/grid.webp",
+  "boxes": [
+    ["", "", "", "", "✓"],
+    ["Partial", "Partial", "Partial", "Partial", "✓"],
+    ["", "✓", "✓", "✓", "✓"],
+    ["", "", "", "", "✓"]
+  ]
+}

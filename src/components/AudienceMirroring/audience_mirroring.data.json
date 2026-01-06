@@ -1,0 +1,55 @@
+{
+  "images": {
+    "gradientBg": "assets/audience_mirroring/gradient_bg.webp",
+    "grayAvatarsLeft": "assets/audience_mirroring/gray_avatars_left.webp",
+    "orangeVerticalAvatar": "assets/audience_mirroring/orange_vertical_avatar.webp",
+    "gridBackground": "assets/audience_mirroring/grid_background.webp",
+    "grayAvatars": "assets/audience_mirroring/gray_avatars.webp",
+    "background": "assets/audience_mirroring/grid_background.webp",
+    "purpleAvatar": "assets/audience_mirroring/purple_avatar.webp",
+    "matchRate": "assets/audience_mirroring/match_rate.webp",
+    "orangeAvatars": "assets/audience_mirroring/orange_avatars.webp"
+  },
+  "languages": {
+    "en": {
+      "title": "Audience Mirroring",
+      "subtitle": "Stretch captures conversion audiences and enables their reactivation across different platforms.",
+      "decorative_btn_label": "Matched Audience From Meta",
+      "description": [
+        {
+          "highlighted": "Retarget Meta buyers",
+          "description": "on Snapchat"
+        },
+        {
+          "highlighted": "Convert interest into action",
+          "description": "on DV360,"
+        },
+        {
+          "highlighted": "Shorten the funnel",
+          "description": "with intent-based mirroring."
+        }
+      ],
+      "button_label": "Book a Demo"
+    },
+    "ar": {
+      "title": "مضاهاة الجمهور",
+      "subtitle": "يلتقط ستريتش جماهير التحويل ويمكّن إعادة تفعيلهم عبر مختلف المنصات.",
+      "decorative_btn_label": "مطابقة الجمهور من ميتا",
+      "description": [
+        {
+          "highlighted": "أعد استهداف المشترين من ميتا",
+          "description": "على سناب شات"
+        },
+        {
+          "highlighted": "حوّل الاهتمام إلى فعل",
+          "description": "على دي في 360"
+        },
+        {
+          "highlighted": "قلّص مسار التحويل",
+          "description": "عبر تقنية المرايا المبنية على النية"
+        }
+      ],
+      "button_label": "احجز عرضاً توضيحياً"
+    }
+  }
+}

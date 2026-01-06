@@ -1,0 +1,32 @@
+{
+  "languages": {
+    "en": {
+      "title": "Cross-Channel Audience Match",
+      "subtitle": " TikTok & META",
+      "other_subtitle": "Cross-Channel Audience Duplication",
+      "percentage": "28",
+      "meta_audience": "META AUDIENCE",
+      "tiktok_audience": "TIKTOK AUDIENCE",
+      "description": "Platforms report reach in silos. Stretch identifies",
+      "description_highlighted": "overlapping audiences",
+      "description_2": "in real time, helping advertisers uncover duplication and redirect budgets for",
+      "description_2_highlighted": "maximum real unique reach.",
+      "img": "./assets/cross_channel/3xl_en_coins.webp",
+      "button_label": "Book a Demo"
+    },
+    "ar": {
+      "title": "مطابقة الجمهور عبر القنوات",
+      "subtitle": "تيك توك وميتا",
+      "other_subtitle": "نسبة تكرار الجمهور عبر القنوات",
+      "percentage": "٢٨",
+      "meta_audience": "جمهور ميتا",
+      "tiktok_audience": "جمهور تيك توك",
+      "description": "تقوم المنصات بالإبلاغ عن الوصول بشكل منفصل. Stretch تحدد",
+      "description_highlighted": "الجماهير المتداخلة",
+      "description_2": "في الوقت الفعلي، مما يساعد المعلنين على اكتشاف التكرار وإعادة توجيه الميزانيات لتحقيق",
+      "description_2_highlighted": "أقصى وصول فريد حقيقي.",
+      "img": "./assets/cross_channel/3xl_ar_coins.webp",
+      "button_label": "احجز عرضًا تجريبيًا"
+    }
+  }
+}
