@@ -7,12 +7,11 @@ const SectionHeadContainer = ({ children, className, ...props }) => {
   const { currentLanguage } = useLanguage() || {};
   const dir = currentLanguage?.dir || "ltr";
   const paddingClass = dir === "rtl" ? "lg:pl-[30px]" : "lg:pr-[30px]";
-
   return (
     <Flex
       flex={true}
       direction="flex-col xl:flex-row"
-      align="items-start xl:items-end"
+      align="items-start xl:items-center"
       justify="xl:justify-between"
       spaceY="space-y-[15px] xl:space-y-0"
       className={cn("w-full pt-10", paddingClass, className)}

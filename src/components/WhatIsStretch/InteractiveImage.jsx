@@ -50,6 +50,7 @@ const InteractiveImage = () => {
   const iphoneTop = `
     absolute
     bottom-[0]
+    xs:bottom-[-6%]
     lg:bottom-auto
     lg:-translate-y-1/2
     lg:top-[55%]
@@ -73,7 +74,7 @@ const InteractiveImage = () => {
   `;
 
   const graphTop = `
-        top-[14.5%]
+        top-[5.5%]
         md:top-[3%] 
         lg:top-[23%]
         xl:top-[clamp(5%,calc(5%+10vw-12.8px),30%)]
@@ -95,7 +96,7 @@ const InteractiveImage = () => {
   `;
 
   const duplicationTop = `
-        top-[32.5%]
+        top-[23.5%]
         md:top-[22%]
         lg:top-[39%]
         xl:top-[55%]
@@ -118,7 +119,8 @@ const InteractiveImage = () => {
   `;
 
   const mapTop = `
-        top-[52%]
+        xs:top-[46%]
+        top-[46%]
         md:top-[44%]
         lg:top-[58%]
         xl:top-[clamp(54%,42.4vw,64%)]

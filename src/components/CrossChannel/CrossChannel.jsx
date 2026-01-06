@@ -29,15 +29,17 @@ const CrossChannel = ({ id }) => {
         justify="justify-center xl:justify-start"
         className="min-h-full"
       >
-        <img
-          src={withBase(labels.img)}
-          alt="Cross Channel Background"
-          className={`w-[592px] md:w-[900px] lg:w-[1299px] ${language === "ar" ? "translate-x-[5%] xl:translate-x-[18%] 2xl:translate-x-[5%]" : "translate-x-[-5%] xl:translate-x-[-18%] 2xl:translate-x-[-24%]"}`}
-        />
+        <div className="w-[592px] md:w-[900px] lg:w-[1299px] min-h-[1100px] relative">
+          <img
+            src={withBase(labels.img)}
+            alt="Cross Channel Background"
+            className={`absolute top-0 w-full ${language === "ar" ? "translate-x-[5%] md:translate-x-[0%] lg:translate-x-[0] xl:translate-x-[0%] 2xl:translate-x-[5%] 3xl:translate-x-[-5%]" : "translate-x-[-5%] xl:translate-x-[-18%] 2xl:translate-x-[-24%] 3xl:translate-x-[-35%]"}`}
+          />
+        </div>
         <Description
           labels={labels}
           language={language}
-          className="block xl:hidden text-balance min-w-[342px] max-w-[587px] text-center! z-50 mx-auto"
+          className="block xl:absolute right-[0] bottom-[9%] text-balance min-w-[342px] max-w-[587px] text-start! z-50 mx-auto"
         />
       </Flex>
     </Section>

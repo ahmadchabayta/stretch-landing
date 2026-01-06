@@ -49,7 +49,7 @@ const SectionData = ({ labels, language }) => {
       <Description
         labels={labels}
         language={language}
-        className="hidden xl:mt-[65%] xl:block min-w-[382px] max-w-[587px] text-end! z-50"
+        className="hidden xl:block min-w-[382px] max-w-[587px] text-end! z-50"
       />
     </Flex>
   );

@@ -10,7 +10,7 @@ const WhatIsStretch = ({ className, id }) => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
   return (
-    <Section id={id} container={false} className={cn("relative", className)}>
+    <Section id={id} container={false} className={cn("relative overflow-hidden", className)}>
       <Container>
         <SectionTitle data={sectionLabels} />
       </Container>

@@ -87,7 +87,7 @@ const typographyVariants = {
     [direction:ltr]:text-right
   `,
   "section-desc": `
-    font-poppins font-normal text-justify
+    font-poppins font-normal
     text-[14px] leading-normal
     xl:text-[20px]
     2xl:text-[20px]
