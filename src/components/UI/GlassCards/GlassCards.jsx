@@ -15,6 +15,9 @@ const GlassCards = () => {
   const [showStats, setShowStats] = useState(false);
   const [dpr, setDpr] = useState(1.5);
 
+  // Only enable stats in development
+  const isDevelopment = import.meta.env.DEV;
+
   // Drag State Management
   const dragRef = useRef({
     isDragging: false,
@@ -61,8 +64,10 @@ const GlassCards = () => {
     setActiveIndex((prev) => (prev + 1) % cardsData.length);
   };
 
-  // Toggle FPS stats overlay with the "s" key
+  // Toggle FPS stats overlay with the "s" key (development only)
   useEffect(() => {
+    if (!isDevelopment) return;
+
     const handleKey = (event) => {
       if (event.key.toLowerCase() === "s") {
         setShowStats((prev) => !prev);
@@ -71,7 +76,7 @@ const GlassCards = () => {
 
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, []);
+  }, [isDevelopment]);
 
   return (
     <Section className="relative w-full bg-[#020617] overflow-hidden font-sans select-none">
@@ -111,7 +116,7 @@ const GlassCards = () => {
             <PerformanceMonitor onIncline={() => setDpr(2)} onDecline={() => setDpr(1)} />
             <FrameLimiter fps={FPS_CAP} />
             <Scene activeIndex={activeIndex} dragRef={dragRef} />
-            {showStats && <Stats />}
+            {isDevelopment && showStats && <Stats />}
           </Canvas>
         </div>
 

@@ -38,7 +38,7 @@ const ProvenToPerform = () => {
           >
             <Glass
               accentColor="#FFFFFF"
-              className="flex flex-col touch-none select-none items-center justify-center min-h-[152px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden bg-red-500!"
+              className="flex flex-col touch-none select-none items-center justify-center min-h-[152px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden"
             >
               <div
                 className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "right-0 top-0 translate-y-[-50%] translate-x-[50%]" : "left-0 top-0 translate-y-[-50%] translate-x-[-50%]"}`}
@@ -91,7 +91,7 @@ const ProvenToPerform = () => {
               <Typography
                 as="p"
                 variant="proven-to-perform-card-quotedBy"
-                className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18  bg-blue-900 text-white"
+                className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18   text-white"
               >
                 {labels.images.img_2.by}
               </Typography>
