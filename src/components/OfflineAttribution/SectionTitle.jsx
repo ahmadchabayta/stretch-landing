@@ -11,9 +11,8 @@ const SectionTitle = ({ labels, dir }) => (
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}
       </Typography.Text>
-      <Typography.Text>
-        {labels.subtitles.visits ? ` ${labels.subtitles.visits}` : ""}
-      </Typography.Text>
+      {` `}
+      <Typography.Text>{labels.subtitles.visits}</Typography.Text>
     </Typography>
   </SectionHeadContainer>
 );

@@ -4,10 +4,12 @@ import cn from "../../utils/cn";
 import { withBase } from "../../utils/withBase";
 
 const SectionTitle = ({ labels, className }) => (
-  <SectionHeadContainer className={cn("mb-6 xl:mb-12 items-start! h-full", className)}>
-    <Typography as="h2" variant="section-title" className="max-w-[808px]!">
-      {labels.title}
-    </Typography>
+  <SectionHeadContainer className={cn("mb-6 xl:mb-12 items-start! h-full w-full", className)}>
+    <div className="flex w-full justify-between items-center">
+      <Typography as="h2" variant="section-title" className="max-w-[808px]!">
+        {labels.title}
+      </Typography>
+    </div>
     <img
       src={withBase(labels.images.large)}
       alt="Cross Channel Background"

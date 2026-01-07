@@ -24,7 +24,7 @@ const SectionData = ({ labels, language }) => {
         <Typography
           as="h3"
           variant="section-subtitle"
-          className="hidden text-secondary font-bold prose"
+          className="hidden xl:flex text-secondary font-bold prose"
         >
           {labels.subtitle}
         </Typography>

@@ -11,6 +11,9 @@ const SectionHeader = ({ title, subtitle, subtitleHighlighted }) => (
       <Typography.Text accent bold>
         {subtitleHighlighted}
       </Typography.Text>
+      <Typography.Text accent bold>
+        {subtitleHighlighted}
+      </Typography.Text>
     </Typography>
   </SectionHeadContainer>
 );
