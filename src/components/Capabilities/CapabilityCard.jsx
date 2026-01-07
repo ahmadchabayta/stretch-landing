@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Wrapper, Typography } from "../../components";
+import GlassCircle from "../UI/GlassCircle";
 
 const CapabilityCard = ({ card, isActive, onClick }) => (
   <Wrapper
@@ -23,7 +24,16 @@ const CapabilityCard = ({ card, isActive, onClick }) => (
         {card.title}
       </Typography>
     </div>
-    <div className="pointer-events-none absolute -bottom-4 left-1/2 z-10 h-20 w-20 -translate-x-1/2 cursor-pointer rounded-full bg-transparent shadow-[12px_12px_16px_-6px_rgba(0,0,0,0.25)] lg:-bottom-10 lg:h-40 lg:w-40" />
+    <GlassCircle
+      className="pointer-events-none absolute bottom-[50%] translate-y-[50%] left-1/2 z-10 h-20! w-20! -translate-x-1/2 lg:h-40! lg:w-40!"
+      blur={15}
+      noiseIntensity={0.1}
+      distortionScale={8}
+      reflectionIntensity={10}
+      glassColor="rgba(150, 150, 150, 0.2)"
+      borderColor="rgba(0, 0, 0, 0.1)"
+      borderWidth={1}
+    />
   </Wrapper>
 );
 
