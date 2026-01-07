@@ -92,6 +92,7 @@ const typographyVariants = {
     xl:text-[20px]
     2xl:text-[20px]
     3xl:text-[24px]
+    
   `,
   "menu-link": `
     [direction:ltr]:font-manrope [direction:rtl]:font-tajawal font-normal

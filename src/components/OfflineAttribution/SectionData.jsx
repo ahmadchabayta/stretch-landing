@@ -18,8 +18,8 @@ const SectionData = ({ labels, dir, language }) => {
         "2xl:absolute 2xl:top-[300px]",
         "2xl:max-w-[clamp(620px,46.35vw,890px)]!",
         language === "en"
-          ? "2xl:right-[58px]  3xl:right-[148px]"
-          : "2xl:right-[58px]  3xl:right-[148px]",
+          ? "2xl:right-[210px] 3xl:right-[148px]"
+          : "2xl:right-[210px] 3xl:right-[148px]",
       )}
       style={{
         flexDirection: language === "en" ? "row" : "row-reverse",

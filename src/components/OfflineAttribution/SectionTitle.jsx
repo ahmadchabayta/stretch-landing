@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels, dir }) => (
-  <SectionHeadContainer className="app_container">
+  <SectionHeadContainer className="bg-red-500 app_container">
     <Typography as="h2" variant="section-title" dir={dir}>
       {labels.title}
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="xl:[direction:rtl] " dir={dir}>
+    <Typography as="h3" variant="section-subtitle">
       {labels.subtitles.subtitle}{" "}
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}

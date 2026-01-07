@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import data from "./offline_attribution.data.json";
 import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
-import { Section } from "../../components";
+import { Container, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import { withBase } from "../../utils/withBase";
 
@@ -67,10 +67,10 @@ const OfflineAttribution = ({ id }) => {
       className="relative overflow-hidden min-h-0!"
       style={{ direction: "ltr" }}
     >
-      <div style={{ direction: dir }}>
+      <Container style={{ direction: dir }}>
         <SectionTitle labels={labels} dir={dir} />
         <SectionData labels={labels} dir={dir} language={language} />
-      </div>
+      </Container>
       <div
         className="relative min-h-[515px] w-[738px] cursor-pointer lg:h-[815px]"
         dir="ltr"
