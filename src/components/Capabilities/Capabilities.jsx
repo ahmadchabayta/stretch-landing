@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { capability_data as data, capability_url_links } from "./capabilities.data";
 import { useLanguage } from "../../context/LanguageContext";
-import { Section } from "../../components";
+import { Container, Section } from "../../components";
 import useScrollToSection from "../../hooks/useScrollToSection";
 import SectionHeader from "./SectionHeader";
 import CardsContainer from "./CardsContainer";
@@ -38,7 +38,7 @@ const Capabilities = ({ id }) => {
       padding="none"
       className="relative flex min-h-0! flex-col items-center"
     >
-      <div className="relative mx-auto flex h-auto flex-col items-center justify-center gap-8 lg:items-start lg:gap-16 xl:gap-20">
+      <Container className="relative mx-auto flex h-auto flex-col items-center justify-center gap-8 lg:items-start lg:gap-16 xl:gap-20">
         <SectionHeader
           title={labels.title}
           subtitle={labels.subtitle}
@@ -46,7 +46,7 @@ const Capabilities = ({ id }) => {
         />
 
         <CardsContainer cards={cards} activeCard={activeCard} onCardClick={handleCardClick} />
-      </div>
+      </Container>
     </Section>
   );
 };

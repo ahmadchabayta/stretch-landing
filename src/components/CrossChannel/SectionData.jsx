@@ -10,46 +10,41 @@ const SectionData = ({ labels, language }) => {
   });
   return (
     <Flex
+      className="w-full h-full xl:mt-[113px]"
       justify="justify-between"
-      align="items-bottom xl:items-end"
-      className={`xl:flex-col 2xl:absolute min-w-[282px] w-full xl:max-w-[587px] min-h-full ${
-        language === "en" ? "2xl:right-[17px] 3xl:right-4" : "2xl:left-0"
-      } 2xl:top-[250px] relative`}
+      align="xl:items-end"
+      direction="flex-col"
     >
       <Flex
-        direction="flex-col"
-        align="xl:items-end"
-        justify="justify-end"
-        className="space-y-3 text-end! w-full"
+        direction="xl:flex-col"
+        align="items-center xl:items-end"
+        justify="justify-between"
+        className="w-full"
       >
         <Typography
           as="h3"
           variant="section-subtitle"
-          className="3xl:mt-0 text-start! text-secondary 3xl:text-[24px] 3xl:text-end text-[14px] leading-[21px] font-bold xl:hidden"
+          className="hidden text-secondary font-bold prose"
         >
           {labels.subtitle}
         </Typography>
-        <div className="flex xl:flex-col w-full items-center xl:items-end justify-between">
-          <Typography
-            as="h3"
-            variant="section-subtitle"
-            className="text-start max-w-[265px] font-normal!"
-          >
-            {labels.other_subtitle}
-          </Typography>
+        <Typography
+          as="h3"
+          variant="section-subtitle"
+          className="text-start max-w-[153px] xl:max-w-[265px] font-normal!"
+        >
+          {labels.other_subtitle}
+        </Typography>
 
-          <Typography as="h3" className="text-[77px] font-light lg:text-[160px]">
-            <span ref={percentageRef} />
-            {language === "ar" ? "٪" : "%"}
-          </Typography>
-        </div>
+        <Typography as="h3" className="text-[77px] font-light lg:text-[160px]">
+          <span ref={percentageRef} />
+          {language === "ar" ? "٪" : "%"}
+        </Typography>
       </Flex>
-
-      {/* Description - shows under percentage in column mode, hidden in row mode */}
       <Description
         labels={labels}
         language={language}
-        className="hidden xl:block min-w-[382px] max-w-[587px] text-end! z-50"
+        className={`hidden absolute bottom-[10%] xl:block min-w-[382px] max-w-[587px] text-end! z-50 ${language === "ar" ? "right-0" : "right-0"}`}
       />
     </Flex>
   );

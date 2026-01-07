@@ -7,7 +7,6 @@ import FooterLinksColumns from "./FooterLinksColumns";
 import SectionTitle from "./SectionTitle";
 import Section from "../UI/Section/Section";
 import { withBase } from "../../utils/withBase";
-import BackgroundGradients from "./BackgroundGradients";
 
 const Footer = ({ id }) => {
   const { language } = useLanguage();
@@ -22,13 +21,10 @@ const Footer = ({ id }) => {
             backgroundImage: `url(${withBase(data.background_img)})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            backgroundSize: "contain",
             opacity: 1,
           }}
-          className="relative mx-auto mb-5 flex min-h-[55vh] flex-col items-center justify-between overflow-visible!"
+          className="relative bg-contain md:bg-cover mx-auto mb-5 flex min-h-[55vh] flex-col items-center justify-between overflow-visible!"
         >
-          <BackgroundGradients />
-
           <SectionTitle labels={labels} language={language} />
           <FooterCTA labels={labels} language={language} />
         </Container>

@@ -11,7 +11,10 @@
       "description_highlighted": "overlapping audiences",
       "description_2": "in real time, helping advertisers uncover duplication and redirect budgets for",
       "description_2_highlighted": "maximum real unique reach.",
-      "img": "./assets/cross_channel/3xl_en_coins.webp",
+      "images": {
+        "large": "./assets/cross_channel/3xl_en_coins.webp",
+        "small": "./assets/cross_channel/en_coins.webp"
+      },
       "button_label": "Book a Demo"
     },
     "ar": {
@@ -25,7 +28,10 @@
       "description_highlighted": "الجماهير المتداخلة",
       "description_2": "في الوقت الفعلي، مما يساعد المعلنين على اكتشاف التكرار وإعادة توجيه الميزانيات لتحقيق",
       "description_2_highlighted": "أقصى وصول فريد حقيقي.",
-      "img": "./assets/cross_channel/3xl_ar_coins.webp",
+      "images": {
+        "large": "./assets/cross_channel/3xl_en_coins.webp",
+        "small": "./assets/cross_channel/en_coins.webp"
+      },
       "button_label": "احجز عرضًا تجريبيًا"
     }
   }

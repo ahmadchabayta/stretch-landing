@@ -22,7 +22,7 @@ const InteractiveImage = () => {
       <img
         src={withBase(rawData.images.matchRate)}
         alt="Match Rate"
-        className="absolute z-1 right-0 top-[205px] w-[113px] md:right-[27%] lg:right-[29%] lg:top-[17%] xl:right-[16%] xl:top-[7%] 2xl:top-[5%] 2xl:right-[16%] 3xl:right-[29%] 3xl:top-[-10%]"
+        className="absolute z-1 right-0 top-[205px] w-[113px] md:top-[23%] md:right-[12%] lg:right-[20%] lg:top-[-7%] xl:right-[22%] xl:top-[-7%] 2xl:top-[-7%] 2xl:right-[24%] 3xl:right-[29%] 3xl:top-[-10%]"
       />
 
       <div className="flex flex-col lg:flex-row items-center justify-between w-full px-4 gap-8 md:gap-4">
