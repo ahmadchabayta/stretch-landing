@@ -13,7 +13,7 @@
 
 @theme {
   /* Breakpoints */
-  --breakpoint-xs: 402px;
+  --breakpoint-xs: 390px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;

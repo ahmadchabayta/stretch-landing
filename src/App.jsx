@@ -44,8 +44,7 @@ const App = () => {
     <div className="overflow-x-hidden">
       {/* 
       for testing purpooses - to test title */}
-      {/* <div className="fixed h-[90vh] w-[76.1vw] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
-
+      {/* <div className="fixed h-[90vh] w-[88.4vw] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
       <Button variant="fixed" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}

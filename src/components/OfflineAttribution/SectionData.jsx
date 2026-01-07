@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { Container, Typography } from "../../components";
+import { Flex, Typography } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
-import cn from "../../utils/cn";
 
+// eslint-disable-next-line no-unused-vars
 const SectionData = ({ labels, dir, language }) => {
   const parsedNumber = Number(String(labels.number).replace(/,/g, ""));
   const counterRef = useAnimatedCounter(parsedNumber, {
@@ -11,24 +11,16 @@ const SectionData = ({ labels, dir, language }) => {
   });
 
   return (
-    <Container
-      className={cn(
-        "flex items-center justify-between",
-        "z-50",
-        "2xl:absolute 2xl:top-[300px]",
-        "2xl:max-w-[clamp(620px,46.35vw,890px)]!",
-        language === "en"
-          ? "2xl:right-[210px] 3xl:right-[148px]"
-          : "2xl:right-[210px] 3xl:right-[148px]",
-      )}
-      style={{
-        flexDirection: language === "en" ? "row" : "row-reverse",
-      }}
+    <Flex
+      align="items-center"
+      justify="justify-between"
+      spaceX="space-x-[15px] 3xl:space-x-[87px]"
+      className="mx-0! w-full xl:max-w-[578px] 3xl:max-w-[719px]"
     >
       <Typography
         as="h3"
         ref={counterRef}
-        className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
+        className="text-[77px] lg:text-[160px] font-light 2xl:mr-0"
         dir={dir}
       />
       <Typography
@@ -40,7 +32,7 @@ const SectionData = ({ labels, dir, language }) => {
         <br />
         <Typography.Text className="font-bold">{labels.description.highlight}</Typography.Text>
       </Typography>
-    </Container>
+    </Flex>
   );
 };
 
