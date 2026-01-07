@@ -40,6 +40,9 @@ const App = () => {
     language === "ar" ? "font-tajawal left-5" : "right-5 font-poppins"
   } ${hideButton ? `${language === "ar" ? "translate-x-[-150%]" : "translate-x-[150%]"} pointer-events-none opacity-0!` : ""}`;
 
+  console.log(window.innerWidth, "width");
+  console.log(window.innerHeight, "height");
+
   return (
     <div className="overflow-x-hidden">
       <Button variant="fixed" className={floatingButtonClass}>

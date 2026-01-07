@@ -13,10 +13,12 @@ const PremiumGlassCard = ({ data, index, activeIndex, dragRef }) => {
   const backGroupRef = useRef();
   const iconTexture = useSVGTexture(data.icon, data.accentColor);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [hasAnimatedIn, setHasAnimatedIn] = useState(false);
+  const animationProgress = useRef(0);
   const { viewport } = useThree();
 
   // Responsive card scale based on viewport width
-  const cardScale = Math.min(1.5, Math.max(1, viewport.width / 10));
+  const cardScale = Math.min(1.3, Math.max(0.9, viewport.width / 10));
 
   // Calculate Target Position based on circular carousel logic
   // We want the active card at [0,0,0], left at [-x, -z], right at [x, -z]
@@ -38,6 +40,52 @@ const PremiumGlassCard = ({ data, index, activeIndex, dragRef }) => {
 
   useFrame((state, delta) => {
     if (!meshRef.current) return;
+
+    // Premium Entry Animation with stagger
+    const staggerDelay = index * 0.15; // Stagger each card by 150ms
+    const animationDuration = 1.2;
+
+    if (!hasAnimatedIn) {
+      animationProgress.current += delta;
+      const adjustedProgress = Math.max(0, animationProgress.current - staggerDelay);
+      const t = Math.min(1, adjustedProgress / animationDuration);
+
+      // Premium easing function (ease-out-cubic)
+      const eased = 1 - Math.pow(1 - t, 3);
+
+      if (t >= 1) {
+        setHasAnimatedIn(true);
+      }
+
+      // Animate from below and behind with rotation
+      const startY = -8;
+      const startZ = -10;
+      const startRotX = Math.PI * 0.3;
+      const startScale = 0.3;
+      const startOpacity = 0;
+
+      // Calculate current animation values
+      const animY = THREE.MathUtils.lerp(startY, 0, eased);
+      const animZ = THREE.MathUtils.lerp(startZ, targetZ, eased);
+      const animRotX = THREE.MathUtils.lerp(startRotX, 0, eased);
+      const animScale = THREE.MathUtils.lerp(startScale, targetScale, eased);
+      const animOpacity = THREE.MathUtils.lerp(startOpacity, 1, eased);
+
+      // Apply animation values
+      meshRef.current.position.y = animY;
+      meshRef.current.position.z = animZ;
+      meshRef.current.position.x = THREE.MathUtils.lerp(0, targetX, eased);
+      meshRef.current.rotation.x = animRotX;
+      meshRef.current.rotation.y = THREE.MathUtils.lerp(0, targetRotY, eased);
+      meshRef.current.scale.setScalar(animScale);
+
+      // Animate opacity on all materials
+      if (glassRef.current) {
+        glassRef.current.material.opacity = animOpacity * 0.25;
+      }
+
+      return; // Skip normal animation during entry
+    }
 
     // 1. Smooth Interpolation to target position
     const lerpSpeed = 4 * delta;
@@ -61,37 +109,35 @@ const PremiumGlassCard = ({ data, index, activeIndex, dragRef }) => {
     // Add drag influence if this is the active card
     if (wrappedOffset === 0 && dragRef.current) {
       const dragInfluence = dragRef.current.currentX * 4.5;
-      finalRotY += dragInfluence;
-      finalRotX += dragRef.current.currentY * 1.2;
 
-      // Snap to flipped state when dragged far enough
-      if (!dragRef.current.isDragging) {
+      // When dragging, allow free rotation
+      if (dragRef.current.isDragging) {
+        finalRotY = meshRef.current.rotation.y + dragInfluence * delta * 8;
+        finalRotX += dragRef.current.currentY * 1.2;
+      } else {
+        // When drag is released, snap to nearest stable state
         const currentRotY = meshRef.current.rotation.y;
 
-        // Determine the drag direction based on the rotation change from target
-        const rotationChange = currentRotY - targetRotY;
+        // Normalize rotation to -PI to PI range
+        let normalizedRot = ((currentRotY % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+        if (normalizedRot > Math.PI) normalizedRot -= Math.PI * 2;
 
-        // Normalize to -PI to PI range
-        let normalizedChange = rotationChange % (Math.PI * 2);
-        if (normalizedChange > Math.PI) normalizedChange -= Math.PI * 2;
-        if (normalizedChange < -Math.PI) normalizedChange += Math.PI * 2;
+        // Calculate which side is closer: front (0) or back (PI)
+        const distToFront = Math.abs(normalizedRot);
+        const distToBack = Math.abs(Math.abs(normalizedRot) - Math.PI);
 
-        // Check if rotation is past the halfway point (PI/2)
-        if (Math.abs(normalizedChange) > Math.PI / 2) {
+        if (distToBack < distToFront) {
+          // Closer to back - snap to back
           setIsFlipped(true);
-          // Snap in the direction of the drag
-          if (normalizedChange > 0) {
-            finalRotY = targetRotY + Math.PI;
-          } else {
-            finalRotY = targetRotY - Math.PI;
-          }
+          finalRotY = targetRotY + (normalizedRot > 0 ? Math.PI : -Math.PI);
         } else {
+          // Closer to front - snap to front
           setIsFlipped(false);
           finalRotY = targetRotY;
         }
       }
     } else if (isFlipped && wrappedOffset === 0) {
-      // Maintain the current flip direction
+      // Maintain the current flip direction when not dragging
       const currentRotY = meshRef.current.rotation.y;
       let normalizedRot = currentRotY % (Math.PI * 2);
       if (normalizedRot > Math.PI) normalizedRot -= Math.PI * 2;
@@ -160,7 +206,7 @@ const PremiumGlassCard = ({ data, index, activeIndex, dragRef }) => {
             clearcoat={1}
             clearcoatRoughness={0.02}
             transparent
-            opacity={0.25}
+            opacity={hasAnimatedIn ? 0.25 : 0}
             side={THREE.DoubleSide}
           />
         </RoundedBox>
