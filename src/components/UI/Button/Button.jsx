@@ -33,16 +33,16 @@ const baseButtonStyles = `
 
 const buttonVariants = {
   ltr: {
-    demo: `bg-primary font-poppins`,
-    login: `bg-accent font-poppins`,
-    footer_contact: `bg-black font-poppins`,
+    demo: `bg-primary [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
+    login: `bg-accent [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
+    footer_contact: `bg-black [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
     fixed: `font-tajawal right-5 primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 `,
   },
   rtl: {
-    demo: `bg-primary font-poppins`,
-    login: `bg-accent font-poppins`,
-    footer_contact: `bg-black font-poppins`,
-    fixed: `left-5 font-poppins primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 `,
+    demo: `bg-primary [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
+    login: `bg-accent [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
+    footer_contact: `bg-black [direction:ltr]:font-poppins [direction:rtl]:font-tajawal`,
+    fixed: `left-5 font-tajawal primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 `,
   },
 };
 

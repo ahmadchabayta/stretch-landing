@@ -22,7 +22,10 @@ const StepIndicator = ({ currentStep, subtitle, subtitleBold }) => (
       justify="justify-center"
       className="w-full max-w-[314px] 3xl:w-[340.617px] 3xl:h-[88.42px] text-start "
     >
-      <Typography className="font-poppins prose text-balance" as="p">
+      <Typography
+        className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal prose text-balance"
+        as="p"
+      >
         <Typography.Text bold>{subtitleBold}</Typography.Text> {subtitle}
       </Typography>
     </Flex>

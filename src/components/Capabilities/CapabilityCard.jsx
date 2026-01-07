@@ -5,7 +5,7 @@ import GlassCircle from "../UI/GlassCircle";
 const CapabilityCard = ({ card, isActive, onClick }) => (
   <Wrapper
     className={
-      "relative h-48 w-40 shrink-0 cursor-pointer snap-center p-4 transition-all duration-300 ease-in-out lg:h-[336px] lg:w-[285px]"
+      "relative h-[185px] w-40 lg:w-[285px] lg:h-[336px] xl:w-[259px] xl:h-[353px] 3xl:w-[308px] 3xl:h-[353px] shrink-0 cursor-pointer p-4 transition-all duration-300 ease-in-out  "
     }
     onClick={onClick}
   >
@@ -25,7 +25,7 @@ const CapabilityCard = ({ card, isActive, onClick }) => (
       </Typography>
     </div>
     <GlassCircle
-      className="pointer-events-none absolute bottom-[50%] lg:bottom-[40%] translate-y-[50%] left-1/2 z-10 h-20! w-20! -translate-x-1/2 lg:w-30 lg:h-30 xl:h-30! xl:w-30!"
+      className="pointer-events-none absolute bottom-0 left-1/2 z-10 h-[85px] w-[85px] -translate-x-1/2 -translate-y-1/2 lg:h-[163px] lg:w-[163px]"
       blur={15}
       noiseIntensity={0.1}
       distortionScale={8}

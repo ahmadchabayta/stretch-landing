@@ -34,17 +34,19 @@ const Capabilities = ({ id }) => {
         backgroundSize: "100% 399px",
       }}
       id={id}
-      container={true}
+      container={false}
       padding="none"
-      className="relative flex min-h-0! flex-col items-center"
+      className="relative min-h-screen"
+      containerClassName="grid grid-cols-1 grid-rows-[auto_1fr] h-full min-h-screen"
     >
-      <Container className="relative mx-auto flex h-auto flex-col items-center justify-center gap-8 lg:items-start lg:gap-16 xl:gap-20">
+      <Container>
         <SectionHeader
           title={labels.title}
           subtitle={labels.subtitle}
           subtitleHighlighted={labels.subtitle_highlighted}
         />
-
+      </Container>
+      <Container className="flex items-center justify-center">
         <CardsContainer cards={cards} activeCard={activeCard} onCardClick={handleCardClick} />
       </Container>
     </Section>

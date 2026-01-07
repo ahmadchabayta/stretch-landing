@@ -22,7 +22,7 @@ import cn from "../../utils/cn";
  * @param {React.ReactNode} props.children - Content inside the circle
  */
 const GlassCircle = ({
-  size = "200px",
+  size = "",
   className = "",
   blur = 20,
   noiseIntensity = 0.15,

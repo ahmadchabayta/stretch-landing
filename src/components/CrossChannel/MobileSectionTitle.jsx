@@ -7,7 +7,7 @@ const MobileSectionTitle = ({ className, labels }) => {
     <Flex
       direction="flex-col"
       spaceY="space-y-[15px] lg:space-y-0"
-      className={cn("w-full", className)}
+      className={cn("w-full pt-10", className)}
     >
       <Typography as="h2" variant="section-title" className="max-w-[808px]!">
         {labels.title}

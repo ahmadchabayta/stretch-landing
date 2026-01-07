@@ -30,7 +30,10 @@ const WhatIsStretch = ({ className, id }) => {
         `}
       >
         {sectionLabels.tagline.map((line) => (
-          <List.Item className="font-poppins" key={line}>
+          <List.Item
+            className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal"
+            key={line}
+          >
             {line}
           </List.Item>
         ))}

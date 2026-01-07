@@ -28,7 +28,7 @@ const SectionData = ({ labels, dir, language }) => {
       <Typography
         as="h3"
         ref={counterRef}
-        className="font-poppins text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
+        className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal text-[77px] font-light 2xl:mr-0 2xl:text-[160px]"
         dir={dir}
       />
       <Typography

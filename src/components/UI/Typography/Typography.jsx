@@ -36,7 +36,7 @@ import { useLanguage } from "../../../context/LanguageContext";
 
 const typographyVariants = {
   "hero-title": `
-    font-poppins font-extrabold
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
     text-[48px] leading-[72px]
     md:text-[60px] md:leading-[90px]
     lg:text-[72px] lg:leading-[108px]
@@ -45,7 +45,7 @@ const typographyVariants = {
     3xl:text-[112px]
   `,
   "hero-subtitle": `
-    font-poppins font-extrabold
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
     text-[18px] leading-[27px]
     md:text-[24px] md:leading-[36px]
     lg:text-[35px] lg:leading-[53px]
@@ -54,7 +54,7 @@ const typographyVariants = {
     3xl:text-[40px] 3xl:leading-[60px]
   `,
   "hero-description": `
-    font-poppins font-normal
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal
     text-[14px] leading-[21px]
     sm:text-[16px] sm:leading-[24px]
     md:text-[18px] md:leading-[27px]
@@ -64,7 +64,7 @@ const typographyVariants = {
     3xl:text-[24px] 3xl:leading-[36px]
   `,
   "section-title": `
-    font-poppins font-extrabold
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
     text-[40px] leading-[108.457%]
     xl:text-[64px]
     2xl:text-[64px]
@@ -76,7 +76,7 @@ const typographyVariants = {
     prose
     md:prose-lg
     lg:prose-xl
-    font-poppins
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal
     text-[14px] leading-auto
     md:text-[18px]
     xl:text-[20px]
@@ -87,30 +87,30 @@ const typographyVariants = {
     [direction:ltr]:text-right
   `,
   "section-desc": `
-    font-poppins font-normal
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal
     text-[14px] leading-normal
     xl:text-[20px]
     2xl:text-[20px]
     3xl:text-[24px]
   `,
   "menu-link": `
-    font-manrope font-normal
+    [direction:ltr]:font-manrope [direction:rtl]:font-tajawal font-normal
     text-[16px] leading-[22px]
     md:text-[17px] md:leading-[24px]
-    lg:text-[19px] lg:leading-[27px]
+    [direction:ltr]:lg:font-poppins lg:text-[19px] lg:leading-[27px]
     xl:text-[21px] xl:leading-[30px]
     2xl:text-[22px] 2xl:leading-[32px]
-    3xl:text-[23px] 3xl:leading-[34px] 3xl:font-poppins 3xl:font-semibold
+    3xl:text-[23px] 3xl:leading-[34px] 3xl:font-semibold
   `,
   "footer-desc": `
-    font-poppins font-bold text-center
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-bold text-center
     text-[14px] leading-normal
     xl:text-[28px]
     2xl:text-[28px]
     3xl:text-[28px]
   `,
   "hero-feature": `
-    font-poppins font-normal opacity-50
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal opacity-50
     text-[14px] leading-[21px]
     md:text-[15px] md:leading-[23px]
     lg:text-[17px] lg:leading-[26px]
@@ -119,7 +119,7 @@ const typographyVariants = {
     3xl:text-[20px] 3xl:leading-[30px]
   `,
   "button-text": `
-    font-poppins font-bold text-white
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-bold text-white
     text-[18px] leading-normal text-justify whitespace-nowrap
     md:text-[18px] md:leading-normal md:text-justify
     lg:text-[18px] lg:leading-normal lg:text-justify
@@ -128,7 +128,7 @@ const typographyVariants = {
     3xl:text-[32px] 3xl:leading-normal 3xl:text-center
   `,
   "audience-mirroring-list": `
-    font-poppins font-normal text-justify text-accent
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal text-justify text-accent
     text-[14px] leading-normal
     lg:text-[20px]
     xl:text-[20px]
@@ -136,7 +136,7 @@ const typographyVariants = {
     3xl:text-[24px]
   `,
   "testimonial-quote": `
-    font-poppins font-normal italic text-black text-justify
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal italic text-black text-justify
     text-[14px] leading-normal w-[299px] h-[63px]
     lg:text-[20px] lg:w-[627px] lg:h-[78px]
     xl:text-[20px] xl:w-[457px] xl:h-[78px]
@@ -144,7 +144,7 @@ const typographyVariants = {
     3xl:text-[24px] 3xl:w-[668px] 3xl:h-[83px]
   `,
   "proven-to-perform-card-title": `
-    font-poppins font-normal italic text-black text-justify
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal italic text-black text-justify
     text-[14px] leading-normal
     lg:text-[20px]
     xl:text-[20px]

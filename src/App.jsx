@@ -40,11 +40,11 @@ const App = () => {
     language === "ar" ? "font-tajawal left-5" : "right-5 font-poppins"
   } ${hideButton ? `${language === "ar" ? "translate-x-[-150%]" : "translate-x-[150%]"} pointer-events-none opacity-0!` : ""}`;
 
-  console.log(window.innerWidth, "width");
-  console.log(window.innerHeight, "height");
-
   return (
     <div className="overflow-x-hidden">
+      {/* for testing purpooses - to test title margins
+      <div className="fixed h-[90vh] w-[84.5vw] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-red-500" /> */}
+
       <Button variant="fixed" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
@@ -52,7 +52,7 @@ const App = () => {
       </Button>
       <>
         <Navbar />
-        <div className="mb-12" ref={heroRef}>
+        <div ref={heroRef}>
           <Hero id={url_links_data.link_urls[0]} />
         </div>
         <WhatIsStretch id={url_links_data.link_urls[1]} />
