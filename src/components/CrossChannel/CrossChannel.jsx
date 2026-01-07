@@ -31,7 +31,7 @@ const CrossChannel = ({ id }) => {
         <img
           src={withBase(labels.images.small)}
           alt="Cross Channel Background"
-          className="w-full h-auto  min-w-[625px] md:min-w-[1000px] xl:w-7xl"
+          className="translate-x-[-13%] w-full h-auto min-w-[625px] md:min-w-[1000px] xl:w-7xl"
         />
         <Description className="mx-auto max-w-[80vw]" labels={labels} language={language} />
       </Container>
