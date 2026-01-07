@@ -10,16 +10,16 @@ export const getCarouselSpread = ({
   isLgScreen,
   isMdScreen,
 }) => {
-  // Desktop: horizontal spread
+  // Desktop: horizontal spread (using viewport-based z values)
   if (is3XLScreen) return { x: 20, z: -280 };
-  if (is2XLScreen) return { x: 15, z: -280 };
-  if (isXLScreen) return { x: 15, z: -240 };
+  if (is2XLScreen) return { x: 18, z: -260 };
+  if (isXLScreen) return { x: 15, z: -220 };
 
   // Tablet/Mobile: vertical spread
-  if (isLgScreen) return { y: 20, z: -180 };
-  if (isMdScreen) return { y: 20, z: -150 };
+  if (isLgScreen) return { y: 18, z: -160 };
+  if (isMdScreen) return { y: 20, z: -140 };
 
-  return { y: 20, z: -120 }; // Small mobile
+  return { y: 22, z: -100 }; // Small mobile
 };
 
 /**
@@ -40,7 +40,7 @@ export const getCarouselPositions = (spread, isLargeScreen, isMobile) => {
 
   if (isMobile) {
     return [
-      { x: 0, y: -170, z: 0, scale: 1, opacity: 1, zIndex: 30 },
+      { x: 0, y: 0, z: 0, scale: 1, opacity: 1, zIndex: 30 },
       { x: 0, y: `${spread.y * 3}%`, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
       { x: 0, y: `${spread.y * 6}%`, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
     ];
@@ -48,7 +48,7 @@ export const getCarouselPositions = (spread, isLargeScreen, isMobile) => {
 
   // Tablet
   return [
-    { x: 0, y: -100, z: 0, scale: 1, opacity: 1, zIndex: 30 },
+    { x: 0, y: 0, z: 0, scale: 1, opacity: 1, zIndex: 30 },
     { x: 0, y: `${spread.y * 3}%`, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
     { x: 0, y: `${spread.y * 6}%`, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
   ];

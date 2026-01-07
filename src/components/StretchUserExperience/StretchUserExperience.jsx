@@ -61,15 +61,15 @@ const StretchUserExperience = () => {
         alt="Blue Circle"
       />
 
-      <Container>
+      <Container className="mb-8 md:mb-12 lg:mb-16 xl:mb-20">
         <SectionTitle currentStep={currentIndex + 1} data={sectionLabels} />
       </Container>
 
       {/* Carousel Section - Centered in Container */}
-      <Container className="flex flex-col xl:flex-row items-center justify-center gap-6 lg:gap-10">
+      <Container className="flex flex-col xl:flex-row xl:items-center justify-center gap-6 lg:gap-10 mt-8 md:mt-12">
         {/* 3D Carousel */}
         <div
-          className="relative w-full h-[70vh] max-h-[600px] xl:h-[500px] flex items-center justify-center origin-center"
+          className="relative w-full h-[clamp(500px,60vh,700px)] md:h-[clamp(550px,65vh,750px)] xl:h-[clamp(500px,55vh,800px)] flex items-center justify-center origin-center"
           style={{ perspective: "1000px" }}
         >
           {items.map((item, index) => {
@@ -90,7 +90,7 @@ const StretchUserExperience = () => {
           type="button"
           aria-label="Next slide"
           onClick={handleNext}
-          className="hidden xl:flex shrink-0 w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#FF4200]  items-center justify-center shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2"
+          className="hidden xl:flex shrink-0 w-[clamp(3.5rem,4vw,4rem)] h-[clamp(3.5rem,4vw,4rem)] rounded-full bg-[#FF4200] items-center justify-center shadow-lg transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#FF4200] focus:ring-offset-2"
         />
       </Container>
     </Section>
