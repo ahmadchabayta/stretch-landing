@@ -17,7 +17,6 @@ import {
   Footer,
   Typography,
   Button,
-  Container,
 } from "./components";
 import { useLanguage } from "./context/LanguageContext";
 import url_links_data from "../src/components/Navbar/navbar.data.json";

@@ -24,8 +24,8 @@ SectionTitle.propTypes = {
   currentStep: PropTypes.number.isRequired,
   data: PropTypes.shape({
     title: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      title_2: PropTypes.string.isRequired,
+      part1: PropTypes.string.isRequired,
+      part2: PropTypes.string.isRequired,
     }).isRequired,
     steps: PropTypes.arrayOf(
       PropTypes.shape({
