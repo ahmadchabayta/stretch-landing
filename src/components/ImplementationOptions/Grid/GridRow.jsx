@@ -11,15 +11,15 @@ const GridRow = ({ channel, index, isDesktop, activeTab, isArabic }) => {
   return (
     <div
       className={cn(
-        "grid w-full grid-cols-3 items-center justify-start text-left md:grid-cols-5 py-2",
-        index > 0 && "border-t-2 border-black",
+        "grid w-full grid-cols-3 items-center justify-start text-left md:grid-cols-5 h-12 md:h-14 lg:h-16",
+        index > 0 && "border-t border-black",
       )}
     >
       {/* Channel Name */}
       <Typography
         as="div"
         className={cn(
-          "px-2 lg:px-3 py-4 lg:py-5 flex items-center justify-start",
+          "px-2 lg:px-3 h-full flex items-center justify-start",
           "text-sm md:text-[18px] lg:text-[20px] 3xl:text-[24px] font-medium",
 
           isArabic && "font-[Tajawal,sans-serif]",

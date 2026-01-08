@@ -22,13 +22,17 @@ const FooterCTA = ({ labels, language }) => {
         justify="justify-center"
         spaceY="space-y-[29px] xl:space-y-0"
         spaceX="xl:space-x-4 3xl:space-x-[60px]!"
-        className="mt-10!"
+        className="mt-10! "
       >
-        <Button variant="demo" className={_language}>
-          {labels.button_label.demo_button_label}
+        <Button variant="demo" className={`px-[44px] py-[13px] ${_language}`}>
+          <Typography as="span" variant="button-text">
+            {labels.button_label.demo_button_label}
+          </Typography>
         </Button>
-        <Button variant="footer_contact" className={`${_language}`}>
-          {labels.button_label.contact_button_label}
+        <Button variant="footer_contact" className={`px-[44px] py-[13px] ${_language}`}>
+          <Typography as="span" variant="button-text">
+            {labels.button_label.contact_button_label}
+          </Typography>
         </Button>
       </Flex>
     </Flex>

@@ -35,7 +35,7 @@ const App = () => {
   const footerInView = useInView(footerRef, { amount: 0.1 });
   const hideButton = heroInView || footerInView;
 
-  const floatingButtonClass = `primary-btn fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 ${
+  const floatingButtonClass = `bg-primary fixed xl:opacity-50! px-2 py-2 hover:opacity-100! transition-all duration-300 linear bottom-10 z-10000 ${
     language === "ar" ? "font-tajawal left-5" : "right-5 font-poppins"
   } ${hideButton ? `${language === "ar" ? "translate-x-[-150%]" : "translate-x-[150%]"} pointer-events-none opacity-0!` : ""}`;
 

@@ -33,7 +33,7 @@ const OfflineAttribution = ({ id }) => {
     min-w-[1583px]
     shrink-0
     xl:bottom-[clamp(16%,7%,14%)]
-    2xl:bottom-[clamp(14%,15%,15%)]
+    2xl:bottom-[clamp(12%,13%,14%)]
     3xl:bottom-[0%]
     left-[-26%]
     lg:left-[-32%]

@@ -101,28 +101,6 @@ higher res images */
   }
 }
 
-@layer components {
-  .primary-btn {
-    @apply rounded-pill-small bg-primary flex items-center justify-center gap-[22.544px] leading-normal font-bold text-white;
-    @apply h-[33px] w-full max-w-[172px] text-[18px]; /* Default mobile styles */
-
-    /* Small (sm) */
-    @apply sm:h-[38px] sm:max-w-[190px];
-
-    /* Medium (md) */
-    @apply md:h-[42px] md:max-w-[210px];
-
-    /* Large (lg) */
-    @apply lg:h-[50px] lg:max-w-[266px] lg:text-[28px];
-
-    /* Extra Large (xl) */
-    @apply xl:h-[52px] xl:max-w-[270px];
-
-    /* 3XL - Desktop */
-    @apply 3xl:text-[28px] 3xl:w-[320px] 3xl:h-[72px] 3xl:inline-flex 3xl:px-11 3xl:gap-2.5 3xl:rounded-pill;
-  }
-}
-
 .menu_links_typography {
   @apply font-manrope 3xl:text-[23px] lg:font-poppins 3xl:font-semibold 3xl:leading-[34px] text-left text-[16px] leading-[22px] font-normal lg:text-center;
 }

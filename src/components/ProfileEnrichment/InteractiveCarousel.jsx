@@ -21,7 +21,7 @@ const InteractiveCarousel = ({ images }) => {
       direction="flex-col"
       align="items-center"
       justify="justify-center"
-      className="relative mx-auto w-full"
+      className="relative mx-auto w-full mt-14"
     >
       <Flex
         align="items-center"
@@ -34,7 +34,7 @@ const InteractiveCarousel = ({ images }) => {
       >
         <img
           src={withBase(images.macbook)}
-          className="pointer-events-none relative z-20 min-w-[225.236px] lg:min-w-[675.708px]"
+          className="mt-18 pointer-events-none relative z-20 min-w-[225.236px] lg:min-w-[675.708px]"
           alt="Macbook Base"
         />
 
@@ -53,7 +53,7 @@ const InteractiveCarousel = ({ images }) => {
             velocity: 0,
           }}
           className={`absolute origin-center border-none 
-            w-[302.122px] lg:w-[579.336px] xl:w-[648px] mb-12 2xl:w-[639px] ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
+            min-w-[302.122px] lg:min-w-[579.336px] xl:min-w-[648px] mb-12 2xl:min-w-[639px] ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
         {/* Screen 2 */}
@@ -70,7 +70,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute  origin-center border-none w-[191.788px] lg:w-[421.559px] xl:w-[561.724px] 3xl:w-[682.159px] ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none min-w-[191.788px] lg:min-w-[421.559px] xl:min-w-[561.724px] 3xl:min-w-[682.159px] ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
 
@@ -88,7 +88,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center mb-12 border-none w-[242px] lg:w-[752px] xl:w-[716px] ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center mb-12 border-none min-w-[242px] lg:min-w-[752px] xl:min-w-[716px] ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
       </Flex>

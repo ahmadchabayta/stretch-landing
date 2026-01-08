@@ -24,8 +24,9 @@ const baseButtonStyles = `
  cursor-pointer 
  rounded-pill-small
  
- w-[172px]
- 3xl:w-full
+ min-w-[172px]
+ 3xl:min-w-[234px]
+ text-white
 `;
 
 const buttonVariants = {

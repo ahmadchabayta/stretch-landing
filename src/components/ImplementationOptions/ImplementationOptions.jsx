@@ -21,7 +21,7 @@ const ImplementationOptions = ({ id }) => {
       <Container>
         <SectionTitle labels={labels} language={language} />
       </Container>
-      <Container className="w-full overflow-x-auto 6 pt-12">
+      <Container className="w-full overflow-x-auto 6 mt-24">
         <Grid
           activeTab={activeTab}
           labels={labels}

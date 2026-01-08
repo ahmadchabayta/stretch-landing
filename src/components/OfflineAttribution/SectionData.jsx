@@ -20,7 +20,7 @@ const SectionData = ({ labels, dir, language }) => {
       <Typography
         as="h3"
         ref={counterRef}
-        className="text-[77px] lg:text-[160px] font-light 2xl:mr-0"
+        className="text-[77px] lg:text-[160px] font-light 2xl:mr-0 z-20"
         dir={dir}
       />
       <Typography
