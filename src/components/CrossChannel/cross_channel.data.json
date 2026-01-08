@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "Cross-Channel Audience Match",
+      "title": {
+        "part1": "Cross-Channel ",
+        "part2": "Audience Match"
+      },
       "subtitle": "TikTok & META",
       "other_subtitle": "Cross-Channel Audience Duplication",
       "percentage": "28",
@@ -18,7 +21,10 @@
       "button_label": "Book a Demo"
     },
     "ar": {
-      "title": "مطابقة الجمهور عبر القنوات",
+      "title": {
+        "part1": "مطابقة الجمهور",
+        "part2": " عبر القنوات"
+      },
       "subtitle": "تيك توك وميتا",
       "other_subtitle": "نسبة تكرار الجمهور عبر القنوات",
       "percentage": "٢٨",

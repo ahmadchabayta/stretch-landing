@@ -10,34 +10,25 @@ const WhatIsStretch = ({ className, id }) => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
   return (
-    <Section id={id} container={false} className={cn("relative overflow-hidden", className)}>
+    <Section id={id} className={cn("relative overflow-hidden", className)}>
       <Container>
         <SectionTitle data={sectionLabels} />
       </Container>
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full min-h-[80vh]">
         <InteractiveImage data={sectionLabels} />
       </div>
-      <List
-        className={`absolute 
-        bottom-0
-        text-[14px] font-bold [direction:rtl] 
-        lg:text-[20px] 
-        xl:right-[115px] xl:bottom-6 xl:text-right 
-        2xl:right-[111px] 
-        3xl:text-[24px] 3xl:right-[156px]
-        ${language === "ar" ? "left-[26px] text-left" : "right-[26px] text-right"}
-
-        `}
-      >
-        {sectionLabels.tagline.map((line) => (
-          <List.Item
-            className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal"
-            key={line}
-          >
-            {line}
-          </List.Item>
-        ))}
-      </List>
+      <Container className="relative bg-red-500">
+        <List className="absolute bottom-[123px] text-[14px] font-bold lg:text-[20px] text-end dir-ltr:right-0 dir-rtl:left-0">
+          {sectionLabels.tagline.map((line) => (
+            <List.Item
+              className="[direction:ltr]:font-poppins [direction:rtl]:font-tajawal"
+              key={line}
+            >
+              {line}
+            </List.Item>
+          ))}
+        </List>
+      </Container>
       {/* <SectionButton>{data.button_label}</SectionButton> */}
     </Section>
   );

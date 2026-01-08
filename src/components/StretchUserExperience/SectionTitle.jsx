@@ -8,9 +8,9 @@ const SectionTitle = ({ currentStep, data }) => {
   return (
     <SectionHeadContainer className="w-full relative z-20">
       <Typography as="h2" variant="section-title">
-        {data.title.title}
+        {data.title.part1}
         <br />
-        {data.title.title_2}
+        <Typography.Text className="3xl:whitespace-pre-line">{data.title.part2}</Typography.Text>
       </Typography>
       <StepIndicator
         currentStep={currentStep}

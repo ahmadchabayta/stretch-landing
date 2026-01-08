@@ -4,7 +4,9 @@ import { Typography, SectionHeadContainer } from "../../components";
 const SectionTitle = ({ labels, language }) => (
   <SectionHeadContainer>
     <Typography as="h2" variant="section-title">
-      {labels.title}
+      {labels.title.part1}
+      <br />
+      <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
     <Typography
       as="h3"
@@ -23,7 +25,10 @@ const SectionTitle = ({ labels, language }) => (
 
 SectionTitle.propTypes = {
   labels: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.shape({
+      part1: PropTypes.string.isRequired,
+      part2: PropTypes.string.isRequired,
+    }).isRequired,
     subtitle: PropTypes.shape({
       line1: PropTypes.string.isRequired,
       line_highlight: PropTypes.string.isRequired,

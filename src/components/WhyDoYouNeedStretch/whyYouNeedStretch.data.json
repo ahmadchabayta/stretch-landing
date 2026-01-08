@@ -2,7 +2,10 @@
   "backgroundImage": "assets/why_do_you_need_stretch/background.webp",
   "languages": {
     "en": {
-      "title": "WHY DO YOU NEED STRETCH?",
+      "title": {
+        "part1": "WHY DO YOU NEED ",
+        "part2": "STRETCH?"
+      },
       "subtitle": {
         "description": "Marketing campaigns are",
         "highlighted_desc_1": "everywhere.",
@@ -40,7 +43,10 @@
       }
     },
     "ar": {
-      "title": "لماذا تحتاج إلى ستريتش؟",
+      "title": {
+        "part1": "لماذا تحتاج إلى ",
+        "part2": "سترتش؟"
+      },
       "subtitle": {
         "description": "حملات التسويق موجودة",
         "highlighted_desc_1": "في كل مكان",

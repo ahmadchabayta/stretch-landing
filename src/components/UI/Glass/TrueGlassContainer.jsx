@@ -8,7 +8,7 @@ export const LightContext = createContext(null);
  * REUSABLE LIGHT CONTAINER
  * The full-screen engine that manages the single light source.
  */
-export const TrueGlassContainer = ({ children, className = "", minHeight = "min-h-screen" }) => {
+export const TrueGlassContainer = ({ children, className = "", minHeight = "min-h-[600px]" }) => {
   const containerRef = useRef(null);
   const [inputType, setInputType] = useState("mouse");
   const [borderRadius, setBorderRadius] = useState(32);

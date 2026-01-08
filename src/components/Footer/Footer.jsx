@@ -14,7 +14,7 @@ const Footer = ({ id }) => {
 
   return (
     <footer id={id} className="w-full overflow-x-hidden ">
-      <Section className="min-h-0!">
+      <Section>
         {/* Top section with CTA and net background with built-in side gradients */}
         <Container
           style={{
@@ -23,7 +23,7 @@ const Footer = ({ id }) => {
             backgroundPosition: "center",
             opacity: 1,
           }}
-          className="relative bg-contain md:bg-cover mx-auto mb-5 flex min-h-[55vh] flex-col items-center justify-between overflow-visible!"
+          className="relative min-h-screen bg-contain md:bg-cover mx-auto mb-5 flex flex-col items-center justify-between overflow-visible!"
         >
           <SectionTitle labels={labels} language={language} />
           <FooterCTA labels={labels} language={language} />

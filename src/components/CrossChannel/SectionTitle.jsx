@@ -7,7 +7,9 @@ const SectionTitle = ({ labels, className }) => (
   <SectionHeadContainer className={cn("mb-6 xl:mb-12 items-start! h-full w-full", className)}>
     <div className="flex w-full justify-between items-center">
       <Typography as="h2" variant="section-title" className="max-w-[808px]!">
-        {labels.title}
+        {labels.title.part1}
+        <br />
+        <Typography.Text>{labels.title.part2}</Typography.Text>
       </Typography>
     </div>
     <img

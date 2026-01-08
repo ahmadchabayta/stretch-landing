@@ -7,12 +7,14 @@ const SectionTitle = ({ title, language }) => (
     variant="section-title"
     className={language === "ar" ? "font-[Tajawal,sans-serif] font-bold" : ""}
   >
-    {title}
+    {title.part1}
+    <br />
+    <Typography.Text>{title.part2}</Typography.Text>
   </Typography>
 );
 
 SectionTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.object.isRequired,
   language: PropTypes.string.isRequired,
 };
 

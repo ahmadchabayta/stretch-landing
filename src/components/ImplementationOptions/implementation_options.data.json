@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "IMPLEMENTATION OPTIONS FOR STRETCH",
+      "title": {
+        "part1": "IMPLEMENTATION",
+        "part2": "OPTIONS FOR STRETCH "
+      },
       "subtitle": {
         "line1": "Where can",
         "line_highlight": "Stretch Track",
@@ -77,7 +80,10 @@
       ]
     },
     "ar": {
-      "title": "خيارات التطبيق لـ ستريتش",
+      "title": {
+        "part1": "خيارات التطبيق ",
+        "part2": "لـ ستريتش"
+      },
       "subtitle": {
         "line1": "أين يمكن لـ",
         "line_highlight": "ستريتش التتبع",

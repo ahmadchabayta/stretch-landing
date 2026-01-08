@@ -15,7 +15,10 @@ export const capability_url_links = [
 export const capability_data = {
   languages: {
     en: {
-      title: "CAPABILITIES OVERVIEW",
+      title: {
+        part1: "CAPABILITIES ",
+        part2: "OVERVIEW",
+      },
       subtitle: "Stretch powers four",
       subtitle_highlighted: "core capabilities",
       button_label: "Book a Demo",
@@ -39,7 +42,10 @@ export const capability_data = {
       ],
     },
     ar: {
-      title: "نظرة عامة على القدرات",
+      title: {
+        part1: "نظرة عامة",
+        part2: "على القدرات",
+      },
       subtitle: "Stretch تقدم أربع",
       subtitle_highlighted: "قدرات أساسية",
       button_label: "احجز عرضًا تجريبيًا",

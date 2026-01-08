@@ -2,7 +2,7 @@ import { useRef } from "react";
 import PropTypes from "prop-types";
 import { useLanguage } from "../../../context/LanguageContext";
 import cn from "../../../utils/cn";
-import { Button, Flex, Wrapper } from "../..";
+import { Button, Flex, Typography, Wrapper } from "../..";
 import { withBase } from "../../../utils/withBase";
 
 const NavbarControl = ({ data, className }) => {
@@ -43,7 +43,9 @@ const NavbarControl = ({ data, className }) => {
         </button>
       </Wrapper>
       <Button variant="login" className="mx-auto w-full xl:w-auto min-w-[204px]">
-        {data.button_label}
+        <Typography as="span" variant="button-text">
+          {data.button_label}
+        </Typography>
       </Button>
     </Flex>
   );

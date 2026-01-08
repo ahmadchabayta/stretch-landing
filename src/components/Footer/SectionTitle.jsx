@@ -8,7 +8,9 @@ const SectionTitle = ({ labels, language }) => (
       variant="section-title"
       className={`${language === "ar" ? "font-[Tajawal,sans-serif]" : ""}`}
     >
-      {labels.title}
+      {labels.title.part1}
+      <br />
+      <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
     <Typography
       as="h3"
@@ -23,7 +25,10 @@ const SectionTitle = ({ labels, language }) => (
 
 SectionTitle.propTypes = {
   labels: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.shape({
+      part1: PropTypes.string.isRequired,
+      part2: PropTypes.string.isRequired,
+    }).isRequired,
     subtitle: PropTypes.shape({
       subtitle: PropTypes.string.isRequired,
       highlight: PropTypes.string.isRequired,

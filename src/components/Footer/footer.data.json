@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "YOUR MISSING LINK",
+      "title": {
+        "part1": "your ",
+        "part2": "missing link"
+      },
       "subtitle": {
         "subtitle": "Between Ad Spend and ",
         "highlight": "Real Results"
@@ -14,7 +17,10 @@
       "footer_links": ["Company Info", "Privacy & Terms", "Support", "Contact", "Powered by Memob+"]
     },
     "ar": {
-      "title": "حلقتك المفقودة",
+      "title": {
+        "part1": "حلقتك ",
+        "part2": "المفقودة"
+      },
       "subtitle": {
         "subtitle": "بين إنفاق الإعلانات و",
         "highlight": "النتائج الحقيقية"

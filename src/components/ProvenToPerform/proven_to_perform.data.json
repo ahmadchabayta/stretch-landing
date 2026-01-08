@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "PROVEN TO PERFORM",
+      "title": {
+        "part1": "Proven",
+        "part2": "To Perform"
+      },
       "subtitle": "-Testimonials",
       "images": {
         "img_1": {
@@ -17,7 +20,10 @@
       }
     },
     "ar": {
-      "title": "أثبت فعاليته",
+      "title": {
+        "part1": "أثبت ",
+        "part2": "فعاليته"
+      },
       "subtitle": "آراء العملاء-",
       "images": {
         "img_1": {

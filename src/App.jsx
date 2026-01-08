@@ -17,11 +17,11 @@ import {
   Footer,
   Typography,
   Button,
+  Container,
 } from "./components";
 import { useLanguage } from "./context/LanguageContext";
 import url_links_data from "../src/components/Navbar/navbar.data.json";
 import { capability_url_links } from "./components/Capabilities/capabilities.data";
-import GlassCards from "./components/UI/GlassCards/GlassCards";
 
 const buttonLabels = {
   en: "Book a Demo",
@@ -42,9 +42,8 @@ const App = () => {
 
   return (
     <div className="overflow-x-hidden">
-      {/* 
-      for testing purpooses - to test title */}
-      {/* <div className="fixed h-[90vh] w-[88.4vw] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
+      {/* for testing purpooses - to test title
+      <Container className="fixed h-[90vh] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
       <Button variant="fixed" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
@@ -59,7 +58,7 @@ const App = () => {
         <WhyDoYouNeedStretch id={url_links_data.link_urls[2]} />
         <StretchUserExperience />
 
-        <GlassCards />
+        {/* <GlassCards /> */}
 
         <Capabilities />
         <CrossChannel id={capability_url_links[0]} />

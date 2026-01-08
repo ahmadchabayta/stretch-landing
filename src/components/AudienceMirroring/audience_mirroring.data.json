@@ -12,7 +12,10 @@
   },
   "languages": {
     "en": {
-      "title": "Audience Mirroring",
+      "title": {
+        "part1": "Audience ",
+        "part2": "Mirroring"
+      },
       "subtitle": "Stretch captures conversion audiences and enables their reactivation across different platforms.",
       "decorative_btn_label": "Matched Audience From Meta",
       "description": [
@@ -32,7 +35,10 @@
       "button_label": "Book a Demo"
     },
     "ar": {
-      "title": "مضاهاة الجمهور",
+      "title": {
+        "part1": "مضاهاة ",
+        "part2": "الجمهور"
+      },
       "subtitle": "يلتقط ستريتش جماهير التحويل ويمكّن إعادة تفعيلهم عبر مختلف المنصات.",
       "decorative_btn_label": "مطابقة الجمهور من ميتا",
       "description": [

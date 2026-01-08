@@ -26,8 +26,8 @@
   "languages": {
     "en": {
       "title": {
-        "title": "THE STRETCH",
-        "title_2": "USER EXPERIENCE"
+        "part1": "THE STRETCH",
+        "part2": "USER EXPERIENCE"
       },
       "steps": [
         {
@@ -50,8 +50,8 @@
     },
     "ar": {
       "title": {
-        "title": "تجربة ستريتش",
-        "title_2": "للمستخدم"
+        "part1": "تجربة ستريتش",
+        "part2": "للمستخدم"
       },
       "steps": [
         {

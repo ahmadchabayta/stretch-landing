@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "THE COMPETITIVE EDGE STRETCH VS SOCIAL & DSPs",
+      "title": {
+        "part1": "THE COMPETITIVE EDGE",
+        "part2": "STRETCH VS SOCIAL & DSPs"
+      },
       "button_label": "Book a demo",
       "features": [
         "Cross-platform matching",
@@ -13,7 +16,10 @@
       "partial": "Partial"
     },
     "ar": {
-      "title": "الميزة التنافسية: ستريتش مقابل وسائل التواصل الاجتماعي ومنصّات الـ DSP",
+      "title": {
+        "part1": "الميزة التنافسية:",
+        "part2": "ستريتش مقابل وسائل التواصل الاجتماعي ومنصّات الـ DSP"
+      },
       "button_label": "احجز عرضاً توضيحياً",
       "features": [
         "مطابقة عبر المنصات",

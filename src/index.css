@@ -5,6 +5,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@variant dir-ltr ([dir="ltr"] &);
+@variant dir-rtl ([dir="rtl"] &);
+
 /* * {
   padding: 0;
   margin: 0;
@@ -41,6 +44,10 @@
   --spacing-30px: 30px;
   --spacing-63px: 63px;
 }
+
+/* spiderman background - bad
+smaller images
+higher res images */
 
 /* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
 

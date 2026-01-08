@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "OFFLINE ATTRIBUTION",
+      "title": {
+        "part1": "Offline ",
+        "part2": "Attribution"
+      },
       "subtitles": {
         "subtitle": "Stretch tracks who saw or clicked your ads across channels, and",
         "subtitle_highlight": "matches that exposure to real-world location",
@@ -27,7 +30,10 @@
       }
     },
     "ar": {
-      "title": "الإحالة التسويقية غير المتصلة بالإنترنت",
+      "title": {
+        "part1": "الإحالة التسويقية غير ",
+        "part2": "المتصلة بالإنترنت"
+      },
       "subtitles": {
         "subtitle": "يتتبع ستريتش الأشخاص الذين شاهدوا إعلاناتك أو نقروا عليها عبر مختلف القنوات، ",
         "subtitle_highlight": "ويربط هذا التعرض بزيارات فعلية لمواقع المتاجر على أرض الواقع."

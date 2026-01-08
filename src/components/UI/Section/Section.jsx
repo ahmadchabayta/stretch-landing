@@ -43,7 +43,7 @@ const Section = ({
     id={id}
     className={cn(
       // Base section styles previously defined in global CSS
-      "relative mx-auto min-h-screen w-full",
+      "relative mx-auto min-h-screen w-full border-y-2 mb-6",
       PADDING_STYLES[padding],
       BACKGROUND_STYLES[background],
       className,

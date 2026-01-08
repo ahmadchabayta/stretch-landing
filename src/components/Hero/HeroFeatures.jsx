@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Typography, List } from "../../components";
 
 const HeroFeatures = ({ data }) => (
-  <List className="flex flex-col items-center justify-center space-y-2 lg:flex-row lg:space-x-16">
+  <List className="flex flex-col w-full items-center justify-center xl:justify-between space-y-2 xl:flex-row lg:space-x-16">
     {data.map((el, i) => (
       <List.Item
         key={`${el}_${i}`}

@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "Profile Enrichment",
+      "title": {
+        "part1": "Profile",
+        "part2": "Enrichment"
+      },
       "subtitle": {
         "subtitle": "Enrich matched audience leveraging MEmob+ 3B data touch points, with ",
         "highlighted": "real-world behaviors, apps used, brand affinity, demographics, and interests data",
@@ -10,7 +13,10 @@
       "button_label": "Book a Demo"
     },
     "ar": {
-      "title": "إثراء الملفات التعريفية",
+      "title": {
+        "part1": "إثراء الملفات ",
+        "part2": "التعريفية"
+      },
       "subtitle": {
         "subtitle": "عزّز شرائح الجمهور المطابقة بالاستفادة من أكثر من 3 مليارات نقطة بيانات لدى MEmob+، والمتعلقة",
         "highlighted": " بالسلوكيات الواقعية، والتطبيقات المستخدمة، وولاء العلامة التجارية، والبيانات الديموغرافية، والاهتمامات",

@@ -21,15 +21,11 @@ import cn from "../../../utils/cn";
  */
 
 const baseButtonStyles = `
-  !cursor-pointer px-[44px] z-[9999] text-white text-center font-bold
-  rounded-pill-small transition-all hover:brightness-90 active:scale-95
-  min-w-[172px] max-w-[215px] mx-auto flex items-center justify-center
-  h-[45px] text-[18px]
-  md:h-[38px] md:text-[20px]
-  lg:h-[50.291px] lg:min-w-[266px] lg:px-[38.821px] lg:gap-[8.823px] lg:text-[24px] lg:rounded-pill-large
-  xl:h-[50px] xl:text-[24px]
-  2xl:h-[52px] 2xl:text-[30px]
-  3xl:h-[57px] 3xl:text-[32px] 3xl:rounded-pill
+ cursor-pointer 
+ rounded-pill-small
+ 
+ w-[172px]
+ 3xl:w-full
 `;
 
 const buttonVariants = {

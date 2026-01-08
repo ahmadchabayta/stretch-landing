@@ -10,7 +10,9 @@ const MobileSectionTitle = ({ className, labels }) => {
       className={cn("w-full pt-10", className)}
     >
       <Typography as="h2" variant="section-title" className="max-w-[808px]!">
-        {labels.title}
+        {labels.title.part1}
+        <br />
+        <Typography.Text>{labels.title.part2}</Typography.Text>
       </Typography>
       <Typography as="h3" variant="section-subtitle" className="text-secondary font-bold prose">
         {labels.subtitle}

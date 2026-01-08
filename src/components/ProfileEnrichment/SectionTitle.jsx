@@ -4,7 +4,9 @@ import { Typography, SectionHeadContainer } from "../../components";
 const SectionTitle = ({ labels }) => (
   <SectionHeadContainer>
     <Typography as="h2" variant="section-title">
-      {labels.title}
+      {labels.title.part1}
+      <br />
+      <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
     <Typography as="h3" variant="section-subtitle" className="">
       {labels.subtitle.subtitle}{" "}

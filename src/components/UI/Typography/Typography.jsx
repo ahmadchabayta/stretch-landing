@@ -64,6 +64,7 @@ const typographyVariants = {
     3xl:text-[24px] 3xl:leading-[36px]
   `,
   "section-title": `
+  uppercase
     [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
     text-[40px] leading-[108.457%]
     xl:text-[64px]

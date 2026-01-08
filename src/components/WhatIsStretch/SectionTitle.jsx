@@ -4,7 +4,9 @@ import { Typography, SectionHeadContainer } from "../../components";
 const SectionTitle = ({ data }) => (
   <SectionHeadContainer className="min-w-full">
     <Typography as="h2" variant="section-title" className="w-full">
-      {data.title}
+      {data.title.part1}
+      <br />
+      <Typography.Text className="3xl:whitespace-pre-line">{data.title.part2}</Typography.Text>
     </Typography>
     <Typography as="h3" variant="section-subtitle" className="w-full">
       <Typography.Text>{data.description.part1}</Typography.Text>

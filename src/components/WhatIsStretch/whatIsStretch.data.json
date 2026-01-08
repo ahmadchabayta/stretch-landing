@@ -1,7 +1,10 @@
 {
   "languages": {
     "en": {
-      "title": "WHAT IS STRETCH?",
+      "title": {
+        "part1": "What is ",
+        "part2": "Stretch?"
+      },
       "description": {
         "part1": "Stretch is a seamless SaaS platform that sheds light on ",
         "highlighted1": "duplication,cross-platform",
@@ -12,7 +15,10 @@
       "tagline": ["No SDKs", "No integrations", "Just clarity"]
     },
     "ar": {
-      "title": "ما هو ستريتش؟",
+      "title": {
+        "part1": "ما هو ",
+        "part2": "ستريتش؟"
+      },
       "description": {
         "part1": "ستريتش هو منصة SaaS متكاملة توفر رؤية واضحة حول ",
         "highlighted1": "تكرار الجمهور، وأداء الحملات عبر المنصات",

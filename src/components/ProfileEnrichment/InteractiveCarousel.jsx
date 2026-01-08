@@ -21,47 +21,76 @@ const InteractiveCarousel = ({ images }) => {
       direction="flex-col"
       align="items-center"
       justify="justify-center"
-      className="relative mx-auto w-full mb-[20%]"
+      className="relative mx-auto w-full"
     >
       <Flex
         align="items-center"
         justify="justify-center"
-        className={`relative h-[450px] w-full overflow-visible md:h-[650px] lg:h-[800px] xl:h-[950px]`}
+        className={`relative h-[450px] w-full overflow-visible md:h-[650px] lg:h-[824px] xl:h-[684px]`}
         style={{
           perspective: isXl ? "2500px" : isLg ? "2000px" : "1500px",
-          perspectiveOrigin: "center center",
+          perspectiveOrigin: "center 60%",
         }}
       >
         <img
           src={withBase(images.macbook)}
-          className="pointer-events-none relative z-20 w-full max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px]"
+          className="pointer-events-none relative z-20 min-w-[225.236px] lg:min-w-[675.708px]"
           alt="Macbook Base"
         />
 
-        {slides.map((slide, index) => {
-          const position = getPosition(index);
-          const isRightPosition = position === "next";
+        {/* Screen 1 */}
+        <motion.img
+          src={withBase(images.screen_1)}
+          alt="Profile Enrichment 1"
+          variants={variants}
+          initial={false}
+          animate={getPosition(0)}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 25,
+            mass: 0.8,
+            velocity: 0,
+          }}
+          className={`absolute origin-center border-none 
+            w-[302.122px] lg:w-[579.336px] xl:w-[648px] mb-12 2xl:w-[639px] ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
+          draggable={false}
+        />
+        {/* Screen 2 */}
+        <motion.img
+          src={withBase(images.screen_3)}
+          alt="Profile Enrichment 3"
+          variants={variants}
+          initial={false}
+          animate={getPosition(1)}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 25,
+            mass: 0.8,
+            velocity: 0,
+          }}
+          className={`absolute  origin-center border-none w-[191.788px] lg:w-[421.559px] xl:w-[561.724px] 3xl:w-[682.159px] ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
+          draggable={false}
+        />
 
-          return (
-            <motion.img
-              key={slide.id}
-              src={withBase(slide.src)}
-              alt={slide.alt}
-              variants={variants}
-              initial={false}
-              animate={position}
-              transition={{
-                type: "spring",
-                stiffness: 120,
-                damping: 25,
-                mass: 0.8,
-                velocity: 0,
-              }}
-              className={`absolute max-h-[50%] max-w-[55%] origin-center rounded-lg border-none object-contain lg:max-h-[45%] lg:max-w-[50%] xl:max-h-[40%] xl:max-w-[45%] ${isRightPosition ? "-z-1 " : "z-20"}`}
-              draggable={false}
-            />
-          );
-        })}
+        {/* Screen 3 */}
+        <motion.img
+          src={withBase(images.screen_2)}
+          alt="Profile Enrichment 2"
+          variants={variants}
+          initial={false}
+          animate={getPosition(2)}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 25,
+            mass: 0.8,
+            velocity: 0,
+          }}
+          className={`absolute origin-center mb-12 border-none w-[242px] lg:w-[752px] xl:w-[716px] ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
+          draggable={false}
+        />
       </Flex>
 
       <Flex
@@ -69,7 +98,7 @@ const InteractiveCarousel = ({ images }) => {
         align="items-center"
         justify="justify-center"
         gap="gap-6"
-        className="z-40 mt-10 lg:absolute lg:right-10 lg:mt-0 xl:right-20"
+        className="z-40 my-10 lg:my-0 lg:absolute lg:right-10 lg:mt-0 xl:right-20"
       >
         {slides.map((slide, index) => (
           <button
