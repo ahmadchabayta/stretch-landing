@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Typography } from "..";
 
 const HeroTitle = ({ sectionLabels }) => (
-  <>
+  <div className="flex flex-col items-center xl:items-start xl:text-start bg-red-500 ">
     <Typography as="h1" variant="hero-title" className="mb-[12.37px] lg:mb-6 3xl:mb-7">
       {sectionLabels.title}
     </Typography>
@@ -22,11 +22,11 @@ const HeroTitle = ({ sectionLabels }) => (
     <Typography
       as="p"
       variant="hero-description"
-      className="3xl:max-w-[855px] mb-8 max-w-[350px] md:max-w-[450px] lg:mb-20"
+      className="3xl:max-w-[855px] mb-8 max-w-[350px] md:max-w-[450px]"
     >
       {sectionLabels.description}
     </Typography>
-  </>
+  </div>
 );
 
 HeroTitle.propTypes = {
