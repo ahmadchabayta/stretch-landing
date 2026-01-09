@@ -9,7 +9,7 @@ const CardsContainer = ({ cards, activeCard, onCardClick }) => (
     {/* Right gradient fade - only visible when scrolling is active */}
     <div className="pointer-events-none absolute right-0 top-0 z-60 h-full w-20 bg-linear-to-l from-white to-transparent md:hidden" />
 
-    <div className="relative z-50 flex h-auto w-screen cursor-grab items-center gap-5 overflow-x-auto overflow-y-hidden py-5 px-5 md:justify-center lg:mx-auto lg:gap-x-0 lg:gap-y-12 lg:space-y-0 md:overflow-visible 2xl:flex">
+    <div className="relative z-50 flex h-auto w-screen cursor-grab items-center gap-5 overflow-x-auto overflow-y-hidden py-5 px-5 md:justify-center lg:mx-auto lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-x-5 lg:gap-y-12 md:overflow-visible xl:flex xl:gap-5">
       {cards.map((card, index) => (
         <CapabilityCard
           key={card.id}

@@ -30,9 +30,10 @@ const OfflineAttribution = ({ id }) => {
     absolute
     min-w-full
     max-w-[1231px]
-    bottom-[75%]
-    translate-y-[50%]
+    bottom-[0]
+    translate-y-[75%]
     left-0
+    xxl:left-[-10%]
     3xl:left-[-40px]
    `;
   const showSmallImages = `
@@ -49,18 +50,21 @@ const OfflineAttribution = ({ id }) => {
     lg:translate-x-[0]
     lg:left-[-195px]
     bottom-0
+    translate-y-[100%]
+    md:translate-y-[90%]
+    2md:translate-y-[90%]
   `;
 
   return (
-    <Section id={id} className="relative overflow-hidden border-y-2">
-      <Container className="flex flex-col">
+    <Section id={id} className="relative overflow-hidden border-y-2 max-h-screen flex flex-col">
+      <Container className="flex flex-col shrink-0">
         <SectionTitle labels={labels} />
         <Flex align="items-end" justify="justify-end" className="">
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
       <div
-        className="relative h-[417px] md:h-[750px] lg:h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
+        className="relative flex-1 min-h-0 max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
         {...(!isTouchDevice && {
           onMouseEnter: () => setIsRevealed((prev) => !prev),
           onMouseLeave: () => setIsRevealed((prev) => !prev),
