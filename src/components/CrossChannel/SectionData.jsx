@@ -12,8 +12,8 @@ const SectionData = ({ labels, language }) => {
     <Flex
       className="w-full h-full xl:mt-[113px]"
       justify="justify-between"
-      align="xl:items-end"
-      direction="flex-col"
+      align=" xl:items-end"
+      direction="flex-row xl:flex-col"
     >
       <Flex
         direction="xl:flex-col"
@@ -31,7 +31,7 @@ const SectionData = ({ labels, language }) => {
         <Typography
           as="h3"
           variant="section-subtitle"
-          className="text-start max-w-[153px] xl:max-w-[265px] font-normal!"
+          className="text-start max-w-[153px] lg:max-w-[265px] font-normal!"
         >
           {labels.other_subtitle}
         </Typography>

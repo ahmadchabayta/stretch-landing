@@ -15,23 +15,23 @@ const CrossChannel = ({ id }) => {
   const percentageRef = useAnimatedCounter(labels.percentage, { duration: 2 });
 
   return (
-    <Section id={id} className="flex flex-col relative overflow-hidden">
+    <Section id={id} className="flex flex-col relative overflow-hidden min-h-0!">
       <Container>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 items-start relative h-full">
+        <div className="flex flex-col xl:grid xl:grid-cols-2 items-start relative h-full">
           {/* // desktop */}
-          <SectionTitle className="hidden lg:flex flex-col!" labels={labels} language={language} />
-          <MobileSectionTitle className="flex lg:hidden" labels={labels} language={language} />
+          <SectionTitle className="hidden xl:flex flex-col!" labels={labels} language={language} />
+          <MobileSectionTitle className="flex xl:hidden" labels={labels} language={language} />
           <SectionData labels={labels} language={language} percentageRef={percentageRef} />
         </div>
       </Container>
 
       {/* Image Container - Mobile and Tablet */}
 
-      <Container className="flex lg:hidden flex-col items-center justify-center w-screen!">
+      <Container className="flex xl:hidden flex-col items-center justify-center w-screen!">
         <img
           src={withBase(labels.images.small)}
           alt="Cross Channel Background"
-          className="translate-x-[-13%] w-full h-auto min-w-[625px] md:min-w-[800px]"
+          className="translate-x-[-13%] w-full h-auto min-w-[625px] md:min-w-[800px] lg:min-w-[1299px]"
         />
         <Description className="mx-auto max-w-[80vw]" labels={labels} language={language} />
       </Container>

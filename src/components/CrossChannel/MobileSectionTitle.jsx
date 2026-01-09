@@ -14,7 +14,7 @@ const MobileSectionTitle = ({ className, labels }) => {
         <br />
         <Typography.Text>{labels.title.part2}</Typography.Text>
       </Typography>
-      <Typography as="h3" variant="section-subtitle" className="text-secondary font-bold prose">
+      <Typography as="h3" variant="section-subtitle" className="text-secondary font-bold">
         {labels.subtitle}
       </Typography>
     </Flex>
