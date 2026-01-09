@@ -1,7 +1,6 @@
 import { createElement } from "react";
 import PropTypes from "prop-types";
 import cn from "../../../utils/cn";
-import { useLanguage } from "../../../context/LanguageContext";
 
 /**
  * Typography component - A flexible text component that supports both HTML elements and custom typography variants
@@ -121,13 +120,13 @@ const typographyVariants = {
     3xl:text-[20px] 3xl:leading-[30px]
   `,
   "button-text": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-bold text-white
-    text-[18px] leading-normal text-justify whitespace-nowrap
-    md:text-[18px] md:leading-normal md:text-justify
-    lg:text-[18px] lg:leading-normal lg:text-justify
-    xl:text-[32px] xl:leading-normal xl:text-center
-    2xl:text-[32px] 2xl:leading-normal 2xl:text-center
-    3xl:text-[32px] 3xl:leading-normal 3xl:text-center
+    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-semibold text-white
+    text-[14px] leading-tight
+    md:text-[15px] md:leading-tight
+    lg:text-[16px] lg:leading-tight
+    xl:text-[17px] xl:leading-tight
+    2xl:text-[18px] 2xl:leading-tight
+    3xl:text-[19px] 3xl:leading-tight
   `,
   "audience-mirroring-list": `
     [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal text-justify text-accent
@@ -184,19 +183,14 @@ const htmlElements = [
 ];
 
 export const Typography = ({ as = "p", variant, className, children, ...rest }) => {
-  const { language } = useLanguage();
-
   // Determine the HTML element to render (always from 'as' prop)
   const element = htmlElements.includes(as) ? as : "p";
 
   // Determine the typography class to apply (from variant prop)
   const variantClass = variant && typographyVariants[variant] ? typographyVariants[variant] : "";
 
-  // Add dynamic font family based on language
-  const languageFontClass = language === "ar" ? "font-tajawal" : "";
-
-  // Combine classes - ensure variant class comes first for proper CSS specificity
-  const combinedClassName = cn(variantClass, languageFontClass, className);
+  // Combine classes - variant class includes direction-based font switching
+  const combinedClassName = cn(variantClass, className);
 
   return createElement(element, { className: combinedClassName, ...rest }, children);
 };

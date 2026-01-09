@@ -4,7 +4,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import SectionTitle from "./SectionTitle";
 import { withBase } from "../../utils/withBase";
-import RippleButton from "../UI/RippleButton";
+import { RippleButton } from "../UI";
 import { useCarouselTimer } from "./useCarouselTimer";
 import { getCarouselSpread, getCarouselPositions, getPositionIndex } from "./carouselConfig";
 import CarouselItem from "./CarouselItem";

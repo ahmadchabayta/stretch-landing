@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "../../utils/cn";
+import cn from "../../../utils/cn";
 
 /**
  * GlassCircle - A reusable liquid glass component with SVG filters

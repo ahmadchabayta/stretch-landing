@@ -32,11 +32,7 @@ const DesktopGrid = ({ features, boxes, partialLabel, isArabic, columnOffset = 0
               "grid items-center gap-2 px-3 py-4 transition-colors duration-200 sm:gap-3 sm:px-4 sm:py-5 lg:gap-4 lg:px-6 lg:py-6 xl:py-7",
               "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6",
               rowIdx !== features.length - 1 && "border-b border-gray-100",
-              isArabic ? "direction-rtl" : "",
             )}
-            style={{
-              direction: isArabic ? "rtl" : "ltr",
-            }}
           >
             {/* Feature name */}
             <div className={cn("flex items-center justify-start")}>

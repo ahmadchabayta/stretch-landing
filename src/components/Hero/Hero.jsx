@@ -23,12 +23,7 @@ const Hero = ({ id }) => {
           <HeroTitle sectionLabels={sectionLabels} />
 
           <Flex className="mt-[84.5px] lg:mt-[42.6px]">
-            <Button
-              variant="demo"
-              as="button"
-              className="place-self-start px-11 w-fit! h-fit!"
-              dir={language === "ar" ? "rtl" : "ltr"}
-            >
+            <Button variant="demo" as="button" className="place-self-start px-11 w-fit! h-fit!">
               <Typography as="span" variant="button-text">
                 {sectionLabels.button_label}
               </Typography>

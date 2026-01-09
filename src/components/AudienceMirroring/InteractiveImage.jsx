@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import rawData from "./audience_mirroring.data.json";
 import { withBase } from "../../utils/withBase";
+import { Container } from "../UI";
 
 const InteractiveImage = () => {
   return (
-    <div
+    <Container
       style={{
         backgroundImage: `url('${withBase(rawData.images.gradientBg)}')`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "center",
       }}
-      className="3xl:max-w-[1527px] bg-fill relative mx-auto flex min-w-[190px] items-center justify-center bg-center"
+      className="bg-fill relative mx-auto flex items-center justify-center bg-center"
     >
       <img
         src={withBase(rawData.images.background)}
@@ -51,7 +52,7 @@ const InteractiveImage = () => {
           className="w-[150px] md:w-[180px] lg:w-[286px] md:grayscale-100 hover:grayscale-0 transition-all"
         />
       </div>
-    </div>
+    </Container>
   );
 };
 

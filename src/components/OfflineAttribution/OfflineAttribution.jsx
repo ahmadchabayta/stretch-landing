@@ -12,7 +12,6 @@ const OfflineAttribution = ({ id }) => {
   const { language, currentLanguage } = useLanguage();
   const labels = data.languages?.[language] || data.languages?.en;
 
-  // const dir = currentLanguage?.dir || "rtl";
   const [isRevealed, setIsRevealed] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -29,19 +28,13 @@ const OfflineAttribution = ({ id }) => {
     hidden
     xl:flex
     absolute
-    w-full
-    min-w-[1583px]
-    shrink-0
-    xl:bottom-[clamp(16%,7%,14%)]
-    2xl:bottom-[clamp(12%,13%,14%)]
-    3xl:bottom-[0%]
-    left-[-26%]
-    lg:left-[-32%]
-    xl:left-[-22.1%]
-    xxl:left-[-20.1%]
-    2xl:left-[-17%]
-    3xl:left-[-11%]
-  `;
+    min-w-full
+    max-w-[1231px]
+    bottom-[75%]
+    translate-y-[50%]
+    left-0
+    3xl:left-[-40px]
+   `;
   const showSmallImages = `
     flex
     xl:hidden
@@ -51,31 +44,23 @@ const OfflineAttribution = ({ id }) => {
     md:min-w-[1324px]
     lg:min-w-[1583px]
     left-[57%]
-    md:left-[60%]
-    md:left-1/2
-    lg:left-[55%]
+    md:left-[55%]
     translate-x-[-50%]
-    bottom-[0%]
-   
+    lg:translate-x-[0]
+    lg:left-[-195px]
+    bottom-0
   `;
 
   return (
-    <Section
-      id={id}
-      container={false}
-      padding="none"
-      className="relative overflow-hidden"
-      style={{ direction: "ltr" }}
-    >
-      <Container className="flex flex-col ">
+    <Section id={id} className="relative overflow-hidden border-y-2">
+      <Container className="flex flex-col">
         <SectionTitle labels={labels} />
         <Flex align="items-end" justify="justify-end" className="">
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
       <div
-        className="min-h-[415px] min-w-[738px] lg:w-[1583px] lg:min-h-[890px] cursor-pointer "
-        dir="ltr"
+        className="relative h-[417px] md:h-[750px] lg:h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
         {...(!isTouchDevice && {
           onMouseEnter: () => setIsRevealed((prev) => !prev),
           onMouseLeave: () => setIsRevealed((prev) => !prev),

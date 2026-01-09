@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import { Typography, SectionHeadContainer } from "../../components";
 
-const SectionTitle = ({ labels, dir }) => (
+const SectionTitle = ({ labels }) => (
   <SectionHeadContainer>
-    <Typography as="h2" variant="section-title" dir={dir}>
+    <Typography as="h2" variant="section-title">
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle" dir={dir} className="">
+    <Typography as="h3" variant="section-subtitle" className="">
       {labels.subtitle}
     </Typography>
   </SectionHeadContainer>
@@ -19,7 +19,6 @@ SectionTitle.propTypes = {
     title: PropTypes.string,
     subtitle: PropTypes.string,
   }).isRequired,
-  dir: PropTypes.string,
 };
 
 export default SectionTitle;

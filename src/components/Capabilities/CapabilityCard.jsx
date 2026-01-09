@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Wrapper, Typography } from "../../components";
-import GlassCircle from "../UI/GlassCircle";
+import { GlassCircle } from "../UI/";
 
 const CapabilityCard = ({ card, isActive, onClick }) => (
   <Wrapper

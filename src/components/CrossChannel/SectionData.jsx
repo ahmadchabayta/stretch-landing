@@ -44,7 +44,7 @@ const SectionData = ({ labels, language }) => {
       <Description
         labels={labels}
         language={language}
-        className={`hidden absolute bottom-[10%] xl:block min-w-[382px] max-w-[587px] text-end! z-50 ${language === "ar" ? "right-0" : "right-0"}`}
+        className={`hidden absolute bottom-[10%] xl:block min-w-[382px] max-w-[587px] text-end! z-50 ltr:right-0 rtl:left-0`}
       />
     </Flex>
   );

@@ -76,7 +76,12 @@ List.propTypes = {
  * </List>
  */
 List.Item = ({ children, className, bold = false, accent = false, icon, ...rest }) => {
-  const itemClasses = cn(bold && "font-bold", accent && "text-accent", className);
+  const itemClasses = cn(
+    "[direction:ltr]:font-poppins [direction:rtl]:font-tajawal",
+    bold && "font-bold",
+    accent && "text-accent",
+    className,
+  );
 
   return (
     <li className={itemClasses} {...rest}>

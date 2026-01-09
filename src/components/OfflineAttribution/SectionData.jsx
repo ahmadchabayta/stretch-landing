@@ -3,11 +3,13 @@ import { Flex, Typography } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
 
 // eslint-disable-next-line no-unused-vars
-const SectionData = ({ labels, dir, language }) => {
+const SectionData = ({ labels, language }) => {
   const parsedNumber = Number(String(labels.number).replace(/,/g, ""));
+  const locale = language === "ar" ? "ar-EG" : "en-US";
   const counterRef = useAnimatedCounter(parsedNumber, {
     duration: 2,
     dependencies: [parsedNumber],
+    locale,
   });
 
   return (
@@ -21,12 +23,10 @@ const SectionData = ({ labels, dir, language }) => {
         as="h3"
         ref={counterRef}
         className="text-[77px] lg:text-[160px] font-light 2xl:mr-0 z-20"
-        dir={dir}
       />
       <Typography
         as="p"
         className="text-black [direction:ltr] xl:[direction:rtl] text-sm lg:text-[20px] 3xl:text-[24px]"
-        dir={dir}
       >
         {labels.description.desc}
         <br />
@@ -44,7 +44,6 @@ SectionData.propTypes = {
       highlight: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  dir: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
 };
 

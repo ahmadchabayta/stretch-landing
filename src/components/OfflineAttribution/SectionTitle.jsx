@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
-const SectionTitle = ({ labels, dir }) => (
+const SectionTitle = ({ labels }) => (
   <SectionHeadContainer className="app_container">
-    <Typography as="h2" variant="section-title" dir={dir}>
+    <Typography as="h2" variant="section-title">
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
@@ -28,7 +28,6 @@ SectionTitle.propTypes = {
       visits: PropTypes.string,
     }).isRequired,
   }).isRequired,
-  dir: PropTypes.string.isRequired,
 };
 
 export default SectionTitle;

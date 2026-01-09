@@ -7,17 +7,16 @@ import MappedDescription from "./MappedDescription";
 import SectionTitle from "./SectionTitle";
 
 const AudienceMirroring = ({ id }) => {
-  const { language, currentLanguage } = useLanguage();
+  const { language } = useLanguage();
   const labels = rawData.languages?.[language] || rawData.languages?.en;
-  const dir = currentLanguage?.dir || "ltr";
 
   return (
     <Section id={id} className="bg-white!">
       <Container className="flex flex-col h-full space-y-[10%]">
-        <SectionTitle labels={labels} dir={dir} />
+        <SectionTitle labels={labels} />
         <Flex className="" flex="true" direction="flex-col">
           <InteractiveImage data={labels} />
-          <MappedDescription labels={labels} dir={dir} />
+          <MappedDescription labels={labels} />
         </Flex>
       </Container>
     </Section>

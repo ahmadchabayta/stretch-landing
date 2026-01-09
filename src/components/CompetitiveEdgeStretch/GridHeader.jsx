@@ -26,11 +26,7 @@ const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
       className={cn(
         "grid gap-2 px-3 py-4 sm:gap-3 sm:px-4 lg:gap-4 lg:px-6",
         "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6",
-        isArabic ? "direction-rtl" : "",
       )}
-      style={{
-        direction: isArabic ? "rtl" : "ltr",
-      }}
     >
       {/* Empty corner for feature names column */}
       <div />

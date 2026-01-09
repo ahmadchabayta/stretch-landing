@@ -1,4 +1,5 @@
 export { default as Button } from "./Button/Button";
+export { default as RippleButton } from "./Button/RippleButton";
 export { default as Flex } from "./Flex/Flex";
 export { default as Typography } from "./Typography/Typography";
 export { default as Wrapper } from "./Wrapper/Wrapper";
@@ -7,3 +8,4 @@ export { default as Image } from "./Image/Image";
 export { default as SectionHeadContainer } from "./SectionHeadContainer/SectionHeadContainer";
 export { default as Container } from "./Container/Container";
 export { default as Glass } from "./Glass/Glass";
+export { default as GlassCircle } from "./GlassCircle/GlassCircle";

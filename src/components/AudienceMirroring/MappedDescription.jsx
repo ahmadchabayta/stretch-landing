@@ -1,16 +1,11 @@
 import PropTypes from "prop-types";
 import { List, Typography } from "../../components";
 
-const MappedDescription = ({ labels, dir }) => (
+const MappedDescription = ({ labels }) => (
   <List className="mt-[10%]">
     {labels.description.map((item, index) => (
       <List.Item key={`description-${index}`}>
-        <Typography
-          as="li"
-          variant="audience-mirroring-list"
-          className={`text-black ${dir === "rtl" ? "font-[Tajawal]" : "font-poppins"}`}
-          dir={dir}
-        >
+        <Typography as="li" variant="audience-mirroring-list" className="text-black">
           <Typography.Text accent bold>
             {item.highlighted}
           </Typography.Text>{" "}
@@ -30,7 +25,6 @@ MappedDescription.propTypes = {
       }),
     ),
   }).isRequired,
-  dir: PropTypes.string,
 };
 
 export default MappedDescription;
