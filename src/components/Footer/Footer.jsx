@@ -14,7 +14,7 @@ const Footer = ({ id }) => {
 
   return (
     <footer id={id} className="w-full overflow-x-hidden ">
-      <Section>
+      <Section className="mb-0!">
         {/* Top section with CTA and net background with built-in side gradients */}
         <Container
           style={{
@@ -34,7 +34,7 @@ const Footer = ({ id }) => {
           flex="flex"
           direction="flex-col"
           align="items-center!"
-          justify="justify-between"
+          justify="justify-center"
           className="w-full flex-1 bg-black pt-16! min-h-[548px] pb-24"
         >
           <img
@@ -42,7 +42,7 @@ const Footer = ({ id }) => {
             src={withBase(data.footer_logo)}
             alt="Stretch logo"
           />
-          <Container appContainer>
+          <Container>
             <Flex
               flex="flex"
               direction="flex-col lg:flex-row"

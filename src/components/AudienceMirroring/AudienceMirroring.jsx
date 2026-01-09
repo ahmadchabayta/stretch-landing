@@ -11,10 +11,10 @@ const AudienceMirroring = ({ id }) => {
   const labels = rawData.languages?.[language] || rawData.languages?.en;
 
   return (
-    <Section id={id} className="bg-white!">
-      <Container className="flex flex-col h-full space-y-[10%]">
+    <Section id={id} className="bg-white! min-h-0!">
+      <Container className="flex flex-col space-y-8">
         <SectionTitle labels={labels} />
-        <Flex className="" flex="true" direction="flex-col">
+        <Flex className="" flex="true" direction="flex-col" align="items-center">
           <InteractiveImage data={labels} />
           <MappedDescription labels={labels} />
         </Flex>

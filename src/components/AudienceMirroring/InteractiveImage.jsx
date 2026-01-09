@@ -12,12 +12,12 @@ const InteractiveImage = () => {
         backgroundSize: "contain",
         backgroundPosition: "center",
       }}
-      className="bg-fill relative mx-auto flex items-center justify-center bg-center"
+      className="bg-fill max-w-[1544px] relative mx-auto flex items-center justify-center bg-center"
     >
       <img
-        src={withBase(rawData.images.background)}
+        src={withBase(rawData.images.gridBackground)}
         alt="Background"
-        className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] object-contain z-0"
+        className="absolute top-[50%] left-[50%] max-w-[543px] lg:max-w-[1019px] 3xl:max-w-[1209.5px] translate-y-[-50%] translate-x-[-50%] object-contain z-0 rotate-90 lg:rotate-0"
       />
 
       <img
@@ -49,7 +49,7 @@ const InteractiveImage = () => {
         <img
           src={withBase(rawData.images.orangeAvatars)}
           alt="Orange Avatars"
-          className="w-[150px] md:w-[180px] lg:w-[286px] md:grayscale-100 hover:grayscale-0 transition-all"
+          className="w-[150px] md:w-[180px] lg:w-[286px] md:grayscale-100 hover:grayscale-0 transition-all relative z-30"
         />
       </div>
     </Container>
