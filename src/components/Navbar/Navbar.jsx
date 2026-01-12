@@ -48,16 +48,23 @@ const Navbar = () => {
             loading="eager"
           />
 
-          <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
+          <>
+            <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
 
-          <MobileMenu ref={menuRef} isOpen={isMenuOpen} data={data} linkUrls={rawData.link_urls} />
+            <MobileMenu
+              ref={menuRef}
+              isOpen={isMenuOpen}
+              data={data}
+              linkUrls={rawData.link_urls}
+            />
 
-          <Menu
-            className="hidden min-w-[50%] justify-center xl:flex"
-            isOpen={true}
-            data={data}
-            linkUrls={rawData.link_urls}
-          />
+            <Menu
+              className="hidden min-w-[50%] justify-center xl:flex"
+              isOpen={true}
+              data={data}
+              linkUrls={rawData.link_urls}
+            />
+          </>
 
           <NavbarControl className="hidden xl:flex" data={data} />
         </div>

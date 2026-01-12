@@ -45,7 +45,7 @@ const ProvenToPerform = () => {
                   className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "right-0 top-0 translate-y-[-50%] translate-x-[50%]" : "left-0 top-0 translate-y-[-50%] translate-x-[-50%]"}`}
                 >
                   <svg
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white/5"
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white"
                     fill="currentColor"
                     viewBox="0 0 97 61"
                   >
@@ -75,7 +75,7 @@ const ProvenToPerform = () => {
                   className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "left-0 top-0 translate-y-[50%] translate-x-[-50%]" : "right-0 bottom-0 translate-y-[50%] translate-x-[50%]"}`}
                 >
                   <svg
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white/5"
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white"
                     fill="currentColor"
                     viewBox="0 0 97 61"
                   >

@@ -149,7 +149,7 @@ const Glass = memo(({ children, distortion = 65, className = "", accentColor = "
       <div className="relative z-30 select-none" style={{ transform: "translateZ(0)" }}>
         <div className="relative flex flex-col justify-center items-center">{children}</div>
         <motion.div
-          className="absolute flex flex-col justify-center items-center inset-0 [&_*]:!text-[var(--accent-color)]"
+          className="absolute flex flex-col justify-center items-center inset-0 [&_*]:!text-gray-950 "
           style={{
             "--accent-color": accentColor,
             clipPath,

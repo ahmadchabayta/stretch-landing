@@ -12,7 +12,7 @@ const MobileMenu = React.forwardRef(({ isOpen, data, linkUrls }, ref) => {
   return (
     <div
       className={`absolute top-[70%] z-50 flex h-auto w-[300px] flex-col items-stretch overflow-hidden rounded-xl bg-white shadow-2xl transition-all duration-300 ease-in-out ${
-        isRTL ? "left-2" : "right-2"
+        isRTL ? "left-0" : "right-0"
       } ${isOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-4 opacity-0"}`}
       ref={ref}
     >

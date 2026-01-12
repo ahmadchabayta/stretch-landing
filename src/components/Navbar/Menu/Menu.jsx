@@ -16,8 +16,8 @@ const Menu = ({ data, linkUrls, className }) => {
   return (
     <Flex
       flex={true}
-      justify="justify-between"
-      spaceX="xl:space-x-2 3xl:space-x-8"
+      justify="justify-evenly"
+      spaceX="space-x-0 xl:space-x-2 3xl:space-x-8"
       className={cn("w-full max-w-[716px]", className)}
     >
       {data.menu_items.map((item, i) => {

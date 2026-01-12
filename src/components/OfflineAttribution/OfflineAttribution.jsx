@@ -35,6 +35,7 @@ const OfflineAttribution = ({ id }) => {
     left-0
     xxl:left-[-10%]
     3xl:left-[-40px]
+    
    `;
   const showSmallImages = `
     flex
