@@ -44,7 +44,7 @@ const Navbar = () => {
           <img
             src={withBase(rawData.images.logo)}
             alt="Stretch Logo"
-            className="w-[171px] lg:w-[293px]"
+            className="w-[171px] lg:w-[230px]"
             loading="eager"
           />
 

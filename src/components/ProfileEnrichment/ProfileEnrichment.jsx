@@ -18,10 +18,12 @@ const ProfileEnrichment = ({ id }) => {
         backgroundSize: "cover",
       }}
       container={true}
-      className="relative overflow-hidden h-screen"
+      className="relative overflow-hidden"
     >
-      <SectionTitle labels={labels} />
-      <div className="absolute max-h-[80vh] left-0 w-full bottom-0">
+      <div className="relative z-10">
+        <SectionTitle labels={labels} />
+      </div>
+      <div className="absolute left-0 w-full bottom-0 h-[65%] md:h-[70%] lg:h-[75%]">
         <InteractiveCarousel images={data.images} />
       </div>
     </Section>

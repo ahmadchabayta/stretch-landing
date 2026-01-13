@@ -1,16 +1,14 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { capability_data as data, capability_url_links } from "./capabilities.data";
+import { capability_data as data } from "./capabilities.data";
 import { useLanguage } from "../../context/LanguageContext";
 import { Container, Section } from "../../components";
-import useScrollToSection from "../../hooks/useScrollToSection";
 import SectionHeader from "./SectionHeader";
 import CardsContainer from "./CardsContainer";
 
 const Capabilities = ({ id }) => {
   const [activeCard, setActiveCard] = useState("cross-channel");
   const { language } = useLanguage();
-  const { scrollToSection } = useScrollToSection();
   const labels = data.languages[language] || data.languages.en;
 
   // Merge card labels with card icons and sizes
@@ -19,10 +17,8 @@ const Capabilities = ({ id }) => {
     title: labels.cards[idx]?.title || card.title,
   }));
 
-  const handleCardClick = (cardId, index) => {
+  const handleCardClick = (cardId) => {
     setActiveCard(cardId);
-    const targetUrl = capability_url_links[index];
-    scrollToSection(targetUrl);
   };
 
   return (

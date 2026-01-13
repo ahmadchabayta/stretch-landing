@@ -17,7 +17,7 @@ const CarouselItem = ({ item, position, onClick }) => {
       <img
         src={item.src}
         alt={item.alt}
-        className="w-[clamp(280px,90vw,500px)] xl:w-[clamp(500px,40vw,900px)] object-contain pointer-events-none"
+        className="w-[clamp(280px,90vw,500px)] xl:w-[clamp(500px,40vw,900px)] pointer-events-none"
         draggable={false}
       />
     </motion.div>

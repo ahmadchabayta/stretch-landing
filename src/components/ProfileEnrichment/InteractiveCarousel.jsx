@@ -11,7 +11,7 @@ const InteractiveCarousel = ({ images }) => {
     { id: 3, src: images.screen_2, alt: "Profile Enrichment 2" },
   ];
 
-  const { currentSlide, setCurrentSlide, getPosition, variants, isLg, isXl } = useCarousel3D(
+  const { currentSlide, setCurrentSlide, getPosition, variants } = useCarousel3D(
     slides.length,
     4000,
   );
@@ -20,21 +20,21 @@ const InteractiveCarousel = ({ images }) => {
     <Flex
       direction="flex-col"
       align="items-center"
-      justify="justify-center"
-      className="relative mx-auto w-full mt-14"
+      justify="justify-end"
+      className="relative mx-auto w-full h-full"
     >
       <Flex
         align="items-center"
         justify="justify-center"
-        className={`relative h-[450px] w-full overflow-visible md:h-[650px] lg:h-[824px] xl:h-[684px]`}
+        className="relative w-full flex-1 overflow-visible"
         style={{
-          perspective: isXl ? "2500px" : isLg ? "2000px" : "1500px",
+          perspective: "2000px",
           perspectiveOrigin: "center 60%",
         }}
       >
         <img
           src={withBase(images.macbook)}
-          className="mt-18 pointer-events-none relative z-20 min-w-[225.236px] lg:min-w-[675.708px]"
+          className="pointer-events-none relative z-20 w-[90%] sm:w-[75%] md:w-[80%] lg:w-[75%] max-w-[700px] min-w-[200px] h-auto"
           alt="Macbook Base"
         />
 
@@ -52,8 +52,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center border-none 
-            min-w-[302.122px] lg:min-w-[579.336px] xl:min-w-[648px] mb-12 2xl:min-w-[639px] ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[45%] max-w-[550px] min-w-[200px] h-auto ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
         {/* Screen 2 */}
@@ -70,7 +69,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center border-none min-w-[191.788px] lg:min-w-[421.559px] xl:min-w-[561.724px] 3xl:min-w-[682.159px] ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[40%] max-w-[580px] min-w-[170px] h-auto ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
 
@@ -88,7 +87,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center mb-12 border-none min-w-[242px] lg:min-w-[752px] xl:min-w-[716px] ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[43%] max-w-[620px] min-w-[190px] h-auto ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
       </Flex>
@@ -98,7 +97,7 @@ const InteractiveCarousel = ({ images }) => {
         align="items-center"
         justify="justify-center"
         gap="gap-6"
-        className="z-40 my-10 lg:my-0 lg:absolute lg:right-10 lg:mt-0 xl:right-20"
+        className="z-40 my-10 lg:my-0 lg:absolute lg:right-10 lg:top-1/2 lg:-translate-y-1/2 xl:right-20"
       >
         {slides.map((slide, index) => (
           <button

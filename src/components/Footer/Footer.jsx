@@ -13,8 +13,8 @@ const Footer = ({ id }) => {
   const labels = data.languages?.[language] || data.languages.en;
 
   return (
-    <footer id={id} className="w-full overflow-x-hidden ">
-      <Section className="mb-0!">
+    <footer id={id} className="w-full ">
+      <Section className="mb-0! ">
         {/* Top section with CTA and net background with built-in side gradients */}
         <Container
           style={{
@@ -23,10 +23,12 @@ const Footer = ({ id }) => {
             backgroundPosition: "center",
             opacity: 1,
           }}
-          className="relative min-h-screen bg-contain md:bg-cover mx-auto mb-5 flex flex-col items-center justify-between overflow-visible!"
+          className="relative max-w-none! min-h-screen bg-size-[645.71px_397.89px]  md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5  overflow-visible flex"
         >
-          <SectionTitle labels={labels} language={language} />
-          <FooterCTA labels={labels} language={language} />
+          <Container className="flex flex-col items-center justify-between">
+            <SectionTitle labels={labels} language={language} />
+            <FooterCTA labels={labels} language={language} />
+          </Container>
         </Container>
 
         {/* Bottom section with logo and links */}

@@ -47,7 +47,7 @@ const StretchUserExperience = () => {
   return (
     <Section
       container={false}
-      className="stretch_user_experience relative w-full overflow-hidden"
+      className="stretch_user_experience relative w-full overflow-hidden min-h-screen flex flex-col"
       style={{
         backgroundImage: `url('${withBase(backgroundImage)}')`,
         backgroundRepeat: "no-repeat",
@@ -61,15 +61,15 @@ const StretchUserExperience = () => {
         alt="Blue Circle"
       />
 
-      <Container className="mb-8 md:mb-12 lg:mb-16 xl:mb-20">
+      <Container className="relative z-10 pt-4 md:pt-6 shrink-0">
         <SectionTitle currentStep={currentIndex + 1} data={sectionLabels} />
       </Container>
 
       {/* Carousel Section - Centered in Container */}
-      <Container className="flex flex-col xl:flex-row xl:items-center justify-center gap-6 lg:gap-10 mt-8 md:mt-12">
+      <Container className="flex flex-col xl:flex-row xl:items-center justify-end xl:justify-center gap-6 lg:gap-10 flex-1 pb-8 md:pb-12 lg:pb-16 mt-8 md:mt-12 lg:mt-16">
         {/* 3D Carousel */}
         <div
-          className="relative w-full h-[clamp(500px,60vh,700px)] md:h-[clamp(550px,65vh,750px)] xl:h-[clamp(500px,55vh,800px)] flex items-center justify-center origin-center"
+          className="relative w-full flex-1 max-h-[300px] md:max-h-[350px] lg:max-h-[450px] xl:max-h-[800px] flex items-center justify-center origin-center overflow-visible"
           style={{ perspective: "1000px" }}
         >
           {items.map((item, index) => {

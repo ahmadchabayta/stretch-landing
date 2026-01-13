@@ -29,17 +29,16 @@ const ProvenToPerform = () => {
       <AppBoundary>
         {/* Container is now centered by default */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <TrueGlassContainer className="flex justify-self-center items-center! justify-center! overflow-hidden  text-gray-500/30">
+          <TrueGlassContainer className="flex justify-self-center items-center! justify-center! overflow-hidden text-gray-500/30 mt-[164px]">
             <Flex
               direction="flex-col xl:flex-row"
               justify="justify-center"
               align="items-center"
-              spaceY="space-y-36 xl:space-y-0"
               spaceX="xl:space-x-2 2xl:space-x-4"
             >
               <Glass
                 accentColor="#FFFFFF"
-                className="flex flex-col touch-none select-none items-center justify-center min-h-[152px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden"
+                className="mb-[80px] flex flex-col touch-none select-none items-center justify-center min-h-[152px] max-h-[172px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden"
               >
                 <div
                   className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "right-0 top-0 translate-y-[-50%] translate-x-[50%]" : "left-0 top-0 translate-y-[-50%] translate-x-[-50%]"}`}
