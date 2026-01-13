@@ -35,9 +35,8 @@ const FooterSocialIcons = ({ className = "" }) => (
     as="nav"
     direction="flex-row"
     align="items-center"
-    justify="justify-center md:justify-start"
     gap="gap-4 md:gap-6 xl:gap-8"
-    className={`mt-4 min-h-12 md:mt-6 ${className}`}
+    className={`${className}`}
     aria-label="Stretch social media links"
   >
     {socialLinks.map(({ href, label, Icon }) => (
@@ -49,6 +48,7 @@ const FooterSocialIcons = ({ className = "" }) => (
         aria-label={`${label} profile`}
         title={`Stretch on ${label}`}
         itemProp="sameAs"
+        className="flex items-center justify-center"
       >
         <Icon size={28} />
       </a>

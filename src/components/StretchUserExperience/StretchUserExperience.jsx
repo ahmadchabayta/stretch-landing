@@ -66,7 +66,7 @@ const StretchUserExperience = () => {
       </Container>
 
       {/* Carousel Section - Centered in Container */}
-      <Container className="flex flex-col xl:flex-row xl:items-center justify-end xl:justify-center gap-6 lg:gap-10 flex-1 pb-8 md:pb-12 lg:pb-16 mt-8 md:mt-12 lg:mt-16">
+      <Container className="xl:absolute xl:top-1/2 xl:translate-y-[-50%] xl:left-1/2 xl:translate-x-[-50%] flex flex-col xl:flex-row xl:items-center justify-end xl:justify-center gap-6 lg:gap-10 flex-1">
         {/* 3D Carousel */}
         <div
           className="relative w-full flex-1 max-h-[300px] md:max-h-[350px] lg:max-h-[450px] xl:max-h-[800px] flex items-center justify-center origin-center overflow-visible"

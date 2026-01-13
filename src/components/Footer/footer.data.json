@@ -14,7 +14,11 @@
         "demo_button_label": "Book a Demo",
         "contact_button_label": "Contact Us Now"
       },
-      "footer_links": ["Company Info", "Privacy & Terms", "Support", "Contact", "Powered by MEmob+"]
+      "footer_links": ["Company Info", "Privacy & Terms", "Support", "Contact"],
+      "powered_by": {
+        "powered_by": "Powered by",
+        "logo": "./assets/footer/memob_logo.webp"
+      }
     },
     "ar": {
       "title": {
@@ -30,7 +34,11 @@
         "demo_button_label": "احجز عرضاً توضيحياً",
         "contact_button_label": "تواصل معنا الآن"
       },
-      "footer_links": ["معلومات الشركة", "الخصوصية والشروط", "الدعم", "اتصل بنا", "مدعوم من Memob+"]
+      "footer_links": ["معلومات الشركة", "الخصوصية والشروط", "الدعم", "اتصل بنا"],
+      "powered_by": {
+        "powered_by": "مدعوم من",
+        "logo": "./assets/footer/memob_logo.webp"
+      }
     }
   },
   "footer_logo": "./assets/footer/footer_logo.webp",

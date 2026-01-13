@@ -38,7 +38,7 @@ const DashboardImage = ({
         }
       }}
       aria-label={`Show next dashboard image, current: ${item.alt}`}
-      className="cursor-pointer col-start-1 row-start-1"
+      className="cursor-pointer col-start-1 row-start-1 "
       animate={{
         x,
         y,
@@ -58,7 +58,7 @@ const DashboardImage = ({
       <img
         src={item.src}
         alt={item.alt}
-        className="w-[420px] md:w-[650px] lg:w-[903px] xl:w-[860px] 2xl:w-[908px] 3xl:w-[919.36px] h-auto object-contain pointer-events-none max-w-[85vw] md:max-w-none"
+        className="w-full min-w-[420px] md:min-w-[950px] lg:min-w-[903px] xl:min-w-[860px] 2xl:min-w-[908px] 3xl:min-w-[919.36px] h-auto object-contain pointer-events-none max-w-[95vw] md:max-w-none"
         draggable={false}
       />
     </motion.div>

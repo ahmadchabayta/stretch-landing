@@ -37,24 +37,23 @@ const Footer = ({ id }) => {
           direction="flex-col"
           align="items-center!"
           justify="justify-center"
-          className="w-full flex-1 bg-black pt-16! min-h-[548px] pb-24"
+          className="w-full flex-1 bg-black min-h-[548px] pb-12"
         >
           <img
             className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px]"
             src={withBase(data.footer_logo)}
             alt="Stretch logo"
           />
-          <Container>
-            <Flex
-              flex="flex"
-              direction="flex-col lg:flex-row"
-              align="items-center lg:items-start"
-              justify="justify-between"
-              className="w-full"
-            >
-              <FooterLinksColumns labels={labels} language={language} />
-            </Flex>
-          </Container>
+
+          <Flex
+            flex="flex"
+            direction="flex-col lg:flex-row"
+            align="items-center lg:items-start"
+            justify="justify-between"
+            className="w-full max-w-[90vw]"
+          >
+            <FooterLinksColumns labels={labels} language={language} />
+          </Flex>
         </Flex>
       </Section>
     </footer>

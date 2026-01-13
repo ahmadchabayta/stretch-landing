@@ -66,6 +66,11 @@ higher res images */
   }
 }
 
+html,
+body {
+  background-color: #fafbfc;
+}
+
 .app_container {
   width: 100%;
   max-width: 95%;

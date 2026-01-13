@@ -38,7 +38,7 @@ const Navbar = () => {
   });
 
   return (
-    <Container>
+    <Container className="bg-white">
       <nav>
         <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
           <img

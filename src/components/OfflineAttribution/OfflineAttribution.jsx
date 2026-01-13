@@ -32,9 +32,15 @@ const OfflineAttribution = ({ id }) => {
     max-w-[1231px]
     bottom-[0]
     translate-y-[75%]
-    left-0
-    xxl:left-[-10%]
-    3xl:left-[-40px]
+    
+    
+    
+    [direction:ltr]:left-0
+    [direction:ltr]:xxl:left-[-10%]
+    [direction:ltr]:3xl:left-[-40px]
+    [direction:rtl]:left-0
+    [direction:rtl]:xxl:right-[-10%]
+    [direction:rtl]:3xl:right-[-40px]
     
    `;
   const showSmallImages = `
@@ -57,15 +63,15 @@ const OfflineAttribution = ({ id }) => {
   `;
 
   return (
-    <Section id={id} className="relative overflow-hidden max-h-screen flex flex-col">
+    <Section dir="ltr" id={id} className="relative overflow-hidden max-h-screen flex flex-col">
       <Container className="flex flex-col shrink-0">
-        <SectionTitle labels={labels} />
-        <Flex align="items-end" justify="justify-end" className="">
+        <SectionTitle labels={labels} language={language} />
+        <Flex align="items-end" justify="justify-end">
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
       <div
-        className="relative flex-1 min-h-0 max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
+        className="relative flex-1 min-w-[400px] max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
         {...(!isTouchDevice && {
           onMouseEnter: () => setIsRevealed((prev) => !prev),
           onMouseLeave: () => setIsRevealed((prev) => !prev),
