@@ -25,7 +25,7 @@ const CapabilityCard = ({ card, isActive, onClick }) => (
       </Typography>
     </div>
     <GlassCircle
-      className="pointer-events-none absolute bottom-0 left-1/2 z-10 h-[85px] w-[85px] -translate-x-1/2 -translate-y-1/2 lg:h-[163px] lg:w-[163px]"
+      className="pointer-events-none absolute bottom-0 left-1/2 right-1/2 z-10 h-[85px] w-[85px] -translate-x-1/2 -translate-y-1/2 rtl:translate-x-1/2 lg:h-[163px] lg:w-[163px]"
       blur={15}
       noiseIntensity={0.1}
       distortionScale={8}
