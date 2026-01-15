@@ -30,25 +30,25 @@ const OfflineAttribution = ({ id }) => {
     absolute
     min-w-full
     max-w-[1231px]
-    bottom-[0]
-    translate-y-[75%]
-    
-    
-    
-    [direction:ltr]:left-0
-    [direction:ltr]:xxl:left-[-10%]
-    [direction:ltr]:3xl:left-[-40px]
-    [direction:rtl]:left-0
-    [direction:rtl]:xxl:right-[-10%]
-    [direction:rtl]:3xl:right-[-40px]
-    
+    bottom-[-50%]
+    dir-ltr:left-[-10%]
+    dir-ltr:xxl:left-[-8%]
+    dir-ltr:2xl:left-0
+    dir-ltr:3xl:left-0
+    dir-rtl:left-0
+    dir-rtl:xxl:right-[-8%]
+    dir-rtl:3xl:right-0
+    dir-rtl:2xl:right-0
+    transition-opacity
+    duration-500
+    ease-in-out
    `;
   const showSmallImages = `
     flex
     xl:hidden
     absolute
     w-full
-    min-w-[738px]
+    min-w-[938px]
     md:min-w-[1324px]
     lg:min-w-[1583px]
     left-[57%]
@@ -57,84 +57,60 @@ const OfflineAttribution = ({ id }) => {
     lg:translate-x-[0]
     lg:left-[-195px]
     bottom-0
-    translate-y-[100%]
-    md:translate-y-[95%]
-    2md:translate-y-[95%]
+    transition-opacity
+    duration-500
+    ease-in-out
   `;
 
   return (
-    <Section dir="ltr" id={id} className="relative overflow-hidden flex flex-col min-h-screen">
+    <Section
+      dir="ltr"
+      id={id}
+      className="relative overflow-hidden flex flex-col min-h-0! lg:min-h-screen!"
+    >
       <Container className="flex flex-col shrink-0 w-full ">
         <SectionTitle labels={labels} language={language} />
         <Flex align="items-end" justify="justify-end">
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div className="relative flex-1 bg-red-500 min-h-full max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
-        {isRevealed ? (
-          <>
-            <img
-              {...(!isTouchDevice
-                ? {
-                    onMouseEnter: () => setIsRevealed((prev) => !prev),
-                    onMouseLeave: () => setIsRevealed((prev) => !prev),
-                  }
-                : {
-                    onClick: () => setIsRevealed((prev) => !prev),
-                  })}
-              className={showLargeImages}
-              src={withBase(labels.images.large.orange)}
-              alt="orange map"
-            />
-            <img
-              {...(!isTouchDevice
-                ? {
-                    onMouseEnter: () => setIsRevealed((prev) => !prev),
-                    onMouseLeave: () => setIsRevealed((prev) => !prev),
-                  }
-                : {
-                    onClick: () => setIsRevealed((prev) => !prev),
-                  })}
-              className={showSmallImages}
-              src={withBase(labels.images.small.orange)}
-              alt="orange map mobile"
-            />
-          </>
-        ) : (
-          <>
-            <img
-              {...(!isTouchDevice
-                ? {
-                    onMouseEnter: () => setIsRevealed((prev) => !prev),
-                    onMouseLeave: () => setIsRevealed((prev) => !prev),
-                  }
-                : {
-                    onClick: () => setIsRevealed((prev) => !prev),
-                  })}
-              className={showLargeImages}
-              src={withBase(labels.images.large.purple)}
-              alt="purple map"
-            />
-            <img
-              {...(!isTouchDevice
-                ? {
-                    onMouseEnter: () => setIsRevealed((prev) => !prev),
-                    onMouseLeave: () => setIsRevealed((prev) => !prev),
-                  }
-                : {
-                    onClick: () => setIsRevealed((prev) => !prev),
-                  })}
-              className={showSmallImages}
-              src={withBase(labels.images.small.purple)}
-              alt="purple map mobile"
-            />
-          </>
-        )}
+      <div className="relative flex-1 min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
+        {/* Purple images (default) */}
+        <img
+          className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          src={withBase(labels.images.large.purple)}
+          alt="purple map"
+        />
+        <img
+          className={`${showSmallImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+          src={withBase(labels.images.small.purple)}
+          alt="purple map mobile"
+        />
+
+        {/* Orange images (revealed on hover) */}
+        <img
+          className={`${showLargeImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          src={withBase(labels.images.large.orange)}
+          alt="orange map"
+        />
+        <img
+          className={`${showSmallImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          src={withBase(labels.images.small.orange)}
+          alt="orange map mobile"
+        />
+
         <button
           className="absolute inset-0 cursor-pointer bg-transparent"
           aria-label={isRevealed ? "Hide attribution map" : "Show attribution map"}
           tabIndex={0}
-          onClick={isTouchDevice ? () => setIsRevealed((prev) => !prev) : undefined}
+          {...(!isTouchDevice
+            ? {
+                onMouseEnter: () => setIsRevealed(true),
+                onMouseLeave: () => setIsRevealed(false),
+              }
+            : {
+                onClick: () => setIsRevealed((prev) => !prev),
+              })}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();

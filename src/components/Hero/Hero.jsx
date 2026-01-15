@@ -20,7 +20,7 @@ const Hero = ({ id }) => {
       }}
       className={`${
         isLTR
-          ? "bg-position-[right_-59px_top_180px] md:bg-position-[left_100%_top_299px] lg:bg-position-[right_-26px_top_363.33px] xl:bg-position-[right_-236px_top_-43px] 2xl:bg-position-[right_-120px_top_10%] 3xl:bg-position-[right_-50px_top_110px]"
+          ? "bg-position-[right_-59px_top_180px] md:bg-position-[left_100%_top_299px] lg:bg-position-[right_0px_top_363.33px] xl:bg-position-[right_-236px_top_-43px] 2xl:bg-position-[right_-120px_top_10%] 3xl:bg-position-[right_-50px_top_110px]"
           : "bg-position-[left_-19px_top_180px] md:bg-position-[right_84%_top_299px] lg:bg-position-[left_-41px_top_363.33px] xl:bg-position-[left_-40px_top_-43px] 2xl:bg-position-[left_-120px_top_10%] 3xl:bg-position-[left_-50px_top_110px]"
       } bg-size-[663.568px_auto] md:bg-size-[952px_auto] lg:bg-size-[1352px_auto] 3xl:bg-size-[1364px_auto] relative bg-white!`}
     >
