@@ -15,28 +15,18 @@ const FooterLinksColumns = ({ labels, language }) => {
   }`;
 
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-y-[18px] lg:gap-x-12 xl:gap-x-16">
-      {/* Column 1: Privacy Policy */}
+    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-[18px] lg:gap-x-12 xl:gap-x-16">
+      {/* Left Column: Terms of Service & Powered by */}
       <div className="flex flex-col gap-[18px] text-center lg:text-start items-center lg:items-start">
-        <a href={allLinks[0].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
-          {allLinks[0].label}
-        </a>
-      </div>
-
-      {/* Column 2: Terms of Service */}
-      <div className="flex flex-col gap-[18px] text-center items-center">
         <a href={allLinks[1].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
           {allLinks[1].label}
         </a>
-      </div>
 
-      {/* Column 3: Powered by */}
-      <div className="hidden lg:flex flex-row items-center justify-end gap-2 md:gap-3">
         <a
           href={labels.powered_by.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-row items-center gap-2 md:gap-3"
+          className="hidden lg:flex flex-row items-center gap-2 md:gap-3"
         >
           <span className={poweredByClass}>{labels.powered_by.powered_by}</span>
           <img
@@ -45,6 +35,17 @@ const FooterLinksColumns = ({ labels, language }) => {
             className="w-24 lg:w-[161px] 3xl:w-[214px]"
           />
         </a>
+      </div>
+
+      {/* Right Column: Privacy Policy & Social Icons */}
+      <div className="flex flex-col gap-[18px] text-center lg:text-end items-center lg:items-end">
+        <a href={allLinks[0].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
+          {allLinks[0].label}
+        </a>
+
+        <div className="hidden lg:flex">
+          <FooterSocialIcons />
+        </div>
       </div>
 
       {/* Powered by on mobile */}
@@ -63,11 +64,6 @@ const FooterLinksColumns = ({ labels, language }) => {
 
       {/* Social icons on mobile */}
       <div className="flex lg:hidden flex-col text-center items-center">
-        <FooterSocialIcons />
-      </div>
-
-      {/* Social icons on desktop - Column 3 Row 2 */}
-      <div className="hidden lg:flex lg:col-start-3 flex-col text-end items-end">
         <FooterSocialIcons />
       </div>
     </div>

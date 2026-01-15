@@ -33,7 +33,7 @@ const OfflineAttribution = ({ id }) => {
     bottom-[-50%]
     dir-ltr:left-[-10%]
     dir-ltr:xxl:left-[-8%]
-    dir-ltr:2xl:left-0
+    dir-ltr:2xl:left-[-7%]
     dir-ltr:3xl:left-0
     dir-rtl:left-0
     dir-rtl:xxl:right-[-8%]
