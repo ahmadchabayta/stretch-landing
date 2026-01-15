@@ -1,32 +1,31 @@
 import PropTypes from "prop-types";
-import { LinkedInIcon, InstagramIcon, XIcon, YouTubeIcon, FacebookIcon } from "./FooterIcons";
 import { Flex } from "..";
 
 const socialLinks = [
   {
     href: "https://www.linkedin.com",
     label: "LinkedIn",
-    Icon: LinkedInIcon,
+    iconClass: "fab fa-linkedin",
   },
   {
     href: "https://www.instagram.com",
     label: "Instagram",
-    Icon: InstagramIcon,
+    iconClass: "fab fa-instagram",
   },
   {
     href: "https://x.com",
     label: "X",
-    Icon: XIcon,
+    iconClass: "fab fa-x-twitter",
   },
   {
     href: "https://www.youtube.com",
     label: "YouTube",
-    Icon: YouTubeIcon,
+    iconClass: "fab fa-youtube",
   },
   {
     href: "https://www.facebook.com",
     label: "Facebook",
-    Icon: FacebookIcon,
+    iconClass: "fab fa-facebook",
   },
 ];
 
@@ -39,7 +38,7 @@ const FooterSocialIcons = ({ className = "" }) => (
     className={`${className}`}
     aria-label="Stretch social media links"
   >
-    {socialLinks.map(({ href, label, Icon }) => (
+    {socialLinks.map(({ href, label, iconClass }) => (
       <a
         key={label}
         href={href}
@@ -48,9 +47,9 @@ const FooterSocialIcons = ({ className = "" }) => (
         aria-label={`${label} profile`}
         title={`Stretch on ${label}`}
         itemProp="sameAs"
-        className="flex items-center justify-center"
+        className="flex items-center justify-center text-white hover:opacity-80 transition-opacity"
       >
-        <Icon size={28} />
+        <i className={`${iconClass} text-[24px] md:text-[28px] lg:text-[32px]`}></i>
       </a>
     ))}
   </Flex>
