@@ -42,6 +42,7 @@ const typographyVariants = {
     xl:text-[84px] xl:leading-auto
     2xl:text-[96px]
     3xl:text-[112px]
+   
   `,
   "hero-subtitle": `
     [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
@@ -69,6 +70,7 @@ const typographyVariants = {
     xl:text-[64px]
     2xl:text-[64px]
     3xl:text-[72px]
+     text-balance
   `,
   "section-subtitle": `
     text-balance

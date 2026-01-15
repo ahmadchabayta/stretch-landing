@@ -3,7 +3,7 @@ import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels, language }) => (
   <SectionHeadContainer dir={language === "ar" ? "rtl" : "ltr"} className="app_container">
-    <Typography as="h2" variant="section-title">
+    <Typography as="h2" variant="section-title" className="">
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>

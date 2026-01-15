@@ -59,22 +59,21 @@ const InteractiveImage = () => {
   `;
 
   const iphoneSide = isRTL
-    ? `left-[-10%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`
+    ? `left-[-20%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`
     : `left-[-10%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`;
 
   const iphonePosition = `${iphoneTop} ${iphoneSide}`;
 
   const iphoneSize = `
-  object-contain  
-    min-w-[450px]
-    xs:min-w-[450px]
+    min-w-[360px]
+    xs:min-w-[360px]
     md:w-[624px]
     lg:w-[606px]
     xl:w-[clamp(794px,52.8vw,1014px)]
   `;
 
   const graphTop = `
-        top-[5.5%]
+        top-[2.5%]
         md:top-[3%] 
         lg:top-[23%]
         xl:top-[clamp(5%,calc(5%+10vw-12.8px),30%)]
@@ -87,7 +86,6 @@ const InteractiveImage = () => {
   const graphPosition = `${graphTop} ${graphSide}`;
 
   const graphSize = `
-    object-contain
     w-[283px]
     xs:w-[283px]
     md:w-[400px]
@@ -96,7 +94,7 @@ const InteractiveImage = () => {
   `;
 
   const duplicationTop = `
-        top-[23.5%]
+        top-[18.5%]
         md:top-[22%]
         lg:top-[39%]
         xl:top-[55%]
@@ -110,7 +108,6 @@ const InteractiveImage = () => {
   const duplicationPosition = `${duplicationTop} ${duplicationSide}`;
 
   const duplicationSize = `
-  object-contain
     min-w-[475px]
     xs:w-[475px]
     md:w-[575px]
@@ -133,7 +130,6 @@ const InteractiveImage = () => {
   const mapPosition = `${mapTop} ${mapSide}`;
 
   const mapSize = `
-    object-contain
     w-[276px]
     xs:w-[276px]
     md:w-[376px]

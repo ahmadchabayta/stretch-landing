@@ -18,7 +18,7 @@ const WhatIsStretch = ({ className, id }) => {
         <InteractiveImage data={sectionLabels} />
       </div>
       <Container className="relative bg-red-500">
-        <List className="absolute bottom-[123px] text-[14px] font-bold lg:text-[20px] text-end right-0 ">
+        <List className="absolute bottom-[35px] lg:bottom-[123px] text-[14px] font-bold lg:text-[20px] text-right! right-0 ">
           {sectionLabels.tagline.map((line) => (
             <List.Item key={line}>{line}</List.Item>
           ))}
