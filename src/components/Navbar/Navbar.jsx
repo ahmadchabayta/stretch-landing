@@ -38,38 +38,40 @@ const Navbar = () => {
   });
 
   return (
-    <Container className="bg-white">
-      <nav>
-        <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
-          <img
-            src={withBase(rawData.images.logo)}
-            alt="Stretch Logo"
-            className="w-[171px] lg:w-[230px]"
-            loading="eager"
-          />
-
-          <>
-            <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
-
-            <MobileMenu
-              ref={menuRef}
-              isOpen={isMenuOpen}
-              data={data}
-              menuLinks={rawData.menu_links}
+    <div className="bg-white w-full">
+      <Container>
+        <nav>
+          <div className="relative flex h-[94px] items-center justify-between md:h-[170px]">
+            <img
+              src={withBase(rawData.images.logo)}
+              alt="Stretch Logo"
+              className="w-[171px] lg:w-[230px]"
+              loading="eager"
             />
 
-            <Menu
-              className="hidden min-w-[50%] justify-center xl:flex"
-              isOpen={true}
-              data={data}
-              menuLinks={rawData.menu_links}
-            />
-          </>
+            <>
+              <Burger className="flex xl:hidden" onClick={toggleMenu} isOpen={isMenuOpen} />
 
-          <NavbarControl className="hidden xl:flex" data={data} />
-        </div>
-      </nav>
-    </Container>
+              <MobileMenu
+                ref={menuRef}
+                isOpen={isMenuOpen}
+                data={data}
+                menuLinks={rawData.menu_links}
+              />
+
+              <Menu
+                className="hidden min-w-[50%] justify-center xl:flex"
+                isOpen={true}
+                data={data}
+                menuLinks={rawData.menu_links}
+              />
+            </>
+
+            <NavbarControl className="hidden xl:flex" data={data} />
+          </div>
+        </nav>
+      </Container>
+    </div>
   );
 };
 
