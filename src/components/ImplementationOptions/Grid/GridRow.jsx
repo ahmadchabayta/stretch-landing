@@ -11,7 +11,7 @@ const GridRow = ({ channel, index, isDesktop, activeTab, isArabic }) => {
   return (
     <div
       className={cn(
-        "grid w-full grid-cols-3 items-center justify-start text-left md:grid-cols-5 h-12 md:h-14 lg:h-16",
+        "grid w-full grid-cols-3 items-center justify-start text-start md:grid-cols-5 h-12 md:h-14 lg:h-16",
         index > 0 && "border-t border-black",
       )}
     >

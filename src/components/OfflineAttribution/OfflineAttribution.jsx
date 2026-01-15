@@ -58,33 +58,43 @@ const OfflineAttribution = ({ id }) => {
     lg:left-[-195px]
     bottom-0
     translate-y-[100%]
-    md:translate-y-[90%]
-    2md:translate-y-[90%]
+    md:translate-y-[95%]
+    2md:translate-y-[95%]
   `;
 
   return (
-    <Section dir="ltr" id={id} className="relative overflow-hidden max-h-screen flex flex-col">
+    <Section dir="ltr" id={id} className="relative overflow-hidden flex flex-col min-h-screen">
       <Container className="flex flex-col shrink-0">
         <SectionTitle labels={labels} language={language} />
         <Flex align="items-end" justify="justify-end">
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div
-        className="relative flex-1 min-w-[400px] max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer"
-        {...(!isTouchDevice && {
-          onMouseEnter: () => setIsRevealed((prev) => !prev),
-          onMouseLeave: () => setIsRevealed((prev) => !prev),
-        })}
-      >
+      <div className="relative flex-1 bg-red-500 min-h-full max-h-[417px] md:max-h-[750px] lg:max-h-[890px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
         {isRevealed ? (
           <>
             <img
+              {...(!isTouchDevice
+                ? {
+                    onMouseEnter: () => setIsRevealed((prev) => !prev),
+                    onMouseLeave: () => setIsRevealed((prev) => !prev),
+                  }
+                : {
+                    onClick: () => setIsRevealed((prev) => !prev),
+                  })}
               className={showLargeImages}
               src={withBase(labels.images.large.orange)}
               alt="orange map"
             />
             <img
+              {...(!isTouchDevice
+                ? {
+                    onMouseEnter: () => setIsRevealed((prev) => !prev),
+                    onMouseLeave: () => setIsRevealed((prev) => !prev),
+                  }
+                : {
+                    onClick: () => setIsRevealed((prev) => !prev),
+                  })}
               className={showSmallImages}
               src={withBase(labels.images.small.orange)}
               alt="orange map mobile"
@@ -93,11 +103,27 @@ const OfflineAttribution = ({ id }) => {
         ) : (
           <>
             <img
+              {...(!isTouchDevice
+                ? {
+                    onMouseEnter: () => setIsRevealed((prev) => !prev),
+                    onMouseLeave: () => setIsRevealed((prev) => !prev),
+                  }
+                : {
+                    onClick: () => setIsRevealed((prev) => !prev),
+                  })}
               className={showLargeImages}
               src={withBase(labels.images.large.purple)}
               alt="purple map"
             />
             <img
+              {...(!isTouchDevice
+                ? {
+                    onMouseEnter: () => setIsRevealed((prev) => !prev),
+                    onMouseLeave: () => setIsRevealed((prev) => !prev),
+                  }
+                : {
+                    onClick: () => setIsRevealed((prev) => !prev),
+                  })}
               className={showSmallImages}
               src={withBase(labels.images.small.purple)}
               alt="purple map mobile"
