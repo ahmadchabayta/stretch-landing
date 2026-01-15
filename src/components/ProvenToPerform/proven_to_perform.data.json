@@ -5,7 +5,7 @@
         "part1": "Proven",
         "part2": "To Perform"
       },
-      "subtitle": "-Testimonials",
+      "subtitle": "Testimonials",
       "images": {
         "img_1": {
           "img": "./assets/proven_to_perform/left_profile_large.webp",
@@ -24,7 +24,7 @@
         "part1": "أثبت ",
         "part2": "فعاليته"
       },
-      "subtitle": "آراء العملاء-",
+      "subtitle": "آراء العملاء",
       "images": {
         "img_1": {
           "img": "./assets/proven_to_perform/right_profile_large_ar.webp",

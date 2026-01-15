@@ -42,7 +42,7 @@ const App = () => {
   return (
     <div className="overflow-x-hidden">
       {/* for testing purpooses - to test title*/}
-      {/* <Container className="fixed h-[90vh] z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
+      {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
       <Button variant="fixed" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
@@ -53,13 +53,13 @@ const App = () => {
         <div ref={heroRef}>
           <Hero id={url_links_data.link_urls[0]} />
         </div>
-        <WhatIsStretch id={url_links_data.link_urls[1]} />
+        <WhatIsStretch id="what-is-stretch" />
         <WhyDoYouNeedStretch id={url_links_data.link_urls[2]} />
         <StretchUserExperience />
 
         {/* <GlassCards /> */}
 
-        <Capabilities />
+        <Capabilities id="capabilities" />
         <CrossChannel id={capability_url_links[0]} />
         <AudienceMirroring id={capability_url_links[2]} />
         <OfflineAttribution id={capability_url_links[3]} />

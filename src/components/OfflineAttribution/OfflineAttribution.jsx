@@ -64,7 +64,7 @@ const OfflineAttribution = ({ id }) => {
 
   return (
     <Section dir="ltr" id={id} className="relative overflow-hidden flex flex-col min-h-screen">
-      <Container className="flex flex-col shrink-0">
+      <Container className="flex flex-col shrink-0 w-full ">
         <SectionTitle labels={labels} language={language} />
         <Flex align="items-end" justify="justify-end">
           <SectionData labels={labels} language={language} />

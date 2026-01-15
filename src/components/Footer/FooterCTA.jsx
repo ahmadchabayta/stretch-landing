@@ -25,16 +25,16 @@ const FooterCTA = ({ labels, language }) => {
         className="mt-10! "
       >
         {" "}
-        <Button variant="footer_contact" className={`px-[44px] py-[13px] bg-black! ${_language}`}>
+        <Button variant="footer_contact" className={`px-11 py-[13px] bg-black! ${_language}`}>
           <Typography as="span" variant="button-text">
             {labels.button_label.contact_button_label}
           </Typography>
         </Button>
-        <Button variant="demo" className={`px-[44px] py-[13px] ${_language}`}>
+        {/* <Button variant="demo" className={`px-[44px] py-[13px] ${_language}`}>
           <Typography as="span" variant="button-text">
             {labels.button_label.demo_button_label}
           </Typography>
-        </Button>
+        </Button> */}
       </Flex>
     </Flex>
   );

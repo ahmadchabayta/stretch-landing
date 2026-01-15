@@ -31,7 +31,7 @@ const Hero = ({ id }) => {
           <Button
             variant="demo"
             as="button"
-            className="place-self-center xl:place-self-start px-11 w-fit! h-fit! mt-[18.26px] lg:mt-[84.5px] xl:mt-[42.6px] 3xl:mt-[63.11px]"
+            className="place-self-center xl:place-self-start w-fit! h-fit! mt-[18.26px] lg:mt-[84.5px] xl:mt-[42.6px] 3xl:mt-[63.11px]"
           >
             <Typography as="span" variant="button-text">
               {sectionLabels.button_label}

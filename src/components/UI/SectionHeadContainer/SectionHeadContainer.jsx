@@ -7,10 +7,10 @@ const SectionHeadContainer = ({ children, className, ...props }) => {
     <Flex
       flex={true}
       direction="flex-col xl:flex-row"
-      align="items-start xl:items-center"
+      align="items-start xl:items-end"
       justify="xl:justify-between"
       spaceY="space-y-[15px] xl:space-y-0"
-      className={cn("w-full pt-10", className)}
+      className={cn("w-full py-10", className)}
       {...props}
     >
       {children}

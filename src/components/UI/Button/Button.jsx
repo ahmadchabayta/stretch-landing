@@ -24,15 +24,16 @@ import cn from "../../../utils/cn";
 
 const baseButtonStyles = `
 cursor-pointer
-active:scale-95
   inline-flex
   items-center
   justify-center
-  font-medium
-  rounded-pill-small
+  font-semibold
+  rounded-lg
+  md:rounded-[0.5rem]
+  lg:rounded-[0.5rem]
   transition-all
-  duration-75
-  ease-in-out
+  duration-200
+  ease-out
   focus:outline-none
   focus:ring-2
   focus:ring-offset-2
@@ -41,12 +42,15 @@ active:scale-95
   disabled:pointer-events-none
   ltr:font-poppins
   rtl:font-tajawal
+  active:scale-[0.98]
+  active:shadow-sm
+  active:brightness-95
 `;
 
 const sizeStyles = {
-  sm: "px-3 py-1.5 text-sm 3xl:px-4 3xl:py-2",
-  md: "px-4 py-2 text-base 3xl:px-5 3xl:py-2.5",
-  lg: "px-6 py-3 text-lg 3xl:px-7 3xl:py-3.5",
+  sm: "px-4 py-1.5 text-sm md:px-5 md:py-2 lg:px-6 lg:py-2 3xl:px-7 3xl:py-2.5",
+  md: "px-5 py-2 text-base md:px-6 md:py-2.5 lg:px-7 lg:py-2.5 3xl:px-8 3xl:py-3",
+  lg: "px-6 py-2.5 text-lg md:px-7 md:py-3 lg:px-8 lg:py-3 3xl:px-10 3xl:py-3.5",
 };
 
 const variantStyles = {

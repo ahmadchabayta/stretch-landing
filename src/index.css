@@ -75,35 +75,36 @@ body {
   width: 100%;
   max-width: 95%;
   margin-inline: auto;
+  padding-inline: 1rem;
 }
 @media (min-width: 640px) {
   .app_container {
-    max-width: 580px;
+    max-width: 600px;
   }
 }
 @media (min-width: 768px) {
   .app_container {
-    max-width: 650px;
+    max-width: 720px;
   }
 }
 @media (min-width: 1024px) {
   .app_container {
-    max-width: 903px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1280px) {
   .app_container {
-    max-width: 1245px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 1440px) {
   .app_container {
-    max-width: 1326px;
+    max-width: 1320px;
   }
 }
 @media (min-width: 1920px) {
   .app_container {
-    max-width: 1623px;
+    max-width: 1600px;
   }
 }
 

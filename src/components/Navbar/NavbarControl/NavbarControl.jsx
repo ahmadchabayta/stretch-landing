@@ -1,20 +1,20 @@
 import { useRef } from "react";
 import PropTypes from "prop-types";
-import { useLanguage } from "../../../context/LanguageContext";
+// import { useLanguage } from "../../../context/LanguageContext";
 import cn from "../../../utils/cn";
-import { Button, Flex, Typography, Wrapper } from "../..";
-import { withBase } from "../../../utils/withBase";
+import { Button, Flex, Typography } from "../..";
+// import { withBase } from "../../../utils/withBase";
 
 const NavbarControl = ({ data, className }) => {
   const rootRef = useRef(null);
-  const { languages, currentLanguage, changeLanguage } = useLanguage();
+  // const { languages, currentLanguage, changeLanguage } = useLanguage();
 
-  // Show the opposite language as a way to switch
-  const otherLanguage = languages.find((lang) => lang.code !== currentLanguage.code);
+  // // Show the opposite language as a way to switch
+  // const otherLanguage = languages.find((lang) => lang.code !== currentLanguage.code);
 
-  const handleLanguageSwitch = () => {
-    changeLanguage(otherLanguage.code);
-  };
+  // const handleLanguageSwitch = () => {
+  //   changeLanguage(otherLanguage.code);
+  // };
 
   return (
     <Flex
@@ -26,7 +26,7 @@ const NavbarControl = ({ data, className }) => {
       ref={rootRef}
       className={cn(className)}
     >
-      <Wrapper className="relative">
+      {/* <Wrapper className="relative">
         <button
           type="button"
           onClick={handleLanguageSwitch}
@@ -41,8 +41,8 @@ const NavbarControl = ({ data, className }) => {
           </div>
           <span className="text-sm font-medium">{otherLanguage.label}</span>
         </button>
-      </Wrapper>
-      <Button variant="login" className="mx-auto w-full xl:w-auto min-w-[204px]">
+      </Wrapper> */}
+      <Button variant="login" className="mx-auto w-full">
         <Typography as="span" variant="button-text">
           {data.button_label}
         </Typography>

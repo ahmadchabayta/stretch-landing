@@ -4,7 +4,7 @@
   },
   "languages": {
     "en": {
-      "menu_items": ["Product", "Use Cases", "About Us", "Contact"],
+      "menu_items": ["What is Stretch", "Capabilities"],
 
       "button_label": "Login",
       "hero_features": [
@@ -14,7 +14,7 @@
       ]
     },
     "ar": {
-      "menu_items": ["المنتج", "حالات الاستخدام", "من نحن", "تواصل معنا"],
+      "menu_items": ["ما هو Stretch", "القدرات"],
 
       "button_label": "تسجيل الدخول",
       "hero_features": [
@@ -24,5 +24,6 @@
       ]
     }
   },
-  "link_urls": ["product", "use-cases", "about-us", "contact"]
+  "link_urls": ["product", "use-cases", "about-us", "contact"],
+  "menu_links": ["what-is-stretch", "capabilities"]
 }

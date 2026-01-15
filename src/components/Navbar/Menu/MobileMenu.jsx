@@ -5,7 +5,7 @@ import ArrowIcon from "../ArrowIcon";
 import useScrollToSection from "../../../hooks/useScrollToSection";
 import { useLanguage } from "../../../context/LanguageContext";
 
-const MobileMenu = React.forwardRef(({ isOpen, data, linkUrls }, ref) => {
+const MobileMenu = React.forwardRef(({ isOpen, data, menuLinks }, ref) => {
   const { activeLink, scrollToSection } = useScrollToSection();
   const { isRTL } = useLanguage();
 
@@ -19,7 +19,7 @@ const MobileMenu = React.forwardRef(({ isOpen, data, linkUrls }, ref) => {
       {/* Menu Items */}
       <div className="flex flex-col py-3">
         {data.menu_items.map((item, i) => {
-          const url = linkUrls[i];
+          const url = menuLinks?.[i] || "";
           const isActive = activeLink === url;
           return (
             <button
@@ -56,7 +56,7 @@ MobileMenu.propTypes = {
   data: PropTypes.shape({
     menu_items: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
-  linkUrls: PropTypes.arrayOf(PropTypes.string).isRequired,
+  menuLinks: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default MobileMenu;

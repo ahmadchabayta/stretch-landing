@@ -47,7 +47,7 @@ const StretchUserExperience = () => {
   return (
     <Section
       container={false}
-      className="stretch_user_experience relative w-full overflow-hidden min-h-screen flex flex-col"
+      className="stretch_user_experience relative w-full overflow-hidden  flex flex-col"
       style={{
         backgroundImage: `url('${withBase(backgroundImage)}')`,
         backgroundRepeat: "no-repeat",
@@ -66,7 +66,7 @@ const StretchUserExperience = () => {
       </Container>
 
       {/* Carousel Section - Centered in Container */}
-      <Container className="xl:absolute xl:top-1/2 xl:translate-y-[-50%] xl:left-1/2 xl:translate-x-[-50%] flex flex-col xl:flex-row xl:items-center justify-end xl:justify-center gap-6 lg:gap-10 flex-1">
+      <Container className="xl:absolute xl:top-1/2 xl:translate-y-[20%] xl:left-1/2 xl:translate-x-[-50%] flex flex-col xl:flex-row xl:items-center justify-end xl:justify-center gap-6 lg:gap-10 flex-1">
         {/* 3D Carousel */}
         <div
           className="relative w-full flex-1 max-h-[300px] md:max-h-[350px] lg:max-h-[450px] xl:max-h-[800px] flex items-center justify-center origin-center overflow-visible"

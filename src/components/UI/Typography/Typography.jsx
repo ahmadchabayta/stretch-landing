@@ -82,11 +82,9 @@ const typographyVariants = {
     text-[14px] leading-auto
     md:text-[18px]
     xl:text-[20px]
-    xl:text-right
+    xl:text-end
     2xl:text-[20px]
-    3xl:text-[24px] 
-    [direction:rtl]:text-left
-    [direction:ltr]:text-right
+    3xl:text-[24px]
   `,
   "section-desc": `
     [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal
