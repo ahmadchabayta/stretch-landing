@@ -39,7 +39,7 @@ const FooterLinksColumns = ({ labels, language }) => {
           <img
             src={withBase(labels.powered_by.logo)}
             alt="Memob logo"
-            className="w-24 lg:w-[161px] 3xl:w-[214px]"
+            className="w-24 lg:w-[141px] "
           />
         </a>
 
