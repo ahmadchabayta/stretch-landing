@@ -39,18 +39,6 @@ const CompetitiveEdgeStretch = () => {
         {/* Premium Comparison Grid */}
         <div className="relative z-10 w-full px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="mx-auto w-full max-w-7xl">
-            {/* Cycle Button - Hidden on large screens */}
-            <button
-              onClick={handleNextColumns}
-              className={cn(
-                "mb-4 rounded-xl px-6 py-3 text-sm font-semibold transition-all duration-200 lg:hidden",
-                "bg-secondary text-white shadow-lg hover:shadow-xl active:scale-95",
-                isArabic ? "font-[Tajawal,sans-serif]" : "font-poppins",
-              )}
-            >
-              {isArabic ? "التالي" : "Next Platform"} →
-            </button>
-
             {/* Grid Container */}
             <div className="overflow-hidden rounded-2xl py-4 lg:py-6">
               <GridHeader
@@ -67,6 +55,32 @@ const CompetitiveEdgeStretch = () => {
                 isArabic={isArabic}
                 columnOffset={columnOffset}
               />
+            </div>
+
+            {/* Cycle Button - Hidden on large screens, centered below grid */}
+            <div className="mt-6 flex justify-center lg:hidden">
+              <button
+                onClick={handleNextColumns}
+                className={cn(
+                  "rounded-xl cursor-pointer px-6 py-3 text-sm font-semibold transition-all duration-200 flex items-center gap-2",
+                  "bg-secondary text-white shadow-lg hover:shadow-xl active:scale-95",
+                  isArabic ? "font-[Tajawal,sans-serif]" : "font-poppins",
+                )}
+              >
+                {isArabic ? "التالي" : "Next Platform"}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-5 w-5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

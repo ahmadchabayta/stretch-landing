@@ -70,14 +70,9 @@ const typographyVariants = {
     xl:text-[64px]
     2xl:text-[64px]
     3xl:text-[72px]
-     text-balance
   `,
   "section-subtitle": `
-    text-balance
     text-black
-    prose
-    md:prose-lg
-    lg:prose-xl
     ltr:font-poppins rtl:font-tajawal
     text-[14px] leading-auto
     md:text-[18px]

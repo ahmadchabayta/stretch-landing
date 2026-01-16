@@ -16,7 +16,7 @@ const SectionData = ({ labels, language }) => {
     <Flex
       align="items-center"
       justify="justify-between"
-      className="mx-0! w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
+      className="mx-0! w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px]"
     >
       <Typography
         as="h3"
@@ -25,7 +25,7 @@ const SectionData = ({ labels, language }) => {
       />
       <Typography
         as="p"
-        className="text-black [direction:ltr] xl:[direction:rtl] text-sm lg:text-[20px] 3xl:text-[24px]"
+        className="text-black  [direction:ltr] xl:[direction:rtl] text-sm lg:text-[20px] 3xl:text-[24px]"
       >
         {labels.description.desc}
         <br />

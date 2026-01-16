@@ -1,41 +1,61 @@
+import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Wrapper, Typography } from "../../components";
 import { GlassCircle } from "../UI/";
 
-const CapabilityCard = ({ card, isActive, onClick }) => (
-  <Wrapper
-    className={
-      "relative h-[185px] w-40 lg:w-[285px] lg:h-[336px] xl:w-[259px] xl:h-[353px] 3xl:w-[308px] 3xl:h-[353px] shrink-0 cursor-pointer p-4 transition-all duration-300 ease-in-out "
+const CapabilityCard = ({ card, isActive, onClick, "data-card-id": dataCardId }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (isActive && cardRef.current) {
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
+      if (mediaQuery.matches) {
+        cardRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
     }
-    onClick={onClick}
-  >
-    <div
-      className={`relative flex h-full w-full flex-col items-center gap-3 rounded-2xl p-4 transition-all duration-300 ease-in-out lg:rounded-3xl lg:border-2 lg:border-black ${
-        isActive ? "bg-secondary border-none" : "border border-black bg-transparent"
+  }, [isActive]);
+
+  return (
+    <Wrapper
+      ref={cardRef}
+      data-card-id={dataCardId}
+      className={`relative h-[185.306px] w-[161.683px] lg:w-[285px] lg:h-[336px] xl:w-[259px] xl:h-[353px] 3xl:w-[308px] 3xl:h-[353px] shrink-0 cursor-pointer transition-all duration-300 ease-in-out snap-center md:snap-align-none ${
+        isActive ? "mx-8 md:mx-0" : "mx-0"
       }`}
+      onClick={onClick}
     >
-      <card.icon className={card.sizeClassName} isActive={isActive} />
-      <Typography
-        as="p"
-        className={`flex h-auto w-full items-center justify-center text-center text-[14px] font-bold transition-colors duration-300 ease-in-out select-none lg:text-[22px] ${
-          isActive ? "text-white" : "text-black"
+      <div
+        className={`relative flex h-full w-full flex-col items-center gap-[12.599px] rounded-2xl py-[25.197px] px-[17.323px] transition-all duration-300 ease-in-out lg:rounded-3xl lg:border-2 lg:border-black lg:items-center ${
+          isActive ? "bg-secondary border-none" : "border border-black bg-transparent"
         }`}
       >
-        {card.title}
-      </Typography>
-    </div>
-    <GlassCircle
-      className="pointer-events-none absolute bottom-0 left-1/2 right-1/2 z-10 h-[85.6px] w-[85.6px] -translate-x-1/2 translate-y-[-20%] lg:-translate-y-1/2 rtl:translate-x-1/2 lg:w-[123px] 2xl:h-[163px] lg:h-[123px] 2xl:w-[163px]"
-      blur={15}
-      noiseIntensity={0.1}
-      distortionScale={8}
-      reflectionIntensity={10}
-      glassColor="rgba(150, 150, 150, 0.2)"
-      borderColor="rgba(0, 0, 0, 0.1)"
-      borderWidth={1}
-    />
-  </Wrapper>
-);
+        <card.icon className={card.sizeClassName} isActive={isActive} />
+        <Typography
+          as="p"
+          className={`flex h-auto w-full items-center justify-center text-center text-[14px] font-bold transition-colors duration-300 ease-in-out select-none lg:text-[22px] ${
+            isActive ? "text-white" : "text-black"
+          }`}
+        >
+          {card.title}
+        </Typography>
+      </div>
+      <GlassCircle
+        className="pointer-events-none absolute bottom-0 left-1/2 right-1/2 z-10 h-[85.6px] w-[85.6px] -translate-x-1/2 translate-y-[-20%] lg:-translate-y-1/2 rtl:translate-x-1/2 lg:w-[123px] 2xl:h-[163px] lg:h-[123px] 2xl:w-[163px]"
+        blur={15}
+        noiseIntensity={0.1}
+        distortionScale={8}
+        reflectionIntensity={10}
+        glassColor="rgba(150, 150, 150, 0.2)"
+        borderColor="rgba(0, 0, 0, 0.1)"
+        borderWidth={1}
+      />
+    </Wrapper>
+  );
+};
 
 CapabilityCard.propTypes = {
   card: PropTypes.shape({
@@ -46,6 +66,7 @@ CapabilityCard.propTypes = {
   }).isRequired,
   isActive: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
+  "data-card-id": PropTypes.string,
 };
 
 export default CapabilityCard;

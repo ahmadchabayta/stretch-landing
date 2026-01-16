@@ -33,7 +33,7 @@ const CrossChannel = ({ id }) => {
           alt="Cross Channel Background"
           className="translate-x-[-13%] w-full h-auto min-w-[625px] md:min-w-[800px] lg:min-w-[1299px]"
         />
-        <Description className="mx-auto max-w-[80vw]" labels={labels} language={language} />
+        <Description className="mx-auto text-justify" labels={labels} language={language} />
       </Container>
     </Section>
   );

@@ -1,22 +1,14 @@
 import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
-const SectionTitle = ({ labels, language }) => (
-  <SectionHeadContainer dir={language === "ar" ? "rtl" : "ltr"}>
-    <Typography
-      as="h2"
-      variant="section-title"
-      className="w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
-    >
+const SectionTitle = ({ labels }) => (
+  <SectionHeadContainer>
+    <Typography as="h2" variant="section-title" className="w-full">
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography
-      as="h3"
-      variant="section-subtitle"
-      className="max-w-[691px] xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
-    >
+    <Typography as="h3" variant="section-subtitle">
       {labels.subtitles.subtitle}{" "}
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}

@@ -32,8 +32,8 @@ const Capabilities = ({ id }) => {
       id={id}
       container={false}
       padding="none"
-      className="relative min-h-screen"
-      containerClassName="grid grid-cols-1 grid-rows-[auto_1fr] h-full min-h-screen"
+      className="relative min-h-0!"
+      containerClassName="grid grid-cols-1 grid-rows-[auto_1fr] h-full min-h-0!"
     >
       <Container>
         <SectionHeader
@@ -42,7 +42,7 @@ const Capabilities = ({ id }) => {
           subtitleHighlighted={labels.subtitle_highlighted}
         />
       </Container>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center py-8">
         <CardsContainer cards={cards} activeCard={activeCard} onCardClick={handleCardClick} />
       </div>
     </Section>

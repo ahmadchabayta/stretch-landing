@@ -2,16 +2,17 @@ import PropTypes from "prop-types";
 import { Typography, List } from "../../components";
 
 const HeroFeatures = ({ data }) => (
-  <List className="flex flex-col w-full items-center justify-center xl:justify-between space-y-2 xl:flex-row lg:space-x-16">
+  <List
+    variant="bulleted"
+    className="flex flex-col items-start justify-start xl:justify-between space-y-2 xl:flex-row lg:space-x-16 list-disc pl-4 xl:pl-0 w-fit! mx-auto"
+  >
     {data.map((el, i) => (
-      <List.Item
-        key={`${el}_${i}`}
-        className="3xl:h-30px flex items-center justify-center space-x-4"
-      >
-        <Typography as="p" className="3xl:w-6 3xl:h-6 prose">
-          ●
-        </Typography>
-        <Typography as="p" variant="hero-feature" className="max-w-[471px] prose">
+      <List.Item key={`${el}_${i}`} className="list-item ml-4 xl:ml-0">
+        <Typography
+          as="p"
+          variant="hero-feature"
+          className="max-w-[471px] ml-6 flex items-center justify-center"
+        >
           {el}
         </Typography>
       </List.Item>
