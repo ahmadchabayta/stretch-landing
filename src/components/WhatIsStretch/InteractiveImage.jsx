@@ -74,7 +74,7 @@ const InteractiveImage = () => {
 
   const graphTop = `
         top-[-2.5%]
-        xs:top-[-1%]
+        xs:top-[-2%]
         md:top-[3%] 
         lg:top-[23%]
         xl:top-[clamp(5%,calc(5%+10vw-12.8px),30%)]

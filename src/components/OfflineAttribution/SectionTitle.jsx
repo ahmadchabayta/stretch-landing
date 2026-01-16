@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels, language }) => (
-  <SectionHeadContainer dir={language === "ar" ? "rtl" : "ltr"} className="app_container">
+  <SectionHeadContainer dir={language === "ar" ? "rtl" : "ltr"}>
     <Typography as="h2" variant="section-title" className="w-full">
       {labels.title.part1}
       <br />

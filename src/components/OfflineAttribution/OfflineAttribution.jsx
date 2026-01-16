@@ -33,7 +33,7 @@ const OfflineAttribution = ({ id }) => {
     bottom-[-50%]
     dir-ltr:left-[-10%]
     dir-ltr:xxl:left-[-8%]
-    dir-ltr:2xl:left-[-7%]
+    dir-ltr:2xl:left-[clamp(-5%,1%,2%)]
     dir-ltr:3xl:left-0
     dir-rtl:left-0
     dir-rtl:xxl:right-[-8%]
@@ -69,7 +69,7 @@ const OfflineAttribution = ({ id }) => {
       id={id}
       className="relative overflow-hidden flex flex-col min-h-0! lg:min-h-screen!"
     >
-      <Container className="flex flex-col shrink-0 w-full ">
+      <Container className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
         <Flex align="items-end" justify="justify-end">
           <SectionData labels={labels} language={language} />
