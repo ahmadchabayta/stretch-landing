@@ -23,7 +23,7 @@ const Footer = ({ id }) => {
             backgroundPosition: "center",
             opacity: 1,
           }}
-          className="relative max-w-none! min-h-screen bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5  overflow-visible flex"
+          className="relative max-w-none! h-full min-h-[55vh] bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5  overflow-visible flex"
         >
           <Container className="flex flex-col items-center justify-between">
             <SectionTitle labels={labels} language={language} />

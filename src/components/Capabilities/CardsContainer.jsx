@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 import CapabilityCard from "./CapabilityCard";
 
 const CardsContainer = ({ cards, activeCard, onCardClick }) => (
-  <div className="relative flex w-full flex-1 items-center justify-center overflow-visible p-0 min-h-[300px] lg:h-[450px]">
+  <div className="relative flex w-full flex-1 items-center justify-center overflow-visible p-0 min-h-[300px] lg:min-h-[450px] ">
     {/* Left gradient fade - only visible when scrolling is active */}
     <div className="pointer-events-none absolute left-0 top-0 z-60 h-full w-20 bg-linear-to-r from-white to-transparent md:hidden" />
 
     {/* Right gradient fade - only visible when scrolling is active */}
     <div className="pointer-events-none absolute right-0 top-0 z-60 h-full w-20 bg-linear-to-l from-white to-transparent md:hidden" />
 
-    <div className="relative z-50 flex h-auto w-screen cursor-grab items-center gap-5 overflow-x-auto overflow-y-hidden py-5 px-5 md:justify-center lg:mx-auto lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-x-5 lg:gap-y-12 md:overflow-visible xl:flex xl:gap-5">
+    <div className="relative z-50 flex min-h-[310px] w-screen cursor-grab items-center gap-5 overflow-x-auto py-7 px-5 md:justify-center lg:mx-auto lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-x-5 lg:gap-y-12 md:overflow-visible xl:flex xl:gap-5">
       {cards.map((card, index) => (
         <CapabilityCard
           key={card.id}

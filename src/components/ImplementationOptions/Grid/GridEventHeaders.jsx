@@ -16,9 +16,9 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
     </Typography>
 
     {/* Mobile buttons */}
-    <div className="flex gap-0 md:hidden -ml-2">
+    <div className="relative mx-auto flex gap-0 md:hidden col-span-2 justify-center items-center self-center ">
       <button
-        className={`relative rounded-full px-3 py-1.5 text-[11px] font-bold transition-all duration-200 -mr-3 ${
+        className={`relative rounded-full px-8 mr-4 py-1.5 text-sm lg:text-base font-bold transition-all duration-200  ${
           language === "ar" ? "font-[Tajawal,sans-serif]" : ""
         } ${
           activeTab === "impressions"
@@ -27,10 +27,10 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
         }`}
         onClick={() => setActiveTab("impressions")}
       >
-        {labels.headers.tracking_impressions}
+        {labels.headers.tracking_impressions_mobile}
       </button>
       <button
-        className={`relative rounded-full px-3 py-1.5 text-[11px] font-bold transition-all duration-200 -ml-3 ${
+        className={`relative rounded-full px-3 py-1.5 text-sm lg:text-base font-bold transition-all duration-200 -ml-3 ${
           language === "ar" ? "font-[Tajawal,sans-serif]" : ""
         } ${
           activeTab === "clicks"
@@ -39,7 +39,7 @@ const GridEventHeaders = ({ labels, isArabic, activeTab, setActiveTab, language 
         }`}
         onClick={() => setActiveTab("clicks")}
       >
-        {labels.headers.tracking_clicks}
+        {labels.headers.tracking_clicks_mobile}
       </button>
     </div>
 
@@ -72,6 +72,8 @@ GridEventHeaders.propTypes = {
       event: PropTypes.string.isRequired,
       tracking_impressions: PropTypes.string.isRequired,
       tracking_clicks: PropTypes.string.isRequired,
+      tracking_impressions_mobile: PropTypes.string.isRequired,
+      tracking_clicks_mobile: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
   isArabic: PropTypes.bool.isRequired,

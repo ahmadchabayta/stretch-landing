@@ -12,7 +12,7 @@ const ProvenToPerform = () => {
   const isArabic = language === "ar";
 
   return (
-    <Section className="relative bg-white!">
+    <Section className="relative bg-white! min-h-0!">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -28,8 +28,8 @@ const ProvenToPerform = () => {
 
       <AppBoundary>
         {/* Container is now centered by default */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <TrueGlassContainer className="flex justify-self-center items-center! justify-center! overflow-hidden text-gray-500/30 mt-[164px]">
+        <div className="flex items-center justify-center">
+          <TrueGlassContainer className="flex justify-self-center items-center! justify-center! overflow-hidden text-gray-500/30">
             <Flex
               direction="flex-col xl:flex-row"
               justify="justify-center"
@@ -38,7 +38,7 @@ const ProvenToPerform = () => {
             >
               <Glass
                 accentColor="#FFFFFF"
-                className="mb-[80px] flex flex-col touch-none select-none items-center justify-center min-h-[152px] max-h-[172px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden"
+                className="mb-[80px] flex flex-col touch-none select-none items-center justify-center min-h-[152px] max-h-[172px] w-full max-w-[75vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden"
               >
                 <div
                   className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "right-0 top-0 translate-y-[-50%] translate-x-[50%]" : "left-0 top-0 translate-y-[-50%] translate-x-[-50%]"}`}
@@ -54,21 +54,21 @@ const ProvenToPerform = () => {
                 <Typography
                   as="h3"
                   variant="proven-to-perform-card-title"
-                  className="flex items-center justify-center max-w-[90%] min-h-40 px-4 py-6 md:px-6 md:py-8 text-gray-700/50"
+                  className="flex items-center justify-center min-w-[300px] lg:min-w-[600px] max-w-[90%] min-h-40 px-4 py-6 md:px-6 md:py-8 text-gray-700/50 "
                 >
                   {labels.images.img_1.text}
                 </Typography>
                 <Typography
                   as="p"
                   variant="proven-to-perform-card-quotedBy"
-                  className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18  text-white"
+                  className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18 text-black"
                 >
                   {labels.images.img_1.by}
                 </Typography>
               </Glass>
               <Glass
                 accentColor="#FFFFFF"
-                className="flex flex-col touch-none select-none items-center justify-center min-h-[152px] w-full max-w-[80vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden relative"
+                className="flex flex-col touch-none select-none items-center justify-center min-h-[152px] w-full max-w-[75vw] xl:max-w-[40vw] z-50 will-change-transform transform-[translate3d(0,0,0)] backface-hidden relative"
               >
                 <div
                   className={`absolute -z-50 h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 pointer-events-none bg-primary rounded-full flex items-center justify-center will-change-transform backface-hidden ${isArabic ? "left-0 top-0 translate-y-[50%] translate-x-[-50%]" : "right-0 bottom-0 translate-y-[50%] translate-x-[50%]"}`}
@@ -84,14 +84,14 @@ const ProvenToPerform = () => {
                 <Typography
                   as="h3"
                   variant="proven-to-perform-card-title"
-                  className="flex items-center justify-center max-w-[90%] min-h-40  px-4 py-6 md:px-6 md:py-8 text-gray-700/50"
+                  className="flex items-center justify-center min-w-[300px] lg:min-w-[600px] max-w-[90%] min-h-40  px-4 py-6 md:px-6 md:py-8 text-gray-700/50 "
                 >
                   {labels.images.img_2.text}
                 </Typography>
                 <Typography
                   as="p"
                   variant="proven-to-perform-card-quotedBy"
-                  className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18   text-white"
+                  className="max-w-[90%] absolute right-[6%] -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-10 xl:-bottom-18 text-black"
                 >
                   {labels.images.img_2.by}
                 </Typography>

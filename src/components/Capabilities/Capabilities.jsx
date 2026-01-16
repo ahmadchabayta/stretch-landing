@@ -42,9 +42,9 @@ const Capabilities = ({ id }) => {
           subtitleHighlighted={labels.subtitle_highlighted}
         />
       </Container>
-      <Container className="flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <CardsContainer cards={cards} activeCard={activeCard} onCardClick={handleCardClick} />
-      </Container>
+      </div>
     </Section>
   );
 };

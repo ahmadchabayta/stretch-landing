@@ -17,6 +17,8 @@
         "channels": "Channels",
         "tracking_impressions": "Tracking Based on Impressions",
         "tracking_clicks": "Tracking Based on Clicks",
+        "tracking_impressions_mobile": "Impressions",
+        "tracking_clicks_mobile": "Clicks",
         "banner": "Banner",
         "video": "Video"
       },
@@ -96,6 +98,8 @@
         "channels": "القنوات",
         "tracking_impressions": "التتبع بناءً على مرات الظهور",
         "tracking_clicks": "التتبع بناءً على النقرات",
+        "tracking_impressions_mobile": "مرات الظهور",
+        "tracking_clicks_mobile": "النقرات",
         "banner": "إعلانات البانر",
         "video": "الفيديو"
       },

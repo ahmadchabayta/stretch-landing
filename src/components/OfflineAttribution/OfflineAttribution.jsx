@@ -48,7 +48,8 @@ const OfflineAttribution = ({ id }) => {
     xl:hidden
     absolute
     w-full
-    min-w-[938px]
+    min-w-[638px]
+    xs:min-w-[738px]
     md:min-w-[1324px]
     lg:min-w-[1583px]
     left-[57%]
@@ -74,7 +75,7 @@ const OfflineAttribution = ({ id }) => {
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div className="relative flex-1 min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
+      <div className="relative flex-1 min-h-[350px] xs:min-h-[400px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
         {/* Purple images (default) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
