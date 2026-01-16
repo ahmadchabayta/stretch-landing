@@ -45,7 +45,7 @@
           "clicks_video_checked": true
         },
         {
-          "name": "Snap",
+          "name": "Snapchat",
           "impressions_banner_checked": false,
           "impressions_video_checked": false,
           "clicks_banner_checked": true,
@@ -66,7 +66,7 @@
           "clicks_video_checked": true
         },
         {
-          "name": "Mobile networks",
+          "name": "Mobile Networks",
           "impressions_banner_checked": true,
           "impressions_video_checked": true,
           "clicks_banner_checked": true,

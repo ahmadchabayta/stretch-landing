@@ -3,12 +3,20 @@ import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels, language }) => (
   <SectionHeadContainer dir={language === "ar" ? "rtl" : "ltr"}>
-    <Typography as="h2" variant="section-title" className="w-full">
+    <Typography
+      as="h2"
+      variant="section-title"
+      className="w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
+    >
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle">
+    <Typography
+      as="h3"
+      variant="section-subtitle"
+      className="max-w-[691px] xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
+    >
       {labels.subtitles.subtitle}{" "}
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}

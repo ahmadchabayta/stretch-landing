@@ -12,7 +12,7 @@
         "Audience retargeting",
         "Profile enrichment"
       ],
-      "columns": ["Snapchat", "Meta", "Tiktok", "DV360", "Stretch"],
+      "columns": ["Snapchat", "Meta", "TikTok", "DV360", "Stretch"],
       "partial": "Partial"
     },
     "ar": {
@@ -34,8 +34,8 @@
   "img": "./assets/competitive_edge_stretch/grid.webp",
   "boxes": [
     ["", "", "", "", "✓"],
-    ["Partial", "Partial", "Partial", "Partial", "✓"],
-    ["", "✓", "✓", "✓", "✓"],
+    ["", "Partial", "Partial", "Partial", "✓"],
+    ["Partial", "✓", "✓", "✓", "✓"],
     ["", "", "", "", "✓"]
   ]
 }

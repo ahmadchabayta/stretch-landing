@@ -16,8 +16,7 @@ const SectionData = ({ labels, language }) => {
     <Flex
       align="items-center"
       justify="justify-between"
-      spaceX="space-x-[15px] 3xl:space-x-[87px]"
-      className="mx-0! w-full xl:max-w-[578px] 3xl:max-w-[719px]"
+      className="mx-0! w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[713px]"
     >
       <Typography
         as="h3"

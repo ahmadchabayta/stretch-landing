@@ -17,6 +17,7 @@ const SectionTitle = ({ labels, language }) => (
       <Typography.Text accent bold>
         {labels.subtitle.line_highlight}
       </Typography.Text>
+      <br />
       <Typography.Text>{` ${labels.subtitle.line2} `}</Typography.Text>
       <Typography.Text bold>{labels.subtitle.line_bold}</Typography.Text>
     </Typography>

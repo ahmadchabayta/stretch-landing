@@ -35,7 +35,7 @@ import cn from "../../../utils/cn";
 
 const typographyVariants = {
   "hero-title": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
+    ltr:font-poppins rtl:font-tajawal font-extrabold
     text-[48px] leading-[72px]
     md:text-[60px] md:leading-[90px]
     lg:text-[72px] lg:leading-[108px]
@@ -45,7 +45,7 @@ const typographyVariants = {
    
   `,
   "hero-subtitle": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
+    ltr:font-poppins rtl:font-tajawal font-extrabold
     text-[18px] leading-[27px]
     md:text-[24px] md:leading-[36px]
     lg:text-[35px] lg:leading-[53px]
@@ -54,7 +54,7 @@ const typographyVariants = {
     3xl:text-[40px] 3xl:leading-[60px]
   `,
   "hero-description": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal
+    ltr:font-poppins rtl:font-tajawal font-normal
     text-[14px] leading-[21px]
     sm:text-[16px] sm:leading-[24px]
     md:text-[18px] md:leading-[27px]
@@ -65,7 +65,7 @@ const typographyVariants = {
   `,
   "section-title": `
   uppercase
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-extrabold
+    ltr:font-poppins rtl:font-tajawal font-extrabold
     text-[40px] leading-[108.457%]
     xl:text-[64px]
     2xl:text-[64px]
@@ -78,7 +78,7 @@ const typographyVariants = {
     prose
     md:prose-lg
     lg:prose-xl
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal
+    ltr:font-poppins rtl:font-tajawal
     text-[14px] leading-auto
     md:text-[18px]
     xl:text-[20px]
@@ -87,7 +87,7 @@ const typographyVariants = {
     3xl:text-[24px]
   `,
   "section-desc": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal
+    ltr:font-poppins rtl:font-tajawal font-normal
     text-[14px] leading-normal
     xl:text-[20px]
     2xl:text-[20px]
@@ -95,23 +95,23 @@ const typographyVariants = {
     
   `,
   "menu-link": `
-    [direction:ltr]:font-manrope [direction:rtl]:font-tajawal font-normal
+    ltr:font-manrope rtl:font-tajawal font-normal
     text-[16px] leading-[22px]
     md:text-[17px] md:leading-[24px]
-    [direction:ltr]:lg:font-poppins lg:text-[19px] lg:leading-[27px]
+    ltr:lg:font-poppins lg:text-[19px] lg:leading-[27px]
     xl:text-[21px] xl:leading-[30px]
     2xl:text-[22px] 2xl:leading-[32px]
     3xl:text-[23px] 3xl:leading-[34px] 3xl:font-semibold
   `,
   "footer-desc": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-bold text-center
+    ltr:font-poppins rtl:font-tajawal font-bold text-center
     text-[14px] leading-normal
     xl:text-[28px]
     2xl:text-[28px]
     3xl:text-[28px]
   `,
   "hero-feature": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal opacity-50
+    ltr:font-poppins rtl:font-tajawal font-normal opacity-50
     text-[14px] leading-[21px]
     md:text-[15px] md:leading-[23px]
     lg:text-[17px] lg:leading-[26px]
@@ -120,7 +120,7 @@ const typographyVariants = {
     3xl:text-[20px] 3xl:leading-[30px]
   `,
   "button-text": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-semibold text-white
+    ltr:font-poppins rtl:font-tajawal font-semibold text-white
     text-[14px] leading-tight
     md:text-[15px] md:leading-tight
     lg:text-[16px] lg:leading-tight
@@ -129,7 +129,7 @@ const typographyVariants = {
     3xl:text-[19px] 3xl:leading-tight
   `,
   "audience-mirroring-list": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal text-justify text-accent
+    ltr:font-poppins rtl:font-tajawal font-normal text-justify text-accent
     text-[14px] leading-normal
     lg:text-[20px]
     xl:text-[20px]
@@ -137,7 +137,7 @@ const typographyVariants = {
     3xl:text-[24px]
   `,
   "testimonial-quote": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal italic text-black text-justify
+    ltr:font-poppins rtl:font-tajawal font-normal italic text-black text-justify
     text-[14px] leading-normal w-[299px] h-[63px]
     lg:text-[20px] lg:w-[627px] lg:h-[78px]
     xl:text-[20px] xl:w-[457px] xl:h-[78px]
@@ -145,7 +145,7 @@ const typographyVariants = {
     3xl:text-[24px] 3xl:w-[668px] 3xl:h-[83px]
   `,
   "proven-to-perform-card-title": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-normal italic text-black text-justify
+    ltr:font-poppins rtl:font-tajawal font-normal italic text-black text-justify
     text-[14px] leading-normal
     lg:text-[20px]
     xl:text-[20px]
@@ -153,7 +153,7 @@ const typographyVariants = {
     3xl:text-[24px]
   `,
   "proven-to-perform-card-quotedBy": `
-    [direction:ltr]:font-poppins [direction:rtl]:font-tajawal font-bold text-black
+    ltr:font-poppins rtl:font-tajawal font-bold text-black
     text-[13px] leading-normal text-center
     lg:text-[20px] lg:text-right
     xl:text-[20px] xl:text-right

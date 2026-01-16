@@ -5,7 +5,9 @@ import CheckIcon from "./CheckIcon";
 export const STRETCH_OPACITIES = [0.25, 0.5, 0.75, 1];
 
 export const getValueStyles = (value, isStretch, idx, small) => {
-  const checkBg = isStretch ? `rgba(59,34,168,${STRETCH_OPACITIES[idx]})` : "#3B22A8";
+  const checkBg = isStretch
+    ? `rgba(59,34,168,${STRETCH_OPACITIES[idx]})`
+    : `rgba(59,34,168,${STRETCH_OPACITIES[idx]})`;
 
   return {
     background: value === "Partial" ? "#ff4200" : value === "✓" ? checkBg : "#fff",
