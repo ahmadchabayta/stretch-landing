@@ -13,8 +13,8 @@ const Footer = ({ id }) => {
   const labels = data.languages?.[language] || data.languages.en;
 
   return (
-    <footer id={id} className="w-full ">
-      <Section className="mb-0! ">
+    <footer id={id} className="w-full">
+      <Section className="mb-0! h-full min-h-0!">
         {/* Top section with CTA and net background with built-in side gradients */}
         <Container
           style={{
@@ -23,7 +23,7 @@ const Footer = ({ id }) => {
             backgroundPosition: "center",
             opacity: 1,
           }}
-          className="relative max-w-none! h-full min-h-[55vh] bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5  overflow-visible flex"
+          className="relative max-w-none! h-full  bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5  overflow-visible flex"
         >
           <Container className="flex flex-col items-center justify-between">
             <SectionTitle labels={labels} language={language} />
@@ -37,7 +37,7 @@ const Footer = ({ id }) => {
           direction="flex-col"
           align="items-center!"
           justify="justify-center"
-          className="w-full flex-1 bg-black py-12"
+          className="w-full flex-1 bg-black min-h-[419px] lg:min-h-[548px] pb-6"
         >
           <img
             className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px]"

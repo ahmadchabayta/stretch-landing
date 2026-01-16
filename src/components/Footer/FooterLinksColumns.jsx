@@ -6,7 +6,7 @@ import { withBase } from "../../utils/withBase";
 const FooterLinksColumns = ({ labels, language }) => {
   const allLinks = labels.footer_links;
 
-  const linkClass = `cursor-pointer text-white font-[Poppins] text-[14px] font-bold leading-normal md:text-[22px] lg:text-[22px] xl:text-[22px] 3xl:text-[28px] hover:underline transition-all ${
+  const linkClass = `cursor-pointer text-white font-[Poppins] text-[14px] leading-normal lg:text-[18px] hover:underline transition-all ${
     language === "ar" ? "font-[Tajawal,sans-serif]" : ""
   }`;
 
@@ -15,13 +15,20 @@ const FooterLinksColumns = ({ labels, language }) => {
   }`;
 
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-[18px] lg:gap-x-12 xl:gap-x-16">
-      {/* Left Column: Terms of Service & Powered by */}
-      <div className="flex flex-col gap-[18px] text-center lg:text-start items-center lg:items-start">
+    <div className="w-full flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-y-[18px] border">
+      {/* Left: Privacy Policy & Terms of Service in a row */}
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 text-center lg:text-start items-center lg:items-end">
+        <a href={allLinks[0].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
+          {allLinks[0].label}
+        </a>
+
         <a href={allLinks[1].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
           {allLinks[1].label}
         </a>
+      </div>
 
+      {/* Right: Powered by & Social Icons in a column */}
+      <div className="flex flex-col lg:gap-6 text-center lg:text-end items-center lg:items-end justify-end ">
         <a
           href={labels.powered_by.url}
           target="_blank"
@@ -34,13 +41,6 @@ const FooterLinksColumns = ({ labels, language }) => {
             alt="Memob logo"
             className="w-24 lg:w-[161px] 3xl:w-[214px]"
           />
-        </a>
-      </div>
-
-      {/* Right Column: Privacy Policy & Social Icons */}
-      <div className="flex flex-col gap-[18px] text-center lg:text-end items-center lg:items-end">
-        <a href={allLinks[0].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
-          {allLinks[0].label}
         </a>
 
         <div className="hidden lg:flex">

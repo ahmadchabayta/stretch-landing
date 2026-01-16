@@ -3,27 +3,27 @@ import { Flex } from "..";
 
 const socialLinks = [
   {
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/company/memobtechnology/",
     label: "LinkedIn",
     iconClass: "fab fa-linkedin",
   },
   {
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/memobtechnology/",
     label: "Instagram",
     iconClass: "fab fa-instagram",
   },
   {
-    href: "https://x.com",
+    href: "https://x.com/memobtechnology/",
     label: "X",
     iconClass: "fab fa-x-twitter",
   },
   {
-    href: "https://www.youtube.com",
+    href: "https://www.youtube.com/@MEmobPlus",
     label: "YouTube",
     iconClass: "fab fa-youtube",
   },
   {
-    href: "https://www.facebook.com",
+    href: "https://www.facebook.com/memobtechnology",
     label: "Facebook",
     iconClass: "fab fa-facebook",
   },
@@ -49,7 +49,7 @@ const FooterSocialIcons = ({ className = "" }) => (
         itemProp="sameAs"
         className="flex items-center justify-center text-white hover:opacity-80 transition-opacity"
       >
-        <i className={`${iconClass} text-[24px] md:text-[28px] lg:text-[32px]`}></i>
+        <i className={`${iconClass} text-[27px]`}></i>
       </a>
     ))}
   </Flex>
