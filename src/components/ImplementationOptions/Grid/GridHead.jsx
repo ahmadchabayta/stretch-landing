@@ -24,19 +24,19 @@ const GridHead = ({ labels, isArabic, activeTab, setActiveTab, language }) => (
 
         <div className="flex gap-0 justify-center items-center cursor-pointer">
           <button
-            className={`w-40 cursor-pointer relative rounded-xl px-8 py-2.5 text-base lg:text-lg font-bold transition-all duration-200 shadow-md backdrop-blur-sm -mr-3 ${
+            className={`w-32 cursor-pointer relative rounded-xl py-2.5 text-base lg:text-lg font-bold transition-all duration-200 shadow-md backdrop-blur-sm -mr-3 ${
               language === "ar" ? "font-[Tajawal,sans-serif]" : ""
             } ${
               activeTab === "impressions"
                 ? "bg-black text-white border-1 border-black z-20"
-                : "bg-transparent text-black border-1 border-black z-10 -mr-5 -z-10 opacity-50"
+                : "bg-transparent text-black border-1 border-black z-10 -mr-3 -z-10 opacity-50"
             }`}
             onClick={() => setActiveTab("impressions")}
           >
             {labels.headers.tracking_impressions_mobile}
           </button>
           <button
-            className={`w-40 cursor-pointer relative rounded-xl px-8 py-2.5 text-base lg:text-lg font-bold transition-all duration-200 -ml-0 shadow-md backdrop-blur-sm ${
+            className={`w-32 cursor-pointer relative rounded-xl py-2.5 text-base lg:text-lg font-bold transition-all duration-200 -ml-0 shadow-md backdrop-blur-sm ${
               language === "ar" ? "font-[Tajawal,sans-serif]" : ""
             } ${
               activeTab === "clicks"
