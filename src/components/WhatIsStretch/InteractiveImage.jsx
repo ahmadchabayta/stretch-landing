@@ -74,6 +74,9 @@ const InteractiveImage = () => {
     lg:w-[606px]
     lg:max-w-[650px]
     xl:w-[clamp(794px,52.8vw,1014px)]
+    2xl:w-[800px]
+    2xl:max-w-none
+    3xl:w-[1100px]
   `;
 
   const graphTop = `
@@ -82,11 +85,12 @@ const InteractiveImage = () => {
         md:top-[-1%] 
         lg:top-[23%]
         xl:top-[clamp(5%,calc(5%+10vw-12.8px),30%)]
+        2xl:top-[2%]
       `;
 
   const graphSide = isRTL
     ? `left-[35px] md:left-1/2 md:-translate-x-1/2 lg:translate-x-0 lg:left-[30%] xl:left-[clamp(40%,38vw,38%)]`
-    : `left-[35px] md:left-1/2 md:-translate-x-1/2 lg:translate-x-0 lg:left-[30%] xl:left-[clamp(40%,38vw,38%)]`;
+    : `left-[35px] md:left-1/2 md:-translate-x-1/2 lg:translate-x-0 lg:left-[30%] xl:left-[clamp(40%,38vw,38%)] 2xl:left-[35%]`;
 
   const graphPosition = `${graphTop} ${graphSide}`;
 
@@ -96,6 +100,8 @@ const InteractiveImage = () => {
     md:w-[400px]
     lg:w-[418px]
     xl:w-[clamp(402px,23.3vw,447px)]
+    2xl:w-[500px]
+    3xl:w-[600px]
   `;
 
   const duplicationTop = `
@@ -105,6 +111,7 @@ const InteractiveImage = () => {
         lg:top-[39%]
         xl:top-[55%]
         xl:-translate-y-1/2
+        2xl:top-[50%]
       `;
 
   const duplicationSide = isRTL
@@ -118,7 +125,9 @@ const InteractiveImage = () => {
     xs:w-[370px]
     md:w-[575px]
     lg:w-[514.378px]
-    xl:w-[clamp(304px,28.6vw,549px)]
+    xl:w-[clamp(404px,28.6vw,549px)]
+    2xl:w-[600px]
+    3xl:w-[700px]
   `;
 
   const mapTop = `
@@ -130,8 +139,8 @@ const InteractiveImage = () => {
       `;
 
   const mapSide = isRTL
-    ? `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(600px,42.4vw,815px)]`
-    : `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(600px,42.4vw,815px)]`;
+    ? `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(550px,42.4vw,815px)]`
+    : `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(550px,42.4vw,815px)] 2xl:left-[40%]`;
 
   const mapPosition = `${mapTop} ${mapSide}`;
 
@@ -141,6 +150,8 @@ const InteractiveImage = () => {
     md:w-[376px]
     lg:w-[398px]
     xl:w-[clamp(396px,22vw,423.04px)]
+    2xl:w-[450px]
+    3xl:w-[500px]
   `;
 
   return (
