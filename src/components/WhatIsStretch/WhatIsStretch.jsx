@@ -10,15 +10,15 @@ const WhatIsStretch = ({ className, id }) => {
   const { language } = useLanguage();
   const sectionLabels = data.languages[language] || data.languages.en;
   return (
-    <Section id={id} className={cn("relative overflow-hidden", className)}>
+    <Section id={id} className={cn("relative overflow-hidden pb-12", className)}>
       <Container>
         <SectionTitle data={sectionLabels} />
       </Container>
       <div className="relative w-full min-h-[80vh]">
         <InteractiveImage data={sectionLabels} />
       </div>
-      <Container className="relative bg-red-500">
-        <List className="absolute bottom-[35px] lg:bottom-[123px] text-[14px] font-bold lg:text-[20px] text-right! right-0 ">
+      <Container className="relative">
+        <List className="absolute bottom-0 xl:bottom-[35px] lg:bottom-[123px] text-[14px] font-bold lg:text-[20px] text-right! right-0 ">
           {sectionLabels.tagline.map((line) => (
             <List.Item key={line}>{line}</List.Item>
           ))}

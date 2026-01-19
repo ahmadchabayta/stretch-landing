@@ -50,7 +50,7 @@ const InteractiveImage = () => {
   const iphoneTop = `
     absolute
     bottom-[-3%]
-    xs:bottom-[0%]
+    xs:bottom-[-3%]
     md:bottom-[-25%]
     lg:bottom-auto
     lg:-translate-y-1/2
@@ -61,7 +61,7 @@ const InteractiveImage = () => {
 
   const iphoneSide = isRTL
     ? `left-[-20%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`
-    : `left-[-10%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`;
+    : `left-[50%] translate-x-[-50%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`;
 
   const iphonePosition = `${iphoneTop} ${iphoneSide}`;
 
@@ -73,7 +73,8 @@ const InteractiveImage = () => {
     md:max-w-[750px]
     lg:w-[606px]
     lg:max-w-[650px]
-    xl:w-[clamp(794px,52.8vw,1014px)]
+    xl:w-[794px]
+    xl:max-w-none
     2xl:w-[800px]
     2xl:max-w-none
     3xl:w-[1100px]
@@ -84,8 +85,8 @@ const InteractiveImage = () => {
         xs:top-[-2%]
         md:top-[-1%] 
         lg:top-[23%]
-        xl:top-[clamp(5%,calc(5%+10vw-12.8px),30%)]
-        2xl:top-[2%]
+        xl:top-[9%]
+        2xl:top-[13%]
       `;
 
   const graphSide = isRTL
@@ -105,18 +106,18 @@ const InteractiveImage = () => {
   `;
 
   const duplicationTop = `
-        top-[10.5%]
-        xs:top-[16.5%]
+        top-[17.5%]
+        xs:top-[18.5%]
         md:top-[22%]
         lg:top-[39%]
-        xl:top-[55%]
+        xl:top-[50%]
         xl:-translate-y-1/2
         2xl:top-[50%]
       `;
 
   const duplicationSide = isRTL
     ? `left-[50%] translate-x-[-50%] lg:translate-x-0 lg:left-[45%] xl:left-[clamp(53%,62vw,52%)]`
-    : `left-[50%] translate-x-[-50%] lg:translate-x-0 lg:left-[45%] xl:left-[clamp(53%,62vw,52%)]`;
+    : `left-[50%] translate-x-[-50%] lg:translate-x-0 lg:left-[45%] xl:left-[58%] 2xl:left-[clamp(53%,62vw,52%)]`;
   5;
   const duplicationPosition = `${duplicationTop} ${duplicationSide}`;
 
@@ -125,22 +126,23 @@ const InteractiveImage = () => {
     xs:w-[370px]
     md:w-[575px]
     lg:w-[514.378px]
-    xl:w-[clamp(404px,28.6vw,549px)]
+    xl:w-[550px]
     2xl:w-[600px]
     3xl:w-[700px]
   `;
 
   const mapTop = `
-        top-[36%]
+        top-[40%]
         xs:top-[38%]
         md:top-[48%]
         lg:top-[58%]
-        xl:top-[clamp(54%,42.4vw,64%)]
+        xl:top-[63%]
+        2xl:top-[63%]
       `;
 
   const mapSide = isRTL
     ? `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(550px,42.4vw,815px)]`
-    : `left-[90px] md:left-[40%] lg:left-[33%] xl:left-[clamp(550px,42.4vw,815px)] 2xl:left-[40%]`;
+    : `left-[25%] xs:left-[39%] md:left-[40%] lg:left-[33%] xl:left-[clamp(550px,40.4vw,815px)] 2xl:left-[40%]`;
 
   const mapPosition = `${mapTop} ${mapSide}`;
 
