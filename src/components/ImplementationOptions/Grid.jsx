@@ -17,7 +17,13 @@ const Grid = ({ labels, activeTab, language, setActiveTab }) => {
         setActiveTab={setActiveTab}
         language={language}
       />
-      <GridHead labels={labels} isArabic={isArabic} />
+      <GridHead
+        labels={labels}
+        isArabic={isArabic}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        language={language}
+      />
       <GridBody
         channels={labels.channels}
         isDesktop={isDesktop}

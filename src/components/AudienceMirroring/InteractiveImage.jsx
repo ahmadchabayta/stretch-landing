@@ -12,7 +12,7 @@ const InteractiveImage = () => {
         backgroundSize: "contain",
         backgroundPosition: "center",
       }}
-      className="bg-fill max-w-[1544px] relative mx-auto flex items-center justify-center bg-center"
+      className="bg-cover max-w-[1544px] relative mx-auto flex items-center justify-center bg-center"
     >
       <img
         src={withBase(rawData.images.gridBackground)}
@@ -35,14 +35,9 @@ const InteractiveImage = () => {
 
         <div className="relative">
           <img
-            src={withBase(rawData.images.orangeVerticalAvatar)}
-            alt="Orange Vertical Avatar"
-            className="w-[190px] md:w-[200px] lg:w-[391px] cursor-pointer hover:opacity-0 transition-opacity"
-          />
-          <img
             src={withBase(rawData.images.purpleAvatar)}
-            alt="Purple Avatar"
-            className="w-[190px] md:w-[391px] cursor-pointer z-50 xl:grayscale-100 hover:grayscale-0 absolute top-0 left-0"
+            alt="Orange Vertical Avatar"
+            className="w-[190px] md:w-[200px] lg:w-[391px] cursor-pointer grayscale-100 hover:grayscale-0 transition-opacity"
           />
         </div>
 

@@ -33,7 +33,7 @@ const OfflineAttribution = ({ id }) => {
     bottom-[-50%]
     dir-ltr:left-[-10%]
     dir-ltr:xxl:left-[-8%]
-    dir-ltr:2xl:left-[clamp(-5%,1%,2%)]
+    dir-ltr:2xl:left-[-5%]
     dir-ltr:3xl:left-0
     dir-rtl:left-0
     dir-rtl:xxl:right-[-8%]
@@ -48,15 +48,14 @@ const OfflineAttribution = ({ id }) => {
     xl:hidden
     absolute
     w-full
-    min-w-[638px]
-    xs:min-w-[738px]
-    md:min-w-[1324px]
-    lg:min-w-[1583px]
+    min-w-[538px]
+    xs:min-w-[638px]
+    md:min-w-[894px]
+    lg:min-w-[1283px]
     left-[57%]
     md:left-[55%]
     translate-x-[-50%]
-    lg:translate-x-[0]
-    lg:left-[-195px]
+    lg:translate-x-[-60%]
     bottom-0
     transition-opacity
     duration-500
@@ -75,7 +74,7 @@ const OfflineAttribution = ({ id }) => {
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div className="relative flex-1 min-h-[350px] xs:min-h-[400px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
+      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
         {/* Purple images (default) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}

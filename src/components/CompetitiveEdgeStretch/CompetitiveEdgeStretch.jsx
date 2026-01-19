@@ -58,27 +58,27 @@ const CompetitiveEdgeStretch = () => {
             </div>
 
             {/* Cycle Button - Hidden on large screens, centered below grid */}
-            <div className="mt-6 flex justify-center lg:hidden">
+            <div className="mt-6 mr-3 flex justify-end lg:hidden">
               <button
                 onClick={handleNextColumns}
                 className={cn(
-                  "rounded-xl cursor-pointer px-6 py-3 text-sm font-semibold transition-all duration-200 flex items-center gap-2",
-                  "bg-secondary text-white shadow-lg hover:shadow-xl active:scale-95",
+                  "rounded-[7px] w-44 cursor-pointer px-6 py-3 text-sm font-semibold transition-all duration-200 flex items-center justify-between gap-2",
+                  "bg-black text-white shadow-lg hover:shadow-xl active:scale-95",
                   isArabic ? "font-[Tajawal,sans-serif]" : "font-poppins",
                 )}
               >
                 {isArabic ? "التالي" : "Next Platform"}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
+                  width="10.867"
+                  height="13.186"
+                  viewBox="0 0 11 14"
                   fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-5 w-5"
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
+                  <path
+                    d="M0 12.0094V1.17833C0 0.820555 0.118612 0.534722 0.355834 0.320833C0.592084 0.106944 0.868195 0 1.18417 0C1.28333 0 1.38687 0.0136109 1.49479 0.0408332C1.60174 0.0670832 1.70431 0.107431 1.8025 0.161875L10.3235 5.60583C10.5044 5.73222 10.6405 5.87708 10.7319 6.04042C10.8223 6.20278 10.8675 6.38701 10.8675 6.59312C10.8675 6.79924 10.8223 6.98347 10.7319 7.14583C10.6415 7.30819 10.5053 7.45306 10.3235 7.58042L1.8025 13.0244C1.70431 13.0778 1.60076 13.1182 1.49187 13.1454C1.38299 13.1726 1.27944 13.1862 1.18125 13.1862C0.864306 13.1862 0.588194 13.0793 0.352916 12.8654C0.117638 12.6515 0 12.3662 0 12.0094Z"
+                    fill="white"
+                  />
                 </svg>
               </button>
             </div>

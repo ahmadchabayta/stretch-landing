@@ -8,7 +8,7 @@ const SectionTitle = ({ labels }) => (
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="">
+    <Typography as="h3" variant="section-subtitle" className="max-w-[637px]">
       {labels.subtitle}
     </Typography>
   </SectionHeadContainer>
