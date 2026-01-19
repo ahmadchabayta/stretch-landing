@@ -23,10 +23,7 @@ const SectionData = ({ labels, language }) => {
         ref={counterRef}
         className="text-[77px] lg:text-[160px] font-light 2xl:mr-0 z-20"
       />
-      <Typography
-        as="p"
-        className="text-black  [direction:ltr] xl:[direction:rtl] text-sm lg:text-[20px] 3xl:text-[24px]"
-      >
+      <Typography as="p" className="text-black text-end text-sm lg:text-[20px] 3xl:text-[24px]">
         {labels.description.desc}
         <br />
         <Typography.Text className="font-bold">{labels.description.highlight}</Typography.Text>

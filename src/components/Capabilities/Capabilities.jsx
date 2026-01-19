@@ -31,7 +31,7 @@ const Capabilities = ({ id }) => {
       }}
       id={id}
       className="relative min-h-0!"
-      containerClassName="flex flex-col min-h-0!"
+      containerClassName="flex flex-col min-h-0! pb-2.5"
     >
       <Container>
         <SectionHeader

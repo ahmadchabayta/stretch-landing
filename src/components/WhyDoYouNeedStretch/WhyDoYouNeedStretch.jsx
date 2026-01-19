@@ -13,7 +13,7 @@ const WhyDoYouNeedStretch = ({ id }) => {
     <Section
       id={id}
       container={true}
-      className="overflow-hidden flex flex-col items-center justify-center pb-[120px] relative"
+      className="overflow-hidden flex flex-col items-center justify-center pb-2.5 xl:pb-5 relative"
       style={{
         backgroundImage: `url('${withBase(_data.backgroundImage)}')`,
         backgroundRepeat: "no-repeat",
