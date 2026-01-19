@@ -51,7 +51,7 @@ const InteractiveImage = () => {
     absolute
     bottom-[-3%]
     xs:bottom-[0%]
-    md:bottom-[-12%]
+    md:bottom-[-25%]
     lg:bottom-auto
     lg:-translate-y-1/2
     lg:top-[55%]
@@ -68,8 +68,11 @@ const InteractiveImage = () => {
   const iphoneSize = `
     min-w-[360px]
     xs:min-w-[360px]
-    md:w-[624px]
+    xs:max-w-[400px]
+    md:w-[724px]
+    md:max-w-[750px]
     lg:w-[606px]
+    lg:max-w-[650px]
     xl:w-[clamp(794px,52.8vw,1014px)]
   `;
 
@@ -120,8 +123,8 @@ const InteractiveImage = () => {
 
   const mapTop = `
         top-[36%]
-        xs:top-[40%]
-        md:top-[46%]
+        xs:top-[38%]
+        md:top-[48%]
         lg:top-[58%]
         xl:top-[clamp(54%,42.4vw,64%)]
       `;
