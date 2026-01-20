@@ -2,7 +2,7 @@ import { useRef } from "react";
 import PropTypes from "prop-types";
 // import { useLanguage } from "../../../context/LanguageContext";
 import cn from "../../../utils/cn";
-import { Button, Flex, Typography } from "../..";
+import { Flex, Typography } from "../..";
 // import { withBase } from "../../../utils/withBase";
 
 const NavbarControl = ({ data, className }) => {
@@ -26,27 +26,16 @@ const NavbarControl = ({ data, className }) => {
       ref={rootRef}
       className={cn(className)}
     >
-      {/* <Wrapper className="relative">
-        <button
-          type="button"
-          onClick={handleLanguageSwitch}
-          className="flex w-full items-center gap-3 rounded-lg border border-gray-200 px-3 py-2.5 transition-all hover:border-gray-300 hover:bg-gray-50"
-        >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full">
-            <img
-              src={withBase(otherLanguage.flag)}
-              alt={otherLanguage.label}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <span className="text-sm font-medium">{otherLanguage.label}</span>
-        </button>
-      </Wrapper> */}
-      <Button variant="login" className="mx-auto w-full">
+      <a
+        href="https://stretchtag.ai/"
+        className="px-4 py-1.5 text-sm md:px-5 md:py-2 lg:px-6 lg:py-2 3xl:px-7 3xl:py-2.5 mx-auto w-full inline-flex items-center justify-center cursor-pointer rounded-lg md:rounded-[0.5rem] lg:rounded-[0.5rem] bg-accent text-white font-semibold shadow-sm transition-all duration-200 ease-out ltr:font-poppins rtl:font-tajawal hover:bg-accent/90 hover:shadow-md active:scale-[0.98] active:bg-accent/80 active:shadow-sm active:brightness-95 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Typography as="span" variant="button-text">
           {data.button_label}
         </Typography>
-      </Button>
+      </a>
     </Flex>
   );
 };
