@@ -43,7 +43,14 @@ const App = () => {
     <div className="overflow-x-hidden">
       {/* for testing purpooses - to test title*/}
       {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
-      <Button variant="fixed" className={floatingButtonClass}>
+      <Button
+        as="a"
+        href="https://test.stretchtag.ai/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="fixed"
+        className={floatingButtonClass}
+      >
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
         </Typography>

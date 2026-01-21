@@ -29,8 +29,11 @@ const Hero = ({ id }) => {
           <HeroTitle sectionLabels={sectionLabels} />
 
           <Button
+            as="a"
+            href="https://test.stretchtag.ai/signup"
+            target="_blank"
+            rel="noopener noreferrer"
             variant="demo"
-            as="button"
             className="place-self-center xl:place-self-start w-fit! h-fit! mt-[18.26px] lg:mt-[84.5px] xl:mt-[42.6px] 3xl:mt-[63.11px]"
           >
             <Typography as="span" variant="button-text">
