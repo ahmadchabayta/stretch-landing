@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import CapabilityCard from "./CapabilityCard";
+import { Flex } from "../UI";
 
 const CardsContainer = ({ cards, activeCard, onCardClick }) => {
   const containerRef = useRef(null);
@@ -52,16 +53,23 @@ const CardsContainer = ({ cards, activeCard, onCardClick }) => {
   }, [cards, activeCard, onCardClick]);
 
   return (
-    <div className="relative flex w-full flex-1 items-center justify-center overflow-visible">
+    <Flex
+      align="items-center"
+      justify="justify-center"
+      className="relative w-full flex-1 overflow-visible"
+    >
       {/* Left gradient fade - only visible when scrolling is active */}
       <div className="pointer-events-none absolute left-0 top-0 z-60 h-full w-20 bg-linear-to-r from-white to-transparent md:hidden" />
 
       {/* Right gradient fade - only visible when scrolling is active */}
       <div className="pointer-events-none absolute right-0 top-0 z-60 h-full w-20 bg-linear-to-l from-white to-transparent md:hidden" />
 
-      <div
+      <Flex
+        flex="flex lg:grid lg:grid-cols-2 xl:flex"
+        align="items-center"
+        justify="md:justify-center lg:place-items-center"
         ref={containerRef}
-        className="relative z-50 flex min-h-[340px] pb-12 w-screen cursor-grab items-center gap-5 overflow-x-auto overflow-y-hidden py-7 px-[calc(50vw-80.84px)] md:px-5 md:justify-center lg:mx-auto lg:grid lg:grid-cols-2 lg:place-items-center lg:gap-x-5 lg:gap-y-24 md:overflow-visible xl:flex xl:gap-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory md:snap-none"
+        className="relative z-50 min-h-[340px] pb-12 2xl:pb-24 w-screen cursor-grab gap-5 overflow-x-auto overflow-y-hidden py-7 px-[calc(50vw-80.84px)] md:px-5 lg:mx-auto lg:gap-x-5 lg:gap-y-24 md:overflow-visible xl:gap-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory md:snap-none"
       >
         {cards.map((card, index) => (
           <CapabilityCard
@@ -72,8 +80,8 @@ const CardsContainer = ({ cards, activeCard, onCardClick }) => {
             data-card-id={card.id}
           />
         ))}
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 };
 

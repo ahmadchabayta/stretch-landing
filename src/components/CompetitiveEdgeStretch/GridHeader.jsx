@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Typography } from "../../components";
+import { Flex, Typography } from "../../components";
 import cn from "../../utils/cn";
 
 const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
@@ -35,10 +35,12 @@ const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
       {visibleColumns.map((col, idx) => {
         const isStretch = idx === stretchIdx;
         return (
-          <div
+          <Flex
+            align="items-center"
+            justify="justify-center"
             key={`${col}-${idx}`}
             className={cn(
-              "flex items-center justify-center px-1 text-center",
+              "px-1 text-center",
               // Hide columns based on breakpoint (competitors only)
               !isStretch && idx === 1 && "hidden sm:flex",
               !isStretch && idx === 2 && "hidden md:flex",
@@ -59,7 +61,7 @@ const GridHeader = ({ columns, isArabic, columnOffset = 0 }) => {
             >
               {col}
             </Typography.Text>
-          </div>
+          </Flex>
         );
       })}
     </div>

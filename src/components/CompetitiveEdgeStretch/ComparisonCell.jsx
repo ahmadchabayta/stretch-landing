@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import cn from "../../utils/cn";
 import ValueCell, { getValueStyles } from "./ValueCell";
+import { Flex } from "../UI";
 
 const ComparisonCell = ({
   value,
@@ -11,10 +12,12 @@ const ComparisonCell = ({
   isArabic,
   className,
 }) => (
-  <div className={cn("flex items-center justify-center", className)}>
-    <div
+  <Flex align="items-center" justify="justify-center" className={cn(className)}>
+    <Flex
+      align="items-center"
+      justify="justify-center"
       className={cn(
-        "flex items-center justify-center rounded-xl font-bold transition-all duration-200",
+        "rounded-xl font-bold transition-all duration-200",
         "w-[190px] h-[72px] px-[16.607px] py-[24.156px]",
         "[&:hover]:!bg-black [&:hover]:scale-105",
         isArabic && "font-[Tajawal,sans-serif]",
@@ -33,8 +36,8 @@ const ComparisonCell = ({
         small={isSmall}
         partialLabel={partialLabel}
       />
-    </div>
-  </div>
+    </Flex>
+  </Flex>
 );
 
 ComparisonCell.propTypes = {

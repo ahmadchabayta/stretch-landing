@@ -4,20 +4,23 @@ import NavbarControl from "../NavbarControl/NavbarControl";
 import ArrowIcon from "../ArrowIcon";
 import useScrollToSection from "../../../hooks/useScrollToSection";
 import { useLanguage } from "../../../context/LanguageContext";
+import { Flex } from "../../UI";
 
 const MobileMenu = React.forwardRef(({ isOpen, data, menuLinks }, ref) => {
   const { activeLink, scrollToSection } = useScrollToSection();
   const { isRTL } = useLanguage();
 
   return (
-    <div
-      className={`absolute top-[70%] z-50 flex h-auto w-[300px] flex-col items-stretch overflow-hidden rounded-xl bg-white shadow-2xl transition-all duration-300 ease-in-out ${
+    <Flex
+      direction="flex-col"
+      align="items-stretch"
+      className={`absolute top-[70%] z-50 h-auto w-[300px] overflow-hidden rounded-xl bg-white shadow-2xl transition-all duration-300 ease-in-out ${
         isRTL ? "left-0" : "right-0"
       } ${isOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-4 opacity-0"}`}
       ref={ref}
     >
       {/* Menu Items */}
-      <div className="flex flex-col py-3">
+      <Flex direction="flex-col" className="py-3">
         {data.menu_items.map((item, i) => {
           const url = menuLinks?.[i] || "";
           const isActive = activeLink === url;
@@ -39,13 +42,13 @@ const MobileMenu = React.forwardRef(({ isOpen, data, menuLinks }, ref) => {
             </button>
           );
         })}
-      </div>
+      </Flex>
 
       {/* Controls Section */}
-      <div className="flex flex-col border-t border-gray-200 bg-gray-50 px-5 py-4">
+      <Flex direction="flex-col" className="border-t border-gray-200 bg-gray-50 px-5 py-4">
         <NavbarControl data={data} />
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 });
 

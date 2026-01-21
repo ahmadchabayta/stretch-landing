@@ -31,7 +31,7 @@ const socialLinks = [
 
 const FooterSocialIcons = ({ className = "" }) => (
   <Flex
-    as="nav"
+    as="div"
     direction="flex-row"
     align="items-center"
     gap="gap-4 md:gap-6 xl:gap-8"

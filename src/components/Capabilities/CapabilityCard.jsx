@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Wrapper, Typography } from "../../components";
-import { GlassCircle } from "../UI/";
+import { Flex, GlassCircle } from "../UI/";
 
 const CapabilityCard = ({ card, isActive, onClick, "data-card-id": dataCardId }) => {
   const cardRef = useRef(null);
@@ -28,8 +28,10 @@ const CapabilityCard = ({ card, isActive, onClick, "data-card-id": dataCardId })
       }`}
       onClick={onClick}
     >
-      <div
-        className={`relative flex h-full w-full flex-col items-center gap-[12.599px] rounded-2xl py-[25.197px] px-[17.323px] transition-all duration-300 ease-in-out lg:rounded-3xl lg:border-2 lg:border-black lg:items-center ${
+      <Flex
+        direction="flex-col"
+        align="items-center"
+        className={`relative h-full w-full gap-[12.599px] rounded-2xl py-[25.197px] px-[17.323px] transition-all duration-300 ease-in-out lg:rounded-3xl lg:border-2 lg:border-black  ${
           isActive ? "bg-secondary border-none" : "border border-black bg-transparent"
         }`}
       >
@@ -42,7 +44,7 @@ const CapabilityCard = ({ card, isActive, onClick, "data-card-id": dataCardId })
         >
           {card.title}
         </Typography>
-      </div>
+      </Flex>
       <GlassCircle
         className="pointer-events-none absolute bottom-0 left-1/2 right-1/2 z-10 h-[85.6px] w-[85.6px] -translate-x-1/2 -translate-y-1/2 rtl:translate-x-1/2 lg:w-[123px] 2xl:h-[163px] lg:h-[123px] 2xl:w-[163px]"
         blur={15}

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Typography } from "../../components";
+import { Flex, Typography } from "../../components";
 import cn from "../../utils/cn";
 import ComparisonCell from "./ComparisonCell";
 
@@ -35,7 +35,7 @@ const DesktopGrid = ({ features, boxes, partialLabel, isArabic, columnOffset = 0
             )}
           >
             {/* Feature name */}
-            <div className={cn("flex items-center justify-start")}>
+            <Flex align="items-center" justify="justify-start">
               <Typography.Text
                 className={cn(
                   "text-[12.021px] font-bold text-black leading-normal text-pretty ",
@@ -48,7 +48,7 @@ const DesktopGrid = ({ features, boxes, partialLabel, isArabic, columnOffset = 0
               >
                 {feature}
               </Typography.Text>
-            </div>
+            </Flex>
 
             {/* Values */}
             {visibleBoxes.map((value, colIdx) => {

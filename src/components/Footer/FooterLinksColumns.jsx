@@ -15,9 +15,17 @@ const FooterLinksColumns = ({ labels, language }) => {
   }`;
 
   return (
-    <div className="w-full flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-y-[18px] border">
+    <Flex
+      direction="flex-col lg:flex-row"
+      justify="lg:justify-between"
+      className="w-full gap-4 lg:gap-y-[18px] border"
+    >
       {/* Left: Privacy Policy & Terms of Service in a row */}
-      <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 text-center lg:text-start items-center lg:items-end">
+      <Flex
+        direction="flex-col lg:flex-row"
+        align="items-center lg:items-end"
+        className="gap-4 lg:gap-6 text-center lg:text-start"
+      >
         <a href={allLinks[0].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
           {allLinks[0].label}
         </a>
@@ -25,10 +33,15 @@ const FooterLinksColumns = ({ labels, language }) => {
         <a href={allLinks[1].url} target="_blank" rel="noopener noreferrer" className={linkClass}>
           {allLinks[1].label}
         </a>
-      </div>
+      </Flex>
 
       {/* Right: Powered by & Social Icons in a column */}
-      <div className="flex flex-col lg:gap-6 text-center lg:text-end items-center lg:items-end justify-end ">
+      <Flex
+        direction="flex-col"
+        align="items-center lg:items-end"
+        justify="justify-end"
+        className="lg:gap-6 text-center lg:text-end"
+      >
         <a
           href={labels.powered_by.url}
           target="_blank"
@@ -43,13 +56,18 @@ const FooterLinksColumns = ({ labels, language }) => {
           />
         </a>
 
-        <div className="hidden lg:flex">
+        <Flex flex="hidden lg:flex">
           <FooterSocialIcons />
-        </div>
-      </div>
+        </Flex>
+      </Flex>
 
       {/* Powered by on mobile */}
-      <div className="flex lg:hidden flex-col gap-4 text-center items-center">
+      <Flex
+        flex="flex lg:hidden"
+        direction="flex-col"
+        align="items-center"
+        className="gap-4 text-center"
+      >
         <a href={labels.powered_by.url} target="_blank" rel="noopener noreferrer">
           <Flex direction="flex-row" align="items-center" gap="gap-2 md:gap-3">
             <span className={poweredByClass}>{labels.powered_by.powered_by}</span>
@@ -60,13 +78,13 @@ const FooterLinksColumns = ({ labels, language }) => {
             />
           </Flex>
         </a>
-      </div>
+      </Flex>
 
       {/* Social icons on mobile */}
-      <div className="flex lg:hidden flex-col text-center items-center">
+      <Flex flex="flex lg:hidden" direction="flex-col" align="items-center" className="text-center">
         <FooterSocialIcons />
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 };
 

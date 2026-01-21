@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { Typography } from "..";
+import { Flex, Typography } from "..";
 
 const HeroTitle = ({ sectionLabels }) => (
-  <div className="flex flex-col items-center xl:items-start xl:text-start">
+  <Flex direction="flex-col" align="items-center xl:items-start" className="xl:text-start">
     <Typography as="h1" variant="hero-title" className="mb-[12.37px] lg:mb-6 3xl:mb-7">
       {sectionLabels.title}
     </Typography>
@@ -26,7 +26,7 @@ const HeroTitle = ({ sectionLabels }) => (
     >
       {sectionLabels.description}
     </Typography>
-  </div>
+  </Flex>
 );
 
 HeroTitle.propTypes = {

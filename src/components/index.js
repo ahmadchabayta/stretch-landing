@@ -2,6 +2,7 @@ export { default as Button } from "./UI/Button/Button";
 export { default as AudienceMirroring } from "./AudienceMirroring/AudienceMirroring";
 export { default as Capabilities } from "./Capabilities/Capabilities";
 export { default as CrossChannel } from "./CrossChannel/CrossChannel";
+export { default as DemoModal } from "./DemoModal/DemoModal";
 export { default as Hero } from "./Hero/Hero";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as Section } from "./UI/Section/Section";

@@ -3,7 +3,7 @@ import rawData from "./cross_channel.data.json";
 import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
 import { useLanguage } from "../../context/LanguageContext";
-import { Section, Container } from "../../components";
+import { Section, Container, Flex } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
 import { withBase } from "../../utils/withBase";
 import MobileSectionTitle from "./MobileSectionTitle";
@@ -17,12 +17,17 @@ const CrossChannel = ({ id }) => {
   return (
     <Section id={id} className="flex flex-col relative overflow-hidden min-h-0!">
       <Container>
-        <div className="flex flex-col xl:grid xl:grid-cols-2 items-start relative h-full">
+        <Flex
+          flex="flex xl:grid xl:grid-cols-2 "
+          direction="flex-col"
+          align="items-start"
+          className="relative h-full"
+        >
           {/* // desktop */}
           <SectionTitle className="hidden xl:flex flex-col!" labels={labels} language={language} />
           <MobileSectionTitle className="flex xl:hidden" labels={labels} language={language} />
           <SectionData labels={labels} language={language} percentageRef={percentageRef} />
-        </div>
+        </Flex>
       </Container>
 
       {/* Image Container - Mobile and Tablet */}

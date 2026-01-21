@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
-import { SectionHeadContainer, Typography } from "../../components";
+import { Flex, SectionHeadContainer, Typography } from "../../components";
 import cn from "../../utils/cn";
 import { withBase } from "../../utils/withBase";
 
 const SectionTitle = ({ labels, className }) => (
   <SectionHeadContainer className={cn("mb-6 xl:mb-12 items-start! h-full w-full", className)}>
-    <div className="flex w-full justify-between items-center">
+    <Flex justify="justify-between" align="items-center" className="w-full ">
       <Typography as="h2" variant="section-title" className="max-w-[808px]!">
         {labels.title.part1}
         <br />
         <Typography.Text>{labels.title.part2}</Typography.Text>
       </Typography>
-    </div>
+    </Flex>
     <img
       src={withBase(labels.images.large)}
       alt="Cross Channel Background"
