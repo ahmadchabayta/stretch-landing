@@ -23,7 +23,7 @@ const Footer = ({ id }) => {
             backgroundPosition: "center",
             opacity: 1,
           }}
-          className="relative max-w-none! min-h-screen h-full bg-size-[601px_591px] md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5 overflow-visible flex "
+          className="relative max-w-none! h-full bg-size-[601px_591px] md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto mb-5 overflow-visible flex "
         >
           <Container className="flex flex-col items-center justify-between">
             <SectionTitle labels={labels} language={language} />
@@ -36,8 +36,8 @@ const Footer = ({ id }) => {
           flex="flex"
           direction="flex-col"
           align="items-center!"
-          justify="justify-center"
-          className="w-full flex-1 bg-black min-h-[419px] lg:min-h-[548px] pb-6"
+          justify="justify-end"
+          className="w-full flex-1 bg-black min-h-full pb-6"
         >
           <img
             className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px]"

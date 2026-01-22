@@ -5,20 +5,15 @@ import { withBase } from "../../utils/withBase";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const containerStyles = `
-  relative w-full max-w-[612px] h-[157px] z-50 my-10 mx-auto
-  3xl:h-[321px]
+  relative w-full max-w-[612px] min-h-[157px] z-50 my-10 mx-auto 3xl:min-h-[321px] flex flex-col
 `;
 
 const iconStyles = `
-  absolute top-[50%] translate-y-[-50%] left-0 w-full h-full object-contain
-  xl:w-[615px] xl:h-auto
+w-full h-full object-contain xl:w-[615px] xl:h-auto
 `;
 
 const detailsStyles = `
-  h-full origin-top absolute bottom-0 translate-y-[100%] w-full max-w-[350px] 2xl:max-w-[450px] left-[50%] translate-x-[-50%] text-left 
-  lg:translate-y-[100%]
-  xl:translate-y-[105%]
-  3xl:bottom-20 3xl:translate-y-full 3xl:text-justify 3xl:text-[24px] 3xl:left-0 3xl:translate-x-[25%]
+  h-full w-full max-w-[350px] 2xl:max-w-[450px] text-left 3xl:text-justify 3xl:text-[24px] 
 `;
 
 const WhyDoYouNeedStretchIcons = ({ data }) => {
@@ -45,9 +40,23 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
   };
 
   return (
-    <>
+    <Flex
+      flex="flex lg:grid lg:grid-cols-2"
+      direction="flex-col"
+      align="items-center place-items-center"
+      justify="justify-center"
+      spaceY="space-y-[25px] lg:space-y-0"
+      gap="lg:gap-y-20"
+      className="w-full "
+    >
       {items.map((item, index) => (
-        <Flex key={index} align="items-center" justify="justify-center" className={containerStyles}>
+        <Flex
+          key={index}
+          align="items-center"
+          justify="justify-center"
+          direction="flex-col"
+          className={containerStyles}
+        >
           {isDesktop ? (
             <img className={iconStyles} src={item.icon} alt={item.issue} />
           ) : (
@@ -61,7 +70,7 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
               viewport={{ once: true, amount: 0.3 }}
             />
           )}
-          <Flex align="items-center">
+          <Flex align="items-start justify-center self-start" className="w-full">
             <Typography as="p" variant="section-desc" className={detailsStyles}>
               {typeof item.details === "string" ? (
                 item.details
@@ -77,7 +86,7 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
           </Flex>
         </Flex>
       ))}
-    </>
+    </Flex>
   );
 };
 

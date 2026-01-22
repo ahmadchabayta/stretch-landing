@@ -56,7 +56,7 @@ const StretchUserExperience = () => {
       }}
     >
       <img
-        className="absolute -z-0 object-contain top-[307px] right-[-0.5%] w-[clamp(96px,20vw,140px)] md:right-[0.5%] md:w-[clamp(180px,32vw,240px)] lg:w-[clamp(340px,32vw,420px)] xl:top-[366px] xl:left-[41px]"
+        className="absolute -z-0 object-contain top-[307px] right-[-0.5%] w-[clamp(96px,20vw,140px)] md:right-[0.5%] md:w-[clamp(180px,32vw,240px)] lg:w-[clamp(340px,32vw,420px)] xl:top-[35%] xl:left-[41px]"
         src={withBase(isLargeScreen ? data.images.large : data.images.small)}
         alt="Blue Circle"
       />
