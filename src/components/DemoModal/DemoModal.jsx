@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
-import { Button } from "..";
+import { Button, Flex, Typography } from "..";
+import Input from "../UI/Input/Input";
+import Textarea from "../UI/Input/Textarea";
 import data from "./demo_modal.data.json";
 
 const DemoModal = ({ isOpen, onClose }) => {
@@ -54,123 +56,105 @@ const DemoModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-9999 flex items-center justify-center"
-      onClick={onClose}
-      role="presentation"
-    >
+    <div className="fixed inset-0 z-9999 flex items-center justify-center" role="presentation">
       {/* Backdrop with blur */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
-
-      {/* Modal Container */}
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
       <div
-        className="relative z-10 w-[95%] sm:w-[90%] md:w-[85%] lg:w-[748px] max-w-[748px] mx-auto px-2 sm:px-4"
-        onClick={(e) => e.stopPropagation()}
-        role="dialog"
-        aria-modal="true"
-      >
-        {/* Header Image */}
+        className="absolute inset-0 bg-black/30 backdrop-blur-sm"
+        onClick={onClose}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onClose();
+          }
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Close modal"
+      />
 
-        {/* Main Modal Card */}
-        <div
-          className="relative bg-transparent rounded-[20px] sm:rounded-[25px] md:rounded-[35px] border border-black"
-          style={{
-            boxShadow: "7px 9px 16.5px 0px rgba(0, 0, 0, 0.25)",
-            backgroundImage: `url('${data.modal_background}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          {/* Form Content */}
-          <form
-            onSubmit={handleSubmit}
-            className="relative pt-[40px] sm:pt-[50px] md:pt-[60px] pb-[40px] sm:pb-[50px] md:pb-[57px] px-[20px] sm:px-[40px] md:px-[61px]"
+      {/* Modal Content with absolute image */}
+      <section
+        className="relative w-[356px] xs:w-[376px] sm:w-[506px] md:w-[606px] lg:w-[706px]  flex justify-center items-start px-4 sm:px-6 md:px-12 py-6"
+        role="dialog"
+        tabIndex={-1}
+        aria-modal="true"
+        style={{ minHeight: 500 }}
+      >
+        {/* Responsive background image absolutely positioned */}
+        <img
+          src={data.background.mobile}
+          alt="Modal background"
+          className="absolute inset-0 w-full h-full object-fill md:hidden pointer-events-none select-none z-0"
+          draggable={false}
+        />
+        <img
+          src={data.background.large}
+          alt="Modal background large"
+          className="absolute inset-0 w-full h-full object-fill hidden md:block pointer-events-none select-none z-0"
+          draggable={false}
+        />
+        {/* Modal form content above image */}
+        <form className="relative w-full z-10" onSubmit={handleSubmit}>
+          <Flex align="items-start" justify="justify-start">
+            <Typography
+              as="h2"
+              variant="modal-title"
+              className="flex flex-col items-start text-left w-full"
+            >
+              {data.modal_title.part1}
+              <Typography.Text className="text-black text-[24px] text-left w-full">{` ${data.modal_title.part2}`}</Typography.Text>
+            </Typography>
+          </Flex>
+          <Flex
+            spaceY="space-y-2.5 md:space-y-3 2xl:space-y-8"
+            className="w-full mx-auto mt-12"
+            direction="flex-col"
+            align="items-center"
           >
-            {/* Username Input */}
-            <input
+            <Input
               type="text"
               name="username"
               value={formData.username}
               onChange={handleChange}
               placeholder="Username"
               required
-              className="w-full bg-white/50 focus:bg-white backdrop-blur-sm rounded-[12px] sm:rounded-[16px] md:rounded-[20px] px-[16px] sm:px-[20px] md:px-[23px] py-[10px] sm:py-[12px] md:py-[13px] mb-4 sm:mb-5 md:mb-6 font-poppins text-[16px] sm:text-[20px] md:text-[24px] text-black placeholder:opacity-30 border-none outline-none focus:ring-2 focus:ring-black/10 transition-colors"
             />
-
-            {/* Email Input */}
-            <input
+            <Input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
               required
-              className="w-full bg-white/50 focus:bg-white backdrop-blur-sm rounded-[12px] sm:rounded-[16px] md:rounded-[20px] px-[16px] sm:px-[20px] md:px-[23px] py-[10px] sm:py-[12px] md:py-[13px] mb-4 sm:mb-5 md:mb-6 font-poppins text-[16px] sm:text-[20px] md:text-[24px] text-black placeholder:opacity-30 border-none outline-none focus:ring-2 focus:ring-black/10 transition-colors"
             />
-
-            {/* Company Name Input */}
-            <input
+            <Input
               type="text"
               name="company"
               value={formData.company}
               onChange={handleChange}
               placeholder="Company Name"
               required
-              className="w-full bg-white/50 focus:bg-white backdrop-blur-sm rounded-[12px] sm:rounded-[16px] md:rounded-[20px] px-[16px] sm:px-[20px] md:px-[23px] py-[10px] sm:py-[12px] md:py-[13px] mb-4 sm:mb-5 md:mb-6 font-poppins text-[16px] sm:text-[20px] md:text-[24px] text-black placeholder:opacity-30 border-none outline-none focus:ring-2 focus:ring-black/10 transition-colors"
             />
-
-            {/* LinkedIn Input */}
-            <input
+            <Input
               type="text"
               name="linkedin"
               value={formData.linkedin}
               onChange={handleChange}
               placeholder="Company LinkedIn"
-              className="w-full bg-white/50 focus:bg-white backdrop-blur-sm rounded-[12px] sm:rounded-[16px] md:rounded-[20px] px-[16px] sm:px-[20px] md:px-[23px] py-[10px] sm:py-[12px] md:py-[13px] mb-4 sm:mb-5 md:mb-6 font-poppins text-[16px] sm:text-[20px] md:text-[24px] text-black placeholder:opacity-30 border-none outline-none focus:ring-2 focus:ring-black/10 transition-colors"
             />
-
-            {/* Note Textarea */}
-            <textarea
+            <Textarea
               name="note"
               value={formData.note}
               onChange={handleChange}
               placeholder="Leave a Note.."
               rows={3}
-              className="w-full bg-white/50 focus:bg-white backdrop-blur-sm rounded-[12px] sm:rounded-[16px] md:rounded-[20px] px-[16px] sm:px-[20px] md:px-[23px] py-[10px] sm:py-[12px] md:py-[13px] mb-4 sm:mb-5 md:mb-6 font-poppins text-[18px] sm:text-[20px] md:text-[24px] text-gray-900 placeholder:opacity-30 outline-none resize-none transition-colors"
             />
-
-            {/* Submit Button */}
-            <div className="flex justify-center">
-              <Button
-                type="submit"
-                className="bg-black text-white rounded-[0.5rem] px-[40px] sm:px-[60px] md:px-[74px] py-2 sm:py-2.5 font-poppins font-bold text-[20px] sm:text-[26px] md:text-[32px] hover:bg-black/90 transition-all"
-              >
-                Schedule a Demo
-              </Button>
-            </div>
-          </form>
-
-          {/* Close button (X) */}
-          <button
-            type="button"
-            onClick={onClose}
-            className="absolute -top-5 -right-5 w-[50px] h-[50px] flex items-center justify-center rounded-full bg-accent transition-colors z-20"
-            aria-label="Close modal"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="#fff"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M15 5L5 15M5 5L15 15" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </button>
-        </div>
-      </div>
+            <Button variant="footer_contact" className="bg-black!">
+              {data.button_label.contact_button_label}
+            </Button>
+          </Flex>
+        </form>
+      </section>
     </div>
   );
 };

@@ -127,3 +127,17 @@ body {
     line-height: 34px;
   }
 } */
+
+.form-bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(./assets/footer/modal_background_mobile.webp);
+}
+
+@media (min-width: 1024px) {
+  .form-bg {
+    background-size: contain;
+    background-image: url(./assets/footer/modal_background.webp);
+  }
+}

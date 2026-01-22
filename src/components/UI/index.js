@@ -9,3 +9,4 @@ export { default as SectionHeadContainer } from "./SectionHeadContainer/SectionH
 export { default as Container } from "./Container/Container";
 export { default as Glass } from "./Glass/Glass";
 export { default as GlassCircle } from "./GlassCircle/GlassCircle";
+export { Input, Textarea } from "./Input";

@@ -1,3 +1,13 @@
 {
-  "modal_background": "./assets/demo_modal/modal_background.png"
+  "background": {
+    "large": "./assets/footer/modal_background.webp",
+    "mobile": "./assets/footer/modal_background_mobile.webp"
+  },
+  "modal_title": {
+    "part1": "Reach out",
+    "part2": " to our Sales Experts for a Demo"
+  },
+  "button_label": {
+    "contact_button_label": "Schedule a Demo Now"
+  }
 }

@@ -156,6 +156,10 @@ const typographyVariants = {
     3xl:text-[24px] 3xl:text-right
     
   `,
+  "modal-title": `
+    ltr:font-poppins rtl:font-tajawal font-bold text-accent
+    text-[40px] leading-normal text-start!
+  `,
 };
 
 const htmlElements = [
