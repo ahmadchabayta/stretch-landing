@@ -12,7 +12,7 @@ const ProvenToPerform = () => {
   const isArabic = language === "ar";
 
   return (
-    <Section className="relative bg-white! min-h-0!">
+    <Section className="relative min-h-0! py-0!">
       <div
         className="absolute inset-0 z-0"
         style={{

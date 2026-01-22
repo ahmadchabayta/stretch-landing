@@ -29,8 +29,13 @@ const OfflineAttribution = ({ id }) => {
     xl:flex
     absolute
     min-w-full
-    max-w-[1231px]
-    bottom-[-50%]
+    xl:max-w-[903px]
+    2xl:max-w-[1131px]
+    3xl:max-w-[1231px]
+    bottom-[-25%]
+    xl:bottom-[-40%]
+    2xl:bottom-[-50%]
+    3xl:bottom-[-25%]
     dir-ltr:left-[-10%]
     dir-ltr:xxl:left-[-8%]
     dir-ltr:2xl:left-[-5%]
@@ -74,7 +79,7 @@ const OfflineAttribution = ({ id }) => {
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] lg:w-[1231px] max-w-[1231px] cursor-pointer">
+      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] cursor-pointer overflow-visible">
         {/* Purple images (default) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}

@@ -42,7 +42,7 @@ const App = () => {
   } ${hideButton ? `${language === "ar" ? "translate-x-[-150%]" : "translate-x-[150%]"} pointer-events-none opacity-0!` : ""}`;
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-[#FAFBFC]">
       {/* for testing purpooses - to test title*/}
       {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
       <Button onClick={() => setIsModalOpen(true)} variant="fixed" className={floatingButtonClass}>
@@ -54,22 +54,22 @@ const App = () => {
       <>
         <Navbar />
         <div ref={heroRef}>
-          <Hero id={url_links_data.link_urls[0]} />
+          <Hero className="bg-white" id={url_links_data.link_urls[0]} />
         </div>
-        <WhatIsStretch id="what-is-stretch" />
-        <WhyDoYouNeedStretch id={url_links_data.link_urls[2]} />
-        <StretchUserExperience />
+        <WhatIsStretch className="bg-white" id="what-is-stretch" />
+        <WhyDoYouNeedStretch className="bg-white" id={url_links_data.link_urls[2]} />
+        <StretchUserExperience className="bg-[#FAFBFC]" />
 
         {/* <GlassCards /> */}
 
-        <Capabilities id="capabilities" />
-        <CrossChannel id={capability_url_links[0]} />
-        <AudienceMirroring id={capability_url_links[2]} />
-        <OfflineAttribution id={capability_url_links[3]} />
-        <ProfileEnrichment id={capability_url_links[1]} />
-        <ProvenToPerform />
-        <CompetitiveEdgeStretch />
-        <ImplementationOptions />
+        <Capabilities className="bg-white" id="capabilities" />
+        <CrossChannel className="bg-[#FAFBFC]" id={capability_url_links[0]} />
+        <AudienceMirroring className="bg-white" id={capability_url_links[2]} />
+        <OfflineAttribution className="bg-[#FAFBFC]" id={capability_url_links[3]} />
+        <ProfileEnrichment className="bg-white" id={capability_url_links[1]} />
+        <ProvenToPerform className="bg-[#FAFBFC]" />
+        <CompetitiveEdgeStretch className="bg-white" />
+        <ImplementationOptions className="bg-[#FAFBFC]" />
         <div ref={footerRef}>
           <Footer id={url_links_data.link_urls[3]} />
         </div>

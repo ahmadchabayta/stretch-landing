@@ -10,7 +10,7 @@ const PADDING_STYLES = {
 };
 
 const BACKGROUND_STYLES = {
-  default: "bg-[#FAFBFC]",
+  default: "",
   muted: "bg-slate-50",
   dark: "bg-black text-white",
   primary: "bg-primary text-white",
@@ -43,7 +43,7 @@ const Section = ({
     id={id}
     className={cn(
       // Base section styles previously defined in global CSS
-      "relative mx-auto min-h-screen w-full mb-6",
+      "relative mx-auto min-h-screen w-full",
       PADDING_STYLES[padding],
       BACKGROUND_STYLES[background],
       className,
