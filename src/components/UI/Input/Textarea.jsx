@@ -20,7 +20,7 @@ const Textarea = forwardRef(
     ref,
   ) => {
     const baseStyles =
-      "w-full border rounded-[0.5rem] px-3 py-1 font-poppins text-[16px] text-black placeholder:text-gray-400 outline-none resize-none transition-all";
+      "w-full border-2 rounded-[0.5rem] px-2 sm:px-3 lg:px-5 py-2 sm:py-2.5 lg:py-3 font-poppins text-[15px] sm:text-[16px] lg:text-[17px] text-black placeholder:text-gray-400 outline-none resize-none transition-all";
 
     const variants = {
       default: "bg-[#E7EAED] border-gray-200 focus:bg-white focus:border-black",

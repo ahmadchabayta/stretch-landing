@@ -14,13 +14,60 @@ const DemoModal = ({ isOpen, onClose }) => {
     note: "",
   });
 
+  const [errors, setErrors] = useState({
+    username: "",
+    email: "",
+    company: "",
+    note: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Validate username
+    if (!formData.username.trim()) {
+      newErrors.username = "Username is required";
+    }
+
+    // Validate email
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Validate company
+    if (!formData.company.trim()) {
+      newErrors.company = "Company name is required";
+    }
+
+    // Validate note (required field)
+    if (!formData.note.trim()) {
+      newErrors.note = "Please leave a note";
+    } else if (formData.note.length > 500) {
+      newErrors.note = "Note must be 500 characters or less";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate form before submitting
+    if (!validateForm()) {
+      return;
+    }
 
     // Create mailto link with form data
     const subject = encodeURIComponent("Schedule a Demo");
@@ -36,6 +83,12 @@ const DemoModal = ({ isOpen, onClose }) => {
       email: "",
       company: "",
       linkedin: "",
+      note: "",
+    });
+    setErrors({
+      username: "",
+      email: "",
+      company: "",
       note: "",
     });
     onClose();
@@ -94,7 +147,7 @@ const DemoModal = ({ isOpen, onClose }) => {
           draggable={false}
         />
         {/* Modal form content above image */}
-        <form className="relative w-full z-10" onSubmit={handleSubmit}>
+        <form className="relative w-full z-10" onSubmit={handleSubmit} noValidate>
           <Flex align="items-start" justify="justify-start">
             <Typography
               as="h2"
@@ -117,7 +170,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               value={formData.username}
               onChange={handleChange}
               placeholder="Username"
-              required
+              error={!!errors.username}
+              errorMessage={errors.username}
             />
             <Input
               type="email"
@@ -125,7 +179,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
-              required
+              error={!!errors.email}
+              errorMessage={errors.email}
             />
             <Input
               type="text"
@@ -133,7 +188,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               value={formData.company}
               onChange={handleChange}
               placeholder="Company Name"
-              required
+              error={!!errors.company}
+              errorMessage={errors.company}
             />
             <Input
               type="text"
@@ -148,8 +204,10 @@ const DemoModal = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="Leave a Note.."
               rows={3}
+              error={!!errors.note}
+              errorMessage={errors.note}
             />
-            <Button variant="footer_contact" className="bg-black!">
+            <Button type="submit" variant="footer_contact" className="bg-black!">
               {data.button_label.contact_button_label}
             </Button>
           </Flex>
