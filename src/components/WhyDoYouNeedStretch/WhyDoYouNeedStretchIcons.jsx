@@ -5,7 +5,7 @@ import { withBase } from "../../utils/withBase";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const containerStyles = `
-  relative w-full max-w-[612px] min-h-[157px] z-50 my-10 mx-auto 3xl:min-h-[321px] flex flex-col
+  relative w-full max-w-[612px] min-h-[157px] z-50 mx-auto h-[331px] flex flex-col
 `;
 
 const iconStyles = `
@@ -43,33 +43,34 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
     <Flex
       flex="flex lg:grid lg:grid-cols-2"
       direction="flex-col"
-      align="items-center place-items-center"
+      align="items-center place-items-start"
       justify="justify-center"
-      spaceY="space-y-[25px] lg:space-y-0"
-      gap="lg:gap-y-20"
+      gap="lg:gap-y-8"
       className="w-full "
     >
       {items.map((item, index) => (
         <Flex
           key={index}
-          align="items-center"
-          justify="justify-center"
+          align="items-start"
+          justify="justify-start"
           direction="flex-col"
           className={containerStyles}
         >
-          {isDesktop ? (
-            <img className={iconStyles} src={item.icon} alt={item.issue} />
-          ) : (
-            <motion.img
-              className={iconStyles}
-              src={item.icon}
-              alt={item.issue}
-              variants={imageVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            />
-          )}
+          <div className="w-full flex items-start justify-start">
+            {isDesktop ? (
+              <img className={iconStyles} src={item.icon} alt={item.issue} />
+            ) : (
+              <motion.img
+                className={iconStyles}
+                src={item.icon}
+                alt={item.issue}
+                variants={imageVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              />
+            )}
+          </div>
           <Flex align="items-start justify-center self-start" className="w-full">
             <Typography as="p" variant="section-desc" className={detailsStyles}>
               {typeof item.details === "string" ? (
