@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
 import data from "./hero.data.json";
 import HeroFeatures from "./HeroFeatures";
-import { Button, Container, Section, Typography } from "../../components";
+import { Button, Container, DemoModal, Section, Typography } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import HeroTitle from "./HeroTitle";
+import { useState } from "react";
 
 const Hero = ({ id }) => {
   const { language } = useLanguage();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionLabels = data.languages[language] || data.languages.en;
 
   const isLTR = language === "en";
@@ -29,10 +31,7 @@ const Hero = ({ id }) => {
           <HeroTitle sectionLabels={sectionLabels} />
 
           <Button
-            as="a"
-            href="https://test.stretchtag.ai/signup"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => setIsModalOpen(true)}
             variant="demo"
             className="place-self-center xl:place-self-start w-fit! h-fit! mt-[18.26px] lg:mt-[84.5px] xl:mt-[42.6px] 3xl:mt-[63.11px]"
           >
@@ -40,6 +39,7 @@ const Hero = ({ id }) => {
               {sectionLabels.button_label}
             </Typography>
           </Button>
+          <DemoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
         <Container className="mt-[278px] md:mt-[470px] lg:mt-[682.71px] xl:mt-[138.7px]">
           <HeroFeatures data={sectionLabels.hero_features} />

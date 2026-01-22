@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import {
   AudienceMirroring,
@@ -17,6 +17,7 @@ import {
   Footer,
   Typography,
   Button,
+  DemoModal,
 } from "./components";
 import { useLanguage } from "./context/LanguageContext";
 import url_links_data from "../src/components/Navbar/navbar.data.json";
@@ -29,6 +30,7 @@ const buttonLabels = {
 
 const App = () => {
   const { language } = useLanguage();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const heroRef = useRef(null);
   const footerRef = useRef(null);
   const heroInView = useInView(heroRef, { amount: 0.1 });
@@ -43,18 +45,12 @@ const App = () => {
     <div className="overflow-x-hidden">
       {/* for testing purpooses - to test title*/}
       {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
-      <Button
-        as="a"
-        href="https://test.stretchtag.ai/signup"
-        target="_blank"
-        rel="noopener noreferrer"
-        variant="fixed"
-        className={floatingButtonClass}
-      >
+      <Button onClick={() => setIsModalOpen(true)} variant="fixed" className={floatingButtonClass}>
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
         </Typography>
       </Button>
+      <DemoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <>
         <Navbar />
         <div ref={heroRef}>
