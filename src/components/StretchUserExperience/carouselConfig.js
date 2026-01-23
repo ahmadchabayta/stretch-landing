@@ -32,7 +32,7 @@ export const getCarouselSpread = ({
 export const getCarouselPositions = (spread, isLargeScreen, isMobile) => {
   if (isLargeScreen) {
     return [
-      { x: `-${spread.x}%`, y: `10%`, z: 0, scale: 1, opacity: 1, zIndex: 30 },
+      { x: `-${spread.x}%`, y: 0, z: 0, scale: 1, opacity: 1, zIndex: 30 },
       { x: `${spread.x * 3}%`, y: 0, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
       { x: `${spread.x * 6}%`, y: 0, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
     ];
@@ -40,7 +40,7 @@ export const getCarouselPositions = (spread, isLargeScreen, isMobile) => {
 
   if (isMobile) {
     return [
-      { x: 0, y: `${spread.y + 30}%`, z: 0, scale: 1, opacity: 1, zIndex: 30 },
+      { x: 0, y: `${spread.y + 20}%`, z: 0, scale: 1, opacity: 1, zIndex: 30 },
       { x: 0, y: `${spread.y * 10}%`, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
       { x: 0, y: `${spread.y * 20}%`, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
     ];
@@ -48,9 +48,9 @@ export const getCarouselPositions = (spread, isLargeScreen, isMobile) => {
 
   // Tablet
   return [
-    { x: 0, y: `${spread.y + 30}%`, z: 0, scale: 1, opacity: 1, zIndex: 30 },
-    { x: 0, y: `${spread.y * 10}%`, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
-    { x: 0, y: `${spread.y * 20}%`, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
+    { x: 0, y: `${spread.y + 20}%`, z: 0, scale: 1, opacity: 1, zIndex: 30 },
+    { x: 0, y: `${spread.y * 12}%`, z: spread.z, scale: 0.7, opacity: 0.4, zIndex: 20 },
+    { x: 0, y: `${spread.y * 15}%`, z: spread.z * 1.5, scale: 0.3, opacity: 0.3, zIndex: 10 },
   ];
 };
 
