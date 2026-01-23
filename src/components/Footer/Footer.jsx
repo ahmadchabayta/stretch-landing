@@ -39,21 +39,23 @@ const Footer = ({ id }) => {
           justify="justify-end"
           className="w-full flex-1 bg-black min-h-full pb-6"
         >
-          <img
-            className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px]"
-            src={withBase(data.footer_logo)}
-            alt="Stretch logo"
-          />
+          <Container>
+            <img
+              className="mt-[26px] mb-[38.22px] w-[200px] max-w-full object-contain p-8 md:w-[260px] lg:w-[320px] xl:mt-0 xl:mb-10 xl:w-[362px] mx-auto"
+              src={withBase(data.footer_logo)}
+              alt="Stretch logo"
+            />
 
-          <Flex
-            flex="flex"
-            direction="flex-col lg:flex-row"
-            align="items-center lg:items-start"
-            justify="justify-between"
-            className="w-full max-w-[90vw]"
-          >
-            <FooterLinksColumns labels={labels} language={language} />
-          </Flex>
+            <Flex
+              flex="flex"
+              direction="flex-col lg:flex-row"
+              align="items-center lg:items-start"
+              justify="justify-between"
+              className="w-full max-w-[90vw]"
+            >
+              <FooterLinksColumns labels={labels} language={language} />
+            </Flex>
+          </Container>
         </Flex>
       </Section>
     </footer>

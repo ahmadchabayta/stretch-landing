@@ -61,7 +61,7 @@ const InteractiveImage = () => {
 
   const iphoneSide = isRTL
     ? `left-[-20%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`
-    : `left-[50%] translate-x-[-50%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)]`;
+    : `left-[50%] translate-x-[-50%] md:left-[35%] md:translate-x-[-50%] lg:translate-x-0 lg:left-[-10%] xl:left-[clamp(-8%,-3vw,-3%)] 3xl:left-[-10%]`;
 
   const iphonePosition = `${iphoneTop} ${iphoneSide}`;
 
@@ -87,6 +87,7 @@ const InteractiveImage = () => {
         lg:top-[23%]
         xl:top-[9%]
         2xl:top-[13%]
+        3xl:top-[15%]
       `;
 
   const graphSide = isRTL

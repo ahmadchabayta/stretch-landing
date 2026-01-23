@@ -14,7 +14,7 @@ const WhatIsStretch = ({ className, id }) => {
       <Container>
         <SectionTitle data={sectionLabels} />
       </Container>
-      <div className="relative w-full min-h-[80vh]">
+      <div className="relative w-full max-w-[1920px] min-h-[80vh] mx-auto">
         <InteractiveImage data={sectionLabels} />
       </div>
       <Container className="relative">

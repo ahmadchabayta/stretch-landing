@@ -1,7 +1,8 @@
 {
   "background": {
     "large": "./assets/footer/modal_background.webp",
-    "mobile": "./assets/footer/modal_background_mobile.webp"
+    "mobile": "./assets/footer/modal_background_mobile.webp",
+    "decorative_circle": "./assets/footer/orange_circle.webp"
   },
   "modal_title": {
     "part1": "Reach out",

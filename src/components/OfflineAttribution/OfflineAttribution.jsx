@@ -37,9 +37,9 @@ const OfflineAttribution = ({ id }) => {
     2xl:bottom-[-50%]
     3xl:bottom-[-25%]
     dir-ltr:left-[-10%]
-    dir-ltr:xxl:left-[-8%]
-    dir-ltr:2xl:left-[-5%]
-    dir-ltr:3xl:left-0
+    dir-ltr:xxl:left-[-11%]
+    dir-ltr:2xl:left-[-13%]
+    dir-ltr:3xl:left-[-12%]
     dir-rtl:left-0
     dir-rtl:xxl:right-[-8%]
     dir-rtl:3xl:right-0
@@ -71,7 +71,7 @@ const OfflineAttribution = ({ id }) => {
     <Section
       dir="ltr"
       id={id}
-      className="relative overflow-hidden flex flex-col min-h-0! lg:min-h-screen!"
+      className="relative overflow-hidden flex flex-col min-h-0!  items-center"
     >
       <Container className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
@@ -79,7 +79,7 @@ const OfflineAttribution = ({ id }) => {
           <SectionData labels={labels} language={language} />
         </Flex>
       </Container>
-      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] cursor-pointer overflow-visible">
+      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] 3xl:max-w-[1920px] cursor-pointer overflow-visible">
         {/* Purple images (default) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}

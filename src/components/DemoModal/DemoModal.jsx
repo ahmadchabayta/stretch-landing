@@ -133,7 +133,12 @@ const DemoModal = ({ isOpen, onClose }) => {
         aria-modal="true"
         style={{ minHeight: 500 }}
       >
-        {/* Responsive background image absolutely positioned */}
+        {/* Responsive background decorative_circleimage absolutely positioned */}
+        <img
+          className="w-[99px] right-2 md:w-[163px] z-10 absolute lg:right-[15px]"
+          src={data.background.decorative_circle}
+          alt="decorative circle"
+        />
         <img
           src={data.background.mobile}
           alt="Modal background"
@@ -152,7 +157,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             <Typography
               as="h2"
               variant="modal-title"
-              className="flex flex-col items-start text-left w-full"
+              className="flex flex-col items-start text-left w-full text-balance"
             >
               {data.modal_title.part1}
               <Typography.Text className="text-black text-[24px] text-left w-full">{` ${data.modal_title.part2}`}</Typography.Text>
