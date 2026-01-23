@@ -34,7 +34,7 @@ const InteractiveCarousel = ({ images }) => {
       >
         <img
           src={withBase(images.macbook)}
-          className="pointer-events-none relative z-20 w-[90%] sm:w-[75%] md:w-[80%] lg:w-[75%] 3xl:w-full 3xl:max-w-[900px] max-w-[700px] min-w-[200px] h-auto"
+          className="pointer-events-none relative z-20 w-[90%] sm:w-[75%] md:w-[80%] lg:w-[75%] max-w-[700px] min-w-[200px] h-auto"
           alt="Macbook Base"
         />
 
@@ -52,7 +52,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center border-none w-full max-w-[550px] min-w-[200px] h-auto ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[45%] max-w-[400px] min-w-[200px] h-auto ${getPosition(0) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
         {/* Screen 2 */}
@@ -69,7 +69,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center border-none w-full max-w-[550px] min-w-[170px] h-auto ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[40%] max-w-[580px] min-w-[170px] h-auto ${getPosition(1) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
 
@@ -87,7 +87,7 @@ const InteractiveCarousel = ({ images }) => {
             mass: 0.8,
             velocity: 0,
           }}
-          className={`absolute origin-center border-none w-full max-w-[620px] min-w-[190px] h-auto ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
+          className={`absolute origin-center border-none w-[43%] max-w-[620px] min-w-[190px] h-auto ${getPosition(2) === "next" ? "-z-1" : "z-20"}`}
           draggable={false}
         />
       </Flex>

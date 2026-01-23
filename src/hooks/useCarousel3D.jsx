@@ -4,6 +4,8 @@ import useMediaQuery from "../hooks/useMediaQuery";
 export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
   const isLg = useMediaQuery("(min-width: 1024px)");
   const isXl = useMediaQuery("(min-width: 1280px)");
+  const is2Xl = useMediaQuery("(min-width: 1536px)");
+  const is3Xl = useMediaQuery("(min-width: 1920px)");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -26,11 +28,11 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
 
   const variants = useMemo(() => {
     const radiusX = 350; // Horizontal distance - fixed value
-    const radiusY = -50; // Vertical distance (upward arc)
+    const radiusY = is3Xl ? 120 : is2Xl ? 80 : -50; // Vertical distance (upward arc)
     const tilt = -10; // Base tilt
     const zDepth = 150; // How far back in 3D space
     const scaleSide = 0.6;
-    const yOffset = -80; // Vertical offset to raise rotation center
+    const yOffset = is3Xl ? -80 : is2Xl ? -60 : -40; // Vertical offset to raise rotation center
 
     // Calculate circular positions around the MacBook with upward diagonal arc
     const getCircularPosition = (position) => {
