@@ -1,99 +1,76 @@
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
+import { useEffect, useActionState, useRef } from "react";
 import { Button, Flex, Typography } from "..";
 import Input from "../UI/Input/Input";
 import Textarea from "../UI/Input/Textarea";
 import data from "./demo_modal.data.json";
 import { preload } from "react-dom";
 
+// Form action function following React 19 best practices
+async function submitDemoForm(prevState, formData) {
+  const errors = {};
+
+  // Extract form data
+  const username = formData.get("username")?.toString().trim() || "";
+  const email = formData.get("email")?.toString().trim() || "";
+  const company = formData.get("company")?.toString().trim() || "";
+  const linkedin = formData.get("linkedin")?.toString().trim() || "";
+  const note = formData.get("note")?.toString().trim() || "";
+
+  // Validate username
+  if (!username) {
+    errors.username = "Username is required";
+  }
+
+  // Validate email
+  if (!email) {
+    errors.email = "Email is required";
+  } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+    errors.email = "Please enter a valid email address";
+  }
+
+  // Validate company
+  if (!company) {
+    errors.company = "Company name is required";
+  }
+
+  // Validate note
+  if (!note) {
+    errors.note = "Please leave a note";
+  } else if (note.length > 500) {
+    errors.note = "Note must be 500 characters or less";
+  }
+
+  // Return errors if validation fails
+  if (Object.keys(errors).length > 0) {
+    return { errors, success: false };
+  }
+
+  // Create mailto link with form data
+  const subject = encodeURIComponent("Schedule a Demo");
+  const body = encodeURIComponent(
+    `Hello Team,\n\nName: ${username}\nEmail: ${email}\nCompany: ${company}\nLinkedIn: ${linkedin}\n\nNote:\n${note}`,
+  );
+
+  window.location.href = `mailto:strategy@memob.com?subject=${subject}&body=${body}`;
+
+  return { errors: {}, success: true };
+}
+
 const DemoModal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    company: "",
-    linkedin: "",
-    note: "",
+  const formRef = useRef(null);
+  const [state, formAction, isPending] = useActionState(submitDemoForm, {
+    errors: {},
+    success: false,
   });
 
-  const [errors, setErrors] = useState({
-    username: "",
-    email: "",
-    company: "",
-    note: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
+  // Reset form and close modal on success
+  useEffect(() => {
+    if (state.success && isOpen) {
+      formRef.current?.reset();
+      onClose();
     }
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-
-    // Validate username
-    if (!formData.username.trim()) {
-      newErrors.username = "Username is required";
-    }
-
-    // Validate email
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    // Validate company
-    if (!formData.company.trim()) {
-      newErrors.company = "Company name is required";
-    }
-
-    // Validate note (required field)
-    if (!formData.note.trim()) {
-      newErrors.note = "Please leave a note";
-    } else if (formData.note.length > 500) {
-      newErrors.note = "Note must be 500 characters or less";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Validate form before submitting
-    if (!validateForm()) {
-      return;
-    }
-
-    // Create mailto link with form data
-    const subject = encodeURIComponent("Schedule a Demo");
-    const body = encodeURIComponent(
-      `Hello Team,\n\nName: ${formData.username}\nEmail: ${formData.email}\nCompany: ${formData.company}\nLinkedIn: ${formData.linkedin}\n\nNote:\n${formData.note}`,
-    );
-
-    window.location.href = `mailto:strategy@memob.com?subject=${subject}&body=${body}`;
-
-    // Reset form and close modal
-    setFormData({
-      username: "",
-      email: "",
-      company: "",
-      linkedin: "",
-      note: "",
-    });
-    setErrors({
-      username: "",
-      email: "",
-      company: "",
-      note: "",
-    });
-    onClose();
-  };
+  }, [state.success, isOpen, onClose]);
 
   // Handle escape key press to close modal
   useEffect(() => {
@@ -159,7 +136,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             draggable={false}
           />
           {/* Modal form content above image */}
-          <form className="relative w-full z-10" onSubmit={handleSubmit} noValidate>
+          <form ref={formRef} action={formAction} className="relative w-full z-10" noValidate>
             <Flex align="items-start" justify="justify-start">
               <Typography
                 as="h2"
@@ -179,48 +156,48 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="username"
-                value={formData.username}
-                onChange={handleChange}
                 placeholder="Username"
-                error={!!errors.username}
-                errorMessage={errors.username}
+                error={!!state.errors.username}
+                errorMessage={state.errors.username}
+                disabled={isPending}
               />
               <Input
                 type="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 placeholder="Email Address"
-                error={!!errors.email}
-                errorMessage={errors.email}
+                error={!!state.errors.email}
+                errorMessage={state.errors.email}
+                disabled={isPending}
               />
               <Input
                 type="text"
                 name="company"
-                value={formData.company}
-                onChange={handleChange}
                 placeholder="Company Name"
-                error={!!errors.company}
-                errorMessage={errors.company}
+                error={!!state.errors.company}
+                errorMessage={state.errors.company}
+                disabled={isPending}
               />
               <Input
                 type="text"
                 name="linkedin"
-                value={formData.linkedin}
-                onChange={handleChange}
                 placeholder="Company LinkedIn"
+                disabled={isPending}
               />
               <Textarea
                 name="note"
-                value={formData.note}
-                onChange={handleChange}
                 placeholder="Leave a Note.."
                 rows={3}
-                error={!!errors.note}
-                errorMessage={errors.note}
+                error={!!state.errors.note}
+                errorMessage={state.errors.note}
+                disabled={isPending}
               />
-              <Button type="submit" variant="footer_contact" className="bg-black!">
-                {data.button_label.contact_button_label}
+              <Button
+                type="submit"
+                variant="footer_contact"
+                className="bg-black!"
+                disabled={isPending}
+              >
+                {isPending ? "Submitting..." : data.button_label.contact_button_label}
               </Button>
             </Flex>
           </form>
