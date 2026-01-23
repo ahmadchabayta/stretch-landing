@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Flex, Typography } from "../../components";
 import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
 
-// eslint-disable-next-line no-unused-vars
 const SectionData = ({ labels, language }) => {
   const parsedNumber = Number(String(labels.number).replace(/,/g, ""));
   const locale = language === "ar" ? "ar-EG" : "en-US";
