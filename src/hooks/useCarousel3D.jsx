@@ -26,7 +26,7 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
 
   const variants = useMemo(() => {
     const radiusX = 350; // Horizontal distance - fixed value
-    const radiusY = 100; // Vertical distance (upward arc)
+    const radiusY = -50; // Vertical distance (upward arc)
     const tilt = -10; // Base tilt
     const zDepth = 150; // How far back in 3D space
     const scaleSide = 0.6;
