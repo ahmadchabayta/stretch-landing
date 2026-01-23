@@ -38,9 +38,9 @@ const CompetitiveEdgeStretch = () => {
 
         {/* Premium Comparison Grid */}
         <div className="relative z-10 w-full px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
-          <div className="mx-auto w-full max-w-7xl">
+          <Container className="mx-auto w-full">
             {/* Grid Container */}
-            <div className="overflow-hidden rounded-2xl py-4 lg:py-6">
+            <div className="overflow-hidden">
               <GridHeader
                 columns={labels.columns}
                 isArabic={isArabic}
@@ -82,7 +82,7 @@ const CompetitiveEdgeStretch = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </Container>
         </div>
       </Section>
     </div>
