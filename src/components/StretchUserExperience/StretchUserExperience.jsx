@@ -47,7 +47,7 @@ const StretchUserExperience = () => {
   return (
     <Section
       container={false}
-      className="stretch_user_experience relative w-full overflow-hidden flex flex-col min-h-[90vh] xs:min-h-[95vh] sm:min-h-[90vh]"
+      className="stretch_user_experience relative w-full overflow-hidden flex flex-col min-h-screen xs:min-h-[89vh] sm:min-h-[80vh] xl:min-h-0!"
       style={{
         backgroundImage: `url('${withBase(backgroundImage)}')`,
         backgroundRepeat: "no-repeat",
