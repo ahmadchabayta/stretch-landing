@@ -14,7 +14,6 @@ import graphData from "./graph.data.json";
 import tableData from "./simple_table.data.json";
 
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, Keyboard, Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -32,14 +31,13 @@ const ProfileEnrichmentAlternative = () => {
       <Swiper
         centeredSlides={true}
         spaceBetween={50}
-        freeMode={true}
         slidesPerView={isLg ? 2 : 1}
         grabCursor={true}
         pagination={{
           clickable: true,
         }}
         loop={true}
-        speed={9000}
+        speed={4000}
         modules={[Mousewheel, Keyboard, Pagination, Autoplay]}
         direction="horizontal"
         mousewheel={{ forceToAxis: true, releaseOnEdges: false }}
