@@ -96,7 +96,7 @@ export const useCarousel3D = (slidesLength, intervalMs = 4000) => {
       next: getCircularPosition("next"),
       prev: getCircularPosition("prev"),
     };
-  }, []);
+  }, [is2Xl, is3Xl]);
 
   return { currentSlide, setCurrentSlide: handleSetSlide, getPosition, variants, isLg, isXl };
 };

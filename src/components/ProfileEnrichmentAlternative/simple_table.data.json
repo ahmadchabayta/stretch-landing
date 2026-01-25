@@ -1,0 +1,10 @@
+{
+  "chartTitle": "Top Categories",
+  "chartData": [
+    { "label": "Books & Literature", "value": 9.03 },
+    { "label": "Advertising", "value": 7.39 },
+    { "label": "Business Software", "value": 2.18 },
+    { "label": "Exercise", "value": 1.42 },
+    { "label": "Music", "value": 0.94 }
+  ]
+}

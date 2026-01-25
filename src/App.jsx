@@ -21,7 +21,7 @@ import {
 } from "./components";
 import { useLanguage } from "./context/LanguageContext";
 import url_links_data from "../src/components/Navbar/navbar.data.json";
-import { capability_url_links } from "./components/Capabilities/capabilities.data";
+import ProfileEnrichmentAlternative from "./components/ProfileEnrichmentAlternative/ProfileEnrichmentAlternative";
 
 const buttonLabels = {
   en: "Book a Demo",
@@ -57,16 +57,14 @@ const App = () => {
           <Hero className="bg-white" id={url_links_data.link_urls[0]} />
         </div>
         <WhatIsStretch className="bg-white" id="what-is-stretch" />
-        <WhyDoYouNeedStretch className="bg-white" id={url_links_data.link_urls[2]} />
+        <WhyDoYouNeedStretch className="bg-white" />
         <StretchUserExperience className="bg-[#FAFBFC]" />
-
-        {/* <GlassCards /> */}
-
         <Capabilities className="bg-white" id="capabilities" />
-        <CrossChannel className="bg-[#FAFBFC]" id={capability_url_links[0]} />
-        <AudienceMirroring className="bg-white" id={capability_url_links[2]} />
-        <OfflineAttribution className="bg-[#FAFBFC]" id={capability_url_links[3]} />
-        <ProfileEnrichment className="bg-white" id={capability_url_links[1]} />
+        <CrossChannel className="bg-[#FAFBFC]" />
+        <AudienceMirroring className="bg-white" />
+        <OfflineAttribution className="bg-[#FAFBFC]" />
+        <ProfileEnrichment className="bg-white" />
+        <ProfileEnrichmentAlternative className="bg-white" />
         <ProvenToPerform className="bg-[#FAFBFC]" />
         <CompetitiveEdgeStretch className="bg-white" />
         <ImplementationOptions className="bg-[#FAFBFC]" />

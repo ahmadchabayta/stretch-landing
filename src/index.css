@@ -51,7 +51,43 @@ smaller images
 higher res images */
 
 /* font-extrabold text-[40px] sm:text-[44px] md:text-[48px] lg:text-[54px] xl:text-[60px] 2xl:text-[64px] 3xl:text-[72px] leading-[108%] */
+/* Converted Tailwind @apply rules to vanilla CSS for broader compatibility */
+.glass-card {
+  /* Slight white tint so the card is clearly visible (use !important to confirm override) */
+  background-color: rgba(255, 255, 255, 0.32) !important;
 
+  /* The "frosted" look (supports Safari and modern browsers) */
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+
+  /* A thin, semi-transparent border to define the edges */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  /* Soft shadow to give it depth and lift it off the background */
+  box-shadow:
+    0 10px 30px rgba(11, 15, 24, 0.06),
+    0 6px 12px rgba(11, 15, 24, 0.04);
+
+  /* Ensure element forms a stacking context for backdrop-filter to apply reliably */
+  position: relative;
+  isolation: isolate;
+  /* Temporary debugging outline to confirm CSS is applied (remove once confirmed) */
+  outline: 2px solid rgba(16, 24, 40, 0.04) !important;
+  outline-offset: -1px;
+  /* Fallback subtle gradient to help contrast on browsers without backdrop-filter */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+}
+
+.glass-reflection {
+  /* Adds a slight gradient to mimic a light source hitting the glass as an overlay image so background-color remains */
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
 @keyframes ripple {
   0% {
     transform: scale(0);

@@ -1,0 +1,12 @@
+{
+  "age": [
+    { "name": "18-24", "value": 40 },
+    { "name": "25-39", "value": 35 },
+    { "name": "40-45", "value": 20 },
+    { "name": ">55", "value": 5 }
+  ],
+  "gender": [
+    { "name": "Female", "value": 20 },
+    { "name": "Male", "value": 65 }
+  ]
+}

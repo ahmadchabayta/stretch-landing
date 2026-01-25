@@ -1,0 +1,103 @@
+/* eslint-disable import/no-unresolved */
+import { useLanguage } from "../../context/LanguageContext";
+import { Container, Flex } from "../UI";
+import Section from "../UI/Section/Section";
+
+import SectionTitle from "./SectionTitle";
+import data from "./profile_enrichment.data.json";
+
+import DonutChart from "../UI/Charts/DonutChart/DonutChart";
+import GraphChart from "../UI/Charts/GraphChart";
+import SimpleTable from "../UI/Charts/SimpleTable";
+import donutData from "./donut.data.json";
+import graphData from "./graph.data.json";
+import tableData from "./simple_table.data.json";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { Autoplay, Keyboard, Mousewheel, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import useMediaQuery from "../../hooks/useMediaQuery";
+
+const ProfileEnrichmentAlternative = () => {
+  const { language } = useLanguage();
+  const labels = data.languages?.[language] || data.languages?.en;
+  const isLg = useMediaQuery("(min-width: 1024px)");
+  return (
+    <Section className="my-6 min-h-0!">
+      <Container className="relative z-10">
+        <SectionTitle labels={labels} />
+      </Container>
+      <Swiper
+        centeredSlides={true}
+        spaceBetween={50}
+        freeMode={true}
+        slidesPerView={isLg ? 2 : 1}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        speed={9000}
+        modules={[Mousewheel, Keyboard, Pagination, Autoplay]}
+        direction="horizontal"
+        mousewheel={{ forceToAxis: true, releaseOnEdges: false }}
+        keyboard={{ enabled: true }}
+        autoplay={{
+          delay: 0, // or your preferred delay in ms
+          disableOnInteraction: true, // stops autoplay when user interacts
+        }}
+      >
+        <SwiperSlide>
+          <DonutChart
+            chartTitle={donutData.brand_affinity.chartTitle}
+            data={donutData.brand_affinity.data}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <DonutChart
+            chartTitle={donutData.brand_categories.chartTitle}
+            data={donutData.brand_categories.data}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Flex
+            className="h-full flex-1 my-auto"
+            direction="flex-col"
+            justify="justify-center"
+            align="items-center"
+            spaceY="space-y-4"
+          >
+            <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+
+            <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+          </Flex>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <DonutChart
+            chartTitle={donutData.top_interests.chartTitle}
+            data={donutData.top_interests.data}
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <DonutChart chartTitle={donutData.gender.chartTitle} data={donutData.gender.data} />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <DonutChart chartTitle={donutData.device_os.chartTitle} data={donutData.device_os.data} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Flex direction="flex-col" className="w-full" spaceY="space-y-2">
+            <GraphChart data={graphData.age} title="Age" />
+            <GraphChart data={graphData.gender} title="Gender" />
+          </Flex>
+        </SwiperSlide>
+      </Swiper>
+    </Section>
+  );
+};
+
+export default ProfileEnrichmentAlternative;

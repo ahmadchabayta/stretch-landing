@@ -4,18 +4,6 @@ import { Flex, Typography } from "../UI";
 import { withBase } from "../../utils/withBase";
 import useMediaQuery from "../../hooks/useMediaQuery";
 
-const containerStyles = `
-  relative w-full max-w-[612px] min-h-[157px] z-50 mx-auto h-[331px] flex flex-col
-`;
-
-const iconStyles = `
-w-full h-full object-contain xl:w-[615px] xl:h-auto
-`;
-
-const detailsStyles = `
-  h-full w-full max-w-[350px] 2xl:max-w-[450px] text-left 3xl:text-justify 3xl:text-[24px] 
-`;
-
 const WhyDoYouNeedStretchIcons = ({ data }) => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
@@ -46,7 +34,8 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
       align="items-center place-items-start"
       justify="justify-center"
       gap="lg:gap-y-8"
-      className="w-full "
+      spaceY="space-y-4 lg:space-y-0"
+      className="w-full lg:pb-6"
     >
       {items.map((item, index) => (
         <Flex
@@ -54,14 +43,18 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
           align="items-start"
           justify="justify-start"
           direction="flex-col"
-          className={containerStyles}
+          className="relative w-full max-w-[612px] min-h-full max-h-[330px] z-50 mx-auto"
         >
           <div className="w-full flex items-start justify-start">
             {isDesktop ? (
-              <img className={iconStyles} src={item.icon} alt={item.issue} />
+              <img
+                className="w-full h-full object-contain xl:w-[615px] xl:h-auto"
+                src={item.icon}
+                alt={item.issue}
+              />
             ) : (
               <motion.img
-                className={iconStyles}
+                className="w-full h-full object-contain xl:w-[615px] xl:h-auto"
                 src={item.icon}
                 alt={item.issue}
                 variants={imageVariants}
@@ -72,7 +65,11 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
             )}
           </div>
           <Flex align="items-start justify-center self-start" className="w-full">
-            <Typography as="p" variant="section-desc" className={detailsStyles}>
+            <Typography
+              as="p"
+              variant="section-desc"
+              className="h-full w-full max-w-[350px] 2xl:max-w-[450px] text-left 3xl:text-justify 3xl:text-[24px]"
+            >
               {typeof item.details === "string" ? (
                 item.details
               ) : (

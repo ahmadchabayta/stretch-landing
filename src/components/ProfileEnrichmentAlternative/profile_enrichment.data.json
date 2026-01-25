@@ -1,0 +1,35 @@
+{
+  "languages": {
+    "en": {
+      "title": {
+        "part1": "Profile",
+        "part2": "Enrichment"
+      },
+      "subtitle": {
+        "subtitle": "Enrich matched audience leveraging MEmob+ 3B data touch points, with ",
+        "highlighted": "real-world behaviors, apps used, brand affinity, demographics, and interests data",
+        "subtitle_2": "that platforms generally don’t share."
+      },
+      "button_label": "Book a Demo"
+    },
+    "ar": {
+      "title": {
+        "part1": "إثراء الملفات ",
+        "part2": "التعريفية"
+      },
+      "subtitle": {
+        "subtitle": "عزّز شرائح الجمهور المطابقة بالاستفادة من أكثر من 3 مليارات نقطة بيانات لدى MEmob+، والمتعلقة",
+        "highlighted": " بالسلوكيات الواقعية، والتطبيقات المستخدمة، وولاء العلامة التجارية، والبيانات الديموغرافية، والاهتمامات",
+        "subtitle_2": " التي لا تشاركها المنصات عادة."
+      },
+      "button_label": "احجز عرضاً توضيحياً"
+    }
+  },
+  "images": {
+    "background": "./assets/profile_enrichment/web.webp",
+    "screen_1": "./assets/profile_enrichment/screen_1.webp",
+    "screen_2": "./assets/profile_enrichment/screen_2.webp",
+    "screen_3": "./assets/profile_enrichment/screen_3.webp",
+    "macbook": "./assets/profile_enrichment/macbook.webp"
+  }
+}
