@@ -37,7 +37,7 @@ const ProfileEnrichmentAlternative = () => {
           clickable: true,
         }}
         loop={true}
-        speed={4000}
+        speed={2000}
         modules={[Mousewheel, Keyboard, Pagination, Autoplay]}
         direction="horizontal"
         mousewheel={{ forceToAxis: true, releaseOnEdges: false }}
