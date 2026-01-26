@@ -87,9 +87,9 @@ const DemoModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   // Preload modal images for performance
-  preload(data.background.decorative_circle);
-  preload(data.background.mobile);
-  preload(data.background.large);
+  preload(data.background.decorative_circle, { as: "image" });
+  preload(data.background.mobile, { as: "image" });
+  preload(data.background.large, { as: "image" });
 
   return (
     <>

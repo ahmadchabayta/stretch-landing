@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Typography, Flex } from "../../components";
-import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "../../hooks";
 import Description from "./Description";
 
 const SectionData = ({ labels, language }) => {

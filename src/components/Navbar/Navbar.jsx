@@ -59,12 +59,7 @@ const Navbar = () => {
                 menuLinks={rawData.menu_links}
               />
 
-              <Menu
-                className="hidden min-w-[50%] justify-center xl:flex"
-                isOpen={true}
-                data={data}
-                menuLinks={rawData.menu_links}
-              />
+              <Menu className="hidden xl:flex" data={data} menuLinks={rawData.menu_links} />
             </>
 
             <NavbarControl className="hidden xl:flex" data={data} />

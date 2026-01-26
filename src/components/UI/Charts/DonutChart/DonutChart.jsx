@@ -1,19 +1,21 @@
-import { Pie, PieChart, Tooltip } from "recharts";
-import { RechartsDevtools } from "@recharts/devtools";
 import PropTypes from "prop-types";
-import Typography from "../../Typography/Typography";
+import { Pie, PieChart, Tooltip } from "recharts";
+
 import Flex from "../../Flex/Flex";
+import Typography from "../../Typography/Typography";
 import DonutLegend from "./DonutLegend";
-import useMediaQuery from "../../../../hooks/useMediaQuery";
+import { useInViewAnimation, useMediaQuery } from "../../../../hooks";
 
 const DonutChart = ({
-  isAnimationActive = true,
+  // isAnimationActive = true,
   defaultIndex,
   data,
   chartTitle,
   landscape = false,
 }) => {
-  const isLg = useMediaQuery("(min-width: 1024px)");
+  const isXl = useMediaQuery("(min-width: 1280px)");
+  const [chartRef, inView, animationKey] = useInViewAnimation({ threshold: 0.3 });
+
   return (
     <Flex
       align="items-center"
@@ -25,14 +27,17 @@ const DonutChart = ({
         direction={landscape ? "flex-row" : "flex-col"}
         align="items-center"
         className={`glass-card glass-reflection rounded-2xl min-h-165 h-full w-full min-w-[310px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
+        ref={chartRef}
       >
         <Typography className="font-semibold text-xl tracking-wide text-center">
           {chartTitle}
         </Typography>
+        {/* Use key to force remount and re-trigger animation */}
         <PieChart
+          key={animationKey}
           style={{
             width: "100%",
-            maxWidth: "450px",
+            maxWidth: "420px",
             minWidth: "250px",
             height: "100%",
             margin: "0 auto",
@@ -46,12 +51,11 @@ const DonutChart = ({
             cx="50%"
             cy="50%"
             innerRadius="60%"
-            outerRadius={isLg ? "75%" : "65%"}
+            outerRadius={isXl ? "72%" : "65%"}
             label
-            isAnimationActive={isAnimationActive}
+            isAnimationActive={inView}
           />
           <Tooltip defaultIndex={defaultIndex} />
-          <RechartsDevtools />
         </PieChart>
 
         {/* Legend to the right in landscape mode, below in portrait */}

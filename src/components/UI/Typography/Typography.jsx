@@ -107,11 +107,11 @@ const typographyVariants = {
   `,
   "hero-feature": `
     ltr:font-poppins rtl:font-tajawal font-normal opacity-50
-    text-[14px] leading-[21px]
-    md:text-[15px] md:leading-[23px]
-    lg:text-[17px] lg:leading-[26px]
-    xl:text-[18px] xl:leading-[27px]
-    2xl:text-[19px] 2xl:leading-[29px]
+    text-[12px] leading-[21px]
+    md:text-[17px] md:leading-[23px]
+    lg:text-[19px] lg:leading-[26px]
+    xl:text-[20px] xl:leading-[27px]
+    2xl:text-[20px] 2xl:leading-[29px]
     3xl:text-[20px] 3xl:leading-[30px]
   `,
   "button-text": `
@@ -236,6 +236,7 @@ Typography.Text = ({
   primary = false,
   muted = false,
   br = false,
+  brClassName,
   color,
   ...rest
 }) => {
@@ -274,7 +275,7 @@ Typography.Text = ({
   return (
     <>
       {createElement(element, { className: textClasses, ...rest }, children)}
-      {br && <br />}
+      {br && <br className={brClassName} />}
     </>
   );
 };
@@ -289,6 +290,7 @@ Typography.Text.propTypes = {
   primary: PropTypes.bool,
   muted: PropTypes.bool,
   br: PropTypes.bool,
+  brClassName: PropTypes.string,
   color: PropTypes.string,
 };
 Typography.displayName = "Typography";

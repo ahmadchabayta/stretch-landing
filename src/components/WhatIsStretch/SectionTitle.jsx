@@ -8,7 +8,7 @@ const SectionTitle = ({ data }) => (
       <br />
       <Typography.Text className="3xl:whitespace-pre-line">{data.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="w-full">
+    <Typography as="h3" variant="section-subtitle" className="w-full text-balance">
       <Typography.Text>{data.description.part1}</Typography.Text>
       <Typography.Text accent bold className="3xl:whitespace-pre-line">
         {data.description.highlighted1}

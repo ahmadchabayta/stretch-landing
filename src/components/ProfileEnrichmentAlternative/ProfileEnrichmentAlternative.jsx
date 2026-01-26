@@ -22,6 +22,7 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 const ProfileEnrichmentAlternative = () => {
   const { language } = useLanguage();
   const labels = data.languages?.[language] || data.languages?.en;
+  const isXl = useMediaQuery("(min-width: 1280px)");
   const isLg = useMediaQuery("(min-width: 1024px)");
   const isTablet = useMediaQuery("(min-width: 768px)");
   const isMobile = useMediaQuery("(min-width: 375px)");
@@ -33,7 +34,7 @@ const ProfileEnrichmentAlternative = () => {
       <Swiper
         centeredSlides={true}
         spaceBetween={20}
-        slidesPerView={isLg ? 3 : isTablet ? 2 : isMobile ? 1 : 1}
+        slidesPerView={isXl ? 3 : isLg ? 2 : isTablet ? 1.5 : isMobile ? 1 : 1}
         grabCursor={true}
         pagination={{
           clickable: true,

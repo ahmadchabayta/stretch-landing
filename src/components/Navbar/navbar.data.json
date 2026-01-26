@@ -6,7 +6,10 @@
     "en": {
       "menu_items": ["What is Stretch", "Capabilities"],
 
-      "button_label": "Login",
+      "button_label": {
+        "login": "Log In",
+        "signup": "Sign Up"
+      },
       "hero_features": [
         "Trusted by leading marketers and agencies",
         "No SDK required",

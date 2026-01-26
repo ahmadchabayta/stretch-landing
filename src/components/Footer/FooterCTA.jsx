@@ -14,7 +14,7 @@ const FooterCTA = ({ labels, language }) => {
         align="items-center"
         justify="justify-center"
         spaceY="space-y-8"
-        className="mx-auto mt-8 max-w-3xl flex-1 text-center z-50"
+        className="mx-auto my-8 max-w-3xl flex-1 text-center z-50"
       >
         <Typography as="p" variant="footer-desc" className={_language}>
           {labels.description}

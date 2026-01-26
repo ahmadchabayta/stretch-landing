@@ -14,12 +14,7 @@ const Menu = ({ data, menuLinks, className }) => {
   };
 
   return (
-    <Flex
-      flex={true}
-      justify="justify-evenly"
-      spaceX="space-x-0 xl:space-x-2 3xl:space-x-8"
-      className={cn("w-full max-w-[716px]", className)}
-    >
+    <Flex className={cn("w-full max-w-[30vw]", className)}>
       {data.menu_items.map((item, i) => {
         const isActive = activeIndex === i;
         const linkId = menuLinks?.[i] || "";

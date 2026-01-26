@@ -13,7 +13,7 @@ const arabicToWestern = (str) => {
   return result;
 };
 
-export const useAnimatedCounter = (value, { duration = 2, once = true, locale = "en-US" } = {}) => {
+const useAnimatedCounter = (value, { duration = 2, once = true, locale = "en-US" } = {}) => {
   const ref = useRef(null);
   const motionValue = useMotionValue(0);
 
@@ -56,3 +56,4 @@ export const useAnimatedCounter = (value, { duration = 2, once = true, locale = 
 
   return ref;
 };
+export default useAnimatedCounter;

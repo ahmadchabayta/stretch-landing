@@ -4,7 +4,7 @@ import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
 import { useLanguage } from "../../context/LanguageContext";
 import { Section, Container, Flex } from "../../components";
-import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "../../hooks";
 import { withBase } from "../../utils/withBase";
 import MobileSectionTitle from "./MobileSectionTitle";
 import Description from "./Description";

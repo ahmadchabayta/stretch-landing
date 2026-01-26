@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LabelList } from "recharts";
 import Typography from "../Typography/Typography";
+import { useInViewAnimation } from "../../../hooks";
+
 const GraphChart = ({
   title,
   data,
@@ -10,13 +12,16 @@ const GraphChart = ({
   className = "",
   height = 250,
 }) => {
+  const [chartRef, inView, animationKey] = useInViewAnimation({ threshold: 0.3 });
   return (
     <div
+      ref={chartRef}
       className={`p-4 w-full h-full max-w-[95vw] mx-auto glass-card glass-reflection rounded-2xl ${className}`}
     >
       {title && <Typography className="font-semibold text-lg mb-2">{title}</Typography>}
       <ResponsiveContainer width="100%" height={height}>
         <BarChart
+          key={animationKey}
           data={data}
           layout="vertical"
           margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
@@ -44,7 +49,7 @@ const GraphChart = ({
             dataKey="value"
             fill={color}
             radius={[0, 2, 2, 0]}
-            isAnimationActive={false}
+            isAnimationActive={inView}
             barSize={12}
           >
             <LabelList

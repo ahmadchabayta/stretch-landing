@@ -25,7 +25,7 @@ const Footer = ({ id }) => {
           }}
           className="relative max-w-none! h-full bg-size-[601px_591px] md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto overflow-visible flex bg-white"
         >
-          <Container className="flex flex-col items-center justify-between pb-6">
+          <Container className="flex flex-col items-center justify-between mb-6 pb-6">
             <SectionTitle labels={labels} language={language} />
             <FooterCTA labels={labels} language={language} />
           </Container>

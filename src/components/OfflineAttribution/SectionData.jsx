@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Flex, Typography } from "../../components";
-import { useAnimatedCounter } from "../../hooks/useAnimatedCounter";
+import { useAnimatedCounter } from "../../hooks";
 
 const SectionData = ({ labels, language }) => {
   const parsedNumber = Number(String(labels.number).replace(/,/g, ""));
