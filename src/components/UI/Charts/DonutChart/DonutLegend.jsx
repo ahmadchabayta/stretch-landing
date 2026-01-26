@@ -14,7 +14,7 @@ const DonutLegend = ({ data, variant, className }) => {
               className="inline-block w-3 h-3 rounded-full border border-white shadow"
               style={{ background: entry.fill || "#8884d8" }}
             />
-            <span className="truncate font-medium">{entry.name}</span>
+            <Typography className="font-medium w-full">{entry.name}</Typography>
             <span className="ml-auto font-semibold text-gray-900">
               {typeof entry.value === "number"
                 ? entry.value.toLocaleString(undefined, { maximumFractionDigits: 2 })
@@ -35,7 +35,7 @@ const DonutLegend = ({ data, variant, className }) => {
 
   return (
     <div
-      className={`grid grid-cols-2 px-4 gap-x-6 gap-y-4 w-full h-full ${className}`}
+      className={`grid grid-cols-2 gap-x-6 gap-y-4 min-w-full h-full ${className}`}
       style={{ gridAutoRows: "1fr" }}
     >
       {cells.map((entry, idx) => (

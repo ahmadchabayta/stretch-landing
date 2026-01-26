@@ -24,8 +24,7 @@ const DonutChart = ({
       <Flex
         direction={landscape ? "flex-row" : "flex-col"}
         align="items-center"
-        className={`glass-card glass-reflection rounded-2xl min-w-0 w-full max-w-[95vw] lg:min-h-[600px] h-full py-6 ${landscape ? "flex-row items-stretch" : ""}`}
-        style={landscape ? { minHeight: 340, minWidth: 600, padding: 0 } : {}}
+        className={`glass-card glass-reflection rounded-2xl min-h-137.25 w-full min-w-[310px] max-w-[95vw] h-full py-6 ${landscape ? "flex-row items-stretch" : ""}`}
       >
         <Typography className="font-semibold text-xl tracking-wide text-center">
           {chartTitle}
@@ -33,8 +32,8 @@ const DonutChart = ({
         <PieChart
           style={{
             width: "100%",
-            maxWidth: "500px",
-            minWidth: "320px",
+            maxWidth: "320px",
+            minWidth: "250px",
             height: "100%",
             margin: "0 auto",
             overflow: "visible",
@@ -59,8 +58,8 @@ const DonutChart = ({
         <div
           className={
             landscape
-              ? "flex flex-col justify-center flex-1 min-w-[180px] max-w-[220px] p-4 "
-              : "w-full "
+              ? "flex flex-col justify-center flex-1 min-w-[180px] max-w-[420px] p-4 "
+              : "min-w-[180px] max-w-[420px] p-4 "
           }
         >
           <DonutLegend data={data} variant={landscape ? "vertical" : "inline"} />

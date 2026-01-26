@@ -10,7 +10,6 @@ import {
   StretchUserExperience,
   WhatIsStretch,
   WhyDoYouNeedStretch,
-  ProfileEnrichment,
   ProvenToPerform,
   CompetitiveEdgeStretch,
   ImplementationOptions,
@@ -63,7 +62,7 @@ const App = () => {
         <CrossChannel className="bg-[#FAFBFC]" />
         <AudienceMirroring className="bg-white" />
         <OfflineAttribution className="bg-[#FAFBFC]" />
-        <ProfileEnrichment className="bg-white" />
+        {/* <ProfileEnrichment className="bg-white" /> */}
         <ProfileEnrichmentAlternative className="bg-white" />
         <ProvenToPerform className="bg-[#FAFBFC]" />
         <CompetitiveEdgeStretch className="bg-white" />

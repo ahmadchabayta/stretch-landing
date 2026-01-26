@@ -23,6 +23,8 @@ const ProfileEnrichmentAlternative = () => {
   const { language } = useLanguage();
   const labels = data.languages?.[language] || data.languages?.en;
   const isLg = useMediaQuery("(min-width: 1024px)");
+  const isTablet = useMediaQuery("(min-width: 768px)");
+  const isMobile = useMediaQuery("(min-width: 375px)");
   return (
     <Section className="my-6 min-h-0!">
       <Container className="relative z-10">
@@ -30,8 +32,8 @@ const ProfileEnrichmentAlternative = () => {
       </Container>
       <Swiper
         centeredSlides={true}
-        spaceBetween={50}
-        slidesPerView={isLg ? 2 : 1}
+        spaceBetween={20}
+        slidesPerView={isLg ? 3 : isTablet ? 2 : isMobile ? 1 : 1}
         grabCursor={true}
         pagination={{
           clickable: true,
@@ -43,8 +45,11 @@ const ProfileEnrichmentAlternative = () => {
         mousewheel={{ forceToAxis: true, releaseOnEdges: false }}
         keyboard={{ enabled: true }}
         autoplay={{
-          delay: 0, // or your preferred delay in ms
+          delay: 500, // or your preferred delay in ms
           disableOnInteraction: true, // stops autoplay when user interacts
+        }}
+        style={{
+          padding: 40,
         }}
       >
         <SwiperSlide>
@@ -65,7 +70,7 @@ const ProfileEnrichmentAlternative = () => {
             direction="flex-col"
             justify="justify-center"
             align="items-center"
-            spaceY="space-y-4"
+            spaceY="space-y-2"
           >
             <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
 
@@ -88,7 +93,7 @@ const ProfileEnrichmentAlternative = () => {
           <DonutChart chartTitle={donutData.device_os.chartTitle} data={donutData.device_os.data} />
         </SwiperSlide>
         <SwiperSlide>
-          <Flex direction="flex-col" className="w-full" spaceY="space-y-2">
+          <Flex direction="flex-col" className="w-full" spaceY="space-y-[66px]">
             <GraphChart data={graphData.age} title="Age" />
             <GraphChart data={graphData.gender} title="Gender" />
           </Flex>
