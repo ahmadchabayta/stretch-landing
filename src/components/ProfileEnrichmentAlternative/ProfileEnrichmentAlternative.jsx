@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { useLanguage } from "../../context/LanguageContext";
-import { Container, Flex } from "../UI";
+import { Container } from "../UI";
 import Section from "../UI/Section/Section";
 
 import SectionTitle from "./SectionTitle";
@@ -65,17 +65,18 @@ const ProfileEnrichmentAlternative = () => {
           />
         </SwiperSlide>
         <SwiperSlide>
-          <Flex
-            className="h-full flex-1 my-auto"
-            direction="flex-col"
-            justify="justify-center"
-            align="items-center"
-            spaceY="space-y-2"
+          <div
+            className="grid grid-rows-[1fr_auto_1fr] h-full min-h-165 select-none w-full"
+            style={{ alignItems: "center" }}
           >
-            <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
-
-            <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
-          </Flex>
+            <div className="row-start-1 w-full h-full flex-1">
+              <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+            </div>
+            <div className="row-start-2 flex-1 my-2.5" />
+            <div className="row-start-3 w-full h-full flex-1">
+              <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+            </div>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
@@ -93,10 +94,15 @@ const ProfileEnrichmentAlternative = () => {
           <DonutChart chartTitle={donutData.device_os.chartTitle} data={donutData.device_os.data} />
         </SwiperSlide>
         <SwiperSlide>
-          <Flex direction="flex-col" className="w-full" spaceY="space-y-[66px]">
-            <GraphChart data={graphData.age} title="Age" />
-            <GraphChart data={graphData.gender} title="Gender" />
-          </Flex>
+          <div className="grid grid-rows-[auto_1fr_auto] h-full min-h-165 select-none w-full">
+            <div className="row-start-1 w-full h-full">
+              <GraphChart data={graphData.age} title="Age" />
+            </div>
+            <div className="row-start-2 flex-1" />
+            <div className="row-start-3 w-full h-full">
+              <GraphChart data={graphData.gender} title="Gender" />
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </Section>

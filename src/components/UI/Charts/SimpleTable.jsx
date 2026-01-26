@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const SimpleTable = ({ title, data }) => {
   return (
     /* Added overflow-hidden to ensure gradient stays within rounded corners */
-    <div className="glass-card glass-reflection rounded-2xl h-full shadow-md p-8 flex flex-col w-full max-w-[95vw] mx-auto relative overflow-hidden">
+    <div className="glass-card glass-reflection rounded-2xl h-full max-h-[330px] shadow-md p-8 flex flex-col w-full max-w-[95vw] mx-auto relative overflow-hidden">
       <div className="relative z-10">
         <h3 className="font-semibold text-lg mb-4 text-center">{title}</h3>
         <table className="w-full text-left">

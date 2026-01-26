@@ -8,11 +8,11 @@ const GraphChart = ({
   xDomain = [0, 100],
   barCategoryGap = 10,
   className = "",
-  height = 170,
+  height = 250,
 }) => {
   return (
     <div
-      className={`p-4 w-full max-w-[95vw] mx-auto glass-card glass-reflection rounded-2xl ${className}`}
+      className={`p-4 w-full h-full max-w-[95vw] mx-auto glass-card glass-reflection rounded-2xl ${className}`}
     >
       {title && <Typography className="font-semibold text-lg mb-2">{title}</Typography>}
       <ResponsiveContainer width="100%" height={height}>

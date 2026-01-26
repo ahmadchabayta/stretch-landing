@@ -24,7 +24,7 @@ const DonutChart = ({
       <Flex
         direction={landscape ? "flex-row" : "flex-col"}
         align="items-center"
-        className={`glass-card glass-reflection rounded-2xl min-h-137.25 w-full min-w-[310px] max-w-[95vw] h-full py-6 ${landscape ? "flex-row items-stretch" : ""}`}
+        className={`glass-card glass-reflection rounded-2xl min-h-165 h-full w-full min-w-[310px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
       >
         <Typography className="font-semibold text-xl tracking-wide text-center">
           {chartTitle}
@@ -32,7 +32,7 @@ const DonutChart = ({
         <PieChart
           style={{
             width: "100%",
-            maxWidth: "320px",
+            maxWidth: "450px",
             minWidth: "250px",
             height: "100%",
             margin: "0 auto",
