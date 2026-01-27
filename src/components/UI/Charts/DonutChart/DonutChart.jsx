@@ -14,7 +14,11 @@ const DonutChart = ({
   landscape = false,
 }) => {
   const isXl = useMediaQuery("(min-width: 1280px)");
+  const isTablet = useMediaQuery("(min-width: 768px)");
+  const isXs = useMediaQuery("(min-width: 390px)");
   const [chartRef, inView, animationKey] = useInViewAnimation({ threshold: 0.3 });
+
+  const donutSize = isXl ? 500 : isTablet ? 400 : isXs ? 350 : 300;
 
   return (
     <Flex
@@ -26,7 +30,8 @@ const DonutChart = ({
       <Flex
         direction={landscape ? "flex-row" : "flex-col"}
         align="items-center"
-        className={`glass-card glass-reflection rounded-2xl min-h-165 h-full w-full min-w-[310px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
+        justify="justify-center"
+        className={`glass-card glass-reflection rounded-2xl min-h-165 h-full w-full min-w-[330px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
         ref={chartRef}
       >
         <Typography className="font-semibold text-xl tracking-wide text-center">
@@ -36,12 +41,9 @@ const DonutChart = ({
         <PieChart
           key={animationKey}
           style={{
-            width: "100%",
-            maxWidth: "420px",
-            minWidth: "250px",
-            height: "100%",
-            margin: "0 auto",
-            overflow: "visible",
+            width: donutSize,
+            height: donutSize,
+            aspectRatio: 1,
           }}
           responsive
         >
