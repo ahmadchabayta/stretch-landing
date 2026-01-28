@@ -2,86 +2,83 @@
   "brand_affinity": {
     "chartTitle": "Brand Affinity",
     "data": [
-      { "name": "Souq Waqd Boutique", "value": 35.07, "fill": "#7B61FF" },
-      { "name": "Panda Supermarket", "value": 12.27, "fill": "#3DD598" },
-      { "name": "Vodafone", "value": 9.42, "fill": "#FFC542" },
-      { "name": "Lamborghini", "value": 6.44, "fill": "#FF5757" },
-      { "name": "Papa John's", "value": 8.18, "fill": "#0099FF" },
-      { "name": "KFC", "value": 6.32, "fill": "#FFD600" }
+      { "name": "Western Union", "value": 13.32, "fill": "#FFC220" },
+      { "name": "Burger King", "value": 11.94, "fill": "#D62300" },
+      { "name": "Nissan", "value": 10.39, "fill": "#C3002F" },
+      { "name": "Emirates NBD", "value": 10.3, "fill": "#1A237E" },
+      { "name": "Dubai Islamic Bank", "value": 9.33, "fill": "#00703C" },
+      { "name": "Life Pharmacy", "value": 8.96, "fill": "#0054A6" }
     ]
   },
   "brand_categories": {
     "chartTitle": "Brand Categories",
     "data": [
-      { "name": "Hospitality", "value": 35.07, "fill": "#7B61FF" },
-      { "name": "Retail - Groceries & S", "value": 12.27, "fill": "#3DD598" },
-      { "name": "Banking And Finance", "value": 9.42, "fill": "#FFC542" },
-      { "name": "Quick Service Restaurant", "value": 8.18, "fill": "#FF5757" },
-      { "name": "Quick Service Restaurant", "value": 6.32, "fill": "#FFD600" },
-      { "name": "Automotive", "value": 6.44, "fill": "#0099FF" }
+      { "name": "Currency Exchange S", "value": 13.32, "fill": "#6A32D9" },
+      { "name": "Quick Service Restaurant", "value": 11.94, "fill": "#1AB7E6" },
+      { "name": "Automotive", "value": 10.39, "fill": "#082ACD" },
+      { "name": "Banking And Finance", "value": 10.3, "fill": "#5173FC" },
+      { "name": "Banking And Finance", "value": 9.33, "fill": "#5247A7" },
+      { "name": "Retail - Healthcare", "value": 8.96, "fill": "#0091EA" }
     ]
   },
   "top_interests": {
     "chartTitle": "Top Interests",
     "data": [
-      { "name": "Arts & Entertainment", "value": 10.42, "fill": "#7B61FF" },
-      { "name": "Business", "value": 9.73, "fill": "#3DD598" },
-      { "name": "Health & Fitness", "value": 1.42, "fill": "#FFC542" },
-      { "name": "Education", "value": 1.12, "fill": "#FF5757" },
-      { "name": "Automotive", "value": 0.83, "fill": "#0099FF" }
+      { "name": "Arts & Entertainment", "value": 9.05, "fill": "#6A32D9" },
+      { "name": "Business", "value": 8.59, "fill": "#1AB7E6" },
+      { "name": "Family & Parenting", "value": 2.91, "fill": "#082ACD" },
+      { "name": "Education", "value": 2.51, "fill": "#5173FC" },
+      { "name": "Automotive", "value": 2.32, "fill": "#5247A7" }
     ]
   },
   "gender": {
     "chartTitle": "Gender",
     "data": [
-      { "name": "Male", "value": 65.85, "fill": "#7B61FF" },
-      { "name": "Female", "value": 34.15, "fill": "#FF9F43" }
+      { "name": "Male", "value": 59.92, "fill": "#1976D2" },
+      { "name": "Female", "value": 40.08, "fill": "#E91E63" }
     ]
   },
   "device_os": {
     "chartTitle": "Device OS",
     "data": [
-      { "name": "Android", "value": 98.89, "fill": "#FF9F43" },
-      { "name": "iOS", "value": 1.11, "fill": "#7B61FF" }
+      { "name": "Android", "value": 85.82, "fill": "#3DDC84" },
+      { "name": "iOS", "value": 14.18, "fill": "#000000" }
     ]
   },
   "device_brand": {
     "chartTitle": "Device Brand",
     "data": [
-      { "name": "Samsung", "value": 43.71, "fill": "#7B61FF" },
-      { "name": "Xiaomi", "value": 19.48, "fill": "#3DD598" },
-      { "name": "Vivo", "value": 8.08, "fill": "#FFC542" },
-      { "name": "Oppo", "value": 7.6, "fill": "#FF5757" },
-      { "name": "Honor", "value": 6.18, "fill": "#FFD600" },
-      { "name": "Realme", "value": 4.04, "fill": "#0099FF" },
-      { "name": "Others", "value": 10.91, "fill": "#E6E6E6" }
+      { "name": "Samsung", "value": 32, "fill": "#6A32D9" },
+      { "name": "Xiaomi", "value": 16.5, "fill": "#1AB7E6" },
+      { "name": "Apple", "value": 15.43, "fill": "#082ACD" },
+      { "name": "Oppo", "value": 9.39, "fill": "#5173FC" },
+      { "name": "Vivo", "value": 7.9, "fill": "#5247A7" },
+      { "name": "Honor", "value": 6.98, "fill": "#0091EA" }
     ]
   },
   "device_carrier": {
     "chartTitle": "Device Carrier",
     "data": [
-      { "name": "Ooredoo", "value": 60.31, "fill": "#7B61FF" },
-      { "name": "Vodafone", "value": 21.95, "fill": "#3DD598" },
-      { "name": "Others", "value": 17.74, "fill": "#E6E6E6" }
+      { "name": "Etisalat", "value": 65.86, "fill": "#6A32D9" },
+      { "name": "DU", "value": 33.31, "fill": "#1AB7E6" }
     ]
   },
   "connection_type": {
     "chartTitle": "Connection Type",
     "data": [
-      { "name": "Wi-Fi", "value": 64.75, "fill": "#FF9F43" },
-      { "name": "GPRS", "value": 35.25, "fill": "#7B61FF" }
+      { "name": "Wi-Fi", "value": 53.33, "fill": "#6A32D9" },
+      { "name": "GPRS", "value": 46.67, "fill": "#1AB7E6" }
     ]
   },
   "device_languages": {
     "chartTitle": "Device Languages",
     "data": [
-      { "name": "English", "value": 74.28, "fill": "#7B61FF" },
-      { "name": "Arabic", "value": 23.06, "fill": "#3DD598" },
-      { "name": "French", "value": 1.33, "fill": "#FFC542" },
-      { "name": "Bengali", "value": 0.44, "fill": "#FF5757" },
-      { "name": "Thai", "value": 0.22, "fill": "#FFD600" },
-      { "name": "Turkish", "value": 0.22, "fill": "#0099FF" },
-      { "name": "Other", "value": 0.45, "fill": "#E6E6E6" }
+      { "name": "English", "value": 83.09, "fill": "#6A32D9" },
+      { "name": "Arabic", "value": 15.12, "fill": "#1AB7E6" },
+      { "name": "Indonesian", "value": 0.43, "fill": "#082ACD" },
+      { "name": "French", "value": 0.41, "fill": "#5173FC" },
+      { "name": "Hindi", "value": 0.29, "fill": "#5247A7" },
+      { "name": "Russian", "value": 0.16, "fill": "#0091EA" }
     ]
   }
 }

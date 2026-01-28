@@ -19,19 +19,19 @@ const DonutChart = ({
   const [chartRef, inView, animationKey] = useInViewAnimation({ threshold: 0.3 });
 
   const donutSize = isXl ? 500 : isTablet ? 400 : isXs ? 350 : 300;
-
+  console.log(data.color, "data in DonutChart");
   return (
     <Flex
       align="items-center"
       justify="justify-center"
       direction={landscape ? "flex-row" : "flex-col lg:flex-row"}
-      className={`gap-2 w-full box-border select-none ${landscape ? "" : ""}`}
+      className={`gap-2 w-full min-h-178.5 box-border select-none ${landscape ? "" : ""}`}
     >
       <Flex
         direction={landscape ? "flex-row" : "flex-col"}
         align="items-center"
         justify="justify-center"
-        className={`glass-card glass-reflection rounded-2xl min-h-165 h-full w-full min-w-[330px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
+        className={`glass-card glass-reflection rounded-2xl min-h-178.5 h-full w-full min-w-[330px] max-w-[95vw] py-6 ${landscape ? "flex-row items-stretch" : ""}`}
         ref={chartRef}
       >
         <Typography className="font-semibold text-xl tracking-wide text-center">

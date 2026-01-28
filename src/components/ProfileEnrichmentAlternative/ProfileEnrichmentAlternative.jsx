@@ -65,10 +65,10 @@ const ProfileEnrichmentAlternative = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div
-            className="grid grid-rows-[1fr_auto_1fr] h-full min-h-165 select-none w-full"
+            className="grid grid-rows-[1fr_auto_1fr] h-full min-h-178.5 select-none w-full"
             style={{ alignItems: "center" }}
           >
-            <div className="row-start-1 w-full h-full flex-1">
+            <div className="row-start-1 w-full h-full flex-1 ">
               <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
             </div>
             <div className="row-start-2 flex-1 my-2.5" />
@@ -93,16 +93,33 @@ const ProfileEnrichmentAlternative = () => {
           <DonutChart chartTitle={donutData.device_os.chartTitle} data={donutData.device_os.data} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="grid grid-rows-[auto_1fr_auto] h-full min-h-165 select-none w-full">
-            <div className="row-start-1 w-full h-full">
-              <GraphChart data={graphData.age} title="Age" />
+          <div className="grid grid-rows-[auto_1fr_auto] h-full min-h-178.5 select-none w-full">
+            <div className="row-start-1 flex-1 w-full h-full">
+              <GraphChart
+                xTicks={[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]}
+                data={graphData.age}
+                title="Age"
+              />
             </div>
             <div className="row-start-2 flex-1" />
-            <div className="row-start-3 w-full h-full">
-              <GraphChart data={graphData.gender} title="Gender" />
+            <div className="row-start-3 flex-1 w-full h-full">
+              <GraphChart
+                xTicks={[0, 2, 4, 6, 8, 10, 12, 14]}
+                xDomain={[0, 14]}
+                layout="horizontal"
+                data={graphData.top_apps}
+                title="Top Apps on Device"
+              />
             </div>
           </div>
         </SwiperSlide>
+        {/* <SwiperSlide>
+          <ImpressionsClicksGraph
+            interval={is2Xl ? 8 : isXl ? 10 : isLg ? 12 : isTablet ? 14 : 16}
+            data={transformImpressionsClicksData(impressionsClicksRaw)}
+            title={impressionsClicksRaw.title}
+          />
+        </SwiperSlide> */}
       </Swiper>
     </Section>
   );

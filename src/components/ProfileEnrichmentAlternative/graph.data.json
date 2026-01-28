@@ -1,12 +1,15 @@
 {
   "age": [
-    { "name": "18-24", "value": 40 },
-    { "name": "25-39", "value": 35 },
-    { "name": "40-45", "value": 20 },
-    { "name": ">55", "value": 5 }
+    { "name": "18-24", "value": 32.09, "fill": "#6A32D9" },
+    { "name": "25-39", "value": 45.21, "fill": "#1AB7E6" },
+    { "name": "40-45", "value": 20.41, "fill": "#082ACD" },
+    { "name": ">55", "value": 2.29, "fill": "#5173FC" }
   ],
-  "gender": [
-    { "name": "Female", "value": 20 },
-    { "name": "Male", "value": 65 }
+  "top_apps": [
+    { "name": "Tools", "value": 12.44, "fill": "#6A32D9" },
+    { "name": "Communication", "value": 11.6, "fill": "#1AB7E6" },
+    { "name": "Games", "value": 11.55, "fill": "#082ACD" },
+    { "name": "Puzzle", "value": 9.79, "fill": "#5173FC" },
+    { "name": "Casual", "value": 6.71, "fill": "#5247A7" }
   ]
 }
