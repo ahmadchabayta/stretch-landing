@@ -104,6 +104,7 @@ const ProfileEnrichmentAlternative = () => {
             <div className="row-start-2 flex-1" />
             <div className="row-start-3 flex-1 w-full h-full">
               <GraphChart
+                className="pb-6"
                 xTicks={[0, 2, 4, 6, 8, 10, 12, 14]}
                 xDomain={[0, 14]}
                 layout="horizontal"
