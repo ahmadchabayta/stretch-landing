@@ -69,11 +69,15 @@ const ProfileEnrichmentAlternative = () => {
             style={{ alignItems: "center" }}
           >
             <div className="row-start-1 w-full h-full flex-1 ">
-              <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+              <SimpleTable title={tableData[0].chartTitle} data={tableData[0].chartData} />
             </div>
             <div className="row-start-2 flex-1 my-2.5" />
             <div className="row-start-3 w-full h-full flex-1">
-              <SimpleTable title={tableData.chartTitle} data={tableData.chartData} />
+              <SimpleTable
+                inPercentage={false}
+                title={tableData[1].chartTitle}
+                data={tableData[1].chartData}
+              />
             </div>
           </div>
         </SwiperSlide>

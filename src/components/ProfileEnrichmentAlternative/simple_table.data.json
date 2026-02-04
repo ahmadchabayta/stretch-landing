@@ -1,11 +1,24 @@
-{
-  "chartTitle": "Top Categories",
-  "chartData": [
-    { "label": "Advertising", "value": 5.6 },
-    { "label": "Books & Literature", "value": 5.59 },
+[
+  {
+    "chartTitle": "Top Categories",
+    "chartData": [
+      { "label": "Advertising", "value": 5.6 },
+      { "label": "Books & Literature", "value": 5.59 },
 
-    { "label": "Business Software", "value": 2.82 },
-    { "label": "Music", "value": 2.14 },
-    { "label": "7-12 Education", "value": 2.09 }
-  ]
-}
+      { "label": "Business Software", "value": 2.82 },
+      { "label": "Music", "value": 2.14 },
+      { "label": "7-12 Education", "value": 2.09 }
+    ]
+  },
+  {
+    "chartTitle": "Device Languages",
+    "chartData": [
+      { "label": "English", "value": 83.09 },
+      { "label": "Arabic", "value": 15.12 },
+      { "label": "Indonesian", "value": 0.43 },
+      { "label": "French", "value": 0.41 },
+      { "label": "Hindi", "value": 0.29 },
+      { "label": "Russian", "value": 0.16 }
+    ]
+  }
+]
