@@ -18,6 +18,7 @@ import {
   Button,
   DemoModal,
 } from "./components";
+import { SEOHelmet } from "./components/SEO/SEOHelmet";
 import { useLanguage } from "./context/LanguageContext";
 import url_links_data from "../src/components/Navbar/navbar.data.json";
 import ProfileEnrichmentAlternative from "./components/ProfileEnrichmentAlternative/ProfileEnrichmentAlternative";
@@ -42,6 +43,7 @@ const App = () => {
 
   return (
     <div className="overflow-x-hidden bg-[#FAFBFC]">
+      <SEOHelmet />
       {/* for testing purpooses - to test title*/}
       {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
       <Button onClick={() => setIsModalOpen(true)} variant="fixed" className={floatingButtonClass}>

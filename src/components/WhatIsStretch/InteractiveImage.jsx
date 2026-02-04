@@ -3,11 +3,16 @@ import { useLanguage } from "../../context/LanguageContext";
 import data from "./whatIsStretch.data.json";
 import { withBase } from "../../utils/withBase";
 
+const ALT_TEXT = {
+  en: "Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs.",
+  ar: "لوحة تحكم لإسناد التسويق عبر القنوات تُظهر تداخل الجماهير حسب المنصّة، إجمالي مرات الظهور مقابل النقرات، وخريطة إسناد الزيارات الفعلية للمتاجر، مع إبراز مطابقة الجماهير بدون SDK وقياس الأداء في العالم الحقيقي عبر Meta وTikTok وSnapchat ومنصّات الـDSP.",
+};
+
 const InteractiveImage = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [iphoneSrc, setIphoneSrc] = useState(data.images.iphone.small);
-  const { isRTL } = useLanguage();
+  const { isRTL, language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -157,6 +162,8 @@ const InteractiveImage = () => {
     3xl:w-[500px]
   `;
 
+  const altText = ALT_TEXT[language];
+
   return (
     <div ref={sectionRef}>
       {/* iPhone - centered vertically on left, slightly protruding */}
@@ -171,7 +178,7 @@ const InteractiveImage = () => {
         className={`absolute z-30 transition-all duration-1000 ${graphPosition} ${graphSize} ${visibilityClass} `}
         style={{ transitionDelay: "600ms" }}
         src={withBase(data.images.graph)}
-        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
+        alt={altText}
         loading="eager"
         decoding="async"
         fetchPriority="high"
@@ -180,7 +187,7 @@ const InteractiveImage = () => {
       {/* Scatter: Duplication - center-left (LTR) / center-right (RTL) */}
       <img
         src={withBase(data.images.duplication)}
-        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
+        alt={altText}
         style={{ transitionDelay: "700ms" }}
         className={`absolute z-40 transition-all duration-1000 ${duplicationPosition} ${duplicationSize} ${visibilityClass} `}
       />
@@ -188,7 +195,7 @@ const InteractiveImage = () => {
       {/* Scatter: Map - right side (LTR) / left side (RTL) */}
       <img
         src={withBase(data.images.map)}
-        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
+        alt={altText}
         style={{ transitionDelay: "800ms" }}
         className={`absolute z-50 transition-all duration-1000 ${mapPosition} ${mapSize} ${visibilityClass} `}
       />

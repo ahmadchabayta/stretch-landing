@@ -7,10 +7,16 @@ import { Container, Flex, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import { withBase } from "../../utils/withBase";
 
+const ALT_TEXT = {
+  en: "Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs.",
+  ar: "تصوّر لإسناد الزيارات الفعلية للمتاجر يوضّح زوّار المتجر الذين تعرّضوا للإعلانات مقابل زوّار المنافسين على خريطة موقع، مع إبراز الزيارات داخل المتاجر التي تم قياسها والمدفوعة بإعلانات متعددة القنوات دون استخدام SDKs.",
+};
+
 const OfflineAttribution = ({ id }) => {
   // eslint-disable-next-line no-unused-vars
   const { language, currentLanguage } = useLanguage();
   const labels = data.languages?.[language] || data.languages?.en;
+  const altText = ALT_TEXT[language];
 
   const [isRevealed, setIsRevealed] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -84,24 +90,24 @@ const OfflineAttribution = ({ id }) => {
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
           src={withBase(labels.images.large.purple)}
-          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
+          alt={altText}
         />
         <img
           className={`${showSmallImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
           src={withBase(labels.images.small.purple)}
-          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
+          alt={altText}
         />
 
         {/* Orange images (revealed on hover) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           src={withBase(labels.images.large.orange)}
-          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
+          alt={altText}
         />
         <img
           className={`${showSmallImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           src={withBase(labels.images.small.orange)}
-          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
+          alt={altText}
         />
 
         <button
