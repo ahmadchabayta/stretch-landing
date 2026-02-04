@@ -69,6 +69,7 @@ const CompetitiveEdgeStretch = () => {
               >
                 {isArabic ? "التالي" : "Next Platform"}
                 <svg
+                  className={isArabic ? "rotate-180" : ""}
                   xmlns="http://www.w3.org/2000/svg"
                   width="10.867"
                   height="13.186"

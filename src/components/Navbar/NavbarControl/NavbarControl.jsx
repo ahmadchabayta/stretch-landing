@@ -1,20 +1,20 @@
 import { useRef } from "react";
 import PropTypes from "prop-types";
-// import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/LanguageContext";
 import cn from "../../../utils/cn";
 import { Flex, Typography } from "../..";
-// import { withBase } from "../../../utils/withBase";
+import { withBase } from "../../../utils/withBase";
 
 const NavbarControl = ({ data, className }) => {
   const rootRef = useRef(null);
-  // const { languages, currentLanguage, changeLanguage } = useLanguage();
+  const { languages, currentLanguage, changeLanguage } = useLanguage();
 
-  // // Show the opposite language as a way to switch
-  // const otherLanguage = languages.find((lang) => lang.code !== currentLanguage.code);
+  // Show the opposite language as a way to switch
+  const otherLanguage = languages.find((lang) => lang.code !== currentLanguage.code);
 
-  // const handleLanguageSwitch = () => {
-  //   changeLanguage(otherLanguage.code);
-  // };
+  const handleLanguageSwitch = () => {
+    changeLanguage(otherLanguage.code);
+  };
 
   return (
     <Flex
@@ -45,6 +45,25 @@ const NavbarControl = ({ data, className }) => {
           {data.button_label.login}
         </Typography>
       </a>
+      <button
+        onClick={handleLanguageSwitch}
+        className="shrink-0 px-3 py-1.5 md:px-3 md:py-2 lg:px-3 lg:py-2 3xl:px-4 3xl:py-2.5 mx-auto xl:mx-0 w-full xl:w-auto inline-flex items-center justify-center gap-2 cursor-pointer rounded-lg md:rounded-[0.5rem] lg:rounded-[0.5rem] bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-200 ease-out active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
+        aria-label={`Switch to ${otherLanguage.label}`}
+        title={`Switch to ${otherLanguage.label}`}
+      >
+        <img
+          src={withBase(otherLanguage.flag)}
+          alt={otherLanguage.label}
+          className="w-5 h-4 rounded-sm object-cover shadow-sm"
+        />
+        <Typography
+          as="span"
+          variant="button-text"
+          className="text-black text-sm font-medium ltr:font-poppins rtl:font-tajawal"
+        >
+          {otherLanguage.code.toUpperCase()}
+        </Typography>
+      </button>
     </Flex>
   );
 };

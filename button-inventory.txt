@@ -1,0 +1,43 @@
+# Button Inventory - Stretch Landing Page
+# Generated: 2026-02-04
+# All buttons in the application with unique descriptive identifiers
+
+## Navigation Buttons (Navbar)
+nav_signup_cta: Navbar Sign Up CTA (href: https://stretchtag.ai/)
+nav_login_cta: Navbar Log In CTA (href: https://stretchtag.ai/)
+nav_language_switcher: Language Switcher Toggle (shows flag of opposite language - EN/AR)
+nav_mobile_menu_burger: Mobile Menu Burger Toggle (opens/closes mobile menu)
+nav_desktop_menu_what_is_stretch: Desktop Menu Item - "What is Stretch" (scroll to section)
+nav_desktop_menu_capabilities: Desktop Menu Item - "Capabilities" (scroll to section)
+nav_mobile_menu_what_is_stretch: Mobile Menu Item - "What is Stretch" (scroll to section)
+nav_mobile_menu_capabilities: Mobile Menu Item - "Capabilities" (scroll to section)
+
+## Hero Section Buttons
+hero_book_demo_primary: Hero "Book a Demo" Primary Button (opens demo modal)
+floating_book_demo_sticky: Floating "Book a Demo" Sticky Button (fixed position, opens demo modal, hides when hero/footer in view)
+
+## Footer Buttons
+footer_contact_us_cta: Footer CTA "Contact Us" Button (opens demo modal)
+
+## Demo Modal Buttons
+modal_demo_form_submit: Demo Modal Contact Form Submit Button (submits contact form)
+modal_demo_close_overlay: Demo Modal Close Button (closes modal via overlay click)
+
+## Implementation Options Section
+impl_tab_impressions_mobile: Implementation Options - "Impressions" Tab Mobile (switches to impressions tracking view)
+impl_tab_clicks_mobile: Implementation Options - "Clicks" Tab Mobile (switches to clicks tracking view)
+impl_grid_header_impressions_mobile: Implementation Grid Header - "Impressions" Tab Mobile Variant (switches view)
+impl_grid_header_clicks_mobile: Implementation Grid Header - "Clicks" Tab Mobile Variant (switches view)
+
+## Competitive Edge Section
+competitive_next_platform_mobile: Competitive Edge "Next Platform" / "التالي" Mobile Carousel (cycles through platform comparisons)
+
+## Profile Enrichment Carousel
+carousel_profile_dot_indicator_1: Profile Enrichment Carousel - Dot Indicator 1 (navigate to slide 1)
+carousel_profile_dot_indicator_2: Profile Enrichment Carousel - Dot Indicator 2 (navigate to slide 2)
+carousel_profile_dot_indicator_3: Profile Enrichment Carousel - Dot Indicator 3 (navigate to slide 3)
+
+## Offline Attribution Section
+offline_attribution_map_toggle: Offline Attribution Interactive Map Overlay (toggle between purple/orange attribution maps on hover/click)
+
+## Total Count: 22 unique buttons

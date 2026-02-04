@@ -33,6 +33,7 @@ const ProfileEnrichmentAlternative = () => {
         <SectionTitle labels={labels} />
       </Container>
       <Swiper
+        dir="ltr"
         centeredSlides={true}
         spaceBetween={20}
         slidesPerView={is2Xl ? 3 : isXl ? 2.5 : isLg ? 1.5 : isTablet ? 1.5 : isMobile ? 1 : 1}

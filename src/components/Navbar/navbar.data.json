@@ -19,7 +19,10 @@
     "ar": {
       "menu_items": ["ما هو Stretch", "القدرات"],
 
-      "button_label": "تسجيل الدخول",
+      "button_label": {
+        "login": "دخول",
+        "signup": "اشتراك"
+      },
       "hero_features": [
         "موثوق به من قبل كبار المسوقين والوكالات",
         "لا يتطلب SDK",

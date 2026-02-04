@@ -8,7 +8,7 @@ const SectionTitle = ({ labels }) => (
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle" className="text-balance">
+    <Typography as="h3" variant="section-subtitle" className="text-balance max-w-3xl ">
       {labels.subtitle.subtitle}{" "}
       <Typography.Text bold accent>
         {labels.subtitle.highlighted}
