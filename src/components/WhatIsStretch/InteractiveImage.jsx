@@ -171,7 +171,7 @@ const InteractiveImage = () => {
         className={`absolute z-30 transition-all duration-1000 ${graphPosition} ${graphSize} ${visibilityClass} `}
         style={{ transitionDelay: "600ms" }}
         src={withBase(data.images.graph)}
-        alt="Graph"
+        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
         loading="eager"
         decoding="async"
         fetchPriority="high"
@@ -180,7 +180,7 @@ const InteractiveImage = () => {
       {/* Scatter: Duplication - center-left (LTR) / center-right (RTL) */}
       <img
         src={withBase(data.images.duplication)}
-        alt="Duplication"
+        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
         style={{ transitionDelay: "700ms" }}
         className={`absolute z-40 transition-all duration-1000 ${duplicationPosition} ${duplicationSize} ${visibilityClass} `}
       />
@@ -188,7 +188,7 @@ const InteractiveImage = () => {
       {/* Scatter: Map - right side (LTR) / left side (RTL) */}
       <img
         src={withBase(data.images.map)}
-        alt="Map"
+        alt="Cross-channel marketing attribution dashboard showing audience duplication by platform, total impressions vs clicks, and offline footfall attribution map, highlighting no-SDK audience matching and real-world performance measurement across Meta, TikTok, Snapchat, and DSPs."
         style={{ transitionDelay: "800ms" }}
         className={`absolute z-50 transition-all duration-1000 ${mapPosition} ${mapSize} ${visibilityClass} `}
       />

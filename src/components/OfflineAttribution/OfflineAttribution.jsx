@@ -84,24 +84,24 @@ const OfflineAttribution = ({ id }) => {
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
           src={withBase(labels.images.large.purple)}
-          alt="purple map"
+          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
         />
         <img
           className={`${showSmallImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
           src={withBase(labels.images.small.purple)}
-          alt="purple map mobile"
+          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
         />
 
         {/* Orange images (revealed on hover) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           src={withBase(labels.images.large.orange)}
-          alt="orange map"
+          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
         />
         <img
           className={`${showSmallImages} ${isRevealed ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           src={withBase(labels.images.small.orange)}
-          alt="orange map mobile"
+          alt="Offline footfall attribution visualization showing ad-exposed store visitors versus competitor visitors on a location map, highlighting measured in-store visits driven by cross-channel advertising without SDKs."
         />
 
         <button
