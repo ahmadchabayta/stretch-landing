@@ -18,11 +18,14 @@ const Menu = ({ data, menuLinks, className }) => {
       {data.menu_items.map((item, i) => {
         const isActive = activeIndex === i;
         const linkId = menuLinks?.[i] || "";
+        const buttonName =
+          i === 0 ? "nav_desktop_menu_what_is_stretch" : "nav_desktop_menu_capabilities";
         return (
           <button
             key={`${item}_${i}`}
             type="button"
             onClick={() => handleClick(i, linkId)}
+            data-button-name={buttonName}
             className="menu_links_typography w-full cursor-pointer px-0 py-1"
           >
             <span className={`${isActive ? "font-black" : "font-semibold"}`}>{item}</span>

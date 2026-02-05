@@ -112,6 +112,7 @@ const OfflineAttribution = ({ id }) => {
 
         <button
           className="absolute inset-0 cursor-pointer bg-transparent"
+          data-button-name="offline_attribution_map_toggle"
           aria-label={isRevealed ? "Hide attribution map" : "Show attribution map"}
           tabIndex={0}
           {...(!isTouchDevice

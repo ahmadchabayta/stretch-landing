@@ -32,6 +32,7 @@ const GridHead = ({ labels, isArabic, activeTab, setActiveTab, language }) => (
                 : "bg-transparent text-black border-1 border-black z-10 -mr-3 -z-10 opacity-50"
             }`}
             onClick={() => setActiveTab("impressions")}
+            data-button-name="impl_grid_header_impressions_mobile"
           >
             {labels.headers.tracking_impressions_mobile}
           </button>
@@ -44,6 +45,7 @@ const GridHead = ({ labels, isArabic, activeTab, setActiveTab, language }) => (
                 : "bg-transparent text-black border-1 border-black z-10 -ml-5 -z-10 opacity-50"
             }`}
             onClick={() => setActiveTab("clicks")}
+            data-button-name="impl_grid_header_clicks_mobile"
           >
             {labels.headers.tracking_clicks_mobile}
           </button>

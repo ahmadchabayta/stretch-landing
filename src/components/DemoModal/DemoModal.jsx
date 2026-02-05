@@ -194,6 +194,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Button
                 type="submit"
                 variant="footer_contact"
+                data-button-name="modal_demo_form_submit"
                 className="bg-black!"
                 disabled={isPending}
               >

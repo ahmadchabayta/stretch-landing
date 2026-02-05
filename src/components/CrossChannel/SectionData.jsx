@@ -24,14 +24,14 @@ const SectionData = ({ labels, language }) => {
         <Typography
           as="h3"
           variant="section-subtitle"
-          className="hidden xl:flex text-secondary font-bold prose"
+          className="hidden xl:flex text-secondary font-bold "
         >
           {labels.subtitle}
         </Typography>
         <Typography
           as="h3"
           variant="section-subtitle"
-          className="text-start max-w-[153px] lg:max-w-[265px] font-normal!"
+          className="text-start max-w-[153px] lg:max-w-[265px] font-normal! text-balance "
         >
           {labels.other_subtitle}
         </Typography>

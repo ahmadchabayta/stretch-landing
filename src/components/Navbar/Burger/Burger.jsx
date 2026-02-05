@@ -5,6 +5,7 @@ const Burger = ({ onClick, isOpen, className }) => (
   <button
     type="button"
     onClick={onClick}
+    data-button-name="nav_mobile_menu_burger"
     className={cn(
       "relative z-50 flex h-6 w-6 cursor-pointer items-center justify-center",
       className,

@@ -27,6 +27,7 @@ const NavbarControl = ({ data, className }) => {
     >
       <a
         href="https://stretchtag.ai/"
+        data-button-name="nav_signup_cta"
         className="px-4 whitespace-nowrap py-1.5 text-sm md:px-5 md:py-2 lg:px-6 lg:py-2 3xl:px-7 3xl:py-2.5 mx-auto w-full inline-flex items-center justify-center cursor-pointer rounded-lg md:rounded-[0.5rem] lg:rounded-[0.5rem] bg-primary text-white font-semibold shadow-sm transition-all duration-200 ease-out ltr:font-poppins rtl:font-tajawal hover:bg-primary/90 hover:shadow-md active:scale-[0.98] active:bg-primary/80 active:shadow-sm active:brightness-95 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
         target="_blank"
         rel="noopener noreferrer"
@@ -37,6 +38,7 @@ const NavbarControl = ({ data, className }) => {
       </a>
       <a
         href="https://stretchtag.ai/"
+        data-button-name="nav_login_cta"
         className="px-4 py-1.5 text-sm md:px-5 md:py-2 lg:px-6 lg:py-2 3xl:px-7 3xl:py-2.5 mx-auto w-full inline-flex items-center justify-center cursor-pointer rounded-lg md:rounded-[0.5rem] lg:rounded-[0.5rem] bg-accent text-white font-semibold shadow-sm transition-all duration-200 ease-out ltr:font-poppins rtl:font-tajawal hover:bg-accent/90 hover:shadow-md active:scale-[0.98] active:bg-accent/80 active:shadow-sm active:brightness-95 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
         target="_blank"
         rel="noopener noreferrer"
@@ -47,6 +49,7 @@ const NavbarControl = ({ data, className }) => {
       </a>
       <button
         onClick={handleLanguageSwitch}
+        data-button-name="nav_language_switcher"
         className="shrink-0 px-3 py-1.5 md:px-3 md:py-2 lg:px-3 lg:py-2 3xl:px-4 3xl:py-2.5 mx-auto xl:mx-0 w-full xl:w-auto inline-flex items-center justify-center gap-2 cursor-pointer rounded-lg md:rounded-[0.5rem] lg:rounded-[0.5rem] bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-200 ease-out active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
         aria-label={`Switch to ${otherLanguage.label}`}
         title={`Switch to ${otherLanguage.label}`}

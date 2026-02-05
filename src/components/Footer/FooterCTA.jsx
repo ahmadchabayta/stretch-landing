@@ -33,6 +33,7 @@ const FooterCTA = ({ labels, language }) => {
             as="button"
             onClick={() => setIsModalOpen(true)}
             variant="footer_contact"
+            data-button-name="footer_contact_us_cta"
             className={`px-11 py-[13px] bg-black! ${_language}`}
           >
             <Typography as="span" variant="button-text">

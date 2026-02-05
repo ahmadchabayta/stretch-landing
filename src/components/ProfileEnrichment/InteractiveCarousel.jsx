@@ -103,6 +103,7 @@ const InteractiveCarousel = ({ images }) => {
           <button
             key={slide.id}
             onClick={() => setCurrentSlide(index)}
+            data-button-name={`carousel_profile_dot_indicator_${index + 1}`}
             className="group relative flex items-center justify-center transition-all duration-300 focus:outline-none"
             aria-label={`Show slide ${index + 1}`}
           >

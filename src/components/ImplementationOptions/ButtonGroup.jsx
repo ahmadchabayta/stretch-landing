@@ -8,6 +8,7 @@ const ButtonGroup = ({ activeTab, setActiveTab, labels, language }) => (
         language === "ar" ? "font-[Tajawal,sans-serif]" : ""
       } ${activeTab === "impressions" ? "bg-primary text-white shadow" : "bg-gray-100 text-black"}`}
       onClick={() => setActiveTab("impressions")}
+      data-button-name="impl_tab_impressions_mobile"
     >
       {labels.headers.tracking_impressions}
     </button>
@@ -16,6 +17,7 @@ const ButtonGroup = ({ activeTab, setActiveTab, labels, language }) => (
         language === "ar" ? "font-[Tajawal,sans-serif]" : ""
       } ${activeTab === "clicks" ? "bg-secondary text-white shadow" : "bg-gray-100 text-black"}`}
       onClick={() => setActiveTab("clicks")}
+      data-button-name="impl_tab_clicks_mobile"
     >
       {labels.headers.tracking_clicks}
     </button>

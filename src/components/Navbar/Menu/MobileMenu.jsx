@@ -24,11 +24,14 @@ const MobileMenu = React.forwardRef(({ isOpen, data, menuLinks }, ref) => {
         {data.menu_items.map((item, i) => {
           const url = menuLinks?.[i] || "";
           const isActive = activeLink === url;
+          const buttonName =
+            i === 0 ? "nav_mobile_menu_what_is_stretch" : "nav_mobile_menu_capabilities";
           return (
             <button
               key={i}
               type="button"
               onClick={() => scrollToSection(url)}
+              data-button-name={buttonName}
               className={`menu_links_typography flex w-full cursor-pointer items-center justify-between px-5 py-3.5 transition-all duration-200 ease-in-out hover:bg-gray-50 ${
                 isActive ? "bg-gray-50 font-black" : "font-semibold"
               }`}

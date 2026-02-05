@@ -46,7 +46,12 @@ const App = () => {
       <SEOHelmet />
       {/* for testing purpooses - to test title*/}
       {/* <Container className="fixed h-[90vh] pointer-events-none z-99999 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] border-x-2 border-black" /> */}
-      <Button onClick={() => setIsModalOpen(true)} variant="fixed" className={floatingButtonClass}>
+      <Button
+        onClick={() => setIsModalOpen(true)}
+        variant="fixed"
+        className={floatingButtonClass}
+        data-button-name="floating_book_demo_sticky"
+      >
         <Typography as="span" variant="button-text">
           {buttonLabels[language]}
         </Typography>

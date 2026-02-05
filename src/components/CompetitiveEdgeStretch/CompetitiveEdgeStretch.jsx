@@ -61,6 +61,7 @@ const CompetitiveEdgeStretch = () => {
             <div className="mt-6 mr-3 flex justify-end lg:hidden">
               <button
                 onClick={handleNextColumns}
+                data-button-name="competitive_next_platform_mobile"
                 className={cn(
                   "rounded-[7px] w-44 cursor-pointer px-6 py-3 text-sm font-semibold transition-all duration-200 flex items-center justify-between gap-2",
                   "bg-black text-white shadow-lg hover:shadow-xl active:scale-95",

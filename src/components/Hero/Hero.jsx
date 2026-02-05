@@ -37,6 +37,7 @@ const Hero = ({ id }) => {
             <Button
               onClick={() => setIsModalOpen(true)}
               variant="demo"
+              data-button-name="hero_book_demo_primary"
               className="min-w-[180px] place-self-start w-fit! h-fit! mt-[35.26px] lg:mt-[20px] xl:mt-[42.6px] 3xl:mt-[63.11px]"
             >
               <Typography as="span" variant="button-text">
