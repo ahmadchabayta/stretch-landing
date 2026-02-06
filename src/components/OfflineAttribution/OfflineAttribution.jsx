@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import data from "./offline_attribution.data.json";
 import SectionData from "./SectionData";
 import SectionTitle from "./SectionTitle";
-import { Container, Flex, Section } from "../../components";
+import { Container, Section } from "../../components";
 import { useLanguage } from "../../context/LanguageContext";
 import { withBase } from "../../utils/withBase";
 
@@ -42,14 +42,10 @@ const OfflineAttribution = ({ id }) => {
     xl:bottom-[-40%]
     2xl:bottom-[-50%]
     3xl:bottom-[-25%]
-    dir-ltr:left-[-10%]
-    dir-ltr:xxl:left-[-11%]
-    dir-ltr:2xl:left-[-13%]
-    dir-ltr:3xl:left-[-12%]
-    dir-rtl:left-0
-    dir-rtl:xxl:right-[-8%]
-    dir-rtl:3xl:right-0
-    dir-rtl:2xl:right-0
+    left-[-11%]
+    xxl:left-[-11%]
+    2xl:left-[-20%]
+    3xl:left-[-42%]
     transition-opacity
     duration-500
     ease-in-out
@@ -75,15 +71,14 @@ const OfflineAttribution = ({ id }) => {
 
   return (
     <Section
-      dir="ltr"
+      lang="ar"
+      dir="rtl"
       id={id}
-      className="relative overflow-hidden flex flex-col min-h-0!  items-center"
+      className="relative overflow-hidden flex flex-col min-h-0! items-center"
     >
-      <Container className="flex flex-col shrink-0 w-full">
+      <Container lang="ar" dir="rtl" className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
-        <Flex align="items-end" justify="justify-end">
-          <SectionData labels={labels} language={language} />
-        </Flex>
+        <SectionData labels={labels} language={language} />
       </Container>
       <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] 3xl:max-w-[1920px] cursor-pointer overflow-visible">
         {/* Purple images (default) */}

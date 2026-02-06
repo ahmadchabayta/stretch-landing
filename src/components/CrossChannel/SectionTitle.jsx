@@ -15,7 +15,7 @@ const SectionTitle = ({ labels, className }) => (
     <img
       src={withBase(labels.images.large)}
       alt="Cross Channel Background"
-      className="hidden xl:flex min-w-[1500px] w-full ltr:translate-x-[-33%] rtl:translate-x-[7%]"
+      className="hidden xl:flex min-w-[1500px] w-full translate-x-[-33%]"
     />
   </SectionHeadContainer>
 );

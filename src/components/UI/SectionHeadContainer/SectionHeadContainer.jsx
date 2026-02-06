@@ -5,10 +5,10 @@ import cn from "../../../utils/cn";
 const SectionHeadContainer = ({ children, className, ...props }) => {
   return (
     <Flex
-      flex={true}
-      direction="flex-col xl:flex-row"
+      flex="flex"
+      direction="flex-col xl:flex-row xl:rtl:flex-row-reverse"
       align="items-start xl:items-end"
-      justify="xl:justify-between"
+      justify="justify-start xl:justify-between"
       spaceY="space-y-[15px] xl:space-y-0"
       className={cn("w-full py-10", className)}
       {...props}

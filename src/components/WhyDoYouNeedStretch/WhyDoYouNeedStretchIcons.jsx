@@ -68,7 +68,7 @@ const WhyDoYouNeedStretchIcons = ({ data }) => {
             <Typography
               as="p"
               variant="section-desc"
-              className="h-full w-full max-w-[350px] 2xl:max-w-[450px] text-left 3xl:text-justify 3xl:text-[24px]"
+              className="h-full w-full max-w-[350px] 2xl:max-w-[450px] text-start 3xl:text-justify 3xl:text-[24px]"
             >
               {typeof item.details === "string" ? (
                 item.details

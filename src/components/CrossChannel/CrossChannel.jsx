@@ -15,7 +15,7 @@ const CrossChannel = ({ id }) => {
   const percentageRef = useAnimatedCounter(labels.percentage, { duration: 2 });
 
   return (
-    <Section id={id} className="flex flex-col relative overflow-hidden min-h-0!">
+    <Section dir="ltr" id={id} className="flex flex-col relative overflow-hidden min-h-0!">
       <Container>
         <Flex
           flex="flex xl:grid xl:grid-cols-2 "
@@ -32,7 +32,7 @@ const CrossChannel = ({ id }) => {
 
       {/* Image Container - Mobile and Tablet */}
 
-      <Container className="flex xl:hidden flex-col items-center justify-center w-screen!">
+      <Container className="flex xl:hidden flex-col items-center justify-center w-screen! ">
         <img
           src={withBase(labels.images.small)}
           alt="Cross Channel Background"

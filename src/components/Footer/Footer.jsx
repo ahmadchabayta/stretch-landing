@@ -21,11 +21,10 @@ const Footer = ({ id }) => {
             backgroundImage: `url(${withBase(data.background_img)})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-            opacity: 1,
           }}
-          className="relative max-w-none! h-full bg-size-[601px_591px] md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto overflow-visible flex bg-white"
+          className="relative max-w-none! h-full bg-size-[601px_591px] md:bg-size-[1678px_1034px] lg:bg-size-[1678px_1034px] xl:bg-cover mx-auto overflow-visible flex bg-white before:content-[''] before:absolute before:inset-0 before:bg-white/40 before:pointer-events-none"
         >
-          <Container className="flex flex-col items-center justify-between mb-6 pb-6">
+          <Container className="flex flex-col items-center justify-between mb-6 pb-6 relative z-10">
             <SectionTitle labels={labels} language={language} />
             <FooterCTA labels={labels} language={language} />
           </Container>

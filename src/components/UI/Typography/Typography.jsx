@@ -70,14 +70,17 @@ const typographyVariants = {
     xl:text-[64px]
     2xl:text-[64px]
     3xl:text-[72px]
+    rtl:text-end!
+
   `,
   "section-subtitle": `
     text-black
     ltr:font-poppins rtl:font-tajawal
+    ltr:text-right!
+    rtl:text-start!
     text-[14px] leading-auto
     md:text-[18px]
     xl:text-[20px]
-    xl:text-end
     2xl:text-[20px]
     3xl:text-[24px]
   `,

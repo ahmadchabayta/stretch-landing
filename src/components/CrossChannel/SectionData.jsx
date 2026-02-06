@@ -28,11 +28,7 @@ const SectionData = ({ labels, language }) => {
         >
           {labels.subtitle}
         </Typography>
-        <Typography
-          as="h3"
-          variant="section-subtitle"
-          className="text-start max-w-[153px] lg:max-w-[265px] font-normal! text-balance "
-        >
+        <Typography as="h3" variant="section-subtitle">
           {labels.other_subtitle}
         </Typography>
 
@@ -44,7 +40,7 @@ const SectionData = ({ labels, language }) => {
       <Description
         labels={labels}
         language={language}
-        className={`hidden absolute bottom-[10%] xl:block min-w-[382px] max-w-[587px] text-end! z-50 ltr:right-0 rtl:left-0`}
+        className={`hidden absolute bottom-[10%] xl:block min-w-[382px] max-w-[587px] text-end! z-50 right-0 `}
       />
     </Flex>
   );

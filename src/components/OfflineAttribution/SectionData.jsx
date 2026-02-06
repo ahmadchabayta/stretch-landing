@@ -13,6 +13,7 @@ const SectionData = ({ labels, language }) => {
 
   return (
     <Flex
+      direction="flex-row-reverse"
       align="items-end xl:items-center"
       justify="xl:justify-between"
       className="mx-0! w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px] space-x-3 xl:space-x-0"
@@ -24,7 +25,7 @@ const SectionData = ({ labels, language }) => {
       />
       <Typography
         as="p"
-        className="text-black text-left text-sm lg:text-[20px] 3xl:text-[24px] mb-6 xl:mb-0"
+        className="text-black  text-sm lg:text-[20px] 3xl:text-[24px] mb-6 xl:mb-0"
       >
         {labels.description.desc}
         <br />
