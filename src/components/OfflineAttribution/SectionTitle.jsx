@@ -2,14 +2,15 @@ import PropTypes from "prop-types";
 import { SectionHeadContainer, Typography } from "../../components";
 
 const SectionTitle = ({ labels }) => (
-  <SectionHeadContainer className="flex flex-row-reverse!">
+  <SectionHeadContainer>
     <Typography as="h2" variant="section-title" className="w-full">
       {labels.title.part1}
       <br />
       <Typography.Text>{labels.title.part2}</Typography.Text>
     </Typography>
-    <Typography as="h3" variant="section-subtitle">
-      {labels.subtitles.subtitle}{" "}
+    <Typography className="text-balance" as="h3" variant="section-subtitle">
+      {labels.subtitles.subtitle}
+      <br />
       <Typography.Text accent bold>
         {labels.subtitles.subtitle_highlight}
       </Typography.Text>

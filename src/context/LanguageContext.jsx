@@ -27,19 +27,19 @@ export const LanguageProvider = ({ children }) => {
     document.documentElement.setAttribute("lang", language);
   }, [language]);
 
-  // Keyboard shortcuts: Ctrl+1 for English, Ctrl+2 for Arabic
-  // DISABLED for now
-  // useEffect(() => {
-  //   const handleKeyDown = (e) => {
-  //     if (e.ctrlKey && e.key === "1") {
-  //       setLanguage("en");
-  //     } else if (e.ctrlKey && e.key === "2") {
-  //       setLanguage("ar");
-  //     }
-  //   };
-  //   window.addEventListener("keydown", handleKeyDown);
-  //   return () => window.removeEventListener("keydown", handleKeyDown);
-  // }, []);
+  //  Keyboard shortcuts: Ctrl+1 for English, Ctrl+2 for Arabic
+  //  DISABLED for now
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.key === "1") {
+        setLanguage("en");
+      } else if (e.ctrlKey && e.key === "2") {
+        setLanguage("ar");
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const changeLanguage = (code) => {
     if (LANGUAGES[code]) {

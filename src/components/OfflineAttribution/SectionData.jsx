@@ -13,8 +13,8 @@ const SectionData = ({ labels, language }) => {
 
   return (
     <Flex
-      direction="flex-row-reverse"
-      align="items-end xl:items-center"
+      direction="rtl:flex-row-reverse"
+      align="items-baseline xl:items-center"
       justify="xl:justify-between"
       className="mx-0! w-full xl:max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px] space-x-3 xl:space-x-0"
     >

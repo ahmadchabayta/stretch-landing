@@ -48,12 +48,12 @@
       "button_label": "احجز عرضاً توضيحياً",
       "images": {
         "large": {
-          "purple": "./assets/offline_attribution/purple.webp",
-          "orange": "./assets/offline_attribution/orange.webp"
+          "purple": "./assets/offline_attribution/purple_ar.webp",
+          "orange": "./assets/offline_attribution/orange_ar.webp"
         },
         "small": {
-          "purple": "./assets/offline_attribution/mobile_purple.webp",
-          "orange": "./assets/offline_attribution/mobile_orange.webp"
+          "purple": "./assets/offline_attribution/mobile_purple_ar.webp",
+          "orange": "./assets/offline_attribution/mobile_orange_ar.webp"
         }
       }
     }

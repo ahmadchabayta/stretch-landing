@@ -13,8 +13,7 @@ const ALT_TEXT = {
 };
 
 const OfflineAttribution = ({ id }) => {
-  // eslint-disable-next-line no-unused-vars
-  const { language, currentLanguage } = useLanguage();
+  const { language } = useLanguage();
   const labels = data.languages?.[language] || data.languages?.en;
   const altText = ALT_TEXT[language];
 
@@ -38,6 +37,10 @@ const OfflineAttribution = ({ id }) => {
     xl:max-w-[903px]
     2xl:max-w-[1131px]
     3xl:max-w-[1231px]
+
+    xl:rtl:max-w-[1500px]
+    2xl:rtl:max-w-[1800px]
+    3xl:rtl:max-w-[2000px]
     bottom-[-25%]
     xl:bottom-[-40%]
     2xl:bottom-[-50%]
@@ -46,6 +49,11 @@ const OfflineAttribution = ({ id }) => {
     xxl:left-[-11%]
     2xl:left-[-20%]
     3xl:left-[-42%]
+
+    xl:rtl:left-[-26%]
+    2xl:rtl:left-[-40%]
+    3xl:rtl:left-[-70%]
+    4xl:rtl:left-[-150%]
     transition-opacity
     duration-500
     ease-in-out
@@ -59,10 +67,19 @@ const OfflineAttribution = ({ id }) => {
     xs:min-w-[638px]
     md:min-w-[894px]
     lg:min-w-[1283px]
+    rtl:min-w-[650px]
+    rtl:xs:min-w-[750px]
+    rtl:sm:min-w-[950px]
+    rtl:md:min-w-[1300px]
+    rtl:lg:min-w-[1600px]
     left-[57%]
     md:left-[55%]
     translate-x-[-50%]
+    rtl:left-[50%]
     lg:translate-x-[-60%]
+    rtl:xs:left-[50%]
+
+    rtl:lg:translate-x-[-43%]
     bottom-0
     transition-opacity
     duration-500
@@ -70,13 +87,8 @@ const OfflineAttribution = ({ id }) => {
   `;
 
   return (
-    <Section
-      lang="ar"
-      dir="rtl"
-      id={id}
-      className="relative overflow-hidden flex flex-col min-h-0! items-center"
-    >
-      <Container lang="ar" dir="rtl" className="flex flex-col shrink-0 w-full">
+    <Section id={id} className="relative overflow-hidden flex flex-col min-h-0!">
+      <Container className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
         <SectionData labels={labels} language={language} />
       </Container>

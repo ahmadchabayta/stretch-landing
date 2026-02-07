@@ -25,6 +25,7 @@
   --breakpoint-xxl: 1366px;
   --breakpoint-2xl: 1440px;
   --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2000px;
 
   /* Fonts */
   --font-manrope: "Manrope", sans-serif;

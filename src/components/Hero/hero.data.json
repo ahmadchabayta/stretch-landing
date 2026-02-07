@@ -24,7 +24,11 @@
       "highlighted_subtitle": "والنتائج أصبحت حقيقة",
       "description": "منصتك الوحيدة كخدمة لربط الجمهور عبر القنوات، وإعادة استهدافه، وإثراء البيانات، وقياس الأداء في القنوات غير المتصلة.",
       "button_label": "احجز عرضاً توضيحياً",
-      "hero_img": "./assets/hero/hero_img_ar.webp",
+      "hero_img": {
+        "large": "./assets/hero/hero_img_ar.webp",
+        "medium": "./assets/hero/hero_img_ar.webp",
+        "small": "./assets/hero/hero_img_ar.webp"
+      },
       "hero_features": [
         "أكثر من 3 مليارات نقطة بيانات لدعم قياس أداء أكثر ذكاءً",
         "لا يتطلب SDK",
