@@ -4,6 +4,8 @@ import { Button, Flex, Typography } from "..";
 import Input from "../UI/Input/Input";
 import Textarea from "../UI/Input/Textarea";
 import data from "./demo_modal.data.json";
+import { useLanguage } from "../../context/LanguageContext";
+import { useMediaQuery } from "../../hooks";
 import { preload } from "react-dom";
 
 // Form action function following React 19 best practices
@@ -58,6 +60,8 @@ async function submitDemoForm(prevState, formData) {
 }
 
 const DemoModal = ({ isOpen, onClose }) => {
+  const isSmallScreen = useMediaQuery("<md");
+  const { language } = useLanguage();
   const formRef = useRef(null);
   const [state, formAction, isPending] = useActionState(submitDemoForm, {
     errors: {},
@@ -91,6 +95,15 @@ const DemoModal = ({ isOpen, onClose }) => {
   preload(data.background.mobile, { as: "image" });
   preload(data.background.large, { as: "image" });
 
+  // Select language-specific content
+  const langData = data.languages?.[language] || data.languages?.en;
+
+  // For Arabic, select mobile or desktop modal title
+  let modalTitle = langData.modal_title;
+  if (language === "ar" && langData.mobile_modal_title && isSmallScreen) {
+    modalTitle = langData.mobile_modal_title;
+  }
+
   return (
     <>
       <div className="fixed inset-0 z-9999 flex items-center justify-center" role="presentation">
@@ -119,7 +132,7 @@ const DemoModal = ({ isOpen, onClose }) => {
         >
           {/* Responsive background decorative_circleimage absolutely positioned */}
           <img
-            className="w-[99px] right-2 md:w-[163px] z-10 absolute lg:right-[15px]"
+            className="w-[99px] right-2 rtl:left-2 md:w-[163px] z-10 absolute lg:ltr:right-[15px] rtl:right-auto lg:rtl:left-[15px]"
             src={data.background.decorative_circle}
             alt="decorative circle"
           />
@@ -141,10 +154,14 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Typography
                 as="h2"
                 variant="modal-title"
-                className="flex flex-col items-start text-left w-full text-balance"
+                className="flex flex-col items-start text-left rtl:text-right w/full text-balance"
               >
-                {data.modal_title.part1}
-                <Typography.Text className="text-black text-[24px] text-left w-full">{` ${data.modal_title.part2}`}</Typography.Text>
+                {modalTitle.part1}
+                <Typography.Text className="text-black text-[24px] text-left rtl:text-right w/full">{` ${modalTitle.part2}`}</Typography.Text>
+                <br />
+                {modalTitle.part3 && (
+                  <Typography.Text className="text-black text-[24px] text-left rtl:text-right w/full">{` ${modalTitle.part3}`}</Typography.Text>
+                )}
               </Typography>
             </Flex>
             <Flex
@@ -156,7 +173,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="username"
-                placeholder="Username"
+                placeholder={langData.fields.username}
                 error={!!state.errors.username}
                 errorMessage={state.errors.username}
                 disabled={isPending}
@@ -164,7 +181,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder={langData.fields.email}
                 error={!!state.errors.email}
                 errorMessage={state.errors.email}
                 disabled={isPending}
@@ -172,7 +189,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="company"
-                placeholder="Company Name"
+                placeholder={langData.fields.company_name}
                 error={!!state.errors.company}
                 errorMessage={state.errors.company}
                 disabled={isPending}
@@ -180,12 +197,12 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="linkedin"
-                placeholder="Company LinkedIn"
+                placeholder={langData.fields.company_linkedin}
                 disabled={isPending}
               />
               <Textarea
                 name="note"
-                placeholder="Leave a Note.."
+                placeholder={langData.fields.note}
                 rows={3}
                 error={!!state.errors.note}
                 errorMessage={state.errors.note}
@@ -198,7 +215,11 @@ const DemoModal = ({ isOpen, onClose }) => {
                 className="bg-black!"
                 disabled={isPending}
               >
-                {isPending ? "Submitting..." : data.button_label.contact_button_label}
+                {isPending
+                  ? language === "ar"
+                    ? "جاري الإرسال..."
+                    : "Submitting..."
+                  : langData.button_label}
               </Button>
             </Flex>
           </form>

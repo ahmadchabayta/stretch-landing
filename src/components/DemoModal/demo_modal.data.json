@@ -4,11 +4,40 @@
     "mobile": "./assets/footer/modal_background_mobile.webp",
     "decorative_circle": "./assets/footer/orange_circle.webp"
   },
-  "modal_title": {
-    "part1": "Reach out",
-    "part2": " to our Sales Experts for a Demo"
-  },
-  "button_label": {
-    "contact_button_label": "Schedule a Demo Now"
+  "languages": {
+    "en": {
+      "modal_title": {
+        "part1": "Reach out",
+        "part2": " to our Sales Experts for a Demo"
+      },
+      "fields": {
+        "username": "Username",
+        "email": "Email Address",
+        "company_name": "Company Name",
+        "company_linkedin": "Company LinkedIn",
+        "note": "Leave a Note"
+      },
+      "button_label": "Schedule a Demo Now"
+    },
+    "ar": {
+      "modal_title": {
+        "part1": "تواصل مع",
+        "part2": "خبراء المبيعات لدينا للحصول",
+        "part3": " على عرض توضيحي"
+      },
+      "mobile_modal_title": {
+        "part1": "تواصل مع",
+        "part2": "خبراء المبيعات لدينا",
+        "part3": "للحصول على عرض توضيحي"
+      },
+      "fields": {
+        "username": "اسم المستخدم",
+        "email": "عنوان البريد الإلكتروني",
+        "company_name": "اسم الشركة",
+        "company_linkedin": "حساب LinkedIn الخاص بالشركة",
+        "note": "اترك ملاحظة"
+      },
+      "button_label": "احجز عرضًا توضيحيًا الآن"
+    }
   }
 }
