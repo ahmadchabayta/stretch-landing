@@ -52,19 +52,31 @@ export const capability_data = {
       cards: [
         {
           id: "cross-channel",
-          title: "مطابقة الجمهور عبر القنوات",
+          title: {
+            part1: "مطابقة الجمهور",
+            part2: "عبر القنوات",
+          },
         },
         {
           id: "enrichment",
-          title: "إثراء بيانات الجمهور",
+          title: {
+            part1: "إثراء بيانات",
+            part2: "الجمهور",
+          },
         },
         {
           id: "retargeting",
-          title: "إعادة استهداف الجمهور",
+          title: {
+            part1: "إعادة استهداف",
+            part2: "الجمهور",
+          },
         },
         {
           id: "attribution",
-          title: "نسب غير متصل بالإنترنت",
+          title: {
+            part1: "الإحالة التسويقية",
+            part2: "غير المتصلة بالإنترنت",
+          },
         },
       ],
     },

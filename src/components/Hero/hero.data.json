@@ -26,8 +26,8 @@
       "button_label": "احجز عرضاً توضيحياً",
       "hero_img": {
         "large": "./assets/hero/hero_img_ar.webp",
-        "medium": "./assets/hero/hero_img_ar.webp",
-        "small": "./assets/hero/hero_img_ar.webp"
+        "medium": "./assets/hero/hero_img_md_ar.webp",
+        "small": "./assets/hero/hero_img_sm_ar.webp"
       },
       "hero_features": [
         "أكثر من 3 مليارات نقطة بيانات لدعم قياس أداء أكثر ذكاءً",

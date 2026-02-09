@@ -38,11 +38,19 @@ const CapabilityCard = ({ card, isActive, onClick, "data-card-id": dataCardId })
         <card.icon className={card.sizeClassName} isActive={isActive} />
         <Typography
           as="p"
-          className={`flex h-auto w-full items-center justify-center text-center text-[14px] font-bold transition-colors duration-300 ease-in-out select-none lg:text-[22px] ${
+          className={`flex flex-col h-auto w-full items-center justify-center text-center text-[14px] font-bold transition-colors duration-300 ease-in-out select-none lg:text-[22px] ${
             isActive ? "text-white" : "text-black"
           }`}
         >
-          {card.title}
+          {typeof card.title === "object" ? (
+            <>
+              {card.title.part1}
+              <br />
+              <Typography.Text>{card.title.part2}</Typography.Text>
+            </>
+          ) : (
+            card.title
+          )}
         </Typography>
       </Flex>
       <GlassCircle

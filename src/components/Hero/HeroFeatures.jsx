@@ -4,10 +4,10 @@ import { Typography, List } from "../../components";
 const HeroFeatures = ({ data }) => (
   <List
     variant="bulleted"
-    className="flex flex-col items-start justify-start xl:justify-between space-y-1 xl:space-y-0 xl:flex-row lg:space-x-16 pl-4 xl:pl-0 mx-auto w-full"
+    className="flex flex-col items-start justify-start xl:justify-between space-y-1 xl:space-y-0 xl:flex-row lg:space-x-16 px-4 xl:pl-0 mx-auto w-full"
   >
     {data.map((el, i) => (
-      <List.Item key={`${el}_${i}`} className="list-disc ml-2 md:ml-4 xl:ml-0">
+      <List.Item key={`${el}_${i}`} className="list-disc mx-2 md:mx-4 xl:mx-0">
         <Typography
           as="p"
           variant="hero-feature"
