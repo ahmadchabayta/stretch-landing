@@ -173,7 +173,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               >
                 {modalTitle.part1}
                 <Typography.Text className="text-black text-[24px] text-left rtl:text-right w/full">{` ${modalTitle.part2}`}</Typography.Text>
-                <br />
+                <br className="m-0 p-0" />
                 {modalTitle.part3 && (
                   <Typography.Text className="text-black text-[24px] text-left rtl:text-right w/full">{` ${modalTitle.part3}`}</Typography.Text>
                 )}
@@ -181,7 +181,7 @@ const DemoModal = ({ isOpen, onClose }) => {
             </Flex>
             <Flex
               spaceY="space-y-2.5 md:space-y-3 2xl:space-y-8"
-              className="w-full mx-auto mt-12"
+              className="w-full mx-auto mt-1 xs:mt-4 sm:mt-6 md:mt-12"
               direction="flex-col"
               align="items-center"
             >

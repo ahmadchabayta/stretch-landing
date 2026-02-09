@@ -20,7 +20,7 @@ const Input = forwardRef(
     ref,
   ) => {
     const baseStyles =
-      "w-full border rounded-[0.5rem] px-2 sm:px-3 lg:px-5 min-h-[38px] sm:min-h-[44px] lg:min-h-[52px] h-[2.5rem] sm:h-[2.75rem] lg:h-[3rem] font-poppins text-[15px] sm:text-[16px] lg:text-[17px] text-black placeholder:text-gray-400 outline-none transition-all";
+      "ltr:font-poppins rtl:font-tajawal w-full border rounded-[0.5rem] px-2 sm:px-3 lg:px-5 min-h-[38px] sm:min-h-[44px] lg:min-h-[52px] h-[2.5rem] sm:h-[2.75rem] lg:h-[3rem] text-[15px] sm:text-[16px] lg:text-[17px] text-black placeholder:text-gray-400 outline-none transition-all";
 
     const variants = {
       default: "bg-[#E7EAED] border-gray-200 focus:bg-white focus:border-black",
