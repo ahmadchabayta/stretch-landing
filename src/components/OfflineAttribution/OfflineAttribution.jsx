@@ -47,9 +47,8 @@ const OfflineAttribution = ({ id }) => {
     3xl:bottom-[-25%]
     left-[-11%]
     xxl:left-[-11%]
-    2xl:left-[-20%]
-    3xl:left-[-42%]
-
+    2xl:left-[-8%]
+    3xl:left-[0]
     xl:rtl:left-[-26%]
     2xl:rtl:left-[-40%]
     3xl:rtl:left-[-70%]
@@ -62,25 +61,32 @@ const OfflineAttribution = ({ id }) => {
     flex
     xl:hidden
     absolute
+
     w-full
     min-w-[538px]
+
     xs:min-w-[638px]
     md:min-w-[894px]
     lg:min-w-[1283px]
+
     rtl:min-w-[650px]
     rtl:xs:min-w-[750px]
     rtl:sm:min-w-[950px]
     rtl:md:min-w-[1300px]
     rtl:lg:min-w-[1600px]
+
     left-[57%]
     md:left-[55%]
     translate-x-[-50%]
+
     rtl:left-[50%]
-    lg:translate-x-[-60%]
+    lg:translate-x-[-62%]
     rtl:xs:left-[50%]
 
     rtl:lg:translate-x-[-43%]
+
     bottom-0
+    lg:bottom-[5%]
     transition-opacity
     duration-500
     ease-in-out
@@ -90,7 +96,9 @@ const OfflineAttribution = ({ id }) => {
     <Section id={id} className="relative overflow-hidden flex flex-col min-h-0!">
       <Container className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
-        <SectionData labels={labels} language={language} />
+        <div className="rtl:self-end xl:self-end rtl:xl:self-start w-full max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px] mt-6 mb-12">
+          <SectionData labels={labels} language={language} />
+        </div>
       </Container>
       <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] 3xl:max-w-[1920px] cursor-pointer overflow-visible">
         {/* Purple images (default) */}
