@@ -77,6 +77,18 @@ const DemoModal = ({ isOpen, onClose }) => {
   }, [state.success, isOpen, onClose]);
 
   // Handle escape key press to close modal
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = originalOverflow;
+      };
+    }
+    // If closed, ensure overflow is reset
+    document.body.style.overflow = "";
+  }, [isOpen]);
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isOpen) {
@@ -106,7 +118,10 @@ const DemoModal = ({ isOpen, onClose }) => {
 
   return (
     <>
-      <div className="fixed inset-0 z-9999 flex items-center justify-center" role="presentation">
+      <div
+        className="fixed z-10000000  inset-0 flex items-center justify-center"
+        role="presentation"
+      >
         {/* Backdrop with blur */}
         <div
           className="absolute inset-0 bg-black/30 backdrop-blur-sm"

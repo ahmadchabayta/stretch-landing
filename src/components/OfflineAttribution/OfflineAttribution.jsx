@@ -70,10 +70,10 @@ const OfflineAttribution = ({ id }) => {
     lg:min-w-[1283px]
 
     rtl:min-w-[650px]
-    rtl:xs:min-w-[750px]
+    rtl:xs:min-w-[700px]
     rtl:sm:min-w-[950px]
-    rtl:md:min-w-[1300px]
-    rtl:lg:min-w-[1600px]
+    rtl:md:min-w-[1100px]
+    rtl:lg:min-w-[1500px]
 
     left-[57%]
     md:left-[55%]
@@ -83,9 +83,9 @@ const OfflineAttribution = ({ id }) => {
     lg:translate-x-[-62%]
     rtl:xs:left-[50%]
 
-    rtl:lg:translate-x-[-43%]
+    rtl:lg:translate-x-[-53%]
 
-    bottom-0
+    bottom-[0%]
     lg:bottom-[5%]
     transition-opacity
     duration-500
@@ -96,11 +96,11 @@ const OfflineAttribution = ({ id }) => {
     <Section id={id} className="relative overflow-hidden flex flex-col min-h-0!">
       <Container className="flex flex-col shrink-0 w-full">
         <SectionTitle labels={labels} language={language} />
-        <div className="rtl:self-end xl:self-end rtl:xl:self-start w-full max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px] mt-6 mb-12">
+        <div className="rtl:self-end xl:self-end rtl:xl:self-start w-full max-w-[510px] 2xl:max-w-[600px] 3xl:max-w-[720px] md:mt-6 mb-12">
           <SectionData labels={labels} language={language} />
         </div>
       </Container>
-      <div className="relative flex-1 min-h-[450px] xs:min-h-[500px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] 3xl:max-w-[1920px] cursor-pointer overflow-visible">
+      <div className="relative flex-1 min-h-[450px] xs:min-h-[340px] md:min-h-[700px] lg:min-h-[900px] xl:min-h-[400px] 3xl:min-h-[500px] lg:w-[1231px] max-w-[1231px] 3xl:max-w-[1920px] cursor-pointer overflow-visible">
         {/* Purple images (default) */}
         <img
           className={`${showLargeImages} ${isRevealed ? "opacity-0 pointer-events-none" : "opacity-100"}`}
