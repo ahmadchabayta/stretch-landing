@@ -17,7 +17,7 @@ const Hero = ({ id }) => {
   const isSmall = useMediaQuery("(min-width: 390px)");
 
   const bgPosition =
-    "ltr:bg-position-[right_-50px_top_0px] ltr:md:bg-position-[right_0_top_-50px] ltr:lg:bg-position-[right_0_top_10px] ltr:xl:bg-position-[right_-236px_top_-43px] ltr:2xl:bg-position-[right_-120px_top_10%] ltr:3xl:bg-position-[right_-50px_top_0] rtl:bg-position-[left_-50px_top_0px] rtl:md:bg-position-[left_-50px_top_-50px] rtl:lg:bg-position-[left_-40px_top_10px] rtl:xl:bg-position-[left_-236px_top_-43px] rtl:2xl:bg-position-[left_-120px_top_10%] rtl:3xl:bg-position-[left_-50px_top_0]";
+    "ltr:bg-position-[right_-50px_top_0px] ltr:md:bg-position-[right_0_top_-50px] ltr:lg:bg-position-[right_0_top_10px] ltr:xl:bg-position-[right_-236px_top_-43px] ltr:2xl:bg-position-[right_-120px_top_10%] ltr:3xl:bg-position-[right_-50px_top_0] rtl:bg-position-[left_-50px_top_0px] rtl:md:bg-position-[left_-50px_top_-70px] rtl:lg:bg-position-[left_-40px_top_10px] rtl:xl:bg-position-[left_-0px_top_-43px] rtl:2xl:bg-position-[left_-120px_top_10%] rtl:3xl:bg-position-[left_-50px_top_0]";
 
   const bgSizing =
     "bg-size-[auto_516px] md:bg-size-[663.568px_auto] lg:bg-size-[1024px_auto] 2xl:bg-size-[auto_100%]";
