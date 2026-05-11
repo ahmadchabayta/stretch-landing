@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/stretch-landing/",
+  base: "/stretch/",
   plugins: [
     react({
       babel: {

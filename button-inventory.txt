@@ -1,4 +1,4 @@
-# Button Inventory - Stretch Landing Page
+# Button Inventory - Stretch
 # Generated: 2026-02-04
 # All buttons in the application with unique descriptive identifiers
 

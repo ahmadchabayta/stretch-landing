@@ -1,6 +1,6 @@
 # Typography Component
 
-A flexible and reusable typography component for the Stretch Landing page.
+A flexible and reusable typography component for the Stretch site.
 
 ## Usage
 
