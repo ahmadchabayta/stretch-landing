@@ -54,13 +54,13 @@ async function submitDemoForm(prevState, formData) {
     `Hello Team,\n\nName: ${username}\nEmail: ${email}\nCompany: ${company}\nLinkedIn: ${linkedin}\n\nNote:\n${note}`,
   );
 
-  window.location.href = `mailto:strategy@memob.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:m.faiz@memob.com?subject=${subject}&body=${body}`;
 
   return { errors: {}, success: true };
 }
 
 const DemoModal = ({ isOpen, onClose }) => {
-  const isSmallScreen = useMediaQuery("<md");
+  const isSmallScreen = useMediaQuery("md");
   const { language } = useLanguage();
   const formRef = useRef(null);
   const [state, formAction, isPending] = useActionState(submitDemoForm, {
