@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useEffect, useActionState, useRef } from "react";
+import { useEffect, useActionState, useRef, useLayoutEffect, useSyncExternalStore } from "react";
 import { Button, Flex, Typography } from "..";
 import Input from "../UI/Input/Input";
 import Textarea from "../UI/Input/Textarea";
@@ -7,6 +7,108 @@ import data from "./demo_modal.data.json";
 import { useLanguage } from "../../context/LanguageContext";
 import { useMediaQuery } from "../../hooks";
 import { preload } from "react-dom";
+
+const DRAFT_STORAGE_KEY = "stretch_demo_modal_draft";
+
+const emptyDraft = {
+  username: "",
+  email: "",
+  company: "",
+  linkedin: "",
+  note: "",
+};
+
+function readDraft() {
+  if (typeof window === "undefined") return { ...emptyDraft };
+  try {
+    const raw = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (!raw) return { ...emptyDraft };
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return { ...emptyDraft };
+    return {
+      username: typeof parsed.username === "string" ? parsed.username : "",
+      email: typeof parsed.email === "string" ? parsed.email : "",
+      company: typeof parsed.company === "string" ? parsed.company : "",
+      linkedin: typeof parsed.linkedin === "string" ? parsed.linkedin : "",
+      note: typeof parsed.note === "string" ? parsed.note : "",
+    };
+  } catch {
+    return { ...emptyDraft };
+  }
+}
+
+function persistDraft(draft) {
+  try {
+    localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(draft));
+  } catch {
+    // private mode / quota
+  }
+}
+
+function clearDraft() {
+  try {
+    localStorage.removeItem(DRAFT_STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+}
+
+const draftSubscribers = new Set();
+let draftStore = null;
+
+function ensureDraft() {
+  if (draftStore === null) {
+    draftStore = readDraft();
+  }
+  return draftStore;
+}
+
+function emitDraftUpdate() {
+  draftSubscribers.forEach((cb) => cb());
+}
+
+function subscribeDraftStore(onStoreChange) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
+  const onStorage = (e) => {
+    if (e.key !== DRAFT_STORAGE_KEY && e.key !== null) return;
+    draftStore = readDraft();
+    onStoreChange();
+  };
+  window.addEventListener("storage", onStorage);
+  draftSubscribers.add(onStoreChange);
+  return () => {
+    window.removeEventListener("storage", onStorage);
+    draftSubscribers.delete(onStoreChange);
+  };
+}
+
+function getDemoDraftSnapshot() {
+  return ensureDraft();
+}
+
+function getDemoDraftServerSnapshot() {
+  return { ...emptyDraft };
+}
+
+function patchDemoDraft(field, value) {
+  draftStore = { ...ensureDraft(), [field]: value };
+  persistDraft(draftStore);
+  emitDraftUpdate();
+}
+
+function resetDemoDraftStore() {
+  draftStore = { ...emptyDraft };
+  clearDraft();
+  emitDraftUpdate();
+}
+
+function setDemoField(field) {
+  return (e) => {
+    patchDemoDraft(field, e.target.value);
+  };
+}
 
 // Form action function following React 19 best practices
 async function submitDemoForm(prevState, formData) {
@@ -63,18 +165,27 @@ const DemoModal = ({ isOpen, onClose }) => {
   const isSmallScreen = useMediaQuery("md");
   const { language } = useLanguage();
   const formRef = useRef(null);
+  const wasPendingRef = useRef(false);
+  const draft = useSyncExternalStore(
+    subscribeDraftStore,
+    getDemoDraftSnapshot,
+    getDemoDraftServerSnapshot,
+  );
   const [state, formAction, isPending] = useActionState(submitDemoForm, {
     errors: {},
     success: false,
   });
 
-  // Reset form and close modal on success
-  useEffect(() => {
-    if (state.success && isOpen) {
+  // Close only when this submit finishes successfully — not when reopening with stale success: true
+  useLayoutEffect(() => {
+    const finishedSubmit = wasPendingRef.current && !isPending;
+    wasPendingRef.current = isPending;
+    if (finishedSubmit && state.success && isOpen) {
+      resetDemoDraftStore();
       formRef.current?.reset();
       onClose();
     }
-  }, [state.success, isOpen, onClose]);
+  }, [isPending, state.success, isOpen, onClose]);
 
   // Handle escape key press to close modal
   // Prevent background scroll when modal is open
@@ -188,6 +299,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="username"
+                value={draft.username}
+                onChange={setDemoField("username")}
                 placeholder={langData.fields.username}
                 error={!!state.errors.username}
                 errorMessage={state.errors.username}
@@ -196,6 +309,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="email"
                 name="email"
+                value={draft.email}
+                onChange={setDemoField("email")}
                 placeholder={langData.fields.email}
                 error={!!state.errors.email}
                 errorMessage={state.errors.email}
@@ -204,6 +319,8 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="company"
+                value={draft.company}
+                onChange={setDemoField("company")}
                 placeholder={langData.fields.company_name}
                 error={!!state.errors.company}
                 errorMessage={state.errors.company}
@@ -212,11 +329,15 @@ const DemoModal = ({ isOpen, onClose }) => {
               <Input
                 type="text"
                 name="linkedin"
+                value={draft.linkedin}
+                onChange={setDemoField("linkedin")}
                 placeholder={langData.fields.company_linkedin}
                 disabled={isPending}
               />
               <Textarea
                 name="note"
+                value={draft.note}
+                onChange={setDemoField("note")}
                 placeholder={langData.fields.note}
                 rows={3}
                 error={!!state.errors.note}
