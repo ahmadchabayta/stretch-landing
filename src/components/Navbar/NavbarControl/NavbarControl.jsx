@@ -25,6 +25,8 @@ const NavbarControl = ({ data, className }) => {
       ref={rootRef}
       className={cn("gap-x-2", className)}
     >
+      {/* 
+      
       <a
         href="https://stretchtag.ai/"
         data-button-name="nav_signup_cta"
@@ -36,6 +38,7 @@ const NavbarControl = ({ data, className }) => {
           {data.button_label.signup}
         </Typography>
       </a>
+      */}
       <a
         href="https://stretchtag.ai/"
         data-button-name="nav_login_cta"
